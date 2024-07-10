@@ -1,3 +1,6 @@
+
+
+
 .icon-list {
   padding-left: 0;
   list-style: none;
@@ -44,3 +47,23 @@
   border-width: 4px;
   background-color: white;
 }
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1.2;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
