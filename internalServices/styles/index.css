@@ -94,3 +94,19 @@ body {
   position: relative;
   z-index: 2;
 }
+
+.buttonFFTGreen{
+  background-color: white;
+  border-color: #000000;
+  border-radius: 5px;
+  border-width: 2px;
+  color: rgb(0, 0, 0);
+}
+
+
+.buttonFFTGreen:hover {
+  background-color: #036955;
+  border-color: transparent;
+  color: white;
+  transition: 0.7s;
+}
