@@ -1,0 +1,15 @@
+.buttonFFTGreen{
+    background-color: #ffffff;
+    border-color: #000;
+    color: #000;
+    border-radius: 5px;
+    border-width: 2px;
+}
+  
+  
+  .buttonFFTGreen:hover {
+    background-color: #036955;
+    border-color: transparent;
+    color: white;
+    transition: 0.7s;
+  }

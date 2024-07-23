@@ -4,3 +4,12 @@ li {
 h4 {
     font-size: x-large;
 }
+
+.featurette {
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    justify-content: center;
+}
