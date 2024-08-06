@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Alejandro Sainz Morales, FFT-Mx team and Bootstrap contributors">
+        <meta name="generator" content="Alejandro 0.0.1">
+        <title>Quejas y reclamos FFT-Mx</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
+
+        
+
+        <!-- Bootstrap core CSS -->
+        <link href="../../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+        </style>
+
+        
+        <!-- Custom styles for this template -->
+        <link href="./VLstyles.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!--Contenedor principal del body-->
+        
+        <div class="col-lg-8 mx-auto p-3 py-md-5">
+            
+            <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+                <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <img src="../../../assets/img/common/LogoFFT.gif" alt="FFT-MX-LOGO"  height="40" class="me-2">
+                <span class="fs-4">FFT México</span>
+                </a>
+            </header>
+
+            <main>
+                <h3>Mantenimiento.</h3>
+                <p class="fs-6 col-md-12">Por favor, ayudanos completando las siguientes secciones del cuestionario para completar tu reporte.</p>
+                
+
+                <form class="needs-validation" novalidate>
+
+                     <!--action="https://formspree.io/f/mwkgzebo" method="POST"-->
+
+                    <div class="bd-example">
+                        
+                        <div class="accordion" id="accordionExample">
+
+                            <!-- <div class="accordion-item">
+                                <h4 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <h5>Información General del Reporte</h5>
+                                    </button>
+                                </h4>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <h6 class="mb-3">Tipo de reporte</h6>
+                                        <div class="my-3">
+                                            <div class="form-check">
+                                                <input id="accidente" name="tipoReporte" type="radio" class="form-check-input" checked required>
+                                                <label class="form-check-label" for="accidente">Accidente</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="incidente" name="tipoReporte" type="radio" class="form-check-input" required>
+                                                <label class="form-check-label" for="incidente">Incidente</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="incidente" name="tipoReporte" type="radio" class="form-check-input" required>
+                                                <label class="form-check-label" for="incidente">Condición Insegura</label>
+                                            </div>
+                                        </div>
+                            
+                                        <hr class="my-4">
+                            
+                                        <h6 class="mb-3">¿Qué tipo de situación está relacionada con el reporte?</h6>
+                                        <div class="my-3">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="caida" name="situacionRelacionadoCon">
+                                                <label class="form-check-label" for="caida">Caída</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="exposicion" name="situacionRelacionadoCon">
+                                                <label class="form-check-label" for="exposicion">Exposición a sustancias tóxicas</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="equipo" name="situacionRelacionadoCon">
+                                                <label class="form-check-label" for="equipo">Fallo en equipo</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="condicionInsegura" name="situacionRelacionadoCon">
+                                                <label class="form-check-label" for="equipo">Condición Insegura</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="otro" name="situacionRelacionadoCon">
+                                                <label class="form-check-label" for="otro">Otro (especificar)</label>
+                                            </div>
+                                        </div>
+                            
+                                        <hr class="my-4">
+                            
+                                        <h6 class="mb-3">¿Desea que su reporte sea anónimo?</h6>
+                                        <div class="my-3">
+                                            <div class="form-check">
+                                                <input id="anonimoSi" name="anonimo" type="radio" class="form-check-input" checked required>
+                                                <label class="form-check-label" for="anonimoSi">Sí</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="anonimoNo" name="anonimo" type="radio" class="form-check-input" required>
+                                                <label class="form-check-label" for="anonimoNo">No</label>
+                                            </div>
+                                        </div>
+                            
+                                        <button class="w-100 btn btn-primary btn-lg buttonFFTGreen mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <h5>Continuar</h5>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> -->
+                            
+                            <div class="accordion-item">
+                                <h4 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <h5>Datos del Reportante</h5>
+                                    </button>
+                                </h4>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <h6 class="mb-3">Por favor, proporcione sus datos</h6>
+                                        <div class="row gy-3">
+                                            <div class="col-md-6">
+                                                <label for="nombreReportante" class="form-label">Nombre:</label>
+                                                <input type="text" class="form-control" id="nombreReportante" name="nombreReportante" placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    No has colocado un nombre
+                                                </div>
+                                            </div>
+                            
+                                            <div class="col-md-6">
+                                                <label for="apellidosReportante" class="form-label">Apellidos:</label>
+                                                <input type="text" class="form-control" id="apellidosReportante" name="apellidosReportante" placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    No has colocado un apellido
+                                                </div>
+                                            </div>
+                            
+                                            <div class="col-md-6">
+                                                <label for="puestoReportante" class="form-label">Puesto:</label>
+                                                <input type="text" class="form-control" id="puestoReportante" name="puestoReportante" placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    No has colocado un puesto
+                                                </div>
+                                            </div>
+                            
+                                            <div class="col-md-6">
+                                                <label for="departamentoReportante" class="form-label">Área o departamento:</label>
+                                                <input type="text" class="form-control" id="departamentoReportante" name="departamentoReportante" placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    No has colocado un área o departamento
+                                                </div>
+                                            </div>
+                            
+                                            <div class="col-md-6">
+                                                <label for="telefonoReportante" class="form-label">Teléfono de contacto:</label>
+                                                <input type="text" class="form-control" id="telefonoReportante" name="telefonoReportante" placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    No has colocado un teléfono de contacto
+                                                </div>
+                                            </div>
+                            
+                                            <div class="col-md-6">
+                                                <label for="emailReportante" class="form-label">Correo electrónico:</label>
+                                                <input type="text" class="form-control" id="emailReportante" name="emailReportante" placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    No has colocado un email de contacto
+                                                </div>
+                                            </div>
+                            
+                                            <div class="col-md-6">
+                                                <label for="jefeReportante" class="form-label">Jefe Inmediato:</label>
+                                                <input type="text" class="form-control" id="jefeReportante" name="jefeReportante" placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    No has colocado el nombre de tu jefe o gerente
+                                                </div>
+                                            </div>
+                            
+                                            <button class="w-100 btn btn-primary btn-lg buttonFFTGreen mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <h5>Continuar</h5>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <div class="accordion-item">
+                                <h4 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <h5>Descripción de la incidencia</h5>
+                                    </button>
+                                </h4>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        
+                                        <h6 class="mb-3">Por favor, complete los siguientes campos.</h6>
+
+                                
+                                        <div class="row gy-3">
+                                            
+                                            <div class="col-md-6">
+                                                <label for="nombreAcusado" class="form-label">Descripción del problema.</label>
+                                                <input type="text" class="form-control" id="nombreAcusado" name="nombreAcusado" placeholder="Describa qué es lo que ha identificado" required>
+                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
+                                                <div class="invalid-feedback">
+                                                    No has colocado un nombre
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-md-6">
+                                                <label for="apellidosAcusado" class="form-label">Ubicación del problema.</label>
+                                                <input type="text" class="form-control" id="apellidosAcusado" name="apellidosAcusado" placeholder="Oficina, nave, área especifica" required>
+                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
+                                                <div class="invalid-feedback">
+                                                    No has colocado un apellido
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-md-6">
+                                                <label for="puestoAcusado" class="form-label">Foto del problema (opcional).</label>
+                                                <input type="text" class="form-control" id="puestoAcusado" name="puestoAcusado" placeholder="" required>
+                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
+                                                <div class="invalid-feedback">
+                                                    No has colocado un puesto
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-md-6">
+                                                <label for="departamentoAcusado" class="form-label">¿Ha reportado este incidente anteriormente?</label>
+                                                <input type="text" class="form-control" id="departamentoAcusado" name="departamentoAcusado" placeholder="" required>
+                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
+                                                <div class="invalid-feedback">
+                                                    No has colocado un area o departamento
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-md-6">
+                                                <label for="telefonoAcusado" class="form-label">Comentarios adicionales</label>
+                                                <input type="text" class="form-control" id="telefonoAcusado" name="telefonoAcusado" placeholder="" required>
+                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
+                                                <div class="invalid-feedback">
+                                                    No has colocado un telefono.
+                                                </div>
+                                            </div>
+        
+                                            <a href="./thanks.html">
+                                                <button class="w-100 btn btn-primary btn-lg buttonFFTGreen" type="button">Enviar reporte</button>                                                
+                                            </a>
+                                            
+                                        </div>
+
+                                        
+        
+                                    </div>
+                                </div>
+                            
+                            </div>
+
+                            
+
+                        </div>
+                    
+                    </div>
+
+                </form>
+
+            </main>
+
+            <footer class="pt-5 my-5 text-muted border-top">
+                FFT México S.A. de C.V. &middot; &copy; 2024
+            </footer>
+
+        </div>
+
+        <script src="../../../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
