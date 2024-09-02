@@ -13,3 +13,8 @@ h4 {
 .titulo {
     justify-content: center;
 }
+
+
+th {
+    width: 150px;
+}
