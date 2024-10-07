@@ -1,0 +1,15 @@
+<form id="myForm">
+  <input type="radio" id="disableForm" name="disableForm"> Disable Form
+  <input type="text" name="input1" placeholder="Input 1">
+  <input type="text" name="input2" placeholder="Input 2">
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  document.getElementById('disableForm').addEventListener('change', function() {
+    let formElements = document.getElementById('myForm').elements;
+    for (let i = 0; i < formElements.length; i++) {
+      formElements[i].disabled = this.checked;
+    }
+  });
+</script>

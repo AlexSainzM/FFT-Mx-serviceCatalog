@@ -261,6 +261,11 @@
                 <label class="btn" for="option6" style="font-weight: bold; font-size: larger;">Proveedor</label>
               </div>
 
+              <div class="col-12 text-center" id="prooverrmsg" style="display: none;">
+                <h4 class="mb-3" style="color: red;">Error :( Lamentamos los inconvenientes</h4>
+                <p class="" style="color: red;">Nuestro registro para proovedores ha alcanzado su capacidad máxima. Esperamos verte en nuestro siguiente evento.</p>
+              </div>
+
             </div>
             <!-- FIN TIPO DE VISITA -->
             
@@ -1026,6 +1031,16 @@
     doc.addImage(imgData, 'PNG', 20, 20, 140, 200);
     doc.save('documento.pdf');
   }
+</script>
+
+<script>
+  document.getElementById('option6').addEventListener('change', function() {
+    let formElements = document.getElementById('registro').elements;
+    document.getElementById('prooverrmsg').style.display = 'block';
+    for (let i = 0; i < formElements.length; i++) {
+      formElements[i].disabled = this.checked;
+    }
+  });
 </script>
 
 </body>
