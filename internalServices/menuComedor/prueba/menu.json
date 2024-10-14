@@ -1,0 +1,90 @@
+{
+  "week": "KW41",
+  "days": [
+    {
+      "day": "Lunes",
+      "date": "2024-10-14",
+      "menu": {
+        "Sopa aguada": "Nopales navegantes",
+        "Sopa seca": "Tallarines al burro",
+        "Plato fuerte": "Pollo empanizado con avena y ensalada verde",
+        "Antojito": "Croquetas de platano macho con queso en salsa de mole",
+        "Platillo saludable": "Pechuga de pollo en salsa de amaranto",
+        "Op. cambio": "Pechuga asada / Carne asada / Queso asado",
+        "Frijoles": "Con guajillo",
+        "Ensalada": "Crudites",
+        "Postre": "Parfait de yogurt con galleta molida y mermelada",
+        "Agua": "Tamarindo",
+        "Salsa": "Chipotle"
+      }
+    },
+    {
+      "day": "Martes",
+      "date": "2024-10-15",
+      "menu": {
+        "Sopa aguada": "Sopa de alubias",
+        "Sopa seca": "Ensalada de nopales",
+        "Plato fuerte": "Cerdo a la asturiana",
+        "Antojito": "Tacos dorados de pollo",
+        "Platillo saludable": "Colache de chayotes con queso",
+        "Op. cambio": "Pechuga asada / Carne asada / Queso asado",
+        "Frijoles": "Al epazote",
+        "Ensalada": "Lechugas mixtas y jicama y juliana",
+        "Postre": "Gelatina Mosaico",
+        "Agua": "Guayaba",
+        "Salsa": "Roja de árbol"
+      }
+    },
+    {
+      "day": "Miercoles",
+      "date": "2024-10-16",
+      "menu": {
+        "Sopa aguada": "Sopa de alubias",
+        "Sopa seca": "Ensalada de nopales",
+        "Plato fuerte": "Cerdo a la asturiana",
+        "Antojito": "Tacos dorados de pollo",
+        "Platillo saludable": "Colache de chayotes con queso",
+        "Op. cambio": "Pechuga asada / Carne asada / Queso asado",
+        "Frijoles": "Al epazote",
+        "Ensalada": "Lechugas mixtas y jicama y juliana",
+        "Postre": "Gelatina Mosaico",
+        "Agua": "Guayaba",
+        "Salsa": "Roja de árbol"
+      }
+    },
+    {
+      "day": "Jueves",
+      "date": "2024-10-17",
+      "menu": {
+        "Sopa aguada": "Sopa de alubias",
+        "Sopa seca": "Ensalada de nopales",
+        "Plato fuerte": "Cerdo a la asturiana",
+        "Antojito": "Tacos dorados de pollo",
+        "Platillo saludable": "Colache de chayotes con queso",
+        "Op. cambio": "Pechuga asada / Carne asada / Queso asado",
+        "Frijoles": "Al epazote",
+        "Ensalada": "Lechugas mixtas y jicama y juliana",
+        "Postre": "Gelatina Mosaico",
+        "Agua": "Guayaba",
+        "Salsa": "Roja de árbol"
+      }
+    },
+    {
+      "day": "Viernes",
+      "date": "2024-10-18",
+      "menu": {
+        "Sopa aguada": "Sopa de alubias",
+        "Sopa seca": "Ensalada de nopales",
+        "Plato fuerte": "Cerdo a la asturiana",
+        "Antojito": "Tacos dorados de pollo",
+        "Platillo saludable": "Colache de chayotes con queso",
+        "Op. cambio": "Pechuga asada / Carne asada / Queso asado",
+        "Frijoles": "Al epazote",
+        "Ensalada": "Lechugas mixtas y jicama y juliana",
+        "Postre": "Gelatina Mosaico",
+        "Agua": "Guayaba",
+        "Salsa": "Roja de árbol"
+      }
+    }
+  ]
+}
