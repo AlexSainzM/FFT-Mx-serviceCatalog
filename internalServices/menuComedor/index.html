@@ -78,7 +78,7 @@
         </div>
 
     
-        <div id="menu-content" class="row row-cols-1 row-cols-lg-3 mb-3 align-items-center">
+        <div id="menu-content" class="row row-cols-1 row-cols-xxl-3 mb-3 align-items-center">
     
         </div>        
     
@@ -112,13 +112,26 @@
               .then(data => {
                   const menuContainer = document.getElementById('menu-content');
                   menuContainer.innerHTML = '';  // Limpiar el contenedor antes de agregar nuevos días
-                  document.getElementById('menu-title').innerText = `¡Menú ${data.week}!`;
+
+                  // Función para obtener la semana actual del año
+                  function getCurrentWeek() {
+                    const today = new Date();
+                    const firstDayOfYear = new Date(today.getFullYear(), 0, 1); // 1 de enero
+                    const pastDaysOfYear = (today - firstDayOfYear) / 86400000; // Diferencia en días entre hoy y el 1 de enero
+
+                    // Calcular la semana actual (división de días entre 7, ajustando por el día inicial de la semana)
+                    const weekNumber = Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
+
+                    return weekNumber;
+                  }
+
+                  document.getElementById('menu-title').innerText = `¡Menú KW${getCurrentWeek()}!`;
 
                   // Obtener fecha actual y los siguientes tres días
                   const today = new Date();
                   const datesToShow = [];
                   
-                  for (let i = 0; i < 4; i++) {
+                  for (let i = 0; i < 3; i++) {
                       let date = new Date();
                       date.setDate(today.getDate() + i); // Añadir los días
                       datesToShow.push(date.toISOString().split('T')[0]); // Formato YYYY-MM-DD
