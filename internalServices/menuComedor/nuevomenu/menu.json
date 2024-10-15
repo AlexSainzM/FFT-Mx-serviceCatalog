@@ -1,0 +1,73 @@
+{
+  "week": "KW42",
+  "days": [
+    {
+      "day": "Martes",
+      "date": "2024-10-15",
+      "menu": {
+        "Sopa aguada": "Consomé Juliana",
+        "Sopa seca": "Codito al burro con chile seco",
+        "Plato fuerte": "Deshebrado de pollo en mole quemado",
+        "Antojito": "Tortitas de brocolí en caldillo rojo",
+        "Platillo saludable": "Poblanos campesinos",
+        "Op. cambio": "Pechuga asada / Carne asada / Queso asado",
+        "Frijoles": "De la olla",
+        "Ensalada": "Col con calabacitas en salsa Maggie",
+        "Postre": "Gelatina de Limón",
+        "Agua": "Piña colada",
+        "Salsa": "Chipotle"
+      }
+    },
+    {
+      "day": "Miercoles",
+      "date": "2024-10-16",
+      "menu": {
+        "Sopa aguada": "Sopa de espinaca",
+        "Sopa seca": "Arroz con cebolla",
+        "Plato fuerte": "bistec en salsa michoacana con nopales",
+        "Antojito": "Alambre de carnes mixtas",
+        "Platillo saludable": "Nopales en cordon Blue",
+        "Op. cambio": "Pechuga asada / Carne asada / Queso asado",
+        "Frijoles": "De la olla",
+        "Ensalada": "Betabel en cubos con amaranto",
+        "Postre": "Bofitos",
+        "Agua": "Pepino con Limón",
+        "Salsa": "Verde"
+      }
+    },
+    {
+      "day": "Jueves",
+      "date": "2024-10-17",
+      "menu": {
+        "Sopa aguada": "Sopa verde de verdura",
+        "Sopa seca": "Espaguetti al burro con cebolla",
+        "Plato fuerte": "Albondigas rancheras",
+        "Antojito": "Hurache de pollo",
+        "Platillo saludable": "Ensalada rusa de pollo",
+        "Op. cambio": "Pechuga asada / Carne asada / Queso asado",
+        "Frijoles": "De la olla",
+        "Ensalada": "Germen mixto con zahahoria rallada",
+        "Postre": "Gelatina de durazno",
+        "Agua": "Papaya",
+        "Salsa": "Arriera"
+      }
+    },
+    {
+      "day": "Viernes",
+      "date": "2024-10-18",
+      "menu": {
+        "Sopa aguada": "Consomé de pollo con calacabita, chayote y zanahoria",
+        "Sopa seca": "Arroz rojo",
+        "Plato fuerte": "Mancuerna en su jugo con rajas y epazote",
+        "Antojito": "Tostadas de picadillo",
+        "Platillo saludable": "Ensalada Cesar",
+        "Op. cambio": "Pechuga asada / Carne asada / Queso asado",
+        "Frijoles": "De la olla",
+        "Ensalada": "Nopales asados",
+        "Postre": "Alegria",
+        "Agua": "Agua de jamaica",
+        "Salsa": "Pastor verde"
+      }
+    }
+  ]
+}

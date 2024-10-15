@@ -2,108 +2,71 @@
 <html lang="en">
 
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Alejandro Sainz Morales, FFT-Mx team and Bootstrap contributors">
-    <meta name="generator" content="Alejandro 0.0.1">
-    <title>FFT México - Menú Comedor</title>
+    <title>FFT hemtec</title>
 
-    <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .center-text {
-        text-align: center;
-        margin-top: 20%;
-      }
-    </style>
-
-    <!-- Custom styles for this template -->
-    <link href="./menuComedor.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
   </head>
 
   <body>
-    
-    <div class="container py-3">
-  
-      <header>
-    
-        <!--Header content-->
-        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-          <a href="../index.html" class="d-flex align-items-center text-dark text-decoration-none">
-            <img src="../../assets/img/common/LogoFFT.gif" alt="FFT-MX-LOGO"  height="40" class="me-2">
-            <span class="fs-4">FFT México</span>
-          </a>
-    
-          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            <a class="me-3 py-2 text-dark text-decoration-none" href="">¡Ya puedes pagar con tu tarjeta de Vales!</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="#"></a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="#"></a>
-            <a class="py-2 text-dark text-decoration-none" href="">¡Recuerda que 8 a 10 am tenemos desayunos!</a>
-          </nav>
-        </div>
-    
-        <!--This seccion is part of the Header-->
-        <!-- <div class="row pricing-header p-3 pb-md-4 mx-auto text-center">
-          <div class="col-4">
-            <img src="./" alt="">
-          </div>
-          <div class="col-8">
-            <h1 class="display-4 fw-normal">¡Menú KW30!</h1>
-          </div>
-        </div> -->
-    
-      </header>
-    
-      <main>
 
-        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 titulo">
-            <img src="./menuLogo.png" alt="FFT-MX-LOGO"  height="100" class="me-2" style="border-radius: 15px;">
-            <h1 id="menu-title" class="display-5 fw-normal"></h1> 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../../../assets/img/common/FFF_Logo.png" alt="FFT logo" width="mx-auto" height="30">
+          <img src="../menuLogo.png" alt="FFT logo" width="mx-auto" height="30">
+          <span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#products">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-    
-        <div id="menu-content" class="row row-cols-1 row-cols-xxl-3 mb-3 align-items-center">
-    
-        </div>        
-    
-      </main>
-    
-      <footer class="pt-4 my-md-5 pt-md-5 text-muted border-top text-center">
-        <div class="row">
-          <div class="col-12 col-md">
-            <img class="mb-2" src="../../assets/img/common/LogoFFT.gif" alt=""  height="19">
-            <small class="d-block mb-3 text-muted">FFT México S.A. de C.V. &middot; &copy; 2024</small>
-          </div>
+    <!-- Main Section -->
+    <section class="container py-3">
+        
+      <!-- Menu-title -->
+      <div class="row">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center py-2">
+          <h1 id="menu-title"></h1>
         </div>
-      </footer>
-    
-    
-      <!-- Un footer sencillo que me gustó -->
-      <!-- 
-      <footer class="pt-5 my-5 text-muted border-top text-center">
-        FFT México S.A. de C.V. &middot; &copy; 2024
-      </footer> 
-      -->
-    
-    </div>
+      </div>
+      
+      <!-- Menu-Content -->
+      <div id="menu-content" class="row row-cols-1 row-cols-xxl-3 mb-3 align-items-center"></div>
 
-    <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="fixed-bottom text-center py-3 bg-dark text-light">
+      <p>&copy; 2024 FFT México. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
     <script>
       // Función para cargar el menú desde un archivo JSON
       function loadMenu() {
@@ -150,8 +113,8 @@
                   daysToShow.forEach(day => {
                       let card = `
                       <div class="col">
-                          <div class="card mb-4 rounded-3 shadow-sm border-primary">
-                              <div class="card-header py-3 text-white bg-primary border-primary">
+                          <div class="card mb-4 rounded-3 shadow-sm" style="border-color: #009d80;">
+                              <div class="card-header py-3 text-white" style="background-color: #009d80; border-color: #009d80;">
                                   <h4 class="my-0 fw-bold">${day.day}</h4>
                               </div>
                               <div class="card-body">
