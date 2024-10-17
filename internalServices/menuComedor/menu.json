@@ -68,6 +68,176 @@
         "Agua": "Agua de jamaica",
         "Salsa": "Pastor verde"
       }
+    },
+    {
+      "day": "Lunes",
+      "date": "2024-10-21",
+      "menu": {
+        "Sopa aguada": "Sopa de espinaca con elote",
+        "Sopa seca": "Espaguetti romano",
+        "Plato fuerte": "Pechuga de pollo en salsa pasilla",
+        "Antojito": "Picaditas veracruzanas",
+        "Platillo saludable": "Alambre saludable con nopales",
+        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Frijoles": "Frijoles de la olla",
+        "Ensalada": "Betabel en cubos con cacahuate",
+        "Postre": "Pulparindo",
+        "Agua": "Agua de papaya",
+        "Salsa": "Verde cocida"
+      }
+    },
+    {
+      "day": "Martes",
+      "date": "2024-10-22",
+      "menu": {
+        "Sopa aguada": "Crema de espinaca",
+        "Sopa seca": "Arroz con cebolla y perejil",
+        "Plato fuerte": "Cochinita pibil",
+        "Antojito": "Molote de quesillo con rajas",
+        "Platillo saludable": "Ensalada rosario",
+        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Frijoles": "Frijoles de la olla",
+        "Ensalada": "Ensalada de col",
+        "Postre": "Cremita de chocolate",
+        "Agua": "Agua de limón",
+        "Salsa": "Roja con árbol"
+      }
+    },
+    {
+      "day": "Miércoles",
+      "date": "2024-10-23",
+      "menu": {
+        "Sopa aguada": "Sopa roja de papa",
+        "Sopa seca": "Tallarín al burro con tomillo",
+        "Plato fuerte": "Fajitas de cerdo estilo oriental",
+        "Antojito": "Albóndigas de soya en salsa verde",
+        "Platillo saludable": "Brochetas mexicanas",
+        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Frijoles": "Frijoles de la olla",
+        "Ensalada": "Zanahoria con pepitas",
+        "Postre": "Crepa de crema",
+        "Agua": "Agua de tamarindo",
+        "Salsa": "Mixta"
+      }
+    },
+    {
+      "day": "Jueves",
+      "date": "2024-10-24",
+      "menu": {
+        "Sopa aguada": "Consomé de verduras con garbanzo y acelgas",
+        "Sopa seca": "Arroz verde",
+        "Plato fuerte": "Mancuerna encacahuatada",
+        "Antojito": "Taco acorazado de cerdo",
+        "Platillo saludable": "Picadillo piricaña",
+        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Frijoles": "Frijoles de la olla",
+        "Ensalada": "Espinacas frescas con jitomate",
+        "Postre": "Alegría",
+        "Agua": "Agua de jamaica",
+        "Salsa": "Pastor verde"
+      }
+    },
+    {
+      "day": "Viernes",
+      "date": "2024-10-25",
+      "menu": {
+        "Sopa aguada": "Sopa de alubias con lenteja",
+        "Sopa seca": "Fusilli al pesto",
+        "Plato fuerte": "Banderillas con guacasalsa",
+        "Antojito": "Tostadas de carne polaca",
+        "Platillo saludable": "Ensalada oriental",
+        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Frijoles": "Frijoles de la olla",
+        "Ensalada": "Pepino en rodajas con chile piquín",
+        "Postre": "Gelatina de frambuesa",
+        "Agua": "Agua de naranja",
+        "Salsa": "Chipotle"
+      }
+    },
+    {
+      "day": "Lunes",
+      "date": "2024-10-28",
+      "menu": {
+        "Sopa aguada": "Sopa de alubia con un toque de tocino",
+        "Sopa seca": "Arroz verde",
+        "Plato fuerte": "Deshebrado de cerdo en salsa de tomate con espinaca y papas",
+        "Antojito": "Flautas de pollo",
+        "Platillo saludable": "Ensalada rosa",
+        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Frijoles": "Frijoles de la olla",
+        "Ensalada": "Zanahorias con perejil",
+        "Postre": "Nucita barra",
+        "Agua": "Agua de pepino",
+        "Salsa": "Jalapeño"
+      }
+    },
+    {
+      "day": "Martes",
+      "date": "2024-10-29",
+      "menu": {
+        "Sopa aguada": "Sopa de col con zanahoria",
+        "Sopa seca": "Codito blanco con brócoli",
+        "Plato fuerte": "Bistec encebollado",
+        "Antojito": "Enmoladas",
+        "Platillo saludable": "Tostadas de quesillo",
+        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Frijoles": "Frijoles de la olla",
+        "Ensalada": "Pepinos en rodajas",
+        "Postre": "Gelatina de piña",
+        "Agua": "Agua de guayaba",
+        "Salsa": "Habanero"
+      }
+    },
+    {
+      "day": "Miércoles",
+      "date": "2024-10-30",
+      "menu": {
+        "Sopa aguada": "Crema de espinaca",
+        "Sopa seca": "Arroz amarillo con espinaca",
+        "Plato fuerte": "Manchamanteles de pollo",
+        "Antojito": "Chilaquiles rojos suizos con huevo",
+        "Platillo saludable": "Chop suey de pollo",
+        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Frijoles": "Frijoles de la olla",
+        "Ensalada": "Nopales asados",
+        "Postre": "Flan de coco",
+        "Agua": "Agua de limón",
+        "Salsa": "Chipotle"
+      }
+    },
+    {
+      "day": "Jueves",
+      "date": "2024-10-31",
+      "menu": {
+        "Sopa aguada": "Sopa poblana",
+        "Sopa seca": "Papas endabladas",
+        "Plato fuerte": "Momias (salchichas envueltas en tocino)",
+        "Antojito": "Enchiladas de chile serrano rellenas de queso",
+        "Platillo saludable": "Tostadas de quesillo",
+        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Frijoles": "Frijoles de la olla",
+        "Ensalada": "Pepinos en rodajas",
+        "Postre": "Gelatina halloween",
+        "Agua": "Agua de frutas",
+        "Salsa": "Serranito"
+      }
+    },
+    {
+      "day": "Viernes",
+      "date": "2024-11-01",
+      "menu": {
+        "Sopa aguada": "Sopa VIPS",
+        "Sopa seca": "Verduras salteadas",
+        "Plato fuerte": "Pollo al ajillo con espinacas",
+        "Antojito": "Quesadilla frita de picadillo",
+        "Platillo saludable": "Ensalada caribeña",
+        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Frijoles": "Frijoles de la olla",
+        "Ensalada": "Jícama rallada",
+        "Postre": "Bocadín",
+        "Agua": "Agua de sandía",
+        "Salsa": "Pastor verde"
+      }
     }
   ]
 }
