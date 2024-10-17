@@ -104,11 +104,13 @@
                   const today = new Date();
                   const datesToShow = [];
                   
-                  for (let i = 0; i < 3; i++) {
+                  for (let i = 0; i < 10; i++) {
                       let date = new Date();
                       date.setDate(today.getDate() + i); // Añadir los días
                       datesToShow.push(date.toISOString().split('T')[0]); // Formato YYYY-MM-DD
                   }
+
+                  console.log(datesToShow);
 
                   // Filtrar los días que coinciden con la fecha actual y los siguientes 3 días
                   const daysToShow = data.days.filter(day => datesToShow.includes(day.date));
@@ -120,7 +122,7 @@
                   }
 
                   // Renderizar los días filtrados
-                  daysToShow.forEach(day => {
+                  daysToShow.slice(0,3).forEach(day => {
                       let card = `
                       <div class="col">
                           <div class="card mb-4 rounded-3 shadow-sm" style="border-color: #009d80;">
