@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
   }
   
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5 {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
   }
@@ -22,7 +22,7 @@ body {
     background-color: #ffffff; /* Gris claro para fondo */
   }
   
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5 {
     color: #009D80; /* Verde FFT */
   }
 
