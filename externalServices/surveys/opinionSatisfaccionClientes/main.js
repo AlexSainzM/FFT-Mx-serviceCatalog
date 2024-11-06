@@ -14,8 +14,8 @@ document.getElementById('otroAtributoPositivoChecked').addEventListener('change'
   otroAtributoInput1.style.display = this.checked ? 'block' : 'none';
 });
 
-// Mostrar el campo de texto "otro" de la 3ra pregunta
-document.getElementById('atributosMenosValoradoOTRO').addEventListener('change', function() {
-  const otroAtributoInput2 = document.getElementById('otroAtributoNoValoradoInput');
+// Mostrar el campo de texto "otro" de la 4ta pregunta
+document.getElementById('otroAtributoNegativoChecked').addEventListener('change', function() {
+  const otroAtributoInput2 = document.getElementById('otroAtributoNegativoInput');
   otroAtributoInput2.style.display = this.checked ? 'block' : 'none';
 });
