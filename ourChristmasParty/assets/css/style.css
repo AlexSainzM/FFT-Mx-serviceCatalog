@@ -92,7 +92,7 @@ h2 {
   .fh5co-home-banner .card {
     border: none; }
   .fh5co-home-banner h2 {
-    font-size: 52px;
+    font-size: 80px;
     color: #fff;
     text-transform: uppercase;
     max-width: 730px;
@@ -136,7 +136,7 @@ h2 {
     background: -linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8), black); }
   @media (max-width: 991px) {
     .fh5co-home-banner h2 {
-      font-size: 30px;
+      font-size: 45px;
       max-width: 460px; }
     .fh5co-home-banner .center-text {
       top: 20%; } }
@@ -152,7 +152,7 @@ h2 {
     .fh5co-home-banner a {
       margin-top: 8px; }
     .fh5co-home-banner h2 {
-      font-size: 18px;
+      font-size: 22px;
       max-width: 260px; }
     .fh5co-home-banner .center-text {
       top: 1%; } }
