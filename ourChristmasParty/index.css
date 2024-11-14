@@ -1,0 +1,345 @@
+/* Cambiar color y tamano de texto a toda clase div adentro de body se puede quitar body la verdad*/
+body .div {
+    color: var(--white);
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-width: 30;
+    max-height: 40;
+}
+
+#welcome {
+    display: flex;
+    justify-content: center;
+}
+
+#video {
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 0;
+    opacity: 70%;
+}
+
+#text-video {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    color: var(--secondary2);
+    display: block;
+    padding: 20px;
+    line-height: 260%;
+}
+
+#over-video {
+    position: absolute;
+    top: 200px;
+    z-index: 2;
+    margin-top: 10px;
+    padding: 35px;
+    /* display: block; */
+}
+
+#textOverVideo {
+    position: absolute;
+    z-index: 1; 
+}
+
+/* Tamaño de la letra del video */
+#text-p{
+    font-size: 58px;
+    text-align: center; 
+ 
+}
+
+@media only screen and (max-width: 767px) {
+    /* Cambiar tamaño de letra del #text-p para pantallas de celular */
+    #text-p {
+      font-size: 30px;
+    }
+  }
+
+#video-container {
+    position: relative;
+}
+
+.btnVerMas {
+    background-color: white;
+    border-color: transparent;
+    color: black;
+
+}
+
+.btnVerMas:hover {
+    background-color: black;
+    border-color: transparent;
+    color: white;
+    transition: 0.5s;
+}
+
+
+/* estilos tarjetas carrusel */
+
+.card-body {
+    border-color: transparent;
+}
+
+.card-title {
+    color: #009D80;
+    font-size: 80px;
+}
+
+.tituloTimeline{
+  color: #009D80;
+}
+
+.textoTimeline {
+  color: #575756;
+}
+
+.card-text {
+    color: black;
+    font-size: 2rem;
+}
+
+/* titulo de curiosidades */
+#info{
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    
+}
+
+
+#titulo-info{
+    font-size: 55px !important;
+    text-align: center !important;
+    color: white;
+
+}
+
+/* Esta clase cambia el tono del fondo de la tarjeta*/
+.card-body-info{
+    margin: 10px;
+    align-self: center;
+    border-radius: 10px;
+    display: flex;
+    background-color: var(--primaryB);
+    color: var(--white);
+}
+
+/* Esta clase cambia el tono del fondo del texto*/
+.card-info{
+    width: 500px;
+    height: 400px;
+    margin: 32px;
+    background-color: var(--primaryB);
+    border-color: transparent
+    
+}
+
+/* para centrar el contenido de las tarjetas info */
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjetas-info{
+    font-size: 16px; 
+}
+
+.card-text-info{
+    font-size: 16px;
+}
+
+.modalLittleBoxes {
+    background-color: var(--primaryG);
+    border-radius: 15px;
+    padding: 20px;
+    
+}
+
+/* h1 {
+    font-size: 100px;
+} */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat";
+} */
+.container-MVV {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  background-color: transparent;
+}
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 30px;
+  background-color: #f0f0f0;
+  color: #575756;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 7px;
+  
+}
+.timeline-content p {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+}
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #009D80;
+  margin-top: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 52%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #f0f0f0;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -5px;
+  }
+  .timeline ul li:hover::before {
+    background-color: #d0d0d0;
+  }
+}
+
+#breakers {
+    font-size: 10px;
+}
+
+
+
+/* campaign-timer */
+.campaign-timer{
+  background: rgba(50,55,63,.00);
+  max-width: 555px;
+  margin: 5px auto;
+  padding:5px 0 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(34,31,31,.2);
+}
+.camp {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  font-weight:600;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 0;
+  opacity: 50%;
+}
+.time-after{
+  position:relative;
+}
+.time-after:after{
+  position:absolute;
+  content:':';
+  top:4px;
+  right:-8px;
+}
+.time {
+  display: inline-block;
+  line-height: 1;
+  padding: 5px 12px 0;
+  font-weight: 500;
+  font-size: 22px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  opacity: 50%;
+}/* campaign-timer */
+
+@media (max-width: 600px) {
+  .time {
+    padding: 5px 5px 0;
+    font-size: 18px;
+  }
+
+  .camp {
+    font-size: 12px;
+  }
+  
+}
