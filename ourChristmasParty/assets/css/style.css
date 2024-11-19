@@ -879,3 +879,37 @@ footer {
       .single-blog:last-child {
         padding-bottom: 0;
         border-bottom: none; } }
+
+
+
+
+
+
+
+
+
+        html, body {
+          margin: 0;
+          padding: 0;
+          height: 100%; /* Garantiza que el body ocupe toda la altura */
+        }
+        
+        body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh; /* Ocupa al menos la altura del viewport */
+        }
+
+        header, .banner, .content {
+          flex-shrink: 0; /* Evita que las secciones se compriman */
+        }
+        
+        #content {
+          flex-grow: 1; /* Permite que la sección de contenido ocupe el espacio restante */
+        }
+        
+        footer {
+          /* position: fixed; */
+          bottom: 0;
+          width: 100%;
+        } 
