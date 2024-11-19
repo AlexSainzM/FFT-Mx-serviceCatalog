@@ -33,7 +33,12 @@
   
 
   <div class="container-fluid fh5co-home-banner">
-    <div class="card"> <video class="card-img" src="./newAssets/videoFFTNavidad.webm" type="video/mp4" alt="" autoplay muted loop> </video>
+    <div class="card"> 
+      <video class="card-img" autoplay muted loop>
+        <source src="./newAssets/videoFFTNavidad.webm" type="video/webm">
+        <!-- <source src="./newAssets/videoFFTNavidad.mp4" type="video/mp4"> -->
+        Tu navegador no soporta el elemento de video.
+      </video>
       <div class="card-img-overlay">
         <div class="center-text">
 
@@ -273,6 +278,19 @@
       formElements[i].disabled = this.checked;
     }
   });
+</script>
+
+<script>
+  // Función para desplazarse automáticamente al div con id="Eventos"
+  function scrollToEventos() {
+      const eventosDiv = document.getElementById("content");
+      if (eventosDiv) {
+          eventosDiv.scrollIntoView({ behavior: "smooth" }); // Desplazamiento suave
+      }
+  }
+
+  // Esperar 2 minutos (120,000 ms) antes de desplazarse automáticamente
+  setTimeout(scrollToEventos, 120000);
 </script>
 
 </body>
