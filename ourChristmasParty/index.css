@@ -310,7 +310,7 @@ html {
   font-weight:600;
   font-family: 'Poppins', sans-serif;
   padding: 10px 0;
-  opacity: 50%;
+  opacity: 40%;
 }
 .time-after{
   position:relative;
@@ -329,7 +329,7 @@ html {
   font-size: 22px;
   color: #fff;
   font-family: 'Poppins', sans-serif;
-  opacity: 50%;
+  opacity: 30%;
 }/* campaign-timer */
 
 @media (max-width: 600px) {
@@ -340,6 +340,18 @@ html {
 
   .camp {
     font-size: 12px;
+  }
+  
+}
+
+@media (min-width: 2600px) {
+  .time {
+    padding: 5px 5px 0;
+    font-size: 50px;
+  }
+
+  .camp {
+    font-size: 30px;
   }
   
 }

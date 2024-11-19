@@ -63,7 +63,11 @@
     max-width: 80px;
   }
 }
-
+@media (min-width: 2600px) {
+  .logoFFT {
+    max-width: 500px;
+  }
+}
 
 
 
