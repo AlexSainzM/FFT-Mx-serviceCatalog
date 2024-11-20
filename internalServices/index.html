@@ -116,7 +116,7 @@
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                  <p>Crea un ambiente seguro y respetuoso para todos. Completa esta encuesta y contribuye a nuestro compromiso con el bienestar laboral.</p>
+                  <p>En FFT, promovemos un ambiente laboral seguro y respetuoso. ¿Te has sentido afectado por comportamientos inapropiados o situaciones de violencia? Este espacio es confidencial y seguro.</p>
                   <a href="" class="btn btn-secondary my-2">Disponible muy pronto</a>
                 </div>
               </div>
@@ -142,7 +142,7 @@
               </h2>
               <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                  <p>Queremos saber qué opinas de los menús y el servicio en nuestro comedor. ¡Tu opinión nos importa! Cuentanos tu experiencia. </p>
+                  <p>Queremos saber qué opinas de los menús y el servicio en nuestro comedor. ¡Tu opinión nos importa! Cuentanos tu experiencia a diario. </p>
                   <a href="" class="btn btn-secondary my-2">Disponible muy pronto</a>
                 </div>
               </div>
@@ -155,7 +155,7 @@
               </h2>
               <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                  <p>Ayúdanos a garantizar un entorno seguro para todos. Comparte tus sugerencias y experiencias completando esta encuesta.</p>
+                  <p>Ayúdanos a garantizar un entorno seguro para todos. Comparte tus sugerencias y experiencias completando esta encuesta o bien genera un reporte.</p>
                   <a href="" class="btn btn-secondary my-2">Disponible muy pronto</a>
                 </div>
               </div>
@@ -170,7 +170,23 @@
 
       <!-- FFT Comunicados -->
       <div class="row mb-5">
-        <div class="col-lg-12 order-lg-2">
+
+        <div class="col-lg-6 order-lg-2">
+
+          <h3 class="featurette-title">Mantente informado</h3>
+          <p class=""> Aquí encontrarás todo lo que necesitas saber sobre eventos, cambios de políticas y noticias relevantes.</p>
+
+        </div>
+
+        <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center order-lg-1">
+
+          <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable" style="font-size: x-large;">
+            Ver últimos comunicados
+          </button>
+
+        </div>
+
+        <div class="col-lg-12 order-lg-3">
           <div id="carouselExampleControlsS" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner" id="carouselInner">
               <!-- Las imágenes se insertarán aquí dinámicamente -->
@@ -185,12 +201,7 @@
             </button>
           </div>
         </div>
-        <div class="col-lg-12 order-lg-1">
-          <h3 class="featurette-title text-center">Mantente informado</h3>
-          <p class="text-center"> Aquí encontrarás todo lo que necesitas saber sobre eventos, cambios de políticas y noticias relevantes.</p>
-          <!-- <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="">Disponible muy pronto</a> -->
 
-        </div>
       </div>
 
       <hr class="featurette-divider">
@@ -221,484 +232,25 @@
 
     <!-- Modals for Product Details -->
     
+      <!-- Modal Comunicados -->
+      <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="featurette-title" id="exampleModalCenteredScrollableTitle">Últimos comunicados</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="pdf-list-container">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       
-
-      <!-- Modal for Single S -->
-      <div class="modal fade" id="productModalS" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-          <div class="modal-content">
-            <div class="modal-header d-flex align-items-center justify-content-between">
-              <!-- Logo y Título alineados a la izquierda -->
-              <div class="d-flex align-items-center">
-                <img src="../common_img/FFF_Logo.png" alt="FFT logo" height="30">
-                <h1 class="modal-title featurette-title ms-2" id="exampleModalFullscreenLabel">hemtec Single S</h1>
-              </div>
-            
-              <!-- Botón de cierre alineado a la derecha -->
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            
-            <div class="modal-body">
-              
-              <div class="row"> <!-- mb-5 -->
-                <div class="col-lg-6">
-                  <div id="carouselExampleControlsmodalS" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="./img/hemSingleSx500px_(2).png" class="d-block w-100 rounded-5" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./img/hemSingleSx500px_(3).png" class="d-block w-100 rounded-5" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./img/hemSingleSx500px_(4).png" class="d-block w-100 rounded-5" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsmodalS" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsmodalS" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-                
-                <div class="col-lg-6">
-                  <h1 class="featurette-title">Resumen</h1>
-                  <p> Cabezal suspendido por resorte. Permite configuraciones modulares, con geometrías de rodillo seleccionables. Ofrece medición de fuerza para control de calidad.</p>
-                  <h1 class="featurette-title2">Características clave</h1>
-                  <ul>
-                    <li>Soporte de rodillo y rodillo de hembrado seleccionables del sistema modular.</li>
-                    <li>Calidad de proceso optimizada y tolerancia a errores.</li>
-                    <li>Las tolerancias de las piezas y los componentes pueden ser influenciadas a través del programa del robot.</li>
-                    <li>No se requiere suministro de medios adicionales.</li>
-                    <li>Medición de la fuerza de hembrado para control de calidad y del proceso (directa e indirecta).</li>
-                    <li>Alta calidad gracias al sistema rígido para el pre-hembrado y sistema suspendido para el hembrado final.</li>
-                    <li>Procesamiento de diferentes derivados en la misma línea de producción.</li>
-                    <li>Producción de diversas geometrías de hembrado.</li>
-                    <li>Sistema modular estandarizado.</li>
-                    <li>Adecuado para acero y aluminio.</li>
-                  </ul>
-                  <h1 class="featurette-title2">Geometría de hembrado</h1>
-                  <p> Hembrado plano, de cuerda y especial en piezas de acero y aluminio.</p>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="col-12">
-                  <h1 class="featurette-title text-center">Diseño modular</h1>
-                  <p class="text-center"> El diseño modular del FFThemtec Single S permite una gran variedad de configuraciones diferentes.</p>
-                  <div class="row">
-                    <div class="col-lg-10 offset-lg-1">
-                      <img class="img-fluid w-100" src="./img/hemSingleS_ModularSystem.png" alt="">
-                    </div>
-                  </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="col-12 col-lg-10 offset-lg-1">
-                  <h1 class="featurette-title text-center">Datos técnicos</h1>
-                  
-                  
-                  <h1 class="featurette-title2">Datos básicos</h1>
-                  <table class="table table-striped">
-                    <tbody>
-                      <tr>
-                        <td>Longitud</td>
-                        <td>150 mm</td>
-                      </tr>
-                      <tr>
-                        <td>Ancho</td>
-                        <td>140 mm</td>
-                      </tr>
-                      <tr>
-                        <td>Altura</td>
-                        <td>340 mm</td>
-                      </tr>
-                      <tr>
-                        <td>Peso</td>
-                        <td>Aprox. 7 kg</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  
-
-                  <h1 class="featurette-title2">Condiciones de Operación</h1>
-                  <table class="table table-striped">
-                    <tbody>
-                      <tr>
-                        <td>Humedad del aire</td>
-                        <td>5 - 95 %</td>
-                      </tr>
-                      <tr>
-                        <td>Temperatura ambiente</td>
-                        <td>10 - 40 °C</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-
-                  <h1 class="featurette-title2">Información Adicional</h1>
-                  <table class="table table-striped">
-                    <tbody>
-                      <tr>
-                        <td>Norma</td>
-                        <td>EN ISO 12100-2:2010</td>
-                      </tr>
-                      <tr>
-                        <td>Disponibilidad técnica</td>
-                        <td>≥ 99,8 %</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-
-                  <h1 class="featurette-title2">Propiedades</h1>
-                  <table class="table table-striped">
-                    <tbody>
-                      <tr>
-                        <td>Herramienta guiada por robot</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Carcasa básica estandarizada</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Celda de carga de presión integrada</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Hasta 3 rodillos de hembrado</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Aplicación: componentes montados</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Compatible con sistema de limpieza de rodillos HA 130 RC</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <!-- Botones de descarga de la ficha técnica -->
-                  <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3"></button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4"></button>
-                  </div> -->
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal for Single F -->
-      <div class="modal fade" id="productModalF" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-          <div class="modal-content">
-            <div class="modal-header d-flex align-items-center justify-content-between">
-              <!-- Logo y Título alineados a la izquierda -->
-              <div class="d-flex align-items-center">
-                <img src="../common_img/FFF_Logo.png" alt="FFT logo" height="30">
-                <h1 class="modal-title featurette-title ms-2" id="exampleModalFullscreenLabel">hemtec Single F</h1>
-              </div>
-            
-              <!-- Botón de cierre alineado a la derecha -->
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            
-            <div class="modal-body">
-              
-              <div class="row"> <!-- mb-5 -->
-                <div class="col-lg-6">
-                  <div id="carouselExampleControlsmodalF" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="./img/hemSingleFx500px_(5).png" class="d-block w-100 rounded-5" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./img/hemSingleFx500px_(6).png" class="d-block w-100 rounded-5" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./img/hemSingleFx500px_(7).png" class="d-block w-100 rounded-5" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsmodalF" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsmodalF" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-                
-                <div class="col-lg-6">
-                  <h1 class="featurette-title">Resumen</h1>
-                  <p> Cabezal rígido, ideal para puertas, cofres y paneles laterales. Es intercambiable con el modelo S sin cambiar el programa del robot.</p>
-                  <h1 class="featurette-title2">Características clave</h1>
-                  <ul>
-                    <li>Soporte de rodillo y rodillo de hembrado seleccionables a partir de un sistema modular estandarizado.</li>
-                    <li>Calidad de proceso optimizada y alta tolerancia a errores.</li>
-                    <li>Las tolerancias de las piezas y la calidad de los componentes pueden ser ajustadas mediante el programa del robot.</li>
-                    <li>No requiere suministro de medios adicionales.</li>
-                    <li>La base rígida puede intercambiarse fácilmente con el modelo FFThemtec Single S sin necesidad de modificar el programa del robot.</li>
-                    <li>Sistema rígido para el pre-hembrado y sistema suspendido para el hembrado final, lo que garantiza una alta calidad en todo el proceso.</li>
-                    <li>Posibilidad de procesar diferentes variantes de productos en la misma línea de producción.</li>
-                    <li>Medición indirecta de la fuerza de hembrado para un control preciso del proceso.</li>
-                    <li>Capacidad para producir diversas geometrías de hembrado.</li>
-                    <li>Adecuado tanto para acero como para aluminio.</li>
-                    <li>Posiciones ventajosas de los ejes del robot para componentes con formas complejas (como piezas con forma de canal).</li>
-                  </ul>
-                  
-                  <h1 class="featurette-title2">Aplicaciones</h1>
-                  <ul>
-                    <li>Cofres</li>
-                    <li>Cajuelas</li>
-                    <li>Defensas</li>
-                  </ul>
-
-                  <h1 class="featurette-title2">Geometría de hembrado</h1>
-                  <ul>
-                    <li>Hembrado plano</li>
-                    <li>Hembrado de cuerda</li>
-                    <li>Geometrías de hembrado especiales en piezas de acero y aluminio</li>
-                  </ul>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="col-12">
-                  <h1 class="featurette-title text-center">Diseño modular</h1>
-                  <p class="text-center"> El diseño modular del FFThemtec Single F permite una gran variedad de configuraciones diferentes.</p>
-                  <div class="row">
-                    <div class="col-lg-10 offset-lg-1">
-                      <img class="img-fluid w-100" src="./img/hemSingleF_ModularSystem.png" alt="">
-                    </div>
-                  </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-              </div>
-
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal for Single Y -->
-      <div class="modal fade" id="productModalY" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-          <div class="modal-content">
-            <div class="modal-header d-flex align-items-center justify-content-between">
-              <!-- Logo y Título alineados a la izquierda -->
-              <div class="d-flex align-items-center">
-                <img src="../common_img/FFF_Logo.png" alt="FFT logo" height="30">
-                <h1 class="modal-title featurette-title ms-2" id="exampleModalFullscreenLabel">hemtec Single Y</h1>
-              </div>
-            
-              <!-- Botón de cierre alineado a la derecha -->
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            
-            <div class="modal-body">
-              
-              <div class="row"> <!-- mb-5 -->
-                <div class="col-lg-6">
-                  <div id="carouselExampleControlsmodalY" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="./img/hemSingleYx500px_(2).png" class="d-block w-100 rounded-5" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./img/hemSingleYx500px_(4).png" class="d-block w-100 rounded-5" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./img/hemSingleYx500px_(8).png" class="d-block w-100 rounded-5" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsmodalY" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsmodalY" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-                
-                <div class="col-lg-6">
-                  <h1 class="featurette-title">Resumen</h1>
-                  <p> Optimizado para piezas curvadas como cofres y defensas. Ofrece un acceso mejorado y configuración de ejes optimizada.</p>
-                  <h1 class="featurette-title2">Características clave</h1>
-                  <ul>
-                    <li>Soporte de rodillo y rodillo de hembrado seleccionables a partir de un sistema modular estandarizado.</li>
-                    <li>Optimización de la calidad del proceso y alta tolerancia a errores.</li>
-                    <li>Las tolerancias de las piezas pueden ajustarse mediante el programa del robot.</li>
-                    <li>No requiere suministro de medios adicionales.</li>
-                    <li>Medición de la fuerza de hembrado para el control de calidad y del proceso.</li>
-                    <li>Configuración optimizada del eje del robot para trabajar en piezas curvadas, como cofres.</li>
-                    <li>Alta calidad garantizada gracias al sistema rígido para el pre-hembrado y el sistema suspendido para el hembrado final.</li>
-                    <li>Capacidad de procesar diferentes derivados en la misma línea de producción.</li>
-                    <li>Medición indirecta de la fuerza de hembrado para asegurar precisión en el control del proceso.</li>
-                    <li>Producción de diversas geometrías de hembrado, adaptándose a múltiples aplicaciones.</li>
-                    <li>Adecuado para trabajar con piezas de acero y aluminio.</li>
-                    <li>Posiciones ventajosas del eje del robot para componentes con formas complejas, como piezas en forma de canal.</li>
-                  </ul>                                 
-                  
-                  <h1 class="featurette-title2">Aplicaciones</h1>
-                  <ul>
-                    <li>Cofres</li>
-                    <li>Cajuelas</li>
-                    <li>Defensas</li>
-                  </ul>
-
-                  <h1 class="featurette-title2">Geometría de hembrado</h1>
-                  <ul>
-                    <li>Hembrado plano</li>
-                    <li>Hembrado de cuerda</li>
-                    <li>Geometrías de hembrado especiales en piezas de acero y aluminio</li>
-                  </ul>
-                  
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="col-12">
-                  <h1 class="featurette-title text-center">Accesibilidad optimizada en piezas curvadas</h1>
-                  <p class="text-center"></p>
-                  <div class="row">
-                    <div class="col-lg-10 offset-lg-1">
-                      <img class="img-fluid w-100" src="./img/singleComparative.jpg" alt="">
-                    </div>
-                  </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="col-12 col-lg-10 offset-lg-1">
-                  <h1 class="featurette-title text-center">Datos técnicos</h1>
-                  
-                  
-                  <h1 class="featurette-title2">Datos básicos</h1>
-                  <table class="table table-striped">
-                    <tbody>
-                      <tr>
-                        <td>Longitud</td>
-                        <td>360 mm</td>
-                      </tr>
-                      <tr>
-                        <td>Ancho</td>
-                        <td>190 mm</td>
-                      </tr>
-                      <tr>
-                        <td>Altura</td>
-                        <td>250 mm</td>
-                      </tr>
-                      <tr>
-                        <td>Peso</td>
-                        <td>19 kg</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  
-
-                  <h1 class="featurette-title2">Condiciones de Operación</h1>
-                  <table class="table table-striped">
-                    <tbody>
-                      <tr>
-                        <td>Humedad del aire</td>
-                        <td>5 - 95 %</td>
-                      </tr>
-                      <tr>
-                        <td>Temperatura ambiente</td>
-                        <td>10 - 40 °C</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-
-                  <h1 class="featurette-title2">Información Adicional</h1>
-                  <table class="table table-striped">
-                    <tbody>
-                      <tr>
-                        <td>Norma</td>
-                        <td>EN ISO 12100-2:2010</td>
-                      </tr>
-                      <tr>
-                        <td>Disponibilidad técnica</td>
-                        <td>≥ 99,8 %</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-
-                  <h1 class="featurette-title2">Propiedades</h1>
-                  <table class="table table-striped">
-                    <tbody>
-                      <tr>
-                        <td>Herramienta guiada por robot</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Carcasa básica estandarizada</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Celda de carga de presión integrada</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>2 rodillos de hembrado</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Aplicación: componentes montados</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Compatible con sistema de limpieza de rodillos HA 130 RC</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <!-- Botones de descarga de la ficha técnica -->
-                  <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3"></button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4"></button>
-                  </div> -->
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
 
     <!-- Contact Section -->
     <!-- <section id="contact" class="bg-light py-5">
@@ -736,6 +288,60 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     <script src="./main.js"></script>
+
+    <script>
+      const url2 = 'https://difusion-fft.com/archivos/48'; // URL del sitio
+  
+      // Realiza una solicitud a la URL proporcionada
+      fetch(url2)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error al realizar la solicitud: ' + response.status);
+          }
+          return response.text();
+        })
+        .then(html => {
+          // Crear un elemento temporal para analizar el HTML
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+  
+          // Buscar todas las etiquetas <a> con el atributo href que contiene ".pdf"
+          const pdfData = [];
+          const items = doc.querySelectorAll('.col.bloq');
+          items.forEach(item => {
+            const anchor = item.querySelector('.thumb a[href*=".pdf"]');
+            const title = item.querySelector('.title')?.textContent.trim();
+            if (anchor && title) {
+              const href = anchor.getAttribute('href');
+              const pdfUrl = new URL(href).searchParams.get('path');
+              if (pdfUrl && pdfUrl.endsWith('.pdf')) {
+                pdfData.push({ title, href });
+              }
+            }
+          });
+  
+          // Seleccionar el contenedor donde se insertará la lista
+          const container = document.getElementById('pdf-list-container');
+  
+          // Crear la lista <ul>
+          const ul = document.createElement('ul');
+          pdfData.forEach(({ title, href }) => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = href;
+            a.textContent = title;
+            a.target = '_blank'; // Abrir en una nueva pestaña
+            li.appendChild(a);
+            ul.appendChild(li);
+          });
+  
+          // Insertar la lista en el contenedor
+          container.appendChild(ul);
+        })
+        .catch(error => {
+          console.error('Error:', error.message);
+        });
+    </script>
 
   </body>
 </html>
