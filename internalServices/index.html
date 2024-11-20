@@ -21,6 +21,22 @@
 
   <body>
 
+    <!-- Modal de aviso, portal en desarrollo -->
+    <div id="development-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: center; z-index: 1000;">
+      <div style="background: white; padding: 2rem; border-radius: 8px; text-align: center; max-width: 500px; width: 90%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #009D80; margin-bottom: 1rem;">Portal en Desarrollo</h2>
+        <p style="color: #555; font-size: 1rem;">Estamos trabajando arduamente para implementar todas las funciones y servicios. Agradecemos su paciencia y comprensión.</p>
+        <button onclick="document.getElementById('development-modal').style.display='none'" style="background: #009D80; color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; margin-top: 1rem; cursor: pointer;">Entendido</button>
+      </div>
+    </div>
+    <!-- Header de aviso, portal en desarrollo -->
+    <div id="development-banner" style="background: #f4e04d; color: #333; padding: 1rem; text-align: center; font-size: 1rem; font-family: Arial, sans-serif;">
+      <strong>Estimado usuario:</strong> Este portal está en desarrollo. Pronto estarán disponibles todas las funciones. Gracias por su comprensión.
+    </div>
+    
+    
+
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -34,7 +50,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="">¡Estamos trabajando para mejorar tu experiencia, espera pronto nuevas funciones!</a>
+              <a class="nav-link" aria-current="page" href="">Ir al Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="">Portal de Servicios Internos</a>
@@ -48,36 +64,18 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="text-center py-2">
-      <div class="px-4 pt-3 my-3 text-center border-bottom">
+    <section class="py-2">
+      
+      <div class="px-4 pt-3 my-3 border-bottom">
         <div class="row">
     
           <!-- Breadcrumb, Logo, Summary -->
-          <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-            <!-- <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a class="a-breadcrumb-item" href="#">Joining, Hemming and Separating</a></li>
-                <li class="breadcrumb-item"><a class="a-breadcrumb-item" href="#">hemtec</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Single</li>
-              </ol>
-            </nav> -->
-            <!-- <img src="./img/lineLogo666x274.jpg" class="img-fluid rounded-3 mb-4 linelogo-img" alt="Example image" loading="lazy"> -->
-            <h1>Bienvenidos al portal de Servicios Internos de FFT México</h1>
-            <p class="lead mb-4 text-justify">En FFT, estamos comprometidos en ofrecerte las herramientas y recursos necesarios para optimizar tu experiencia en el trabajo. Este portal es tu espacio para acceder a los servicios y comunicarte directamente sobre temas importantes. Mantente al día con los comunicados, consulta el menú semanal del comedor y participa en encuestas que nos ayudarán a mejorar cada aspecto de nuestro entorno laboral. ¡Tu voz es importante para construir un mejor FFT cada día!</p>
-            <br>
-            <p style="color: #009d80; font-weight: bolder;">¡Estamos trabajando para mejorar tu experiencia, espera pronto nuevas funciones!</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-              <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Ficha técnica completa</button>
-              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Conocer más...</button> -->
-            </div>
+          <div class="col-12 d-flex flex-column">
+            
+            <h1>Portal de Servicios Internos de FFT México</h1>
+            <p class="lead mb-4 text-justify">Bienvenido al espacio donde encontrarás todas las herramientas y recursos necesarios para optimizar tu día a día en FFT.</p>
+            
           </div>
-    
-          <!-- Imagen de Introducción al catálogo -->
-          <!-- <div class="col-12 col-lg-6">
-            <div class="container px-5">
-              <img src="./img/hemSingleS_01_Low.jpg" class="img-fluid border rounded-3 shadow-lg mb-4 custom-img" alt="Example image" loading="lazy">
-            </div>
-          </div> -->
     
         </div>
       </div>
