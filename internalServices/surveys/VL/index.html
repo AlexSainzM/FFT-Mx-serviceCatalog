@@ -161,6 +161,70 @@
                   <label for="departamentoAcusado" class="form-label">Área o departamento:</label>
                   <input type="text" class="form-control" id="departamentoAcusado" name="departamentoAcusado" placeholder="Escribe el área o departamento">
                 </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">
+                        ¿Hay miembros del comité de ética FFT involucrados?
+                    </button>
+                </div>
+        
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLiveLabel">Miembros del comité de ética FFT involucrados</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Por favor, selecciona a los miembros del comité de ética que estuvieron involucrados:</p>
+                                <div class="my-3">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="miembroEnrico" name="miembrosInvolucrados[]" value="Enrico Stölzner">
+                                        <label class="form-check-label" for="miembroEnrico">Enrico Stölzner</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="miembroLuis" name="miembrosInvolucrados[]" value="Luis Gallegos">
+                                        <label class="form-check-label" for="miembroLuis">Luis Gallegos</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="miembroIvan" name="miembrosInvolucrados[]" value="Iván Ocapo">
+                                        <label class="form-check-label" for="miembroIvan">Iván Ocapo</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="miembroRafael" name="miembrosInvolucrados[]" value="Rafael Ordoñez">
+                                        <label class="form-check-label" for="miembroRafael">Rafael Ordoñez</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="miembroAbraham" name="miembrosInvolucrados[]" value="Abraham Gutierrez">
+                                        <label class="form-check-label" for="miembroAbraham">Abraham Gutierrez</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="miembroTim" name="miembrosInvolucrados[]" value="Tim Weber">
+                                        <label class="form-check-label" for="miembroTim">Tim Weber</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="miembroGabriel" name="miembrosInvolucrados[]" value="Gabriel Almaraz">
+                                        <label class="form-check-label" for="miembroGabriel">Gabriel Almaraz</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="miembroJose" name="miembrosInvolucrados[]" value="José Carlos Sanchez">
+                                        <label class="form-check-label" for="miembroJose">José Carlos Sanchez</label>
+                                    </div>
+                                </div>
+        
+                                <p>Si es necesario, proporciona información adicional:</p>
+                                <div class="col-md-12">
+                                    <label for="infoAdicional" class="form-label">Información adicional</label>
+                                    <input type="text" class="form-control" id="infoAdicional" name="infoAdicional" placeholder="Escribe información adicional" required>
+                                    <div class="invalid-feedback">No has proporcionado información adicional.</div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
               </div>
             </div>
           
