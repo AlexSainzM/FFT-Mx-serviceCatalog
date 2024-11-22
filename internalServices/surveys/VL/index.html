@@ -91,49 +91,33 @@
           <h3 class="featurette-title2">Por favor ayudanos completando las siguientes secciones del cuestionario.</h3>
           <!-- <p class=""> Aquí encontrarás todo lo que necesitas saber sobre eventos, cambios de políticas y noticias relevantes.</p> -->
 
-          <form>  
+          <form action="https://formspree.io/f/xwpkqjby" method="POST">  
             <div class="bd-example">
                 <div class="accordion" id="accordionExample">
                     <!-- Datos generales del reporte -->
                     <div class="accordion-item">
                         <h4 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                <h5>Datos generales del reporte</h5>
+                                <h5>¿Con qué situación está relacionado su reporte?</h5>
                             </button>
                         </h4>
 
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
 
-                                <h6 class="mb-3">¿Con qué situación está relacionado su reporte?</h6>
-                                
+                                <h6 class="mb-3">Seleccione con qué situaciones está relacionado su reporte.</h6>
                                 <div class="my-3">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                        <label class="form-check-label" for="same-address">Violencia / Hostigamiento laboral</label>
+                                        <input type="checkbox" class="form-check-input" id="reporte-violencia" name="reporteRelacionadoCon" value="Violencia / Hostigamiento laboral">
+                                        <label class="form-check-label" for="reporte-violencia">Violencia / Hostigamiento laboral</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                        <label class="form-check-label" for="same-address">Acoso Sexual</label>
+                                        <input type="checkbox" class="form-check-input" id="reporte-acoso" name="reporteRelacionadoCon" value="Acoso Sexual">
+                                        <label class="form-check-label" for="reporte-acoso">Acoso Sexual</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                        <label class="form-check-label" for="same-address">Conductas no éticas</label>
-                                    </div>
-                                </div>
-
-                                <hr class="my-4">
-
-                                <h6 class="mb-3">¿Desea que su reporte sea anónimo?</h6>
-
-                                <div class="my-3">
-                                    <div class="form-check">
-                                    <input id="rAnonimoSi" name="rAnonimo" type="radio" class="form-check-input" checked required>
-                                    <label class="form-check-label" for="credit">Si</label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input id="rAnonimoNo" name="rAnonimo" type="radio" class="form-check-input" required>
-                                    <label class="form-check-label" for="debit">No</label>
+                                        <input type="checkbox" class="form-check-input" id="reporte-conductas" name="reporteRelacionadoCon" value="Conductas no éticas">
+                                        <label class="form-check-label" for="reporte-conductas">Conductas no éticas</label>
                                     </div>
                                 </div>
 
@@ -154,72 +138,71 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                             
-                                <h6 class="mb-3">Por favor, introduce los datos de la persona que presenta la queja o reclamación</h6>
+                                <h6 class="mb-3">Por favor, introduce los datos de la persona que presenta la queja o reclamación.</h6>
                         
                                 <div class="row gy-3">
+
+                                    <h6 class="mb-0">¿Desea que su reporte sea anónimo?</h6>
+                                    <div class="my-3">
+                                        <div class="form-check">
+                                            <input id="rAnonimoSi" name="rAnonimo" type="radio" class="form-check-input" checked required>
+                                            <label class="form-check-label" for="rAnonimoSi">Sí</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input id="rAnonimoNo" name="rAnonimo" type="radio" class="form-check-input" required>
+                                            <label class="form-check-label" for="rAnonimoNo">No</label>
+                                        </div>
+                                    </div>
+
                                     
                                     <div class="col-md-6">
-                                    <label for="nombreAfectado" class="form-label">Nombre:</label>
-                                    <input type="text" class="form-control" id="nombreAfectado" name="nombreAfectado" placeholder="" required>
-                                    <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                    <div class="invalid-feedback">
-                                        No has colocado un nombre
-                                    </div>
-                                    </div>
-            
-                                    <div class="col-md-6">
-                                        <label for="apellidosAfectado" class="form-label">Apellidos:</label>
-                                        <input type="text" class="form-control" id="apellidosAfectado" name="apellidosAfectado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
+                                        <label for="nombreAfectado" class="form-label">Nombre y apellidos:</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Escribe tu nombre completo" required>
                                         <div class="invalid-feedback">
-                                            No has colocado un apellido
+                                            No has colocado un nombre.
                                         </div>
                                     </div>
-            
+                                    
+                                    <div class="col-md-6">
+                                        <label for="departamentoAfectado" class="form-label">Área o departamento:</label>
+                                        <input type="text" class="form-control" id="departamentoAfectado" name="departamentoAfectado" placeholder="Escribe tu área o departamento" required>
+                                        <div class="invalid-feedback">
+                                            No has colocado un área o departamento.
+                                        </div>
+                                    </div>
+                                    
                                     <div class="col-md-6">
                                         <label for="puestoAfectado" class="form-label">Puesto:</label>
-                                        <input type="text" class="form-control" id="puestoAfectado" name="puestoAfectado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
+                                        <input type="text" class="form-control" id="puestoAfectado" name="puestoAfectado" placeholder="Escribe tu puesto" required>
                                         <div class="invalid-feedback">
-                                            No has colocado un puesto
+                                            No has colocado un puesto.
                                         </div>
                                     </div>
-            
-                                    <div class="col-md-6">
-                                        <label for="departamentoAfectado" class="form-label">Area o departamento:</label>
-                                        <input type="text" class="form-control" id="departamentoAfectado" name="departamentoAfectado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                        <div class="invalid-feedback">
-                                            No has colocado un area o departamento
-                                        </div>
-                                    </div>
-            
+                                    
                                     <div class="col-md-6">
                                         <label for="telefonoAfectado" class="form-label">Teléfono de contacto:</label>
-                                        <input type="text" class="form-control" id="telefonoAfectado" name="telefonoAfectado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
+                                        <input type="tel" class="form-control" id="telefonoAfectado" name="telefonoAfectado" placeholder="Escribe tu número de contacto" required>
                                         <div class="invalid-feedback">
-                                            No has colocado un telefono de contacto.
+                                            No has colocado un teléfono de contacto.
                                         </div>
                                     </div>
-            
+                                    
                                     <div class="col-md-6">
                                         <label for="emailAfectado" class="form-label">Correo electrónico:</label>
-                                        <input type="text" class="form-control" id="emailAfectado" name="emailAfectado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Escribe tu correo electrónico" required>
                                         <div class="invalid-feedback">
-                                            No has colocado un email de contacto.
+                                            No has colocado un correo de contacto.
                                         </div>
                                     </div>
-            
+                                    
                                     <div class="col-md-6">
-                                        <label for="jefeAfectado" class="form-label">Jefe Inmediato:</label>
-                                        <input type="text" class="form-control" id="jefeAfectado" name="jefeAfectado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
+                                        <label for="jefeAfectado" class="form-label">Jefe inmediato:</label>
+                                        <input type="text" class="form-control" id="jefeAfectado" name="jefeAfectado" placeholder="Escribe el nombre de tu jefe" required>
                                         <div class="invalid-feedback">
                                             No has colocado el nombre de tu jefe o gerente.
                                         </div>
                                     </div>
+                                    
 
                                     <button class="w-100 btn btn-primary btn-lg buttonFFTGreen mb-3"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         <h5>Continuar</h5>
@@ -237,172 +220,125 @@
                             </button>
                         </h4>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            
                             <div class="accordion-body">
-                                
-                                <h6 class="mb-3">Por favor, introduce los datos de la persona contra la que se presenta la queja o reclamación</h6>
 
-                        
+                                <h6 class="mb-3">Por favor, introduce los datos de la persona contra la que se presenta la queja o reclamación</h6>
+                            
                                 <div class="row gy-3">
-                                    
                                     <div class="col-md-6">
                                         <label for="nombreAcusado" class="form-label">Nombre:</label>
-                                        <input type="text" class="form-control" id="nombreAcusado" name="nombreAcusado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                        <div class="invalid-feedback">
-                                            No has colocado un nombre
-                                        </div>
+                                        <input type="text" class="form-control" id="nombreAcusado" name="nombreAcusado" placeholder="Escribe el nombre" required>
+                                        <div class="invalid-feedback">No has colocado un nombre.</div>
                                     </div>
-
+                            
                                     <div class="col-md-6">
                                         <label for="apellidosAcusado" class="form-label">Apellidos:</label>
-                                        <input type="text" class="form-control" id="apellidosAcusado" name="apellidosAcusado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                        <div class="invalid-feedback">
-                                            No has colocado un apellido
-                                        </div>
+                                        <input type="text" class="form-control" id="apellidosAcusado" name="apellidosAcusado" placeholder="Escribe los apellidos" required>
+                                        <div class="invalid-feedback">No has colocado un apellido.</div>
                                     </div>
-
+                            
                                     <div class="col-md-6">
                                         <label for="puestoAcusado" class="form-label">Puesto:</label>
-                                        <input type="text" class="form-control" id="puestoAcusado" name="puestoAcusado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                        <div class="invalid-feedback">
-                                            No has colocado un puesto
-                                        </div>
+                                        <input type="text" class="form-control" id="puestoAcusado" name="puestoAcusado" placeholder="Escribe el puesto" required>
+                                        <div class="invalid-feedback">No has colocado un puesto.</div>
                                     </div>
-
+                            
                                     <div class="col-md-6">
-                                        <label for="departamentoAcusado" class="form-label">Area o departamento:</label>
-                                        <input type="text" class="form-control" id="departamentoAcusado" name="departamentoAcusado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                        <div class="invalid-feedback">
-                                            No has colocado un area o departamento
-                                        </div>
+                                        <label for="departamentoAcusado" class="form-label">Área o departamento:</label>
+                                        <input type="text" class="form-control" id="departamentoAcusado" name="departamentoAcusado" placeholder="Escribe el área o departamento" required>
+                                        <div class="invalid-feedback">No has colocado un área o departamento.</div>
                                     </div>
-
+                            
                                     <div class="col-md-6">
                                         <label for="telefonoAcusado" class="form-label">Teléfono de contacto:</label>
-                                        <input type="text" class="form-control" id="telefonoAcusado" name="telefonoAcusado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                        <div class="invalid-feedback">
-                                            No has colocado un telefono.
-                                        </div>
+                                        <input type="tel" class="form-control" id="telefonoAcusado" name="telefonoAcusado" placeholder="Escribe el teléfono" required>
+                                        <div class="invalid-feedback">No has colocado un teléfono.</div>
                                     </div>
-
+                            
                                     <div class="col-md-6">
                                         <label for="emailAcusado" class="form-label">Correo electrónico:</label>
-                                        <input type="text" class="form-control" id="emailAcusado" name="emailAcusado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                        <div class="invalid-feedback">
-                                            No has colocado un email.
-                                        </div>
+                                        <input type="email" class="form-control" id="emailAcusado" name="emailAcusado" placeholder="Escribe el correo electrónico" required>
+                                        <div class="invalid-feedback">No has colocado un correo electrónico.</div>
                                     </div>
-
+                            
                                     <div class="col-md-6">
-                                        <label for="jefeAcusado" class="form-label">Jefe Inmediato:</label>
-                                        <input type="text" class="form-control" id="jefeAcusado" name="jefeAcusado" placeholder="" required>
-                                        <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                        <div class="invalid-feedback">
-                                            No has colocado el nombre del jefe inmediato de la persona contra la que se presenta la reclamación.
-                                        </div>
+                                        <label for="jefeAcusado" class="form-label">Jefe inmediato:</label>
+                                        <input type="text" class="form-control" id="jefeAcusado" name="jefeAcusado" placeholder="Escribe el nombre del jefe" required>
+                                        <div class="invalid-feedback">No has colocado el nombre del jefe inmediato.</div>
                                     </div>
-
+                            
                                     <div class="col-md-6">
-                                        <label for="jefeAcusado" class="form-label"></label>
-                                         <!--Botón del modal-->
-                                        <div class="col-md-12">
-                                            
-                                            <div class="mb-5">
-                                                <button type="button" class="w-100 btn btn-lg px-4  buttonFFTGreen" data-bs-toggle="modal" data-bs-target="#staticBackdropLive" onclick="" id="miembrosComiteInv">
-                                                    ¿Hay miembros del cómite de ética FFT involucrados?
-                                                </button>
-                                            </div>
-                                                
-                                            <div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                  <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="staticBackdropLiveLabel">Miembros de comité de ética FFT involucrados.</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p class="col-md-12">Por favor seleccione a los miembros del comite de ética que estuvieron involucrados.</p>
-                                                        <p class="col-md-12">Miembros:</p>
-
-                                                        <div class="my-3">
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                                                <label class="form-check-label" for="same-address">Enrico Stölzner</label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                                                <label class="form-check-label" for="same-address">Luis Gallegos</label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                                                <label class="form-check-label" for="same-address">Iván Ocapo</label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                                                <label class="form-check-label" for="same-address">Rafael Ordoñez</label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                                                <label class="form-check-label" for="same-address">Abraham Gutierrez</label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                                                <label class="form-check-label" for="same-address">Tim Weber</label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                                                <label class="form-check-label" for="same-address">Gabriel Almaraz</label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                                                <label class="form-check-label" for="same-address">José Carlos Sanchez</label>
-                                                            </div>
-                                                        </div>                                     
-                                                    
-                                                        <p class="col-md-12">Si es necesario, puede proporcionar información adicional sobre la participación de los miembros seleccionados:</p>
-
-                                                        <!--Aqui nos quedamos-->
-
-                                                        <div class="col-md-12">
-                                                            <label for="nombreAcusado" class="form-label">Información Adicional</label>
-                                                            <input type="text" class="form-control" id="nombreAcusado" name="nombreAcusado" placeholder="" required>
-                                                            <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                            <div class="invalid-feedback">
-                                                                No has colocado un nombre
-                                                            </div>
+                                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">
+                                            ¿Hay miembros del comité de ética FFT involucrados?
+                                        </button>
+                                    </div>
+                            
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="staticBackdropLiveLabel">Miembros del comité de ética FFT involucrados</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Por favor, selecciona a los miembros del comité de ética que estuvieron involucrados:</p>
+                                                    <div class="my-3">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="miembroEnrico" name="miembrosInvolucrados[]" value="Enrico Stölzner">
+                                                            <label class="form-check-label" for="miembroEnrico">Enrico Stölzner</label>
                                                         </div>
-                                                      
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="miembroLuis" name="miembrosInvolucrados[]" value="Luis Gallegos">
+                                                            <label class="form-check-label" for="miembroLuis">Luis Gallegos</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="miembroIvan" name="miembrosInvolucrados[]" value="Iván Ocapo">
+                                                            <label class="form-check-label" for="miembroIvan">Iván Ocapo</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="miembroRafael" name="miembrosInvolucrados[]" value="Rafael Ordoñez">
+                                                            <label class="form-check-label" for="miembroRafael">Rafael Ordoñez</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="miembroAbraham" name="miembrosInvolucrados[]" value="Abraham Gutierrez">
+                                                            <label class="form-check-label" for="miembroAbraham">Abraham Gutierrez</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="miembroTim" name="miembrosInvolucrados[]" value="Tim Weber">
+                                                            <label class="form-check-label" for="miembroTim">Tim Weber</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="miembroGabriel" name="miembrosInvolucrados[]" value="Gabriel Almaraz">
+                                                            <label class="form-check-label" for="miembroGabriel">Gabriel Almaraz</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="miembroJose" name="miembrosInvolucrados[]" value="José Carlos Sanchez">
+                                                            <label class="form-check-label" for="miembroJose">José Carlos Sanchez</label>
+                                                        </div>
                                                     </div>
-                                                    <div class="modal-footer">
-                                                      
-                                                      <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal">Cerrar</button>
-                                                      <!--Botones del Modal deshabilidatados
-                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                      <button type="button" class="btn btn-primary">Understood</button>
-                                                      -->
+                            
+                                                    <p>Si es necesario, proporciona información adicional:</p>
+                                                    <div class="col-md-12">
+                                                        <label for="infoAdicional" class="form-label">Información adicional</label>
+                                                        <input type="text" class="form-control" id="infoAdicional" name="infoAdicional" placeholder="Escribe información adicional" required>
+                                                        <div class="invalid-feedback">No has proporcionado información adicional.</div>
                                                     </div>
-                                                  </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                                 </div>
                                             </div>
-                                            
                                         </div>
-                                        
                                     </div>
-
-                                    <button class="w-100 btn btn-primary btn-lg buttonFFTGreen mb-3"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            
+                                    <button class="w-100 btn btn-primary btn-lg buttonFFTGreen mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                         <h5>Continuar</h5>
                                     </button>
-                                    
                                 </div>
-
-                                
-
                             </div>
+                            
                         </div>
                     
                     </div>
@@ -414,70 +350,52 @@
                         </h4>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                
-                                <h6 class="mb-3">Guía de los hechos</h6>
 
-                                <p class="mb-3">Para garantizar una respuesta oportuna a su reporte, escriba a continuación los hechos relevantes al asunto.</h4>
-                        
+                                <h6 class="mb-3">Guía de los hechos</h6>
+                                <p class="mb-3">Para garantizar una respuesta oportuna a su reporte, escriba a continuación los hechos relevantes al asunto.</p>
+                            
                                 <div class="row gy-3">
                                     <div class="col-12">
                                         <label for="queSucedio" class="form-label">¿Qué fue lo que sucedió?</label>
-                                        <input type="text" class="form-control" id="queSucedio" name="queSucedio" placeholder="" required>
-                                        <div class="invalid-feedback">
-                                        Describa que fue lo que sucedió.
-                                        </div>
+                                        <input type="text" class="form-control" id="queSucedio" name="queSucedio" placeholder="Describa lo que sucedió" required>
+                                        <div class="invalid-feedback">Describa qué fue lo que sucedió.</div>
                                     </div>
-
+                            
                                     <div class="col-12">
-                                        <label for="cuandoSucedio" class="form-label">¿Cuando sucedió?</label>
-                                        <input type="date" class="form-control" id="cuandoSucedio" name="cuandoSucedio" placeholder="" required>
-                                        <div class="invalid-feedback">
-                                        Describa cuando y a que hora sucedió.
-                                        </div>
+                                        <label for="cuandoSucedio" class="form-label">¿Cuándo sucedió?</label>
+                                        <input type="date" class="form-control" id="cuandoSucedio" name="cuandoSucedio" required>
+                                        <div class="invalid-feedback">Indique la fecha en la que sucedió.</div>
                                     </div>
-
+                            
                                     <div class="col-12">
-                                        <label for="cuandoSucedio" class="form-label">¿A qué hora sucedió?</label>
-                                        <input type="text" class="form-control" id="horaSucedio" name="horaSucedio" placeholder="" required>
-                                        <div class="invalid-feedback">
-                                        Describa cuando y a que hora sucedió.
-                                        </div>
+                                        <label for="horaSucedio" class="form-label">¿A qué hora sucedió?</label>
+                                        <input type="time" class="form-control" id="horaSucedio" name="horaSucedio" required>
+                                        <div class="invalid-feedback">Indique la hora en la que sucedió.</div>
                                     </div>
-
+                            
                                     <div class="col-12">
                                         <label for="dondeSucedio" class="form-label">¿Dónde sucedió?</label>
-                                        <input type="text" class="form-control" id="dondeSucedio" name="dondeSucedio" placeholder="" required>
-                                        <div class="invalid-feedback">
-                                        Describa donde sucedió.
-                                        </div>
+                                        <input type="text" class="form-control" id="dondeSucedio" name="dondeSucedio" placeholder="Describa el lugar donde sucedió" required>
+                                        <div class="invalid-feedback">Indique dónde sucedió.</div>
                                     </div>
-
+                            
                                     <div class="col-12">
-                                        <label for="involucrados" class="form-label">¿Quién o quienes estuvieron involucrados?</label>
-                                        <input type="text" class="form-control" id="involucrados" name="involucrados" placeholder="" required>
-                                        <div class="invalid-feedback">
-                                        Describa quién o quienes estuvieron involucrados.
-                                        </div>
+                                        <label for="involucrados" class="form-label">¿Quién o quiénes estuvieron involucrados?</label>
+                                        <input type="text" class="form-control" id="involucrados" name="involucrados" placeholder="Mencione a las personas involucradas" required>
+                                        <div class="invalid-feedback">Describa quién o quiénes estuvieron involucrados.</div>
                                     </div>
-
+                            
                                     <div class="col-12">
                                         <label for="involucradosActos" class="form-label">¿Qué hizo cada persona?</label>
-                                        <input type="text" class="form-control" id="involucradosActos" name="involucradosActos" placeholder="" required>
-                                        <div class="invalid-feedback">
-                                        Describa qué hizo cada una de las persona involucradas.
-                                        </div>
+                                        <textarea class="form-control" id="involucradosActos" name="involucradosActos" rows="4" placeholder="Describa las acciones de cada persona involucrada" required></textarea>
+                                        <div class="invalid-feedback">Describa qué hizo cada una de las personas involucradas.</div>
                                     </div>
-                                    
-                                    <a href="./thanks.html">
-                                        <button class="w-100 btn btn-primary btn-lg buttonFFTGreen" type="button">Enviar reporte</button>                                                
+                            
+                                    <a href="./thanks.html" class="w-100">
+                                        <button class="btn btn-primary btn-lg buttonFFTGreen w-100" type="submit">Enviar reporte</button>
                                     </a>
-
-                                    
-                                    
                                 </div>
-
-                                
-
+                            
                             </div>
                         </div>
                     
@@ -495,7 +413,7 @@
     <!-- Modals for Product Details -->
     
       <!-- Modal Comunicados -->
-      <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+      <!-- <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
@@ -510,7 +428,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       
 
