@@ -93,13 +93,27 @@ fetch(url2)
 
     // Crear la lista <ul>
     const ul = document.createElement('ul');
+
+    // Agregar las clases necesarias al <ul>
+    ul.classList.add('list-group', 'list-group-flush', 'list-group-numbered');
+
     pdfData.forEach(({ title, href }) => {
+      // Crear el elemento <li>
       const li = document.createElement('li');
+      
+      // Agregar la clase necesaria al <li>
+      li.classList.add('list-group-item');
+      
+      // Crear el elemento <a>
       const a = document.createElement('a');
       a.href = href;
       a.textContent = title;
       a.target = '_blank'; // Abrir en una nueva pestaña
+      
+      // Añadir el enlace al <li>
       li.appendChild(a);
+      
+      // Añadir el <li> al <ul>
       ul.appendChild(li);
     });
 
@@ -109,3 +123,4 @@ fetch(url2)
   .catch(error => {
     console.error('Error:', error.message);
   });
+

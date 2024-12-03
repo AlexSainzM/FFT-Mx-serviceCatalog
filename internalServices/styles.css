@@ -22,7 +22,7 @@ body {
     background-color: #ffffff; /* Gris claro para fondo */
   }
   
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, a {
     color: #009D80; /* Verde FFT */
   }
 
@@ -57,6 +57,11 @@ body {
   }
 
   /* Estilo para el enlace activo en el navbar */
+  .navbar-nav .nav-link{
+    color: #009D80;
+    
+  }
+  
   .navbar-nav .nav-link.active {
     font-weight: bolder;
     color: #009D80 !important; /* Verde FFT */
@@ -104,3 +109,74 @@ body {
     opacity: 90%;
     font-size: x-large;
   }
+
+
+
+
+
+
+
+
+
+
+  /* campaign-timer */
+.campaign-timer{
+  background: rgba(50,55,63,.00);
+  max-width: 555px;
+  margin: 5px auto;
+  padding:5px 0 5px;
+  border-radius: 5px;
+  /* box-shadow: 0 0 20px rgba(34,31,31,.2); */
+}
+.camp {
+  display: block;
+  font-size: 14px;
+  color: #000000;
+  font-weight:600;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 0;
+  opacity: 80%;
+}
+.time-after{
+  position:relative;
+}
+.time-after:after{
+  position:absolute;
+  content:':';
+  top:4px;
+  right:-8px;
+}
+.time {
+  display: inline-block;
+  line-height: 1;
+  padding: 5px 8px 0;
+  font-weight: 500;
+  font-size: 22px;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  opacity: 50%;
+}/* campaign-timer */
+
+@media (max-width: 600px) {
+  .time {
+    padding: 5px 5px 0;
+    font-size: 18px;
+  }
+
+  .camp {
+    font-size: 12px;
+  }
+  
+}
+
+@media (min-width: 2600px) {
+  .time {
+    padding: 5px 5px 0;
+    font-size: 50px;
+  }
+
+  .camp {
+    font-size: 30px;
+  }
+  
+}
