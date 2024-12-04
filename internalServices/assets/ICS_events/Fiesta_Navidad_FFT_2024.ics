@@ -1,14 +1,30 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//FFT Fiesta de Navidad 2024//EN
+PRODID:-//FFT Mexico//Fiesta Navidad//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/Mexico_City
+BEGIN:STANDARD
+DTSTART:20241027T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20240407T020000
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+END:DAYLIGHT
+END:VTIMEZONE
 BEGIN:VEVENT
-UID:fiesta-navidad-fft-2024@example.com
+UID:
 DTSTAMP:20241206T150000Z
-DTSTART:20241206T150000Z
-DTEND:20241206T190000Z
+DTSTART;TZID=America/Mexico_City:20241206T150000
+DTEND;TZID=America/Mexico_City:20241206T190000
 SUMMARY:Fiesta de Navidad FFT 2024
-DESCRIPTION:Te esperamos para celebrar juntos en una tarde de convivencia, música, cena y mucha diversión.
-LOCATION:Salón Los Girasoles, Av. 5 de Mayo 1408, San Juan Aquiahuac, 72810 San Andrés Cholula, Pue.
+DESCRIPTION:Únete a nosotros para celebrar la fiesta de Navidad de FFT. Habrá música, comida y actividades especiales para todos.
+LOCATION:Salón Provenza Girasoles. Av. 5 de Mayo, 1408 San Andrés Cholula. https://maps.app.goo.gl/m8x5otjsjm2yMV9W8
 STATUS:CONFIRMED
 END:VEVENT
 END:VCALENDAR
