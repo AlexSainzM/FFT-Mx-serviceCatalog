@@ -1,30 +1,16 @@
 /* Tipografía */
 body {
-    font-family: 'Arial', sans-serif;
+  background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
+    /* font-family: 'Arial', sans-serif; */
   }
   
-  h1, h2, h3, h4 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
+  .container {
+    max-width: 1080px;
   }
   
-  p, li {
-    font-family: 'Arial', sans-serif;
-    opacity: 80%;
-  }
+
   
-  .modal-title, .btn {
-    font-family: 'Raleway', sans-serif;
-  }
-  
-  /* Colores principales */
-  body {
-    background-color: #ffffff; /* Gris claro para fondo */
-  }
-  
-  h1, h2, h3, h4, a {
-    color: #009D80; /* Verde FFT */
-  }
+ 
 
   .text-justify {
     text-align: justify;
@@ -58,13 +44,8 @@ body {
 
   /* Estilo para el enlace activo en el navbar */
   .navbar-nav .nav-link{
-    color: #009D80;
-    
-  }
-  
-  .navbar-nav .nav-link.active {
-    font-weight: bolder;
-    color: #009D80 !important; /* Verde FFT */
+    color: #fff;
+    font-weight: normal;
   }
 
   .a-breadcrumb-item {
