@@ -1,3 +1,4 @@
+
 const url = 'https://www.difusion-fft.com'; // Cambia por la URL que deseas inspeccionar
 
 // Realiza una solicitud a la URL proporcionada
@@ -15,7 +16,7 @@ fetch(url)
 
     // Buscar todas las imágenes dentro de los elementos con clase 'carousel-item'
     const images = doc.querySelectorAll('.carousel-item img');
-    
+
     // Crear un array para almacenar los valores src
     const srcValues = [];
     images.forEach(img => {
@@ -29,6 +30,7 @@ fetch(url)
 
     // Seleccionar el contenedor del carrusel
     const carouselInner = document.getElementById("carouselInner");
+    const carouselIndicators = document.querySelector(".carousel-indicators");
 
     // Iterar sobre las URLs y crear elementos dinámicamente
     srcValues.forEach((url, index) => {
@@ -49,11 +51,26 @@ fetch(url)
       // Agregar la imagen al div y luego el div al carrusel
       carouselItem.appendChild(img);
       carouselInner.appendChild(carouselItem);
+
+      // Crear dinámicamente los indicadores del carrusel
+      const indicator = document.createElement("button");
+      indicator.type = "button";
+      indicator.dataset.bsTarget = "#lastestNewsCarrousel";
+      indicator.dataset.bsSlideTo = index;
+      indicator.setAttribute("aria-label", `Slide ${index + 1}`);
+      if (index === 0) {
+        // Hacer el primer indicador activo
+        indicator.classList.add("active");
+        indicator.setAttribute("aria-current", "true");
+      }
+      carouselIndicators.appendChild(indicator);
     });
   })
   .catch(error => {
     console.error('Error:', error.message);
   });
+
+
 
 
   const url2 = 'https://difusion-fft.com/archivos/48'; // URL del sitio

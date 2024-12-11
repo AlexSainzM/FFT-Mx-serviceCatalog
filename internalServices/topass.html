@@ -75,6 +75,8 @@
   <body>
 
 <div class="container py-3">
+
+  <!-- Header -->
   <header>
     <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-5" style="background-color: #009d80;">
@@ -119,15 +121,9 @@
   <!-- Sección Noticias, comunicados y encuestas -->
     <!-- Mantente informado -->
     <h2 class="display-6 text-center mb-4">Mantente Informado</h2>
-    <div id="lastestNewsCarrousel" class="carousel slide mb-5" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#lastestNewsCarrousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#lastestNewsCarrousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#lastestNewsCarrousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner" id="carouselInner">
-        
-      </div>
+    <div id="lastestNewsCarrousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-wrap="true">
+      <div class="carousel-indicators"></div>
+      <div class="carousel-inner" id="carouselInner"></div>
       <button class="carousel-control-prev" type="button" data-bs-target="#lastestNewsCarrousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -137,11 +133,10 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
-
+    
 
     <!-- Comunicados y Encuestas-->
-    <div class="row row-cols-1 row-cols-md-2 mb-3 text-center">  
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">  
       <!-- Comunicados -->
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">
@@ -177,10 +172,26 @@
             <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
           </div>
         </div>
+      </div> 
+      <!-- Comedor -->
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Menú comedor</h4>
+          </div>
+          <div class="card-body">
+            <!-- <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1> -->
+            <p class="fs-6 text-muted">Conoce las opciones disponibles en nuestro comedor para esta semana.</p>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Sign up for free</button>
+          </div>
+        </div>
       </div>   
     </div>
 
-    <h2 class="display-6 text-center mb-4">Compare plans</h2>
+
+    
+    <!-- Menu Comedor -->
+    <h2 class="display-6 text-center mb-4">¿Ya conoces el menú de esta semana?</h2>
 
     <!-- <div class="table-responsive">
       <table class="table text-center">
