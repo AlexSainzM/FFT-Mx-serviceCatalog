@@ -8,7 +8,22 @@ body {
     max-width: 1080px;
   }
   
+  /* Define el color verde oficial de FFT */
+  :root {
+    --fft-green: #009d80; /* Reemplaza este código por el verde oficial si es diferente */
+  }
 
+  /* Aplica el color verde a los enlaces dentro de listas específicas */
+  .list-unstyled a {
+    color: var(--fft-green); /* Usa la variable definida */
+    text-decoration: none; /* Opcional: elimina el subrayado */
+  }
+
+  /* Opcional: agrega un efecto hover */
+  .list-unstyled a:hover {
+    color: darkgreen; /* Ajusta si necesitas un efecto hover */
+    text-decoration: underline; /* Opcional: subrayado en hover */
+  }
   
  
 

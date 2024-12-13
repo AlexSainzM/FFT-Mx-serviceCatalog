@@ -90,20 +90,20 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="">Últimas noticias</a>
+                <a class="nav-link" href="#lastestNews">Últimas noticias</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Comedor</a>
+                <a class="nav-link" href="#menuComedor">Comedor</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Buzones de atención</a>
+                <a class="nav-link" href="#atentionForms">Buzones de atención</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="">Comunicación</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="">Acerca de FFT</a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -120,7 +120,7 @@
 
   <!-- Sección Noticias, comunicados y encuestas -->
     <!-- Mantente informado -->
-    <h2 class="display-6 text-center mb-4">Mantente Informado</h2>
+    <h2 class="display-6 text-center mb-4" id="lastestNews">Mantente Informado</h2>
     <div id="lastestNewsCarrousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-wrap="true">
       <div class="carousel-indicators"></div>
       <div class="carousel-inner" id="carouselInner"></div>
@@ -154,7 +154,27 @@
               <li>Priority email support</li>
               <li>Help center access</li>
             </ul> -->
-            <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button> -->
+            <button type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#todosLosComunicados">Ver todos</button>
+
+            <!-- Modal "Todos los comunicados" -->
+            <div class="modal fade" id="todosLosComunicados" tabindex="-1" aria-labelledby="todosLosComunicadosTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="todosLosComunicadosTitle">Comunicados recientes</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" id="listaCompletaComunicados">
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -174,7 +194,7 @@
         </div>
       </div> 
       <!-- Comedor -->
-      <div class="col">
+      <div class="col" id="menuComedor">
         <div class="card mb-4 rounded-3 shadow-sm">
           <div class="card-header py-3">
             <h4 class="my-0 fw-normal">Menú comedor</h4>
