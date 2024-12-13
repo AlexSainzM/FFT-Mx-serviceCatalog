@@ -80,3 +80,27 @@ body {
     margin-top: 7rem;
   }
 }
+
+@media (min-width:400px){
+  .img-pruebas {
+    height: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .img-pruebas{
+    height: 105%;
+  }
+}
+@media (min-width: 1400px) {
+  .img-pruebas{
+    height: 110%;
+  }
+}
+@media (min-width: 1600px) {
+  .img-pruebas{
+    height: 125%;
+  }
+}
+
+
+
