@@ -133,7 +133,7 @@ fetch(url)
       };
 
       // Renderizar los primeros 4 elementos en 'pdf-list-container'
-      renderList('pdf-list-container', pdfData, 4);
+      renderList('pdf-list-container', pdfData, 3);
 
       // Renderizar la lista completa en 'listaCompletaComunicados'
       renderList('listaCompletaComunicados', pdfData);
