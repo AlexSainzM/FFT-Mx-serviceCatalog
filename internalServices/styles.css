@@ -13,6 +13,22 @@ body {
     --fft-green: #009d80; /* Reemplaza este código por el verde oficial si es diferente */
   }
 
+  .btn-pulse {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
   /* Aplica el color verde a los enlaces dentro de listas específicas */
   .list-unstyled a {
     color: var(--fft-green); /* Usa la variable definida */
