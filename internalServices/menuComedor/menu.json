@@ -3,427 +3,342 @@
   "days": [
     {
       "day": "Lunes",
-      "date": "2024-12-02",
+      "date": "2025-01-06",
       "menu": {
-        "Sopa aguada": "Sopa de calabacita con garbanzo",
-        "Sopa seca": "Tornillo al burro",
-        "Plato fuerte": "Tinga de cerdo",
-        "Antojito": "Tlacoyos",
-        "Platillo saludable": "Pollo en salsa de amaranto",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles refritos",
-        "Ensalada": "Ensalada de berros con jitomate",
-        "Postre": "Gelatina de naranja",
-        "Agua": "Agua de jamaica",
-        "Salsa": "Roja asada"
-      }
-    },
-    {
-      "day": "Martes",
-      "date": "2024-12-03",
-      "menu": {
-        "Sopa aguada": "Caldo tlapeño",
-        "Sopa seca": "Arroz verde",
-        "Plato fuerte": "Pollo paprika con ensalada verde",
-        "Antojito": "Huevo en salsa verde",
-        "Platillo saludable": "Colache de calabacitas con queso",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con cilantro",
-        "Ensalada": "Ensalada de pepino con zanahoria rallada y amaranto",
-        "Postre": "Bofitos",
-        "Agua": "Agua de limón",
-        "Salsa": "Ranchera"
-      }
-    },
-    {
-      "day": "Miércoles",
-      "date": "2024-12-04",
-      "menu": {
-        "Sopa aguada": "Caldo de verduras con lenteja",
-        "Sopa seca": "Codito blanco",
-        "Plato fuerte": "Amarillito",
-        "Antojito": "Tortitas de papa con ensalada verde",
-        "Platillo saludable": "Ensalada oriental (espinaca, lechuga, naranja, fajitas de pollo, ajonjolí, aderezo de mostaza)",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con cebolla",
-        "Ensalada": "Jícama en bastones",
-        "Postre": "Sandía con chile piquín",
-        "Agua": "Té de manzanilla",
-        "Salsa": "Serranito"
-      }
-    },
-    {
-      "day": "Jueves",
-      "date": "2024-12-05",
-      "menu": {
-        "Sopa aguada": "Sopa de pasta",
-        "Sopa seca": "Verduras sazonadas",
-        "Plato fuerte": "Trozo de cerdo con adobo con papas",
-        "Antojito": "Huarache bandera con pollo",
-        "Platillo saludable": "Albóndigas de soya en caldillo rojo",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles de la olla",
-        "Ensalada": "Ensalada con lechuga sangría y jitomate",
-        "Postre": "Gelatina de fresa",
-        "Agua": "Agua de tamarindo",
-        "Salsa": "Verde con pipicha"
-      }
-    },
-    {
-      "day": "Viernes",
-      "date": "2024-12-06",
-      "menu": {
-        "Sopa aguada": "Nopales navegantes",
-        "Sopa seca": "Espaguetti verde",
-        "Plato fuerte": "Chile relleno en caldillo blanco",
-        "Antojito": "Birria norteña",
-        "Platillo saludable": "Pechuga al limón con ensalada de col",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles al chipotle",
-        "Ensalada": "Jícama y pepino en bastones",
-        "Postre": "Palomitas",
-        "Agua": "Agua de guayaba",
-        "Salsa": "Roja"
-      }
-    },
-    {
-      "day": "Lunes",
-      "date": "2024-12-09",
-      "menu": {
-        "Sopa aguada": "Consomé de verduras con garbanzo",
-        "Sopa seca": "Arroz italiano (finas hierbas y mantequilla)",
-        "Plato fuerte": "Poxole rojo de cabeza",
-        "Antojito": "Salbutes de pollo",
-        "Platillo saludable": "Picadillo de soya",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con serrano",
-        "Ensalada": "Lechugas mixtas con zanahoria rallada",
-        "Postre": "Galleta Trukis",
-        "Agua": "Agua de tamarindo",
-        "Salsa": "Pastor verde"
-      }
-    },
-    {
-      "day": "Martes",
-      "date": "2024-12-10",
-      "menu": {
-        "Sopa aguada": "Sopa de alubias",
-        "Sopa seca": "Espaguetti primavera",
-        "Plato fuerte": "Clemole de zanahoria, ejote y calabaza",
-        "Antojito": "Enchiladas de pipián rojo rellenas de requesón",
-        "Platillo saludable": "Ratatouille (calabaza, chayote, jitomate, queso, berenjena, hierbas finas)",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles refritos",
-        "Ensalada": "Jícamas en juliana",
-        "Postre": "Gelatina de limón",
-        "Agua": "Agua de sandía",
-        "Salsa": "Ranchera"
-      }
-    },
-    {
-      "day": "Miércoles",
-      "date": "2024-12-11",
-      "menu": {
-        "Sopa aguada": "Sopa molida de verduras",
-        "Sopa seca": "Arroz blanco",
-        "Plato fuerte": "Pechuga de pollo en mole poblano",
-        "Antojito": "Croquetas de atún con papa y ensalada verde",
-        "Platillo saludable": "Picadillo cubano (carne molida, pimiento, papa, pasas, jitomate, comino)",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con cilantro",
-        "Ensalada": "Pepinos en rodajas",
-        "Postre": "Natilla de cacahuate",
-        "Agua": "Agua de limón",
-        "Salsa": "Verde martajada"
-      }
-    },
-    {
-      "day": "Jueves",
-      "date": "2024-12-12",
-      "menu": {
-        "Sopa aguada": "Consomé de pollo con ejote",
-        "Sopa seca": "Espaguetti en salsa de cilantro",
-        "Plato fuerte": "Bistec a la mexicana",
-        "Antojito": "Chimichangas de queso y frijol",
-        "Platillo saludable": "Ensalada suprema (lechuga escarola, lechuga larga, jitomate, mango, cebolla morada, pollo, aderezo)",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con cebolla",
-        "Ensalada": "Ensalada de lechugas mixtas con rabanito, cebolla morada y cilantro",
-        "Postre": "Dulce de camote",
-        "Agua": "Agua de guayaba",
-        "Salsa": "Árbol"
-      }
-    },
-    {
-      "day": "Viernes",
-      "date": "2024-12-13",
-      "menu": {
-        "Sopa aguada": "Sopa de espinaca con alubia",
-        "Sopa seca": "Arroz canario",
-        "Plato fuerte": "Milanesa con ensalada verde",
-        "Antojito": "Chilaquiles rojos con huevo",
-        "Platillo saludable": "Chop suey (calabaza, pimiento, zanahoria, germen de soya, pollo, salsa de soya)",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Sopa aguada": "Consomé de pollo a la mexicana con col y alubia",
+        "Sopa seca": "Fideo seco",
+        "Plato fuerte": "Pollo en salsa casé con hierbas finas",
+        "Antojito": "Croquetas de atún y papa con ensalada de zanahoria",
+        "Platillo saludable": "Ensalada César (lechugas mixtas, queso rallado, crotones, pollo)",
+        "Opción de cambio": "Pechuga asada/Carne asada",
         "Frijoles": "Frijoles con epazote",
-        "Ensalada": "Mezcla de lechuga con germen de alfalfa",
+        "Ensalada": "Lechuga sangría, jícama",
         "Postre": "Gelatina de uva",
-        "Agua": "Té de limón",
-        "Salsa": "Arriera"
-      }
-    },
-    {
-      "day": "Lunes",
-      "date": "2024-12-16",
-      "menu": {
-        "Sopa aguada": "Sopa de zanahoria",
-        "Sopa seca": "Arroz mulato",
-        "Plato fuerte": "Molcajete de cerdo",
-        "Antojito": "Envueltos de queso",
-        "Platillo saludable": "Huarache de nopal con queso panela, salsa, lechuga, crema y salsa",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con epazote",
-        "Ensalada": "Ensalada de lechugas mixtas, jitomate, cebolla morada",
-        "Postre": "Gelatina bicolor",
-        "Agua": "Agua de sandía",
-        "Salsa": "Verde cruda"
+        "Agua": "Agua de guayaba",
+        "Salsa": "Salsa mixta"
       }
     },
     {
       "day": "Martes",
-      "date": "2024-12-17",
-      "menu": {
-        "Sopa aguada": "Consomé con verduras",
-        "Sopa seca": "Tallarines al burro",
-        "Plato fuerte": "Trozo en salsa arriera",
-        "Antojito": "Tostadas de quesillo",
-        "Platillo saludable": "Ensalada de atún con galletas saladas",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles de la olla",
-        "Ensalada": "Nopales con cebolla y orégano",
-        "Postre": "Flan",
-        "Agua": "Agua de jamaica",
-        "Salsa": "Roja"
-      }
-    },
-    {
-      "day": "Miércoles",
-      "date": "2024-12-18",
-      "menu": {
-        "Sopa aguada": "Caldo xochitl",
-        "Sopa seca": "Arroz rojo",
-        "Plato fuerte": "Pollo en salsa de guajillo con papas",
-        "Antojito": "Molotes de queso",
-        "Platillo saludable": "Ensalada de huevo duro y pimientos",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles refritos",
-        "Ensalada": "Rodajas de elote al perejil",
-        "Postre": "Churro",
-        "Agua": "Agua de limón",
-        "Salsa": "Norteña"
-      }
-    },
-    {
-      "day": "Jueves",
-      "date": "2024-12-19",
-      "menu": {
-        "Sopa aguada": "Sopa de papa y poro",
-        "Sopa seca": "Verduras sazonadas",
-        "Plato fuerte": "Bistec de cerdo en salsa de champiñones",
-        "Antojito": "Chanclas de molida",
-        "Platillo saludable": "Pimiento relleno de pollo a la mexicana",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con cebolla",
-        "Ensalada": "Zanahoria rallada",
-        "Postre": "Gelatina de jerez",
-        "Agua": "Agua de horchata",
-        "Salsa": "Verde hervida"
-      }
-    },
-    {
-      "day": "Viernes",
-      "date": "2024-12-20",
+      "date": "2025-01-07",
       "menu": {
         "Sopa aguada": "Sopa de verduras",
-        "Sopa seca": "Arroz amarillo",
-        "Plato fuerte": "Mortadela empanizada con ensalada rusa",
-        "Antojito": "Chicharrón en salsa verde",
-        "Platillo saludable": "Arañas de verdura a la plancha en salsa verde",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles refritos",
-        "Ensalada": "Berros con germen de soya",
-        "Postre": "Engalletado de limón",
-        "Agua": "Agua de guanábana",
-        "Salsa": "Chipotle"
-      }
-    },
-    {
-      "day": "Lunes",
-      "date": "2024-12-23",
-      "menu": {
-        "Sopa aguada": "Consomé de verduras",
-        "Sopa seca": "Codito verde",
-        "Plato fuerte": "Bistec de cerdo con papas",
-        "Antojito": "Enchiladas rojas de pollo",
-        "Platillo saludable": "Jamón hawaiano",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles refritos",
-        "Ensalada": "Lechuga, apio, ajonjolí y jitomate",
-        "Postre": "Plátanos con chocolate",
-        "Agua": "Agua de limón",
-        "Salsa": "Martajada"
-      }
-    },
-    {
-      "day": "Martes",
-      "date": "2024-12-24",
-      "menu": {
-        "Sopa aguada": "Bisque de camarón",
-        "Sopa seca": "Verduras sazonadas",
-        "Plato fuerte": "Picadillo navideño (carne molida, pasas, nuez, pimiento, cebolla)",
-        "Antojito": "Soufflé de papa con queso gratinado",
-        "Platillo saludable": "Ensalada Waldorf",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con epazote",
-        "Ensalada": "Ensalada de espinacas, arándanos y suprema de toronja",
-        "Postre": "Ensalada navideña de manzana",
-        "Agua": "Agua de jamaica",
-        "Salsa": "Verde con pipicha"
-      }
-    },
-    {
-      "day": "Miércoles",
-      "date": "2024-12-25",
-      "menu": {
-        "Sopa aguada": "Caldo pollo 2 coles",
-        "Sopa seca": "Arroz rojo",
-        "Plato fuerte": "Bistec de cerdo al pasilla con nopales",
-        "Antojito": "Tostadas de pata",
-        "Platillo saludable": "Pechuga en salsa de cilantro con verduras al vapor",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con chipotle",
-        "Ensalada": "Pepinos y betabel en rizos",
-        "Postre": "Galleta de waffer",
-        "Agua": "Agua de tamarindo",
-        "Salsa": "Pastor roja"
-      }
-    },
-    {
-      "day": "Jueves",
-      "date": "2024-12-26",
-      "menu": {
-        "Sopa aguada": "Sopa a la mexicana con zanahoria y chayote",
-        "Sopa seca": "Papas encebolladas",
-        "Plato fuerte": "Pollo alioli con verduras al vapor",
-        "Antojito": "Tortitas de deshebrada en salsa norteña",
-        "Platillo saludable": "Queso asado con col a la mexicana",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles refritos",
-        "Ensalada": "Ensalada verde con pepitas",
-        "Postre": "Gelatina de piña",
-        "Agua": "Agua de sandía",
-        "Salsa": "Manzano"
-      }
-    },
-    {
-      "day": "Viernes",
-      "date": "2024-12-27",
-      "menu": {
-        "Sopa aguada": "Sopa poblana",
-        "Sopa seca": "Fideo seco con queso",
-        "Plato fuerte": "Manchamanteles de cerdo",
-        "Antojito": "Picaditas de chorizo",
-        "Platillo saludable": "Ensalada sol (lechugas mixtas, germen de alfalfa, naranja suprema, cubos de pollo, queso panela en cubos, crotones)",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles de la olla",
-        "Ensalada": "Espinacas con pimiento rojo",
-        "Postre": "Chocovick",
-        "Agua": "Agua de mandarina",
-        "Salsa": "Jalapeño"
-      }
-    },
-    {
-      "day": "Lunes",
-      "date": "2024-12-30",
-      "menu": {
-        "Sopa aguada": "Sopa de frijol",
-        "Sopa seca": "Tallarín al burro",
-        "Plato fuerte": "Albóndigón relleno de verduras",
-        "Antojito": "Huarache de chorizo",
-        "Platillo saludable": "Ensalada mediterránea (lechugas mixtas, aceitunas, queso en cubos, jitomate, pepitas)",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles de la olla",
-        "Ensalada": "Jícama rallada, berros y betabel",
-        "Postre": "Palanqueta",
-        "Agua": "Agua de pepino",
-        "Salsa": "Xnipec"
-      }
-    },
-    {
-      "day": "Martes",
-      "date": "2024-12-31",
-      "menu": {
-        "Sopa aguada": "Crema de espinaca",
         "Sopa seca": "Arroz blanco",
-        "Plato fuerte": "Pierna adobada",
-        "Antojito": "Medallones de pollo a la naranja con papas cambray",
-        "Platillo saludable": "Tortitas de surimi con ensalada de col",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
+        "Plato fuerte": "Trozo de cerdo en salsa verde con calabacita",
+        "Antojito": "Huarache de maíz con chorizo",
+        "Platillo saludable": "Flautas rellenas de requesón horneadas",
+        "Opción de cambio": "Pechuga asada/Carne asada",
         "Frijoles": "Frijoles refritos",
-        "Ensalada": "Verduras california",
-        "Postre": "Flan",
-        "Agua": "Agua de jamaica",
-        "Salsa": "Macha"
+        "Ensalada": "Zanahoria rallada",
+        "Postre": "Flan de vainilla",
+        "Agua": "Agua de pepino con limón",
+        "Salsa": "Salsa verde"
       }
     },
     {
       "day": "Miércoles",
-      "date": "2025-01-01",
+      "date": "2025-01-08",
       "menu": {
-        "Sopa aguada": "Consomé arriero",
-        "Sopa seca": "Codito a la poblana",
-        "Plato fuerte": "Mancuerna de pollo en salsa verde con ejotes",
-        "Antojito": "Chicharrón en salsa",
-        "Platillo saludable": "Ensalada hispana (lechugas mixtas, jitomate, cebolla morada, huevo duro, pepino)",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con serrano",
-        "Ensalada": "Lechugas mixtas, col morada",
-        "Postre": "Bofitos",
-        "Agua": "Agua de tamarindo",
-        "Salsa": "Árabe"
+        "Sopa aguada": "Consomé con cilantro y garbanzos",
+        "Sopa seca": "Espagueti verde",
+        "Plato fuerte": "Parrillada de carnes mixtas",
+        "Antojito": "Colache de papa con tocino",
+        "Platillo saludable": "Marina rellena de ensalada rusa de atún",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con cebolla",
+        "Ensalada": "Ensalada verde",
+        "Postre": "Bocadín",
+        "Agua": "Agua de jamaica",
+        "Salsa": "Salsa roja"
       }
     },
     {
       "day": "Jueves",
-      "date": "2025-01-02",
+      "date": "2025-01-09",
       "menu": {
-        "Sopa aguada": "Sopa de alubia con epazote",
-        "Sopa seca": "Arroz con zanahoria",
-        "Plato fuerte": "Mole de olla",
-        "Antojito": "Mortadela hawaiana con puré de papa",
-        "Platillo saludable": "Rollos primavera (horneados)",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con epazote",
-        "Ensalada": "Jícama en bastones",
-        "Postre": "Gelatina de cereza",
-        "Agua": "Agua de guayaba",
-        "Salsa": "Mexicana"
+        "Sopa aguada": "Sopa ranchera (grano de elote, poblano, calabacita, epazote)",
+        "Sopa seca": "Arroz rojo",
+        "Plato fuerte": "Pechuga al ajillo con ensalada verde",
+        "Antojito": "Chimichangas de queso con frijol en cama de lechugas mixtas",
+        "Platillo saludable": "Tostadas de ropa vieja",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con chorizo",
+        "Ensalada": "Pepinos en bastones con limón y chile piquín",
+        "Postre": "Gelatina mosaico",
+        "Agua": "Agua de sandía",
+        "Salsa": "Salsa mexicana"
       }
     },
     {
       "day": "Viernes",
-      "date": "2025-01-03",
+      "date": "2025-01-10",
       "menu": {
-        "Sopa aguada": "Sopa purépecha",
-        "Sopa seca": "Codito con espinaca",
-        "Plato fuerte": "Pollo en salsa verde",
-        "Antojito": "Cemita de carnitas",
-        "Platillo saludable": "Ceviche de soya",
-        "Opción de cambio": "Pechuga asada/Carne asada/Queso asado",
-        "Frijoles": "Frijoles con chipotle",
-        "Ensalada": "Mezcla de germen con pimiento amarillo",
+        "Sopa aguada": "Sopa de pasta con poro",
+        "Sopa seca": "Fusilli arrabiata",
+        "Plato fuerte": "Carne enchilada con ensalada verde",
+        "Antojito": "Tostadas de quesillo",
+        "Platillo saludable": "Ceviche de soya con galletas saladas",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con ajo",
+        "Ensalada": "Chayotes al orégano",
+        "Postre": "Capirotada",
+        "Agua": "Agua de naranja",
+        "Salsa": "Salsa ranchera"
+      }
+    },
+    {
+      "day": "Lunes",
+      "date": "2025-01-13",
+      "menu": {
+        "Sopa aguada": "Sopa minestrone (fusilli, zanahoria, perejil, espinaca, alubia, ajo)",
+        "Sopa seca": "Arroz canario",
+        "Plato fuerte": "Cochinita pibil con cebolla morada",
+        "Antojito": "Tacos dorados de papa",
+        "Platillo saludable": "Jitomate relleno de ensalada rusa",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles de la olla",
+        "Ensalada": "Betabel rallado",
+        "Postre": "Gelatina naranja",
+        "Agua": "Agua de guayaba",
+        "Salsa": "Salsa martajada"
+      }
+    },
+    {
+      "day": "Martes",
+      "date": "2025-01-14",
+      "menu": {
+        "Sopa aguada": "Sopa de poblano y epazote y elote",
+        "Sopa seca": "Macarrón rojo",
+        "Plato fuerte": "Pollo asado con papas",
+        "Antojito": "Chile poblano relleno de queso en caldillo blanco",
+        "Platillo saludable": "Tacos orientales vegetarianos (soya) con jamaica",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con chile de árbol",
+        "Ensalada": "Espinaca con cebolla, pepitas y jitomate",
+        "Postre": "Crepa con cajeta",
+        "Agua": "Agua de jamaica",
+        "Salsa": "Salsa roja"
+      }
+    },
+    {
+      "day": "Miércoles",
+      "date": "2025-01-15",
+      "menu": {
+        "Sopa aguada": "Crema de chayote",
+        "Sopa seca": "Arroz mulato",
+        "Plato fuerte": "Bistec de cerdo encebollado con rajas",
+        "Antojito": "Chicharrón en salsa verde",
+        "Platillo saludable": "Alambre de verduras",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con cilantro",
+        "Ensalada": "Rábanos con nopales",
+        "Postre": "Alegría",
+        "Agua": "Agua de tamarindo",
+        "Salsa": "Salsa de chipotle"
+      }
+    },
+    {
+      "day": "Jueves",
+      "date": "2025-01-16",
+      "menu": {
+        "Sopa aguada": "Consomé de pollo con verduras y alberjón",
+        "Sopa seca": "Tallarines al perejil",
+        "Plato fuerte": "Mixiote verde",
+        "Antojito": "Pambazo de papa con chorizo con adobo",
+        "Platillo saludable": "Chop suey de pollo con verduras",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con serrano",
+        "Ensalada": "Calabaza a la poblana",
         "Postre": "Parfait de yogurt con granola",
+        "Agua": "Agua de limón",
+        "Salsa": "Salsa de árbol"
+      }
+    },
+    {
+      "day": "Viernes",
+      "date": "2025-01-17",
+      "menu": {
+        "Sopa aguada": "Sopa de acelga",
+        "Sopa seca": "Arroz blanco",
+        "Plato fuerte": "Pechuga de pollo en mole poblano con ajonjolí",
+        "Antojito": "Cemita de carnitas (carnitas, cebolla, cilantro, papalo)",
+        "Platillo saludable": "Pepinos rellenos de ensalada de atún",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con epazote",
+        "Ensalada": "Zanahorias sauté",
+        "Postre": "Cremita de fresa",
+        "Agua": "Agua de papaya",
+        "Salsa": "Salsa verde"
+      }
+    },
+    {
+      "day": "Lunes",
+      "date": "2025-01-20",
+      "menu": {
+        "Sopa aguada": "Sopa ribolita (alubia, calabaza)",
+        "Sopa seca": "Fusilli al orégano",
+        "Plato fuerte": "Cerdo con rajas poblanas y papa en salsa verde",
+        "Antojito": "Enchiladas morelenses (guajillo, pasilla, papa y chorizo)",
+        "Platillo saludable": "Tortitas de papa rellenas de queso fresco",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con perejil",
+        "Ensalada": "Espinaca y cebolla morada con crutones",
+        "Postre": "Gelatina de uva",
+        "Agua": "Agua de limón",
+        "Salsa": "Salsa verde"
+      }
+    },
+    {
+      "day": "Martes",
+      "date": "2025-01-21",
+      "menu": {
+        "Sopa aguada": "Consomé de pollo con verduras y garbanzo",
+        "Sopa seca": "Arroz blanco",
+        "Plato fuerte": "Pollo en salsa de chipotle cremoso",
+        "Antojito": "Pelonas",
+        "Platillo saludable": "Alambre vegetariano (pimientos verde, rojo y amarillo fileteado, queso, champiñones y cebolla)",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles refritos",
+        "Ensalada": "Jitomate con ajonjolí, lechuga y apio",
+        "Postre": "Ensalada dulce de zanahoria",
+        "Agua": "Agua de naranja",
+        "Salsa": "Salsa roja"
+      }
+    },
+    {
+      "day": "Miércoles",
+      "date": "2025-01-22",
+      "menu": {
+        "Sopa aguada": "Crema de frijol",
+        "Sopa seca": "Espagueti en salsa de cilantro",
+        "Plato fuerte": "Niño envuelto en salsa verde con calabacitas",
+        "Antojito": "Calabacitas capeadas rellenas (jamón, tocino y queso en cubos)",
+        "Platillo saludable": "Chop suey",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con cilantro",
+        "Ensalada": "Ensalada de espinaca cruda con jitomate y amaranto",
+        "Postre": "Gelatina de durazno",
+        "Agua": "Agua de guayaba",
+        "Salsa": "Salsa de chipotle"
+      }
+    },
+    {
+      "day": "Jueves",
+      "date": "2025-01-23",
+      "menu": {
+        "Sopa aguada": "Sopa de tortilla",
+        "Sopa seca": "Arroz canario",
+        "Plato fuerte": "Mole de olla (pollo)",
+        "Antojito": "Alambre de cerdo",
+        "Platillo saludable": "Ensalada del chef (lechuga romana, jamón, queso, jitomate, huevo duro)",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con hoja santa",
+        "Ensalada": "Col a la mexicana",
+        "Postre": "Engalletado de limón",
+        "Agua": "Agua de jamaica",
+        "Salsa": "Salsa ranchera"
+      }
+    },
+    {
+      "day": "Viernes",
+      "date": "2025-01-24",
+      "menu": {
+        "Sopa aguada": "Sopa de verduras con alberjón",
+        "Sopa seca": "Coditos con perejil",
+        "Plato fuerte": "Pollo KFC con ensalada de col",
+        "Antojito": "Chalupas bandera con deshebrada",
+        "Platillo saludable": "Albóndigas de soya en caldillo",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con chile de árbol",
+        "Ensalada": "Espinacas frescas con ajonjolí y tocino crujiente",
+        "Postre": "Galleta waffer",
         "Agua": "Agua de sandía",
-        "Salsa": "Michoacana"
+        "Salsa": "Salsa de habanero"
+      }
+    },
+    {
+      "day": "Lunes",
+      "date": "2025-01-27",
+      "menu": {
+        "Sopa aguada": "Sopa de col blanca con calabaza y alubia",
+        "Sopa seca": "Arroz con apio",
+        "Plato fuerte": "Alambre suizo (cerdo, pimientos, cebolla morada, queso en cubos)",
+        "Antojito": "Molote de papa",
+        "Platillo saludable": "Ensalada de la casa (queso en cubos, jitomate, elote, lechugas mixtas, tortillas doradas)",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con ajo",
+        "Ensalada": "Betabel rallado con amaranto",
+        "Postre": "Gelatina de cereza",
+        "Agua": "Agua de pepino",
+        "Salsa": "Salsa arriera"
+      }
+    },
+    {
+      "day": "Martes",
+      "date": "2025-01-28",
+      "menu": {
+        "Sopa aguada": "Sopa roja de papa (papa en juliana)",
+        "Sopa seca": "Codito hawaiano",
+        "Plato fuerte": "Tinga de pollo",
+        "Antojito": "Tostadas mixtas (picadillo, quesillo)",
+        "Platillo saludable": "Brochetas de verduras con queso",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con perejil",
+        "Ensalada": "Lechuga con jitomate y pepino",
+        "Postre": "Pan francés",
+        "Agua": "Agua de jamaica",
+        "Salsa": "Salsa verde"
+      }
+    },
+    {
+      "day": "Miércoles",
+      "date": "2025-01-29",
+      "menu": {
+        "Sopa aguada": "Crema de zanahoria con perejil fresco",
+        "Sopa seca": "Arroz amarillo",
+        "Plato fuerte": "Salpicón",
+        "Antojito": "Chilorio de pollo",
+        "Platillo saludable": "Tortilla española con verduras",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con cilantro",
+        "Ensalada": "Nopales a la mexicana",
+        "Postre": "Pulparindo",
+        "Agua": "Agua de papaya",
+        "Salsa": "Salsa ranchera"
+      }
+    },
+    {
+      "day": "Jueves",
+      "date": "2025-01-30",
+      "menu": {
+        "Sopa aguada": "Sopa de munición con poro",
+        "Sopa seca": "Verduras sazonadas",
+        "Plato fuerte": "Clemole (salsa de tomate, ejotes, calabaza y zanahoria)",
+        "Antojito": "Chicharrón al albañil",
+        "Platillo saludable": "Picadillo de soya con verduras y germen de soya",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con epazote",
+        "Ensalada": "Pepino con rábanos",
+        "Postre": "Mini hot cakes con cajeta",
+        "Agua": "Agua de guayaba",
+        "Salsa": "Salsa roja"
+      }
+    },
+    {
+      "day": "Viernes",
+      "date": "2025-01-31",
+      "menu": {
+        "Sopa aguada": "Sopa de lentejas",
+        "Sopa seca": "Arroz verde",
+        "Plato fuerte": "Pechuga de pollo encacahuatada",
+        "Antojito": "Dobladas de requesón con rajas de cuaresmeño, crema y salsa",
+        "Platillo saludable": "Crepa de requesón y espinaca en salsa italiana",
+        "Opción de cambio": "Pechuga asada/Carne asada",
+        "Frijoles": "Frijoles con chile de árbol",
+        "Ensalada": "Ensalada de col",
+        "Postre": "Cremita de nuez",
+        "Agua": "Agua de sandía",
+        "Salsa": "Salsa verde"
       }
     }
   ]
