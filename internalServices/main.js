@@ -77,7 +77,7 @@ fetch(url)
 
 
   
-  const url2 = 'https://difusion-fft.com/archivos/48'; // URL del sitio
+  const url2 = 'https://difusion-fft.com/archivos/56'; // URL del sitio
 
   // Realiza una solicitud a la URL proporcionada
   fetch(url2)
