@@ -3,7 +3,7 @@
 
   <head>
 
-    <!-- First release of Service
+    <!-- Second release of Service
       Alejandro Sainz
       FFT México Internal Services
     V00.0.1 -->
@@ -21,36 +21,6 @@
 
   <body>
 
-    
-    <!-- Header de avisos (portal en desarrollo) -->
-    <!-- <div id="warning-banner" style="background: #f4e04d; color: #333; padding: 1rem; text-align: center; font-size: 1rem; font-family: Arial, sans-serif;">
-      <strong>Estimado usuario:</strong> Este portal está en desarrollo. Pronto estarán disponibles todas las funciones. Gracias por su comprensión.
-    </div> -->
-    
-
-    <!-- Navbar -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="">
-          <img src="../../../assets/img/common/FFF_Logo.png" alt="FFT logo" width="mx-auto" height="30">
-          <span></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../../index.html">Volver a Servicios Internos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="">Satisfacción del Menú del Comedor</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav> -->
-
     <!-- Header -->
     <header>
       <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
@@ -67,18 +37,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="../../index.html">Volver al inicio</a>
                 </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link" href="#menuComedor">Comedor</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#atentionForms">Buzones de atención</a>
-                </li> -->
-                <!-- <li class="nav-item">
-                  <a class="nav-link" href="">Comunicación</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">Acerca de FFT</a>
-                </li> -->
               </ul>
             </div>
           </div>
@@ -89,262 +47,359 @@
         <h1 class="display-4 fw-normal" style="opacity: 90%;">Servicios Internos FFT México</h1>
         <p class="fs-5 text-muted">Un espacio con todas las herramientas y recursos para optimizar tu día a día en FFT.</p>
       </div> -->
+
     </header>
-
-    <!-- Hero Section -->
-    <!-- <section class="py-0">
-      
-      <div class="px-4 pt-2 my-2 border-bottom">
-        <div class="row">
     
-          <div class="col-12 d-flex flex-column">
-            
-            <h1>Satisfacción del Menú del Comedor</h1>
-            <p class="lead mb-4 text-justify">Queremos ofrecerte una experiencia cada vez mejor en el comedor, y para lograrlo, necesitamos conocer tus opiniones y sugerencias. Por favor, toma unos minutos para calificar el menú de hoy y compartir tus comentarios. ¡Gracias por ayudarnos a mejorar!</p>
-            
-          </div>
-    
-        </div>
-      </div>
-    </section> -->
-    
-
     <!-- Form Section -->
-    <section id="VL_form" class="container py-5">
+    <section id="actualizacionDatosDelPersonal_form" class="container py-5">
 
-      <!-- FFT Cuestionario -->
+      <!-- Actualización de Datos del Personal -->
       <div class="row mb-5">
 
         <div class="col-12">
 
-          <!-- <h3 class="featurette-title2">Por favor ayudanos completando las siguientes secciones del cuestionario.</h3> -->
-          <!-- <p class=""> Aquí encontrarás todo lo que necesitas saber sobre eventos, cambios de políticas y noticias relevantes.</p> -->
-
           <form action="/ruta-del-servidor" method="POST" enctype="multipart/form-data" class="container p-4 shadow rounded bg-light">
-            <h2 class="text-center mb-4">Actualización de Datos del Personal</h2>
-            <p class="text-muted text-center">
-              Por favor, completa todos los campos requeridos para actualizar tu información en la base de datos de RH. 
+            
+            <h1 class="text-center mb-4">¡Actualiza tus Datos y Sé Parte del Cambio Digital!</h1>
+            <p class="text-muted text-justify">
+              ¡Tu colaboración es fundamental para mejorar nuestros procesos! <br><br>
+              Estamos actualizando nuestra base de datos como parte de nuestra transformación digital. Tu información actualizada nos ayudará a optimizar la gestión de datos del equipo. <br><br>
+              <strong>¡Gracias por tu valioso tiempo!</strong>
             </p>
-          
-            <!-- No. de empleado -->
-            <div class="mb-4">
-              <label for="noEmpleado" class="form-label">No. de empleado</label>
-              <input type="number" id="noEmpleado" name="noEmpleado" class="form-control" placeholder="Ingresa tu número de empleado" required>
-            </div>
-          
-            <!-- No. SAP -->
-            <div class="mb-4">
-              <label for="noSAP" class="form-label">No. SAP</label>
-              <input type="number" id="noSAP" name="noSAP" class="form-control" placeholder="Ingresa tu número SAP" required>
-            </div>
-          
-            <!-- Nombre -->
-            <div class="mb-4">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresa tu nombre" required>
-            </div>
-          
-            <!-- Apellido Paterno -->
-            <div class="mb-4">
-              <label for="apellidoPaterno" class="form-label">Apellido Paterno</label>
-              <input type="text" id="apellidoPaterno" name="apellidoPaterno" class="form-control" placeholder="Ingresa tu apellido paterno" required>
-            </div>
-          
-            <!-- Apellido Materno -->
-            <div class="mb-4">
-              <label for="apellidoMaterno" class="form-label">Apellido Materno</label>
-              <input type="text" id="apellidoMaterno" name="apellidoMaterno" class="form-control" placeholder="Ingresa tu apellido materno" required>
-            </div>
-          
-            <!-- Sexo -->
-            <div class="mb-4">
-              <label for="sexo" class="form-label">Sexo</label>
-              <select id="sexo" name="sexo" class="form-select" required>
-                <option value="" disabled selected>Selecciona una opción</option>
-                <option value="Masculino">Masculino</option>
-                <option value="Femenino">Femenino</option>
-                <option value="Otro">Otro</option>
-              </select>
-            </div>
-          
-            <!-- Fecha de Nacimiento -->
-            <div class="mb-4">
-              <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
-              <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="form-control" required>
-            </div>
-          
-            <!-- Lugar de Nacimiento -->
-            <div class="mb-4">
-              <label for="lugarNacimiento" class="form-label">Lugar de Nacimiento</label>
-              <input type="text" id="lugarNacimiento" name="lugarNacimiento" class="form-control" placeholder="Ingresa tu lugar de nacimiento" required>
-            </div>
-          
-            <!-- CURP -->
-            <div class="mb-4">
-              <label for="curp" class="form-label">CURP</label>
-              <input type="text" id="curp" name="curp" class="form-control" placeholder="Ingresa tu CURP" required>
-              <label for="archivoCURP" class="form-label mt-2">Adjuntar archivo CURP</label>
-              <input type="file" id="archivoCURP" name="archivoCURP" class="form-control" accept=".pdf,.jpg,.png">
-            </div>
-          
-            <!-- NSS -->
-            <div class="mb-4">
-              <label for="nss" class="form-label">NSS</label>
-              <input type="text" id="nss" name="nss" class="form-control" placeholder="Ingresa tu NSS" required>
-              <label for="archivoNSS" class="form-label mt-2">Adjuntar archivo NSS</label>
-              <input type="file" id="archivoNSS" name="archivoNSS" class="form-control" accept=".pdf,.jpg,.png">
-            </div>
-          
-            <!-- Constancia de Situación Fiscal -->
-            <div class="mb-4">
-              <label for="situacionFiscal" class="form-label">Constancia de Situación Fiscal</label>
-              <input type="text" id="situacionFiscal" name="situacionFiscal" class="form-control" placeholder="Ingresa tu constancia" required>
-              <label for="archivoSituacionFiscal" class="form-label mt-2">Adjuntar archivo de constancia</label>
-              <input type="file" id="archivoSituacionFiscal" name="archivoSituacionFiscal" class="form-control" accept=".pdf,.jpg,.png">
-            </div>
-          
-            <!-- INE -->
-            <div class="mb-4">
-              <label for="archivoINE" class="form-label">INE</label>
-              <input type="file" id="archivoINE" name="archivoINE" class="form-control" accept=".pdf,.jpg,.png" required>
-            </div>
-          
-            <!-- Nacionalidad -->
-            <div class="mb-4">
-              <label for="nacionalidad" class="form-label">Nacionalidad</label>
-              <input type="text" id="nacionalidad" name="nacionalidad" class="form-control" placeholder="Ingresa tu nacionalidad" required>
-            </div>
+            <p class="text-muted mb-3"><span style="color: red;">*</span> Campos obligatorios</p>
+            <hr>
 
 
-            <h2 class="text-center mb-4">Actualización de Datos del Personal</h2>
-            <p class="text-muted text-center">
-              Por favor, completa todos los campos requeridos para actualizar tu información en la base de datos de RH. 
-            </p>
+            <!-- Datos Personales -->
+            <h2 class="text-center mb-4">Datos Personales</h2>
+            
+              <!-- No. de empleado -->
+              <div class="mb-4">
+                <label for="noEmpleado" class="form-label">No. de empleado <span style="color: red;">*</span></label>
+                <input type="number" id="noEmpleado" name="noEmpleado" class="form-control" placeholder="Ingresa tu número de empleado" required>
+              </div>
+            
+              <!-- No. SAP -->
+              <div class="mb-4">
+                <label for="noSAP" class="form-label">No. SAP <span style="color: red;">*</span></label>
+                <input type="number" id="noSAP" name="noSAP" class="form-control" placeholder="Ingresa tu número SAP" required>
+              </div>
+            
+              <!-- Nombre -->
+              <div class="mb-4">
+                <label for="nombre" class="form-label">Nombre <span style="color: red;">*</span></label>
+                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresa tu nombre" required>
+              </div>
+            
+              <!-- Apellido Paterno -->
+              <div class="mb-4">
+                <label for="apellidoPaterno" class="form-label">Apellido Paterno <span style="color: red;">*</span></label>
+                <input type="text" id="apellidoPaterno" name="apellidoPaterno" class="form-control" placeholder="Ingresa tu apellido paterno" required>
+              </div>
+            
+              <!-- Apellido Materno -->
+              <div class="mb-4">
+                <label for="apellidoMaterno" class="form-label">Apellido Materno <span style="color: red;">*</span></label>
+                <input type="text" id="apellidoMaterno" name="apellidoMaterno" class="form-control" placeholder="Ingresa tu apellido materno" required>
+              </div>
+            
+              <!-- Sexo -->
+              <div class="mb-4">
+                <label for="sexo" class="form-label">Sexo <span style="color: red;">*</span></label>
+                <select id="sexo" name="sexo" class="form-select" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+            
+              <!-- Fecha de Nacimiento -->
+              <div class="mb-4">
+                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento <span style="color: red;">*</span></label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="form-control" required>
+              </div>
+
+              <!-- Nacionalidad -->
+              <div class="mb-4">
+                <label for="nacionalidad" class="form-label">Nacionalidad <span style="color: red;">*</span></label>
+                <input type="text" id="nacionalidad" name="nacionalidad" class="form-control" placeholder="Ingresa tu nacionalidad" required>
+              </div>
+            
+              <!-- Lugar de Nacimiento -->
+              <div class="mb-4">
+                <label for="lugarNacimiento" class="form-label">Lugar de Nacimiento <span style="color: red;">*</span></label>
+                <input type="text" id="lugarNacimiento" name="lugarNacimiento" class="form-control" placeholder="Ingresa tu lugar de nacimiento" required>
+              </div>
+
+              <!-- INE -->
+              <div class="mb-4">
+                <label for="archivoINE" class="form-label">INE <span style="color: red;">*</span></label>
+                <input type="file" id="archivoINE" name="archivoINE" class="form-control" accept=".pdf,.jpg,.png" required>
+              </div>
+            
+              <!-- CURP -->
+              <div class="mb-4">
+                <label for="curp" class="form-label">CURP <span style="color: red;">*</span></label>
+                <input type="text" id="curp" name="curp" class="form-control" placeholder="Ingresa tu CURP" required>
+                <label for="archivoCURP" class="form-label mt-2">Adjuntar archivo CURP</label>
+                <input type="file" id="archivoCURP" name="archivoCURP" class="form-control" accept=".pdf,.jpg,.png">
+              </div>
+
+              <!-- Constancia de Situación Fiscal -->
+              <div class="mb-4">
+                <label for="situacionFiscal" class="form-label">Constancia de Situación Fiscal <span style="color: red;">*</span></label>
+                <input type="text" id="situacionFiscal" name="situacionFiscal" class="form-control" placeholder="Ingresa tu constancia" required>
+                <label for="archivoSituacionFiscal" class="form-label mt-2">Adjuntar archivo de constancia</label>
+                <input type="file" id="archivoSituacionFiscal" name="archivoSituacionFiscal" class="form-control" accept=".pdf,.jpg,.png">
+              </div>
+            
+              <!-- NSS -->
+              <div class="mb-4">
+                <label for="nss" class="form-label">NSS <span style="color: red;">*</span></label>
+                <input type="text" id="nss" name="nss" class="form-control" placeholder="Ingresa tu NSS" required>
+                <label for="archivoNSS" class="form-label mt-2">Adjuntar archivo NSS</label>
+                <input type="file" id="archivoNSS" name="archivoNSS" class="form-control" accept=".pdf,.jpg,.png">
+              </div>
+              <hr>
+            
+              
 
             <!-- Dirección -->
+            <h2 class="text-center mb-4">Dirección</h2>
 
-            <!-- Calle y Número -->
-            <div class="mb-4">
-              <label for="calleNumero" class="form-label">Calle y Número</label>
-              <input type="text" id="calleNumero" name="calleNumero" class="form-control" placeholder="Ejemplo: Av. Siempre Viva 742" required>
-            </div>
+              <!-- Código Postal -->
+              <div class="mb-4">
+                <label for="codigoPostal" class="form-label">Código Postal <span style="color: red;">*</span></label>
+                <input type="number" id="codigoPostal" name="codigoPostal" class="form-control" placeholder="Ejemplo: 12345" required>
+              </div>
 
-            <!-- Colonia -->
-            <div class="mb-4">
-              <label for="colonia" class="form-label">Colonia</label>
-              <input type="text" id="colonia" name="colonia" class="form-control" placeholder="Ingresa tu colonia" required>
-            </div>
+              <!-- Entidad -->
+              <div class="mb-4">
+                <label for="entidad" class="form-label">Entidad <span style="color: red;">*</span></label>
+                <input type="text" id="entidad" name="entidad" class="form-control" placeholder="Ingresa tu estado o entidad federativa" required>
+              </div>
 
-            <!-- Población -->
-            <div class="mb-4">
-              <label for="poblacion" class="form-label">Población</label>
-              <input type="text" id="poblacion" name="poblacion" class="form-control" placeholder="Ingresa tu población" required>
-            </div>
+              <!-- Población -->
+              <div class="mb-4">
+                <label for="poblacion" class="form-label">Población <span style="color: red;">*</span></label>
+                <input type="text" id="poblacion" name="poblacion" class="form-control" placeholder="Ingresa tu población" required>
+              </div>
 
-            <!-- Municipio -->
-            <div class="mb-4">
-              <label for="municipio" class="form-label">Municipio</label>
-              <input type="text" id="municipio" name="municipio" class="form-control" placeholder="Ingresa tu municipio" required>
-            </div>
+              <!-- Municipio -->
+              <div class="mb-4">
+                <label for="municipio" class="form-label">Municipio <span style="color: red;">*</span></label>
+                <input type="text" id="municipio" name="municipio" class="form-control" placeholder="Ingresa tu municipio" required>
+              </div>
 
-            <!-- Entidad -->
-            <div class="mb-4">
-              <label for="entidad" class="form-label">Entidad</label>
-              <input type="text" id="entidad" name="entidad" class="form-control" placeholder="Ingresa tu estado o entidad federativa" required>
-            </div>
+              <!-- Colonia -->
+              <div class="mb-4">
+                <label for="colonia" class="form-label">Colonia <span style="color: red;">*</span></label>
+                <input type="text" id="colonia" name="colonia" class="form-control" placeholder="Ingresa tu colonia" required>
+              </div>
+            
+              <!-- Calle y Número -->
+              <div class="mb-4">
+                <label for="calleNumero" class="form-label">Calle y Número <span style="color: red;">*</span></label>
+                <input type="text" id="calleNumero" name="calleNumero" class="form-control" placeholder="Ejemplo: Av. Siempre Viva 742" required>
+              </div>
+              <hr>
 
-            <!-- Código Postal -->
-            <div class="mb-4">
-              <label for="codigoPostal" class="form-label">Código Postal</label>
-              <input type="number" id="codigoPostal" name="codigoPostal" class="form-control" placeholder="Ejemplo: 12345" required>
-            </div>
-
-
-
-            <h2 class="text-center mb-4">Actualización de Datos del Personal</h2>
-            <p class="text-muted text-center">
-              Por favor, completa todos los campos requeridos para actualizar tu información en la base de datos de RH. 
-            </p>
+          
 
             <!-- Información de Contacto -->
-
-            <!-- Teléfono Fijo -->
-            <div class="mb-4">
-              <label for="telefonoFijo" class="form-label">Teléfono Fijo</label>
-              <input type="tel" id="telefonoFijo" name="telefonoFijo" class="form-control" placeholder="Ejemplo: 123-456-7890" required>
-            </div>
-
-            <!-- Teléfono Celular -->
-            <div class="mb-4">
-              <label for="telefonoCelular" class="form-label">Teléfono Celular</label>
-              <input type="tel" id="telefonoCelular" name="telefonoCelular" class="form-control" placeholder="Ejemplo: 987-654-3210" required>
-            </div>
-
-            <!-- Correo Electrónico Personal -->
-            <div class="mb-4">
-              <label for="correoPersonal" class="form-label">Correo Electrónico Personal</label>
-              <input type="email" id="correoPersonal" name="correoPersonal" class="form-control" placeholder="Ejemplo: usuario@dominio.com" required>
-            </div>
-
-
-
-
-            <h2 class="text-center mb-4">Actualización de Datos del Personal</h2>
-            <p class="text-muted text-center">
-              Por favor, completa todos los campos requeridos para actualizar tu información en la base de datos de RH. 
-            </p>
-
-            <!-- Datos Académicos -->
-
-            <!-- Clasificación -->
-            <div class="mb-4">
-              <label for="clasificacion" class="form-label">Clasificación</label>
-              <select id="clasificacion" name="clasificacion" class="form-select" required>
-                <option value="" disabled selected>Selecciona una opción</option>
-                <option value="Regla mexicana">Regla mexicana</option>
-                <option value="Básica (hasta Secundaria)">Básica (hasta Secundaria)</option>
-                <option value="Media Superior">Media Superior</option>
-                <option value="Técnico Superior">Técnico Superior</option>
-                <option value="Licenciatura">Licenciatura</option>
-                <option value="Maestría">Maestría</option>
-                <option value="Doctorado">Doctorado</option>
-              </select>
-            </div>
-
-            <!-- Grado -->
-            <div class="mb-4">
-              <label for="grado" class="form-label">Grado</label>
-              <input type="text" id="grado" name="grado" class="form-control" placeholder="Ejemplo: Ingeniería, Licenciatura en Derecho, etc." required>
-            </div>
-
-            <!-- Especialidad -->
-            <div class="mb-4">
-              <label for="especialidad" class="form-label">Especialidad</label>
-              <input type="text" id="especialidad" name="especialidad" class="form-control" placeholder="Ejemplo: Redes, Derecho Penal, etc." required>
-            </div>
-
-            <!-- Status -->
-            <div class="mb-4">
-              <label class="form-label">Status</label>
-              <div class="form-check">
-                <input type="checkbox" id="statusCertificado" name="status[]" value="Certificado" class="form-check-input">
-                <label for="statusCertificado" class="form-check-label">Certificado</label>
+            <h2 class="text-center mb-4">Información de Contacto</h2>
+            
+              <!-- Teléfono Fijo -->
+              <div class="mb-4">
+                <label for="telefonoFijo" class="form-label">Teléfono Fijo <span style="color: red;">*</span></label>
+                <input type="tel" id="telefonoFijo" name="telefonoFijo" class="form-control" placeholder="Ejemplo: 123-456-7890" required>
               </div>
-              <div class="form-check">
-                <input type="checkbox" id="statusTrunco" name="status[]" value="Trunco" class="form-check-input">
-                <label for="statusTrunco" class="form-check-label">Trunco</label>
+
+              <!-- Teléfono Celular -->
+              <div class="mb-4">
+                <label for="telefonoCelular" class="form-label">Teléfono Celular <span style="color: red;">*</span></label>
+                <input type="tel" id="telefonoCelular" name="telefonoCelular" class="form-control" placeholder="Ejemplo: 987-654-3210" required>
               </div>
-              <div class="form-check">
-                <input type="checkbox" id="statusCardex" name="status[]" value="Cardex" class="form-check-input">
-                <label for="statusCardex" class="form-check-label">Cardex</label>
+
+              <!-- Correo Electrónico Personal -->
+              <div class="mb-4">
+                <label for="correoPersonal" class="form-label">Correo Electrónico Personal <span style="color: red;">*</span></label>
+                <input type="email" id="correoPersonal" name="correoPersonal" class="form-control" placeholder="Ejemplo: usuario@dominio.com" required>
               </div>
-              <div class="form-check">
-                <input type="checkbox" id="statusCartaPasante" name="status[]" value="Carta pasante" class="form-check-input">
-                <label for="statusCartaPasante" class="form-check-label">Carta pasante</label>
+              <hr>
+
+
+
+            <!-- Información Académica -->
+            <h2 class="text-center mb-4">Información Académica</h2>
+
+              <!-- Clasificación -->
+              <div class="mb-4">
+                <label for="clasificacion" class="form-label">Clasificación <span style="color: red;">*</span></label>
+                <select id="clasificacion" name="clasificacion" class="form-select" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option value="Regla mexicana">Regla mexicana</option>
+                  <option value="Básica (hasta Secundaria)">Básica (hasta Secundaria)</option>
+                  <option value="Media Superior">Media Superior</option>
+                  <option value="Técnico Superior">Técnico Superior</option>
+                  <option value="Licenciatura">Licenciatura</option>
+                  <option value="Maestría">Maestría</option>
+                  <option value="Doctorado">Doctorado</option>
+                </select>
               </div>
-              <label for="archivoStatus" class="form-label mt-2">Adjuntar archivo de soporte</label>
-              <input type="file" id="archivoStatus" name="archivoStatus" class="form-control" accept=".pdf,.jpg,.png">
-            </div>
+
+              <!-- Grado -->
+              <div class="mb-4">
+                <label for="grado" class="form-label">Grado <span style="color: red;">*</span></label>
+                <input type="text" id="grado" name="grado" class="form-control" placeholder="Ejemplo: Ingeniería, Licenciatura en Derecho, etc." required>
+              </div>
+
+              <!-- Especialidad -->
+              <div class="mb-4">
+                <label for="especialidad" class="form-label">Especialidad <span style="color: red;">*</span></label>
+                <input type="text" id="especialidad" name="especialidad" class="form-control" placeholder="Ejemplo: Redes, Derecho Penal, etc." required>
+              </div>
+
+              <!-- Status -->
+              <div class="mb-4">
+                <label for="status" class="form-label">Status <span style="color: red;">*</span></label>
+                <div class="form-check">
+                  <input type="checkbox" id="statusCertificado" name="status[]" value="Certificado" class="form-check-input">
+                  <label for="statusCertificado" class="form-check-label">Certificado</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="statusTrunco" name="status[]" value="Trunco" class="form-check-input">
+                  <label for="statusTrunco" class="form-check-label">Trunco</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="statusCardex" name="status[]" value="Cardex" class="form-check-input">
+                  <label for="statusCardex" class="form-check-label">Cardex</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="statusCartaPasante" name="status[]" value="Carta pasante" class="form-check-input">
+                  <label for="statusCartaPasante" class="form-check-label">Carta pasante</label>
+                </div>
+                <label for="archivoStatus" class="form-label mt-2">Adjuntar archivo de soporte <span style="color: red;">*</span></label>
+                <input type="file" id="archivoStatus" name="archivoStatus" class="form-control" accept=".pdf,.jpg,.png" required>
+              </div>
+              <hr>
+
+
+
+            <!-- Contactos de Emergencia -->  
+            <h2 class="text-center mb-4">Contactos de Emergencia</h2>
+
+              <!-- Contacto 1 -->
+              <div class="mb-4">
+                <h5>Contacto 1</h5>
+                <label for="nombreContacto1" class="form-label">Nombre Completo <span style="color: red;">*</span></label>
+                <input type="text" id="nombreContacto1" name="nombreContacto1" class="form-control" placeholder="Ejemplo: Juan Pérez López" required>
+                
+                <label for="telefonoFijoContacto1" class="form-label mt-3">Teléfono Fijo <span style="color: red;">*</span> </label>
+                <input type="tel" id="telefonoFijoContacto1" name="telefonoFijoContacto1" class="form-control" placeholder="Ejemplo: 123-456-7890" required>
+                
+                <label for="telefonoCelularContacto1" class="form-label mt-3">Teléfono Celular <span style="color: red;">*</span></label>
+                <input type="tel" id="telefonoCelularContacto1" name="telefonoCelularContacto1" class="form-control" placeholder="Ejemplo: 987-654-3210" required>
+              </div>
+
+              <!-- Contacto 2 -->
+              <div class="mb-4">
+                <h5>Contacto 2</h5>
+                <label for="nombreContacto2" class="form-label">Nombre Completo <span style="color: red;">*</span></label>
+                <input type="text" id="nombreContacto2" name="nombreContacto2" class="form-control" placeholder="Ejemplo: Ana Gómez Díaz" required>
+                
+                <label for="telefonoFijoContacto2" class="form-label mt-3">Teléfono Fijo <span style="color: red;">*</span></label>
+                <input type="tel" id="telefonoFijoContacto2" name="telefonoFijoContacto2" class="form-control" placeholder="Ejemplo: 123-456-7890" required>
+                
+                <label for="telefonoCelularContacto2" class="form-label mt-3">Teléfono Celular <span style="color: red;">*</span></label>
+                <input type="tel" id="telefonoCelularContacto2" name="telefonoCelularContacto2" class="form-control" placeholder="Ejemplo: 987-654-3210" required>
+              </div>
+              <hr>
+
+
+
+
+            <!-- Datos Familiares -->
+            <h2 class="text-center mb-4">Datos Familiares</h2>
+
+              <!-- Estado Civil -->
+              <div class="mb-4">
+                <label for="estadoCivil" class="form-label">Estado Civil <span style="color: red;">*</span></label>
+                <select id="estadoCivil" name="estadoCivil" class="form-select" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option value="Soltero/a">Soltero/a</option>
+                  <option value="Casado/a">Casado/a</option>
+                  <option value="Divorciado/a">Divorciado/a</option>
+                  <option value="Viudo/a">Viudo/a</option>
+                  <option value="Unión Libre">Unión Libre</option>
+                </select>
+              </div>
+
+              <!-- Nombre del Cónyuge -->
+              <div class="mb-4">
+                <label for="nombreConyuge" class="form-label">Nombre del Cónyuge <span style="color: red;">*</span></label>
+                <input type="text" id="nombreConyuge" name="nombreConyuge" class="form-control" placeholder="Ejemplo: María González Pérez">
+              </div>
+
+              <!-- Número de Hijos -->
+              <div class="mb-4">
+                <label for="numeroHijos" class="form-label">Número de Hijos <span style="color: red;">*</span></label>
+                <input type="number" id="numeroHijos" name="numeroHijos" class="form-control" placeholder="Ejemplo: 2" min="0" required>
+              </div>
+              <hr>
+
+
+
+            <!-- Documentos con los que cuenta -->
+            <h2 class="text-center mb-4">Documentos con los que cuenta</h2>
+
+              <!-- Título -->
+              <div class="mb-4">
+                <label class="form-label">Título</label>
+                <div class="form-check">
+                  <input type="checkbox" id="titulo" name="documentos[]" value="Titulo" class="form-check-input">
+                  <label for="titulo" class="form-check-label">Cuenta con Título</label>
+                </div>
+                <label for="archivoTitulo" class="form-label mt-2">Adjuntar archivo</label>
+                <input type="file" id="archivoTitulo" name="archivoTitulo" class="form-control" accept=".pdf,.jpg,.png">
+              </div>
+
+              <!-- Cédula Profesional -->
+              <div class="mb-4">
+                <label class="form-label">Cédula Profesional</label>
+                <div class="form-check">
+                  <input type="checkbox" id="cedulaProfesional" name="documentos[]" value="Cedula Profesional" class="form-check-input">
+                  <label for="cedulaProfesional" class="form-check-label">Cuenta con Cédula Profesional</label>
+                </div>
+                <label for="archivoCedula" class="form-label mt-2">Adjuntar archivo</label>
+                <input type="file" id="archivoCedula" name="archivoCedula" class="form-control" accept=".pdf,.jpg,.png">
+              </div>
+
+              <!-- Pasaporte -->
+              <div class="mb-4">
+                <label class="form-label">Pasaporte</label>
+                <div class="form-check">
+                  <input type="checkbox" id="pasaporte" name="documentos[]" value="Pasaporte" class="form-check-input">
+                  <label for="pasaporte" class="form-check-label">Cuenta con Pasaporte</label>
+                </div>
+                <label for="archivoPasaporte" class="form-label mt-2">Adjuntar archivo</label>
+                <input type="file" id="archivoPasaporte" name="archivoPasaporte" class="form-control" accept=".pdf,.jpg,.png">
+              </div>
+
+              <!-- Visa -->
+              <div class="mb-4">
+                <label class="form-label">Visa</label>
+                <div class="form-check">
+                  <input type="checkbox" id="visa" name="documentos[]" value="Visa" class="form-check-input">
+                  <label for="visa" class="form-check-label">Cuenta con Visa</label>
+                </div>
+                <label for="archivoVisa" class="form-label mt-2">Adjuntar archivo</label>
+                <input type="file" id="archivoVisa" name="archivoVisa" class="form-control" accept=".pdf,.jpg,.png">
+              </div>
+
+
+
 
 
           
@@ -352,6 +407,7 @@
             <div class="d-grid">
               <button type="submit" class="btn btn-primary">Enviar Información</button>
             </div>
+
           </form>
           
           
