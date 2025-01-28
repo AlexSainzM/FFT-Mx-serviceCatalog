@@ -68,13 +68,19 @@
           
             <!-- Pregunta 1 -->
             <div class="mb-4">
-              <label for="satisfaccionGeneral" class="form-label">En general, ¿qué tan satisfecho(a) estás con la celebración de cumpleaños? (Escala del 1 al 5, donde 1 es "Muy insatisfecho" y 5 es "Muy satisfecho")</label>
-              <input type="number" id="satisfaccionGeneral" name="satisfaccionGeneral" class="form-control" min="1" max="5" placeholder="Ingresa un número del 1 al 5" required>
+              <label for="satisfaccionGeneral" class="form-label">1. En general, ¿qué tan satisfecho(a) estás con la celebración de cumpleaños?</label>
+              <div class="range">
+                <input type="range" class="form-range" id="satisfaccionGeneral" name="satisfaccionGeneral" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Muy insatisfecho</span>
+                  <span class="small text-muted">Muy satisfecho</span>
+                </div>
+              </div>
             </div>
           
             <!-- Pregunta 2 -->
             <div class="mb-4">
-              <label for="organizacion" class="form-label">¿Cómo calificarías la organización general del evento?</label>
+              <label for="organizacion" class="form-label">2. ¿Cómo calificarías la organización general del evento?</label>
               <div class="form-check">
                 <input type="radio" id="organizacionTotalmenteSatisfecho" name="organizacion" value="Totalmente satisfecho" class="form-check-input" required>
                 <label for="organizacionTotalmenteSatisfecho" class="form-check-label">Totalmente satisfecho</label>
@@ -95,7 +101,7 @@
           
             <!-- Pregunta 3 -->
             <div class="mb-4">
-              <label for="horarioEvento" class="form-label">¿Te pareció adecuado el horario del evento?</label>
+              <label for="horarioEvento" class="form-label">3. ¿Te pareció adecuado el horario del evento?</label>
               <div class="form-check">
                 <input type="radio" id="horarioSi" name="horarioEvento" value="Sí" class="form-check-input" required>
                 <label for="horarioSi" class="form-check-label">Sí</label>
@@ -104,13 +110,15 @@
                 <input type="radio" id="horarioNo" name="horarioEvento" value="No" class="form-check-input">
                 <label for="horarioNo" class="form-check-label">No</label>
               </div>
-              <label for="sugerenciaHorario" class="form-label mt-2">En caso de que tu respuesta sea NO, ¿qué horario sugieres?</label>
-              <input type="text" id="sugerenciaHorario" name="sugerenciaHorario" class="form-control" placeholder="Ingresa tu sugerencia">
+              <div id="sugerenciaHorarioContainer" style="display: none;">
+                <label for="sugerenciaHorario" class="form-label mt-2">¿Qué horario sugieres?</label>
+                <input type="text" id="sugerenciaHorario" name="sugerenciaHorario" class="form-control" placeholder="Ingresa tu sugerencia">
+              </div>
             </div>
           
             <!-- Pregunta 4 -->
             <div class="mb-4">
-              <label for="duracionEvento" class="form-label">¿Cómo calificarías la duración del evento?</label>
+              <label for="duracionEvento" class="form-label">4. ¿Cómo calificarías la duración del evento?</label>
               <div class="form-check">
                 <input type="radio" id="duracionLargo" name="duracionEvento" value="Demasiado largo" class="form-check-input" required>
                 <label for="duracionLargo" class="form-check-label">Demasiado largo</label>
@@ -127,7 +135,7 @@
           
             <!-- Pregunta 5 -->
             <div class="mb-4">
-              <label for="comodidadLugar" class="form-label">¿Cómo describirías el lugar donde se llevó a cabo la celebración en términos de comodidad y ambiente?</label>
+              <label for="comodidadLugar" class="form-label">5. ¿Cómo describirías el lugar donde se llevó a cabo la celebración en términos de comodidad y ambiente?</label>
               <div class="form-check">
                 <input type="radio" id="comodidadExcelente" name="comodidadLugar" value="Excelente" class="form-check-input" required>
                 <label for="comodidadExcelente" class="form-check-label">Excelente</label>
@@ -148,7 +156,7 @@
           
             <!-- Pregunta 6 -->
             <div class="mb-4">
-              <label for="interaccion" class="form-label">¿Sentiste que la celebración promovió la interacción entre los empleados?</label>
+              <label for="interaccion" class="form-label">6. ¿Sentiste que la celebración promovió la interacción entre los empleados?</label>
               <div class="form-check">
                 <input type="radio" id="interaccionSi" name="interaccion" value="Sí" class="form-check-input" required>
                 <label for="interaccionSi" class="form-check-label">Sí</label>
@@ -161,8 +169,86 @@
           
             <!-- Pregunta 7 -->
             <div class="mb-4">
-              <label for="cosasDisfrutadas" class="form-label">Menciona tres cosas que hayas disfrutado o apreciado durante la celebración:</label>
+              <label for="cosasDisfrutadas" class="form-label">7. Menciona tres cosas que hayas disfrutado o apreciado durante la celebración:</label>
               <textarea id="cosasDisfrutadas" name="cosasDisfrutadas" rows="3" class="form-control" placeholder="Ejemplo: Dinámicas, ambiente, alimentos"></textarea>
+            </div>
+
+            <!-- Pregunta 8 -->
+            <div class="mb-4">
+              <label for="dinamicasFuturas" class="form-label">8. ¿Qué otro tipo de dinámica te gustaría que se realizara para posteriores cumpleaños?</label>
+              <textarea id="dinamicasFuturas" name="dinamicasFuturas" rows="3" class="form-control" placeholder="Ejemplo: Juegos de equipo, concursos, etc."></textarea>
+            </div>
+
+            <!-- Pregunta 9 -->
+            <div class="mb-4">
+              <label class="form-label">9. ¿Recibiste tu tarjeta de cumpleaños?</label>
+              <div class="form-check">
+                <input type="radio" id="tarjetaSi" name="recibioTarjeta" value="Sí" class="form-check-input" required>
+                <label for="tarjetaSi" class="form-check-label">Sí</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" id="tarjetaNo" name="recibioTarjeta" value="No" class="form-check-input">
+                <label for="tarjetaNo" class="form-check-label">No</label>
+              </div>
+              <div id="opinionMensajeContainer" style="display: none;">
+                <label for="opinionMensaje" class="form-label mt-2">¿Qué te pareció el mensaje?</label>
+                <textarea id="opinionMensaje" name="opinionMensaje" rows="3" class="form-control" placeholder="Escribe tu opinión sobre el mensaje"></textarea>
+              </div>
+            </div>
+
+            <!-- Pregunta 10 -->
+            <div class="mb-4">
+              <label for="regalo" class="form-label">10. ¿El regalo que recibiste este año fue lo que esperabas o te sorprendió?</label>
+              <textarea id="regalo" name="regalo" rows="3" class="form-control" placeholder="Escribe tu opinión sobre el regalo"></textarea>
+            </div>
+
+            <!-- Pregunta 11 -->
+            <div class="mb-4">
+              <label for="mejorasFuturas" class="form-label">11. ¿Hay algún aspecto específico que creas que podría mejorarse para futuras celebraciones? ¿Cuál/es?</label>
+              <textarea id="mejorasFuturas" name="mejorasFuturas" rows="3" class="form-control" placeholder="Ejemplo: Mejor ambiente, más variedad de actividades, etc."></textarea>
+            </div>
+
+            <!-- Sección alimentos -->
+            <h3 class="mt-4">Sobre los alimentos</h3>
+
+            <!-- Pregunta 12 -->
+            <div class="mb-4">
+              <label for="calidadAlimentos" class="form-label">12. ¿Cómo calificarías la calidad de los alimentos proporcionados?</label>
+              <div class="form-check">
+                <input type="radio" id="calidadExcelente" name="calidadAlimentos" value="Excelente" class="form-check-input" required>
+                <label for="calidadExcelente" class="form-check-label">Excelente</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" id="calidadBuena" name="calidadAlimentos" value="Buena" class="form-check-input">
+                <label for="calidadBuena" class="form-check-label">Buena</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" id="calidadRegular" name="calidadAlimentos" value="Regular" class="form-check-input">
+                <label for="calidadRegular" class="form-check-label">Regular</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" id="calidadMala" name="calidadAlimentos" value="Mala" class="form-check-input">
+                <label for="calidadMala" class="form-check-label">Mala</label>
+              </div>
+            </div>
+
+            <!-- Pregunta 13 -->
+            <div class="mb-4">
+              <label for="porcionSuficiente" class="form-label">13. ¿Consideras que la porción de alimentos fue suficiente?</label>
+              <div class="form-check">
+                <input type="radio" id="porcionSi" name="porcionSuficiente" value="Sí" class="form-check-input" required>
+                <label for="porcionSi" class="form-check-label">Sí</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" id="porcionNo" name="porcionSuficiente" value="No" class="form-check-input">
+                <label for="porcionNo" class="form-check-label">No</label>
+              </div>
+            </div>
+
+            <!-- Pregunta 14 -->
+            <div class="mb-4">
+              <label for="comentariosAlimentos" class="form-label">14. ¿Tienes algún comentario o sugerencia adicional sobre los alimentos proporcionados?</label>
+              <textarea id="comentariosAlimentos" name="comentariosAlimentos" rows="3" class="form-control" placeholder="Escribe tus comentarios o sugerencias aquí"></textarea>
             </div>
           
             <!-- Botón de Envío -->
@@ -236,6 +322,34 @@
 
     <script src="./main.js"></script>
 
+    <script>
+      // Obtener referencias a los elementos
+      const radioSi = document.getElementById('horarioSi');
+      const radioNo = document.getElementById('horarioNo');
+      const sugerenciaContainer = document.getElementById('sugerenciaHorarioContainer');
+
+      // Agregar event listeners a los radio buttons
+      radioSi.addEventListener('change', function() {
+        sugerenciaContainer.style.display = 'none';
+      });
+
+      radioNo.addEventListener('change', function() {
+        sugerenciaContainer.style.display = 'block';
+      });
+
+      // Para la pregunta de la tarjeta de cumpleaños
+      const tarjetaSi = document.getElementById('tarjetaSi');
+      const tarjetaNo = document.getElementById('tarjetaNo');
+      const opinionMensajeContainer = document.getElementById('opinionMensajeContainer');
+
+      tarjetaSi.addEventListener('change', function() {
+        opinionMensajeContainer.style.display = 'block';
+      });
+
+      tarjetaNo.addEventListener('change', function() {
+        opinionMensajeContainer.style.display = 'none';
+      });
+    </script>
 
   </body>
 </html>
