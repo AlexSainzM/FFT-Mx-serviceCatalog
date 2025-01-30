@@ -1,3 +1,6 @@
+
+
+// Generar los campos acorde al número de hijos<
 function generarCamposHijos(cantidad) {
     const contenedor = document.getElementById('contenedorHijos');
     contenedor.innerHTML = ''; // Limpiar contenedor
