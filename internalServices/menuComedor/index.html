@@ -16,40 +16,37 @@
 
   <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="../../assets/img/common/FFF_Logo.png" alt="FFT logo" width="mx-auto" height="30">
-          <img src="./menuLogo.png" alt="ser_Saludable_logo" width="mx-auto" height="30">
-          <span></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="">Volver al inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="">Menú comedor</a>
-            </li>
-          </ul> -->
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html">Volver a Servicios Internos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="">Menú Comedor</a>
-            </li>
-          </ul>
-        </div>
+    <!-- Header -->
+    <header>
+      <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-5" style="background-color: #009d80;">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="">
+              <img src="../../../assets/img/common/primaryGreenBGLogo.png" alt="FFT logo" width="mx-auto" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../../index.html">Ir a Servicios Internos</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
-    </nav>
+
+      <!-- <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal" style="opacity: 90%;">Servicios Internos FFT México</h1>
+        <p class="fs-5 text-muted">Un espacio con todas las herramientas y recursos para optimizar tu día a día en FFT.</p>
+      </div> -->
+
+    </header>
 
     <!-- Main Section -->
-    <section class="container py-3">
+    <section class="container py-5">
         
       <!-- Menu-title -->
       <div class="row">
@@ -64,7 +61,7 @@
       </div>
       
       <!-- Menu-Content -->
-      <div id="menu-content" class="row row-cols-1 row-cols-xxl-3 mb-3 align-items-center"></div>
+      <div id="menu-content" class="row row-cols-1 row-cols-xxl-3 mb-3 align-items-stretch"></div>
 
     </section>
 
@@ -124,8 +121,8 @@
                   // Renderizar los días filtrados
                   daysToShow.slice(0,3).forEach(day => {
                       let card = `
-                      <div class="col">
-                          <div class="card mb-4 rounded-3 shadow-sm" style="border-color: #009d80;">
+                      <div class="col h-100">
+                          <div class="card mb-4 rounded-3 shadow-sm h-100" style="border-color: #009d80;">
                               <div class="card-header py-3 text-white" style="background-color: #009d80; border-color: #009d80;">
                                   <h4 class="my-0 fw-bold">${day.day}</h4>
                               </div>
@@ -134,8 +131,8 @@
                                       <tbody>
                                           ${Object.keys(day.menu).map(item => `
                                               <tr>
-                                                  <th scope="row">${item}:</th>
-                                                  <td>${day.menu[item]}</td>
+                                                  <th scope="row" style="width: 30%">${item}:</th>
+                                                  <td style="width: 70%">${day.menu[item]}</td>
                                               </tr>
                                           `).join('')}
                                       </tbody>
