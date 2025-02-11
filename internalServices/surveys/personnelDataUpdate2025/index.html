@@ -264,6 +264,48 @@
               </div>
             </div>
             <hr>
+
+            <h2 class="mt-4">Documentos de Viaje</h2>
+
+            <!-- Pregunta sobre Pasaporte -->
+            <div class="mb-3">
+                <label class="form-label">¿Cuenta con Pasaporte?</label>
+                <div>
+                    <input type="radio" id="pasaporte_si" name="pasaporte" value="Sí" class="form-check-input">
+                    <label for="pasaporte_si" class="form-check-label">Sí</label>
+
+                    <input type="radio" id="pasaporte_no" name="pasaporte" value="No" class="form-check-input ms-3" checked>
+                    <label for="pasaporte_no" class="form-check-label">No</label>
+                </div>
+            </div>
+
+            <!-- Carga de Pasaporte (Oculto hasta que seleccione "Sí") -->
+            <div class="mb-3 d-none" id="pasaporte_upload">
+                <label for="archivo_pasaporte" class="form-label">Cargar escaneo del Pasaporte (PDF)</label>
+                <input type="file" id="archivo_pasaporte" name="archivo_pasaporte" class="form-control" accept=".pdf">
+                <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+            </div>
+
+            <!-- Pregunta sobre Visa -->
+            <div class="mb-3">
+                <label class="form-label">¿Cuenta con Visa?</label>
+                <div>
+                    <input type="radio" id="visa_si" name="visa" value="Sí" class="form-check-input">
+                    <label for="visa_si" class="form-check-label">Sí</label>
+
+                    <input type="radio" id="visa_no" name="visa" value="No" class="form-check-input ms-3" checked>
+                    <label for="visa_no" class="form-check-label">No</label>
+                </div>
+            </div>
+
+            <!-- Carga de Visa (Oculto hasta que seleccione "Sí") -->
+            <div class="mb-3 d-none" id="visa_upload">
+                <label for="archivo_visa" class="form-label">Cargar escaneo de la Visa (PDF)</label>
+                <input type="file" id="archivo_visa" name="archivo_visa" class="form-control" accept=".pdf">
+                <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+            </div>
+            <hr>
+            
             
               
 
@@ -273,7 +315,7 @@
             <div class="row">
               <!-- Código Postal -->
               <div class="col-md-4 mb-4">
-                <label for="codigoPostal" class="form-label">Código Postal <span style="color: red;">*</span></label>
+                <label for="codigoPostal" class="form-label fw-bold">Código Postal <span style="color: red;">*</span></label>
                 <input type="text" 
                        id="codigoPostal" 
                        name="codigoPostal" 
@@ -288,7 +330,7 @@
 
               <!-- Entidad -->
               <div class="col-md-8 mb-4">
-                <label for="entidad" class="form-label">Estado <span style="color: red;">*</span></label>
+                <label for="entidad" class="form-label fw-bold">Estado <span style="color: red;">*</span></label>
                 <select id="entidad" name="entidad" class="form-select" required>
                   <option value="" disabled selected>Selecciona tu estado</option>
                   <option value="Aguascalientes">Aguascalientes</option>
@@ -328,7 +370,7 @@
 
               <!-- Municipio -->
               <div class="col-md-6 mb-4">
-                <label for="municipio" class="form-label">Municipio/Alcaldía <span style="color: red;">*</span></label>
+                <label for="municipio" class="form-label fw-bold">Municipio/Alcaldía <span style="color: red;">*</span></label>
                 <input type="text" 
                        id="municipio" 
                        name="municipio" 
@@ -339,7 +381,7 @@
 
               <!-- Población -->
               <div class="col-md-6 mb-4">
-                <label for="poblacion" class="form-label">Población/Ciudad <span style="color: red;">*</span></label>
+                <label for="poblacion" class="form-label fw-bold">Población/Ciudad <span style="color: red;">*</span></label>
                 <input type="text" 
                        id="poblacion" 
                        name="poblacion" 
@@ -350,7 +392,7 @@
 
               <!-- Colonia -->
               <div class="col-md-12 mb-4">
-                <label for="colonia" class="form-label">Colonia <span style="color: red;">*</span></label>
+                <label for="colonia" class="form-label fw-bold">Colonia <span style="color: red;">*</span></label>
                 <input type="text" 
                        id="colonia" 
                        name="colonia" 
@@ -361,7 +403,7 @@
 
               <!-- Calle y Número -->
               <div class="col-md-12 mb-4">
-                <label for="calleNumero" class="form-label">Calle y Número <span style="color: red;">*</span></label>
+                <label for="calleNumero" class="form-label fw-bold">Calle y Número <span style="color: red;">*</span></label>
                 <input type="text" 
                        id="calleNumero" 
                        name="calleNumero" 
@@ -382,7 +424,7 @@
             <div class="row">
               <!-- Teléfono Fijo -->
               <div class="col-md-6 col-lg-4 mb-4">
-                <label for="telefonoFijo" class="form-label">Teléfono Fijo <span style="color: red;">*</span></label>
+                <label for="telefonoFijo" class="form-label fw-bold">Teléfono Fijo <span style="color: red;">*</span></label>
                 <input type="tel" 
                        id="telefonoFijo" 
                        name="telefonoFijo" 
@@ -393,7 +435,7 @@
 
               <!-- Teléfono Celular -->
               <div class="col-md-6 col-lg-4 mb-4">
-                <label for="telefonoCelular" class="form-label">Teléfono Celular <span style="color: red;">*</span></label>
+                <label for="telefonoCelular" class="form-label fw-bold">Teléfono Celular <span style="color: red;">*</span></label>
                 <input type="tel" 
                        id="telefonoCelular" 
                        name="telefonoCelular" 
@@ -404,7 +446,7 @@
 
               <!-- Correo Electrónico Personal -->
               <div class="col-md-12 col-lg-4 mb-4">
-                <label for="correoPersonal" class="form-label">Correo Electrónico Personal <span style="color: red;">*</span></label>
+                <label for="correoPersonal" class="form-label fw-bold">Correo Electrónico Personal <span style="color: red;">*</span></label>
                 <input type="email" 
                        id="correoPersonal" 
                        name="correoPersonal" 
@@ -417,156 +459,380 @@
 
 
 
+            
             <!-- Información Académica -->
-            <h2 class="text-center mb-4">Información Académica</h2>
+            <h2 class="text-center my-4">Información Académica</h2>
 
-              <!-- Clasificación -->
-              <div class="mb-4">
-                <label for="clasificacion" class="form-label">Último grado de estudios: <span style="color: red;">*</span></label>
-                <select id="clasificacion" name="clasificacion" class="form-select" required>
-                  <option value="" disabled selected>Selecciona una opción</option>
-                  <option value="Regla mexicana">Regla mexicana</option>
-                  <option value="Básica (hasta Secundaria)">Básica (hasta Secundaria)</option>
-                  <option value="Media Superior">Media Superior</option>
-                  <option value="Técnico Superior">Técnico Superior</option>
-                  <option value="Licenciatura">Licenciatura</option>
-                  <option value="Maestría">Maestría</option>
-                  <option value="Doctorado">Doctorado</option>
+            <!-- Grado Académico -->
+            <div class="mb-3">
+              <label for="grado" class="form-label fw-bold">Grado Académico <span style="color: red;">*</span></label>
+              <select id="grado" name="grado" class="form-select" required>
+                <option value="" selected disabled>Seleccione una opción</option>
+                <option value="Primaria">Primaria</option>
+                <option value="Secundaria">Secundaria</option>
+                <option value="Bachillerato">Bachillerato</option>
+                <option value="Técnico">Técnico</option>
+                <option value="Licenciatura">Licenciatura</option>
+                <option value="Maestría">Maestría</option>
+                <option value="Doctorado">Doctorado</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+
+            <!-- Especialidad (Solo si el grado requiere) -->
+            <div class="mb-3 d-none" id="especialidad-container">
+                <label for="especialidad" class="form-label fw-bold">Especialidad / Carrera</label>
+                <input type="text" id="especialidad" name="especialidad" class="form-control">
+            </div>
+
+            <!-- Estatus de Estudios -->
+            <div class="mb-3">
+                <label for="estatus" class="form-label fw-bold">Estatus de Estudios <span style="color: red;">*</span></label>
+                <select id="estatus" name="estatus" class="form-select" required>
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="Concluido">Concluido</option>
+                    <option value="En curso">En curso</option>
+                    <option value="No concluido">No concluido</option>
                 </select>
-              </div>
+            </div>
 
-              <!-- Grado -->
-              <!-- <div class="mb-4">
-                <label for="grado" class="form-label">Grado <span style="color: red;">*</span></label>
-                <input type="text" id="grado" name="grado" class="form-control" placeholder="Ejemplo: Ingeniería, Licenciatura en Derecho, etc." required>
-              </div> -->
+            <!-- Año de Finalización (Depende del Estatus) -->
+            <div class="mb-3 d-none" id="anio-container">
+                <label for="anio" class="form-label fw-bold">Año de Finalización / Último Año Cursado</label>
+                <input type="number" id="anio" name="anio" class="form-control" min="1950" max="2030">
+            </div>
 
-              <!-- Especialidad -->
-              <div class="mb-4">
-                <label for="especialidad" class="form-label">Especialidad <span style="color: red;">*</span></label>
-                <input type="text" id="especialidad" name="especialidad" class="form-control" placeholder="Ejemplo: Redes, Derecho Penal, etc." required>
-              </div>
+            <!-- Institución Educativa (Solo si el grado es Técnico o superior) -->
+            <div class="mb-3 d-none" id="institucion-container">
+                <label for="institucion" class="form-label fw-bold">Institución Educativa</label>
+                <input type="text" id="institucion" name="institucion" class="form-control">
+            </div>
 
-              <!-- Status -->
-              <div class="mb-4">
-                <label for="status" class="form-label">Status <span style="color: red;">*</span></label>
-                <div class="form-check">
-                  <input type="checkbox" id="statusCertificado" name="status[]" value="Certificado" class="form-check-input">
-                  <label for="statusCertificado" class="form-check-label">Certificado</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="statusTrunco" name="status[]" value="Trunco" class="form-check-input">
-                  <label for="statusTrunco" class="form-check-label">Trunco</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="statusCardex" name="status[]" value="Cardex" class="form-check-input">
-                  <label for="statusCardex" class="form-check-label">Cardex</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="statusCartaPasante" name="status[]" value="Carta pasante" class="form-check-input">
-                  <label for="statusCartaPasante" class="form-check-label">Carta pasante</label>
-                </div>
-                <label for="archivoStatus" class="form-label mt-2">Adjuntar archivo de soporte <span style="color: red;">*</span></label>
-                <input type="file" id="archivoStatus" name="archivoStatus" class="form-control" accept=".pdf,.jpg,.png" required>
-              </div>
-              <hr>
+            <!-- Documento -->
+            <div class="mb-3">
+                <label for="documento" class="form-label fw-bold">Documento que lo acredita <span style="color: red;">*</span></label>
+                <input type="file" id="documento" name="documento" class="form-control" accept=".pdf, .jpg, .png" required>
+                <small class="form-text text-muted">Formatos aceptados: PDF, JPG, PNG (máx. 2MB).</small>
+            </div>
+            <hr>
+            
 
 
 
             <!-- Contactos de Emergencia -->  
-            <h2 class="text-center mb-4">Contactos de Emergencia</h2>
-
-              <!-- Contacto 1 -->
-              <div class="mb-4">
-                <h5>Contacto 1</h5>
-                <label for="nombreContacto1" class="form-label">Nombre Completo <span style="color: red;">*</span></label>
-                <input type="text" id="nombreContacto1" name="nombreContacto1" class="form-control" placeholder="Ejemplo: Juan Pérez López" required>
+            <h2 class="text-center my-4">Contactos de Emergencia</h2>
+            <!-- Contacto 1 -->
+            <div class="card bg-light mb-4 p-3">
+              <h5 class="card-title">Contacto 1</h5>
+              <div class="row">
+                <!-- Nombre Completo -->
+                <div class="col-12 mb-3">
+                  <label for="nombreContacto1" class="form-label fw-bold">
+                    Nombre Completo <span style="color: red;">*</span>
+                  </label>
+                  <input type="text" 
+                         id="nombreContacto1" 
+                         name="nombreContacto1" 
+                         class="form-control" 
+                         placeholder="Ejemplo: Juan Pérez López" 
+                         required>
+                </div>
                 
-                <label for="telefonoFijoContacto1" class="form-label mt-3">Teléfono Fijo <span style="color: red;">*</span> </label>
-                <input type="tel" id="telefonoFijoContacto1" name="telefonoFijoContacto1" class="form-control" placeholder="Ejemplo: 123-456-7890" required>
+                <!-- Teléfonos en columnas en pantallas medianas y grandes -->
+                <div class="col-md-6 mb-3">
+                  <label for="telefonoFijoContacto1" class="form-label fw-bold">
+                    Teléfono Fijo <span style="color: red;">*</span>
+                  </label>
+                  <input type="tel" 
+                         id="telefonoFijoContacto1" 
+                         name="telefonoFijoContacto1" 
+                         class="form-control" 
+                         placeholder="Ejemplo: 123-456-7890" 
+                         required>
+                </div>
                 
-                <label for="telefonoCelularContacto1" class="form-label mt-3">Teléfono Celular <span style="color: red;">*</span></label>
-                <input type="tel" id="telefonoCelularContacto1" name="telefonoCelularContacto1" class="form-control" placeholder="Ejemplo: 987-654-3210" required>
+                <div class="col-md-6 mb-3">
+                  <label for="telefonoCelularContacto1" class="form-label fw-bold">
+                    Teléfono Celular <span style="color: red;">*</span>
+                  </label>
+                  <input type="tel" 
+                         id="telefonoCelularContacto1" 
+                         name="telefonoCelularContacto1" 
+                         class="form-control" 
+                         placeholder="Ejemplo: 987-654-3210" 
+                         required>
+                </div>
               </div>
-
-              <!-- Contacto 2 -->
-              <div class="mb-4">
-                <h5>Contacto 2</h5>
-                <label for="nombreContacto2" class="form-label">Nombre Completo <span style="color: red;">*</span></label>
-                <input type="text" id="nombreContacto2" name="nombreContacto2" class="form-control" placeholder="Ejemplo: Ana Gómez Díaz" required>
+            </div>
+            <!-- Contacto 2 -->
+            <div class="card bg-light mb-4 p-3">
+              <h5 class="card-title">Contacto 2</h5>
+              <div class="row">
+                <!-- Nombre Completo -->
+                <div class="col-12 mb-3">
+                  <label for="nombreContacto2" class="form-label fw-bold">
+                    Nombre Completo <span style="color: red;">*</span>
+                  </label>
+                  <input type="text" 
+                         id="nombreContacto2" 
+                         name="nombreContacto2" 
+                         class="form-control" 
+                         placeholder="Ejemplo: Ana Gómez Díaz" 
+                         required>
+                </div>
                 
-                <label for="telefonoFijoContacto2" class="form-label mt-3">Teléfono Fijo <span style="color: red;">*</span></label>
-                <input type="tel" id="telefonoFijoContacto2" name="telefonoFijoContacto2" class="form-control" placeholder="Ejemplo: 123-456-7890" required>
+                <!-- Teléfonos en columnas en pantallas medianas y grandes -->
+                <div class="col-md-6 mb-3">
+                  <label for="telefonoFijoContacto2" class="form-label fw-bold">
+                    Teléfono Fijo <span style="color: red;">*</span>
+                  </label>
+                  <input type="tel" 
+                         id="telefonoFijoContacto2" 
+                         name="telefonoFijoContacto2" 
+                         class="form-control" 
+                         placeholder="Ejemplo: 123-456-7890" 
+                         required>
+                </div>
                 
-                <label for="telefonoCelularContacto2" class="form-label mt-3">Teléfono Celular <span style="color: red;">*</span></label>
-                <input type="tel" id="telefonoCelularContacto2" name="telefonoCelularContacto2" class="form-control" placeholder="Ejemplo: 987-654-3210" required>
+                <div class="col-md-6 mb-3">
+                  <label for="telefonoCelularContacto2" class="form-label fw-bold">
+                    Teléfono Celular <span style="color: red;">*</span>
+                  </label>
+                  <input type="tel" 
+                         id="telefonoCelularContacto2" 
+                         name="telefonoCelularContacto2" 
+                         class="form-control" 
+                         placeholder="Ejemplo: 987-654-3210" 
+                         required>
+                </div>
               </div>
-              <hr>
+            </div>
+            <hr>
 
 
 
 
             <!-- Datos Familiares -->
-            <h2 class="text-center mb-4">Datos Familiares</h2>
+            <h2 class="text-center my-4">Datos Familiares</h2>
 
-              <!-- Estado Civil -->
-              <div class="mb-4">
-                <label for="estadoCivil" class="form-label">Estado Civil <span style="color: red;">*</span></label>
-                <select id="estadoCivil" name="estadoCivil" class="form-select" required>
-                  <option value="" disabled selected>Selecciona una opción</option>
-                  <option value="Soltero/a">Soltero/a</option>
-                  <option value="Casado/a">Casado/a</option>
-                  <option value="Divorciado/a">Divorciado/a</option>
-                  <option value="Viudo/a">Viudo/a</option>
-                  <option value="Unión Libre">Unión Libre</option>
-                </select>
-              </div>
+            <!-- Estado Civil -->
+            <div class="mb-4">
+              <label for="estadoCivil" class="form-label fw-bold">Estado Civil <span style="color: red;">*</span></label>
+              <select id="estadoCivil" name="estadoCivil" class="form-select" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="Soltero/a">Soltero/a</option>
+                <option value="Casado/a">Casado/a</option>
+                <option value="Divorciado/a">Divorciado/a</option>
+                <option value="Viudo/a">Viudo/a</option>
+                <option value="Unión Libre">Unión Libre</option>
+              </select>
+            </div>
 
-              <!-- Nombre del Cónyuge -->
-              <div class="mb-4">
-                <label for="nombreConyuge" class="form-label">Nombre del Cónyuge <span style="color: red;">*</span></label>
-                <input type="text" id="nombreConyuge" name="nombreConyuge" class="form-control" placeholder="Ejemplo: María González Pérez">
-              </div>
+            <!-- Nombre del Cónyuge -->
+            <div class="mb-4">
+              <label for="nombreConyuge" class="form-label fw-bold">Nombre del Cónyuge o concubino <span style="color: red;">*</span></label>
+              <input type="text" id="nombreConyuge" name="nombreConyuge" class="form-control" placeholder="Ejemplo: María González Pérez">
+            </div>
 
-              <!-- Número de Hijos -->
-              <div class="mb-4">
-                <label for="numeroHijos" class="form-label">Número de Hijos <span style="color: red;">*</span></label>
-                <input type="number" id="numeroHijos" name="numeroHijos" class="form-control" placeholder="Ejemplo: 2" min="0" required onchange="generarCamposHijos(this.value)">
-              </div>
+            <!-- Número de Hijos -->
+            <div class="mb-4">
+              <label for="numeroHijos" class="form-label fw-bold">Número de Hijos <span style="color: red;">*</span></label>
+              <input type="number" id="numeroHijos" name="numeroHijos" class="form-control" placeholder="Ejemplo: 2" min="0" max="10" required onchange="mostrarCamposHijos(this.value)">
+            </div>
 
-              <!-- Contenedor para los campos dinámicos de los hijos -->
-              <div id="contenedorHijos" class="mb-4">
-                <!-- Aquí se generarán dinámicamente los campos -->
-              </div>
-
-              <hr>
-
-
-
-            <!-- Documentos con los que cuenta -->
-            <h2 class="text-center mb-4">Documentos con los que cuenta</h2>
-
-              <!-- Pasaporte -->
-              <div class="mb-4">
-                <label class="form-label">Pasaporte</label>
-                <div class="form-check">
-                  <input type="checkbox" id="pasaporte" name="documentos[]" value="Pasaporte" class="form-check-input">
-                  <label for="pasaporte" class="form-check-label">Cuenta con Pasaporte</label>
+            <!-- Contenedor para los campos de los hijos (pre-generados y ocultos) -->
+            <div id="contenedorHijos" class="mb-4">
+              <!-- Campos pre-generados para hasta 10 hijos -->
+              <div id="hijo1" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 1</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo1" class="form-control" placeholder="Nombre completo">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo1" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo1" class="form-control" accept=".pdf,.jpg,.png">
+                  </div>
                 </div>
-                <label for="archivoPasaporte" class="form-label mt-2">Adjuntar archivo</label>
-                <input type="file" id="archivoPasaporte" name="archivoPasaporte" class="form-control" accept=".pdf,.jpg,.png">
               </div>
 
-              <!-- Visa -->
-              <div class="mb-4">
-                <label class="form-label">Visa</label>
-                <div class="form-check">
-                  <input type="checkbox" id="visa" name="documentos[]" value="Visa" class="form-check-input">
-                  <label for="visa" class="form-check-label">Cuenta con Visa</label>
+              <div id="hijo2" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 2</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo2" class="form-control" placeholder="Nombre completo">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo2" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo2" class="form-control" accept=".pdf,.jpg,.png">
+                  </div>
                 </div>
-                <label for="archivoVisa" class="form-label mt-2">Adjuntar archivo</label>
-                <input type="file" id="archivoVisa" name="archivoVisa" class="form-control" accept=".pdf,.jpg,.png">
               </div>
+
+              <div id="hijo3" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 3</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo3" class="form-control" placeholder="Nombre completo">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo3" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo3" class="form-control" accept=".pdf,.jpg,.png">
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo4" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 4</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo4" class="form-control" placeholder="Nombre completo">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo4" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo4" class="form-control" accept=".pdf,.jpg,.png">
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo5" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 5</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo5" class="form-control" placeholder="Nombre completo">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo5" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo5" class="form-control" accept=".pdf,.jpg,.png">
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo6" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 6</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo6" class="form-control" placeholder="Nombre completo">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo6" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo6" class="form-control" accept=".pdf,.jpg,.png">
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo7" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 7</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo7" class="form-control" placeholder="Nombre completo">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo7" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo7" class="form-control" accept=".pdf,.jpg,.png">
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo8" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 8</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo8" class="form-control" placeholder="Nombre completo">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo8" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo8" class="form-control" accept=".pdf,.jpg,.png">
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo9" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 9</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo9" class="form-control" placeholder="Nombre completo">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo9" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo9" class="form-control" accept=".pdf,.jpg,.png">
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo10" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 10</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo10" class="form-control" placeholder="Nombre completo">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo10" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo10" class="form-control" accept=".pdf,.jpg,.png">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <hr>
+
+
+
+            
+            
+
+
 
 
 
@@ -652,6 +918,80 @@
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
       })
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const grado = document.getElementById("grado");
+          const especialidadContainer = document.getElementById("especialidad-container");
+          const institucionContainer = document.getElementById("institucion-container");
+          const estatus = document.getElementById("estatus");
+          const anioContainer = document.getElementById("anio-container");
+
+          // Mostrar campo de especialidad si es Técnico, Licenciatura o superior
+          grado.addEventListener("change", function () {
+              const necesitaEspecialidad = ["Técnico", "Licenciatura", "Maestría", "Doctorado", "Otro"];
+              const necesitaInstitucion = ["Técnico", "Licenciatura", "Maestría", "Doctorado"];
+
+              especialidadContainer.classList.toggle("d-none", !necesitaEspecialidad.includes(grado.value));
+              institucionContainer.classList.toggle("d-none", !necesitaInstitucion.includes(grado.value));
+          });
+
+          // Mostrar Año de Finalización si es "Concluido" o "En curso"
+          estatus.addEventListener("change", function () {
+              anioContainer.classList.toggle("d-none", estatus.value === "");
+          });
+      });
+    </script>
+
+    <script>
+      function mostrarCamposHijos(cantidad) {
+        // Ocultar todos los campos primero
+        for (let i = 1; i <= 10; i++) {
+          const campoHijo = document.getElementById(`hijo${i}`);
+          if (campoHijo) {
+            campoHijo.classList.add('d-none');
+          }
+        }
+        
+        // Mostrar solo la cantidad seleccionada
+        for (let i = 1; i <= cantidad; i++) {
+          const campoHijo = document.getElementById(`hijo${i}`);
+          if (campoHijo) {
+            campoHijo.classList.remove('d-none');
+          }
+        }
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const pasaporteSi = document.getElementById("pasaporte_si");
+          const pasaporteNo = document.getElementById("pasaporte_no");
+          const pasaporteUpload = document.getElementById("pasaporte_upload");
+
+          const visaSi = document.getElementById("visa_si");
+          const visaNo = document.getElementById("visa_no");
+          const visaUpload = document.getElementById("visa_upload");
+
+          // Mostrar/ocultar carga de pasaporte
+          pasaporteSi.addEventListener("change", function () {
+              pasaporteUpload.classList.remove("d-none");
+          });
+
+          pasaporteNo.addEventListener("change", function () {
+              pasaporteUpload.classList.add("d-none");
+          });
+
+          // Mostrar/ocultar carga de visa
+          visaSi.addEventListener("change", function () {
+              visaUpload.classList.remove("d-none");
+          });
+
+          visaNo.addEventListener("change", function () {
+              visaUpload.classList.add("d-none");
+          });
+      });
     </script>
 
   </body>
