@@ -59,7 +59,7 @@
 
         <div class="col-12">
 
-          <form method="POST" action="https://formspree.io/f/xeoowoqd" enctype="multipart/form-data" class="container p-4 shadow rounded bg-light">
+          <form id="uploadForm" class="container p-4 shadow rounded bg-light">
             
             
             <h1 class="text-center mb-4">¡Actualiza tus Datos y Sé Parte del Cambio Digital!</h1>
@@ -1042,7 +1042,130 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
     <script src="./main.js"></script>
+
+    <script>
+      document.getElementById("uploadForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        /* @ts-ignore */
+        const zip = new JSZip();
+        const inputs = [...document.querySelectorAll('input[type="file"]')];
+
+        let totalFiles = 0;
+
+        // Agregar archivos al ZIP
+        for (let input of inputs) {
+          if (input.files && input.files.length > 0) {
+            for (let file of input.files) {
+              zip.file(`Archivo_${totalFiles + 1}_${file.name}`, file);
+              totalFiles++;
+            }
+          }
+        }
+
+        try {
+          const zipBlob = await zip.generateAsync({ type: "blob" });
+
+          if (zipBlob.size > 10 * 1024 * 1024) {
+            alert("El archivo ZIP es demasiado grande. Intenta reducir la cantidad o tamaño de los archivos.");
+            return;
+          }
+
+          const formData = new FormData();
+
+          // Función auxiliar para obtener valor seguro
+          const getElementValue = (id) => {
+            const element = document.getElementById(id);
+            return element ? element.value.trim() : '';
+          };
+
+          // Obtener valores de forma segura
+          const formValues = {
+            noEmpleado: getElementValue("noEmpleado"),
+            noSAP: getElementValue("noSAP"),
+            nombre: getElementValue("nombre"),
+            apellidoPaterno: getElementValue("apellidoPaterno"),
+            apellidoMaterno: getElementValue("apellidoMaterno"),
+            sexo: getElementValue("sexo"),
+            fechaNacimiento: getElementValue("fechaNacimiento"),
+            nacionalidad: getElementValue("nacionalidad"),
+            estado_Provincia_Nacimiento: getElementValue("estado_Provincia_Nacimiento"),
+            curp: getElementValue("curp"),
+            rfc: getElementValue("RFC"),
+            nss: getElementValue("nss"),
+            codigoPostal: getElementValue("codigoPostal"),
+            entidad: getElementValue("entidad"),
+            municipio: getElementValue("municipio"),
+            poblacion: getElementValue("poblacion"),
+            colonia: getElementValue("colonia"),
+            calleNumero: getElementValue("calleNumero"),
+            telefonoFijo: getElementValue("telefonoFijo"),
+            telefonoCelular: getElementValue("telefonoCelular"),
+            email: getElementValue("email"),
+            gradoAcademico: getElementValue("gradoAcademico"),
+            especialidad: getElementValue("especialidad"),
+            estatusDeEstudios: getElementValue("estatusDeEstudios"),
+            anioFinalizacion: getElementValue("anioFinalizacion"),
+            institucionEducativa: getElementValue("institucionEducativa"),
+            nombreContacto1: getElementValue("nombreContacto1"),
+            telefonoFijoContacto1: getElementValue("telefonoFijoContacto1"),
+            telefonoCelularContacto1: getElementValue("telefonoCelularContacto1"),
+            nombreContacto2: getElementValue("nombreContacto2"),
+            telefonoFijoContacto2: getElementValue("telefonoFijoContacto2"),
+            telefonoCelularContacto2: getElementValue("telefonoCelularContacto2"),
+            estadoCivil: getElementValue("estadoCivil"),
+            nombreConyuge: getElementValue("nombreConyuge"),
+            numeroHijos: getElementValue("numeroHijos")
+          };
+
+          // Obtener valores de radio buttons de forma segura
+          const pasaporteRadio = document.querySelector('input[name="pasaporte"]:checked');
+          const visaRadio = document.querySelector('input[name="visa"]:checked');
+
+          formValues.pasaporte = pasaporteRadio ? pasaporteRadio.value : '';
+          formValues.visa = visaRadio ? visaRadio.value : '';
+
+          // Agregar todos los valores al FormData
+          Object.entries(formValues).forEach(([key, value]) => {
+            formData.append(key, value);
+          });
+
+          // Manejar información de hijos de forma segura
+          const numeroHijos = parseInt(formValues.numeroHijos) || 0;
+          for (let i = 1; i <= numeroHijos; i++) {
+            const nombreHijo = getElementValue(`nombreHijo${i}`);
+            const fechaNacimientoHijo = getElementValue(`fechaNacimientoHijo${i}`);
+            
+            if (nombreHijo) formData.append(`nombreHijo${i}`, nombreHijo);
+            if (fechaNacimientoHijo) formData.append(`fechaNacimientoHijo${i}`, fechaNacimientoHijo);
+          }
+
+          formData.append("upload", zipBlob, "archivos_comprimidos.zip");
+
+          const response = await fetch("https://formspree.io/f/xnnjzdvv", {
+            method: "POST",
+            headers: {
+              "Accept": "application/json"
+            },
+            body: formData
+          });
+
+          if (response.ok) {
+            alert("Formulario enviado correctamente.");
+            // Opcional: limpiar el formulario después del envío exitoso
+            document.getElementById("uploadForm").reset();
+          } else {
+            alert("Hubo un error al enviar los datos.");
+          }
+        } catch (error) {
+          console.error("Error al generar o enviar el ZIP:", error);
+          alert("Hubo un error en el proceso. Verifica la consola para más detalles.");
+        }
+      });
+    </script>
 
   </body>
 </html>

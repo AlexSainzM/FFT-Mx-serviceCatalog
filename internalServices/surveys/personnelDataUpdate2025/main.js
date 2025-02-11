@@ -95,3 +95,11 @@
             archivoVisa.removeAttribute("required");
         });
     });
+
+
+
+
+
+
+/* Manejo del formulario, comprension en ZIP, Formspre */
+    
