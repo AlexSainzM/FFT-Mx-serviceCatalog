@@ -7,10 +7,10 @@
 
 /* Script: información academica */
     document.addEventListener("DOMContentLoaded", function () {
-    const grado = document.getElementById("grado");
+    const grado = document.getElementById("gradoAcademico");
     const especialidadContainer = document.getElementById("especialidad-container");
     const institucionContainer = document.getElementById("institucion-container");
-    const estatus = document.getElementById("estatus");
+    const estatus = document.getElementById("estatusDeEstudios");
     const anioContainer = document.getElementById("anio-container");
 
     // Mostrar campo de especialidad si es Técnico, Licenciatura o superior

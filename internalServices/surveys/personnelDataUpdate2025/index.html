@@ -338,12 +338,12 @@
             </div>
             <div class="row">
               <div class="col-12 mb-4">
-                <label for="lugarNacimiento" class="form-label fw-bold">
+                <label for="estado_Provincia_Nacimiento" class="form-label fw-bold">
                   Estado o Provincia de Nacimiento <span class="text-danger">*</span>
                   <i class="bi bi-question-circle" data-bs-toggle="tooltip" 
                      title="Ingresa el estado o provincia donde naciste, incluso si es en otro país"></i>
                 </label>
-                <input type="text" id="lugarNacimiento" name="lugarNacimiento" class="form-control" 
+                <input type="text" id="estado_Provincia_Nacimiento" name="estado_Provincia_Nacimiento" class="form-control" 
                        placeholder="Ejemplo: Jalisco, Ontario, Bayern" required>
               </div>
             </div>
@@ -394,11 +394,11 @@
 
             <!-- Constancia de Situación Fiscal -->
             <div class="mb-4">
-              <label for="situacionFiscal" class="form-label fw-bold">Constancia de Situación Fiscal <span style="color: red;">*</span></label>
+              <label for="RFC" class="form-label fw-bold">Constancia de Situación Fiscal <span style="color: red;">*</span></label>
               <div class="card p-3 bg-light">
                 <input type="text" 
-                        id="situacionFiscal" 
-                        name="situacionFiscal" 
+                        id="RFC" 
+                        name="RFC" 
                         class="form-control mb-3" 
                         placeholder="Ingresa tu RFC" 
                         required>
@@ -628,10 +628,10 @@
 
               <!-- Correo Electrónico Personal -->
               <div class="col-md-12 col-lg-4 mb-4">
-                <label for="correoPersonal" class="form-label fw-bold">Correo Electrónico Personal <span style="color: red;">*</span></label>
+                <label for="email" class="form-label fw-bold">Correo Electrónico Personal <span style="color: red;">*</span></label>
                 <input type="email" 
-                       id="correoPersonal" 
-                       name="correoPersonal" 
+                       id="email" 
+                       name="email" 
                        class="form-control" 
                        placeholder="Ejemplo: usuario@dominio.com" 
                        required>
@@ -647,8 +647,8 @@
             <h4 class="my-4">Ultimo grado de estudios</h4>
             <!-- Grado Académico -->
             <div class="mb-3">
-              <label for="grado" class="form-label fw-bold">Grado Académico <span style="color: red;">*</span></label>
-              <select id="grado" name="grado" class="form-select" required>
+              <label for="gradoAcademico" class="form-label fw-bold">Grado Académico <span style="color: red;">*</span></label>
+              <select id="gradoAcademico" name="gradoAcademico" class="form-select" required>
                 <option value="" selected disabled>Seleccione una opción</option>
                 <option value="Primaria">Primaria</option>
                 <option value="Secundaria">Secundaria</option>
@@ -668,8 +668,8 @@
 
             <!-- Estatus de Estudios -->
             <div class="mb-3">
-                <label for="estatus" class="form-label fw-bold">Estatus de Estudios <span style="color: red;">*</span></label>
-                <select id="estatus" name="estatus" class="form-select" required>
+                <label for="estatusDeEstudios" class="form-label fw-bold">Estatus de Estudios <span style="color: red;">*</span></label>
+                <select id="estatusDeEstudios" name="estatusDeEstudios" class="form-select" required>
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="Concluido">Concluido</option>
                     <option value="En curso">En curso</option>
@@ -679,20 +679,20 @@
 
             <!-- Año de Finalización (Depende del Estatus) -->
             <div class="mb-3 d-none" id="anio-container">
-                <label for="anio" class="form-label fw-bold">Año de Finalización / Último Año Cursado</label>
-                <input type="number" id="anio" name="anio" class="form-control" min="1950" max="2030">
+                <label for="anioFinalizacion" class="form-label fw-bold">Año de Finalización / Último Año Cursado</label>
+                <input type="number" id="anioFinalizacion" name="anioFinalizacion" class="form-control" min="1950" max="2030">
             </div>
 
             <!-- Institución Educativa (Solo si el grado es Técnico o superior) -->
             <div class="mb-3 d-none" id="institucion-container">
-                <label for="institucion" class="form-label fw-bold">Institución Educativa</label>
-                <input type="text" id="institucion" name="institucion" class="form-control">
+                <label for="institucionEducativa" class="form-label fw-bold">Institución Educativa</label>
+                <input type="text" id="institucionEducativa" name="institucionEducativa" class="form-control">
             </div>
 
             <!-- Documento -->
             <div class="mb-3">
-                <label for="documento" class="form-label fw-bold">Documento que lo acredita <span style="color: red;">*</span></label>
-                <input type="file" id="documento" name="documento" class="form-control" accept=".pdf" required>
+                <label for="documentoAcademico" class="form-label fw-bold">Documento que lo acredita <span style="color: red;">*</span></label>
+                <input type="file" id="documentoAcademico" name="documentoAcademico" class="form-control" accept=".pdf" required>
                 <small class="form-text text-muted">Solo se aceptan archivos en formato PDF (máx. 2MB).</small>
             </div>
             <hr>
