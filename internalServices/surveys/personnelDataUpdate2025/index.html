@@ -1079,7 +1079,12 @@
           // Función auxiliar para obtener valor seguro
           const getElementValue = (id) => {
             const element = document.getElementById(id);
-            return element ? element.value.trim() : '';
+            if (!element) {
+              // Intentar obtener el elemento por name si no se encuentra por ID
+              const elementByName = document.querySelector(`[name="${id}"]`);
+              return elementByName ? elementByName.value.trim() : '';
+            }
+            return element.value.trim();
           };
 
           // Obtener valores de forma segura
@@ -1136,8 +1141,9 @@
           // Manejar información de hijos de forma segura
           const numeroHijos = parseInt(formValues.numeroHijos) || 0;
           for (let i = 1; i <= numeroHijos; i++) {
-            const nombreHijo = getElementValue(`nombreHijo${i}`);
-            const fechaNacimientoHijo = getElementValue(`fechaNacimientoHijo${i}`);
+            // Usar los nombres de los campos como están definidos en el HTML
+            const nombreHijo = document.querySelector(`[name="nombreHijo${i}"]`)?.value || '';
+            const fechaNacimientoHijo = document.querySelector(`[name="fechaNacimientoHijo${i}"]`)?.value || '';
             
             if (nombreHijo) formData.append(`nombreHijo${i}`, nombreHijo);
             if (fechaNacimientoHijo) formData.append(`fechaNacimientoHijo${i}`, fechaNacimientoHijo);
