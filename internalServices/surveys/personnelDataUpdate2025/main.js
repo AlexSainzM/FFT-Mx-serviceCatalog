@@ -1,34 +1,97 @@
+/* Inicializacion de los tooltips */
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
 
 
-// Generar los campos acorde al número de hijos<
-function generarCamposHijos(cantidad) {
-    const contenedor = document.getElementById('contenedorHijos');
-    contenedor.innerHTML = ''; // Limpiar contenedor
+/* Script: información academica */
+    document.addEventListener("DOMContentLoaded", function () {
+    const grado = document.getElementById("grado");
+    const especialidadContainer = document.getElementById("especialidad-container");
+    const institucionContainer = document.getElementById("institucion-container");
+    const estatus = document.getElementById("estatus");
+    const anioContainer = document.getElementById("anio-container");
 
-    for (let i = 0; i < cantidad; i++) {
-        const hijoDiv = document.createElement('div');
-        hijoDiv.className = 'hijo-info border p-3 mb-3';
-        hijoDiv.innerHTML = `
-            <h5>Información del Hijo ${i + 1}</h5>
-            
-            <!-- Nombre del Hijo -->
-            <div class="mb-3">
-                <label for="nombreHijo${i}" class="form-label">Nombre Completo <span style="color: red;">*</span></label>
-                <input type="text" id="nombreHijo${i}" name="nombreHijo${i}" class="form-control" required>
-            </div>
+    // Mostrar campo de especialidad si es Técnico, Licenciatura o superior
+    grado.addEventListener("change", function () {
+        const necesitaEspecialidad = ["Técnico", "Licenciatura", "Maestría", "Doctorado", "Otro"];
+        const necesitaInstitucion = ["Técnico", "Licenciatura", "Maestría", "Doctorado"];
 
-            <!-- Fecha de Nacimiento -->
-            <div class="mb-3">
-                <label for="fechaNacimientoHijo${i}" class="form-label">Fecha de Nacimiento <span style="color: red;">*</span></label>
-                <input type="date" id="fechaNacimientoHijo${i}" name="fechaNacimientoHijo${i}" class="form-control" required>
-            </div>
+        especialidadContainer.classList.toggle("d-none", !necesitaEspecialidad.includes(grado.value));
+        institucionContainer.classList.toggle("d-none", !necesitaInstitucion.includes(grado.value));
+        });
 
-            <!-- Acta de Nacimiento -->
-            <div class="mb-3">
-                <label for="actaNacimientoHijo${i}" class="form-label">Acta de Nacimiento <span style="color: red;">*</span></label>
-                <input type="file" id="actaNacimientoHijo${i}" name="actaNacimientoHijo${i}" class="form-control" accept=".pdf,.jpg,.png" required>
-            </div>
-        `;
-        contenedor.appendChild(hijoDiv);
+    // Mostrar Año de Finalización si es "Concluido" o "En curso"
+    estatus.addEventListener("change", function () {
+        anioContainer.classList.toggle("d-none", estatus.value === "");
+        });
+    });
+
+
+
+
+/* Script: Mostrar los campos "información de los hijos" */
+    function mostrarCamposHijos(cantidad) {
+        // Ocultar todos los campos primero y quitar required
+        for (let i = 1; i <= 10; i++) {
+            const campoHijo = document.getElementById(`hijo${i}`);
+            if (campoHijo) {
+                campoHijo.classList.add('d-none');
+                // Obtener todos los inputs dentro del contenedor del hijo
+                const inputs = campoHijo.querySelectorAll('input, select');
+                inputs.forEach(input => {
+                    input.removeAttribute('required');
+                });
+            }
+        }
+        
+        // Mostrar solo la cantidad seleccionada y hacer required
+        for (let i = 1; i <= cantidad; i++) {
+            const campoHijo = document.getElementById(`hijo${i}`);
+            if (campoHijo) {
+                campoHijo.classList.remove('d-none');
+                // Obtener todos los inputs dentro del contenedor del hijo
+                const inputs = campoHijo.querySelectorAll('input, select');
+                inputs.forEach(input => {
+                    input.setAttribute('required', '');
+                });
+            }
+        }
     }
-} 
+
+
+/* Script: Documentos de viaje */
+    document.addEventListener("DOMContentLoaded", function () {
+        const pasaporteSi = document.getElementById("pasaporte_si");
+        const pasaporteNo = document.getElementById("pasaporte_no");
+        const pasaporteUpload = document.getElementById("pasaporte_upload");
+        const archivoPasaporte = document.getElementById("archivo_pasaporte");
+
+        const visaSi = document.getElementById("visa_si");
+        const visaNo = document.getElementById("visa_no");
+        const visaUpload = document.getElementById("visa_upload");
+        const archivoVisa = document.getElementById("archivo_visa");
+
+        // Mostrar/ocultar carga de pasaporte
+        pasaporteSi.addEventListener("change", function () {
+            pasaporteUpload.classList.remove("d-none");
+            archivoPasaporte.setAttribute("required", "");
+        });
+
+        pasaporteNo.addEventListener("change", function () {
+            pasaporteUpload.classList.add("d-none");
+            archivoPasaporte.removeAttribute("required");
+        });
+
+        // Mostrar/ocultar carga de visa
+        visaSi.addEventListener("change", function () {
+            visaUpload.classList.remove("d-none");
+            archivoVisa.setAttribute("required", "");
+        });
+
+        visaNo.addEventListener("change", function () {
+            visaUpload.classList.add("d-none");
+            archivoVisa.removeAttribute("required");
+        });
+    });

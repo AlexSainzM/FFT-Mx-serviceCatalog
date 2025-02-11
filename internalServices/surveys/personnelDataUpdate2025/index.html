@@ -435,7 +435,8 @@
                         id="archivoNSS" 
                         name="archivoNSS" 
                         class="form-control" 
-                        accept=".pdf">
+                        accept=".pdf"
+                        required>
                 <div class="form-text mt-2">
                   <i class="bi bi-info-circle"></i> El NSS es un número de 11 dígitos. Puedes encontrarlo en:
                   <ul class="mt-2 mb-0">
@@ -461,7 +462,6 @@
                     <label for="pasaporte_no" class="form-check-label">No</label>
                 </div>
             </div>
-
             <!-- Carga de Pasaporte (Oculto hasta que seleccione "Sí") -->
             <div class="mb-3 d-none" id="pasaporte_upload">
                 <label for="archivo_pasaporte" class="form-label">Cargar escaneo del Pasaporte (PDF) <span class="text-danger">*</span></label>
@@ -480,7 +480,6 @@
                     <label for="visa_no" class="form-check-label">No</label>
                 </div>
             </div>
-
             <!-- Carga de Visa (Oculto hasta que seleccione "Sí") -->
             <div class="mb-3 d-none" id="visa_upload">
                 <label for="archivo_visa" class="form-label">Cargar escaneo de la Visa (PDF) <span class="text-danger">*</span></label>
@@ -661,7 +660,6 @@
                 <option value="Otro">Otro</option>
               </select>
             </div>
-
             <!-- Especialidad (Solo si el grado requiere) -->
             <div class="mb-3 d-none" id="especialidad-container">
                 <label for="especialidad" class="form-label fw-bold">Especialidad / Carrera</label>
@@ -694,8 +692,8 @@
             <!-- Documento -->
             <div class="mb-3">
                 <label for="documento" class="form-label fw-bold">Documento que lo acredita <span style="color: red;">*</span></label>
-                <input type="file" id="documento" name="documento" class="form-control" accept=".pdf, .jpg, .png" required>
-                <small class="form-text text-muted">Formatos aceptados: PDF, JPG, PNG (máx. 2MB).</small>
+                <input type="file" id="documento" name="documento" class="form-control" accept=".pdf" required>
+                <small class="form-text text-muted">Solo se aceptan archivos en formato PDF (máx. 2MB).</small>
             </div>
             <hr>
             
@@ -839,7 +837,8 @@
                   </div>
                   <div class="col-12 mb-3">
                     <label class="form-label fw-bold">Acta de Nacimiento</label>
-                    <input type="file" name="actaNacimientoHijo1" class="form-control" accept=".pdf,.jpg,.png">
+                    <input type="file" name="actaNacimientoHijo1" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
                   </div>
                 </div>
               </div>
@@ -857,7 +856,8 @@
                   </div>
                   <div class="col-12 mb-3">
                     <label class="form-label fw-bold">Acta de Nacimiento</label>
-                    <input type="file" name="actaNacimientoHijo2" class="form-control" accept=".pdf,.jpg,.png">
+                    <input type="file" name="actaNacimientoHijo2" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
                   </div>
                 </div>
               </div>
@@ -875,7 +875,8 @@
                   </div>
                   <div class="col-12 mb-3">
                     <label class="form-label fw-bold">Acta de Nacimiento</label>
-                    <input type="file" name="actaNacimientoHijo3" class="form-control" accept=".pdf,.jpg,.png">
+                    <input type="file" name="actaNacimientoHijo3" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
                   </div>
                 </div>
               </div>
@@ -893,7 +894,8 @@
                   </div>
                   <div class="col-12 mb-3">
                     <label class="form-label fw-bold">Acta de Nacimiento</label>
-                    <input type="file" name="actaNacimientoHijo4" class="form-control" accept=".pdf,.jpg,.png">
+                    <input type="file" name="actaNacimientoHijo4" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
                   </div>
                 </div>
               </div>
@@ -911,7 +913,8 @@
                   </div>
                   <div class="col-12 mb-3">
                     <label class="form-label fw-bold">Acta de Nacimiento</label>
-                    <input type="file" name="actaNacimientoHijo5" class="form-control" accept=".pdf,.jpg,.png">
+                    <input type="file" name="actaNacimientoHijo5" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
                   </div>
                 </div>
               </div>
@@ -929,7 +932,8 @@
                   </div>
                   <div class="col-12 mb-3">
                     <label class="form-label fw-bold">Acta de Nacimiento</label>
-                    <input type="file" name="actaNacimientoHijo6" class="form-control" accept=".pdf,.jpg,.png">
+                    <input type="file" name="actaNacimientoHijo6" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
                   </div>
                 </div>
               </div>
@@ -947,7 +951,8 @@
                   </div>
                   <div class="col-12 mb-3">
                     <label class="form-label fw-bold">Acta de Nacimiento</label>
-                    <input type="file" name="actaNacimientoHijo7" class="form-control" accept=".pdf,.jpg,.png">
+                    <input type="file" name="actaNacimientoHijo7" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
                   </div>
                 </div>
               </div>
@@ -965,7 +970,8 @@
                   </div>
                   <div class="col-12 mb-3">
                     <label class="form-label fw-bold">Acta de Nacimiento</label>
-                    <input type="file" name="actaNacimientoHijo8" class="form-control" accept=".pdf,.jpg,.png">
+                    <input type="file" name="actaNacimientoHijo8" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
                   </div>
                 </div>
               </div>
@@ -983,7 +989,8 @@
                   </div>
                   <div class="col-12 mb-3">
                     <label class="form-label fw-bold">Acta de Nacimiento</label>
-                    <input type="file" name="actaNacimientoHijo9" class="form-control" accept=".pdf,.jpg,.png">
+                    <input type="file" name="actaNacimientoHijo9" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
                   </div>
                 </div>
               </div>
@@ -1001,7 +1008,8 @@
                   </div>
                   <div class="col-12 mb-3">
                     <label class="form-label fw-bold">Acta de Nacimiento</label>
-                    <input type="file" name="actaNacimientoHijo10" class="form-control" accept=".pdf,.jpg,.png">
+                    <input type="file" name="actaNacimientoHijo10" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
                   </div>
                 </div>
               </div>
@@ -1009,18 +1017,6 @@
             </div>
 
             <hr>
-
-
-
-            
-            
-
-
-
-
-
-
-
           
             <!-- Botón de Envío -->
             <div class="d-grid">
@@ -1037,54 +1033,6 @@
       
     </section>
 
-    <!-- Modals for Product Details -->
-    
-      <!-- Modal Comunicados -->
-      <!-- <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="featurette-title" id="exampleModalCenteredScrollableTitle">Últimos comunicados</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="pdf-list-container">
-              
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      
-
-    <!-- Contact Section -->
-    <!-- <section id="contact" class="bg-light py-5">
-      <div class="container">
-        <h2 class="text-center">Contacto</h2>
-        <p class="text-center">Para más información sobre nuestros productos, no dudes en contactarnos.</p>
-        <div class="row">
-          <div class="col-md-6 mx-auto">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="name" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="message" rows="3" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- Footer -->
     <footer class="text-center py-4 bg-dark text-light">
@@ -1095,93 +1043,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     <script src="./main.js"></script>
-
-    <script>
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          const grado = document.getElementById("grado");
-          const especialidadContainer = document.getElementById("especialidad-container");
-          const institucionContainer = document.getElementById("institucion-container");
-          const estatus = document.getElementById("estatus");
-          const anioContainer = document.getElementById("anio-container");
-
-          // Mostrar campo de especialidad si es Técnico, Licenciatura o superior
-          grado.addEventListener("change", function () {
-              const necesitaEspecialidad = ["Técnico", "Licenciatura", "Maestría", "Doctorado", "Otro"];
-              const necesitaInstitucion = ["Técnico", "Licenciatura", "Maestría", "Doctorado"];
-
-              especialidadContainer.classList.toggle("d-none", !necesitaEspecialidad.includes(grado.value));
-              institucionContainer.classList.toggle("d-none", !necesitaInstitucion.includes(grado.value));
-          });
-
-          // Mostrar Año de Finalización si es "Concluido" o "En curso"
-          estatus.addEventListener("change", function () {
-              anioContainer.classList.toggle("d-none", estatus.value === "");
-          });
-      });
-    </script>
-
-    <script>
-      function mostrarCamposHijos(cantidad) {
-        // Ocultar todos los campos primero
-        for (let i = 1; i <= 10; i++) {
-          const campoHijo = document.getElementById(`hijo${i}`);
-          if (campoHijo) {
-            campoHijo.classList.add('d-none');
-          }
-        }
-        
-        // Mostrar solo la cantidad seleccionada
-        for (let i = 1; i <= cantidad; i++) {
-          const campoHijo = document.getElementById(`hijo${i}`);
-          if (campoHijo) {
-            campoHijo.classList.remove('d-none');
-          }
-        }
-      }
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          const pasaporteSi = document.getElementById("pasaporte_si");
-          const pasaporteNo = document.getElementById("pasaporte_no");
-          const pasaporteUpload = document.getElementById("pasaporte_upload");
-          const archivoPasaporte = document.getElementById("archivo_pasaporte");
-
-          const visaSi = document.getElementById("visa_si");
-          const visaNo = document.getElementById("visa_no");
-          const visaUpload = document.getElementById("visa_upload");
-          const archivoVisa = document.getElementById("archivo_visa");
-
-          // Mostrar/ocultar carga de pasaporte
-          pasaporteSi.addEventListener("change", function () {
-              pasaporteUpload.classList.remove("d-none");
-              archivoPasaporte.setAttribute("required", "");
-          });
-
-          pasaporteNo.addEventListener("change", function () {
-              pasaporteUpload.classList.add("d-none");
-              archivoPasaporte.removeAttribute("required");
-          });
-
-          // Mostrar/ocultar carga de visa
-          visaSi.addEventListener("change", function () {
-              visaUpload.classList.remove("d-none");
-              archivoVisa.setAttribute("required", "");
-          });
-
-          visaNo.addEventListener("change", function () {
-              visaUpload.classList.add("d-none");
-              archivoVisa.removeAttribute("required");
-          });
-      });
-    </script>
 
   </body>
 </html>
