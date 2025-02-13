@@ -99,7 +99,26 @@
 
 
 
+// Actualizar el evento change del grado académico
+    document.getElementById('gradoAcademico').addEventListener('change', function() {
+        const cedulaLeyenda = document.getElementById('cedulaLeyenda');
+        const numeroCedulaContainer = document.getElementById('numeroCedulaContainer');
+        const numeroCedulaInput = document.getElementById('numeroCedula');
+        const gradosSuperiores = ['Licenciatura', 'Maestría', 'Doctorado'];
+        
+        if (gradosSuperiores.includes(this.value)) {
+            cedulaLeyenda.classList.remove('d-none');
+            numeroCedulaContainer.classList.remove('d-none');
+            numeroCedulaInput.required = true;
+        } else {
+            cedulaLeyenda.classList.add('d-none');
+            numeroCedulaContainer.classList.add('d-none');
+            numeroCedulaInput.required = false;
+            numeroCedulaInput.value = ''; // Limpiar el campo cuando se oculta
+        }
+    });
 
 
-/* Manejo del formulario, comprension en ZIP, Formspre */
+
+
     

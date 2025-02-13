@@ -344,7 +344,7 @@
                      title="Ingresa el estado o provincia donde naciste, incluso si es en otro país"></i>
                 </label>
                 <input type="text" id="estado_Provincia_Nacimiento" name="estado_Provincia_Nacimiento" class="form-control" 
-                       placeholder="Ejemplo: Jalisco, Ontario, Bayern" required>
+                       placeholder="Ejemplo: Jalisco, Ontario, Bayern" oninput="this.value = this.value.toUpperCase();" required>
               </div>
             </div>
             <hr>
@@ -368,6 +368,27 @@
                 </div>
               </div>
             </div>
+
+            <!-- Acta de Nacimiento -->
+            <div class="mb-4">
+              <label for="archivoActaNacimiento" class="form-label fw-bold">Acta de Nacimiento Actualizada <span style="color: red;">*</span></label>
+              <div class="card p-3 bg-light">
+                <input type="file" 
+                       id="archivoActaNacimiento" 
+                       name="archivoActaNacimiento" 
+                       class="form-control" 
+                       accept=".pdf"
+                       required>
+                <div class="form-text mt-2">
+                  <i class="bi bi-info-circle"></i> Por favor, sube una copia legible y actualizada de tu acta de nacimiento en formato PDF.
+                  <ul class="mt-2 mb-0">
+                    <li>Puedes obtener tu acta de nacimiento actualizada en línea a través del portal: <a href="https://www.gob.mx/ActaNacimiento/" target="_blank" rel="noopener noreferrer">www.gob.mx/ActaNacimiento</a></li>
+                    <li>También puedes tramitarla en cualquier oficina del Registro Civil</li>
+                    <li>El trámite en línea es más rápido y puedes obtenerla el mismo día</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           
             <!-- CURP -->
             <div class="mb-4">
@@ -377,7 +398,8 @@
                         id="curp" 
                         name="curp" 
                         class="form-control mb-3" 
-                        placeholder="Ingresa tu CURP" 
+                        placeholder="Ingresa tu CURP"
+                        oninput="this.value = this.value.toUpperCase();"
                         required>
                 <input type="file" 
                         id="archivoCURP" 
@@ -394,13 +416,15 @@
 
             <!-- Constancia de Situación Fiscal -->
             <div class="mb-4">
-              <label for="RFC" class="form-label fw-bold">Constancia de Situación Fiscal <span style="color: red;">*</span></label>
+              <label for="RFC" class="form-label fw-bold">Constancia de Situación Fiscal <span style="color: red;">*</span> <i class="bi bi-question-circle" data-bs-toggle="tooltip" title="Puedes consultar tu RFC en tu recibo de nómina"></i></label>
+              
               <div class="card p-3 bg-light">
                 <input type="text" 
                         id="RFC" 
                         name="RFC" 
                         class="form-control mb-3" 
                         placeholder="Ingresa tu RFC" 
+                        oninput="this.value = this.value.toUpperCase();"
                         required>
                 <input type="file" 
                         id="archivoSituacionFiscal" 
@@ -442,8 +466,11 @@
                   <ul class="mt-2 mb-0">
                     <li>Tu credencial del IMSS</li>
                     <li>Cartilla del IMSS</li>
-                    <li>O consultarlo en: <a href="https://serviciosdigitales.imss.gob.mx/gestionAsegurados-web-externo/asignacionNSS" target="_blank" rel="noopener noreferrer">Portal IMSS</a></li>
+                    <li>O consultarlo en: <a href="https://www.gob.mx/tramites/ficha/asignacion-o-localizacion-del-numero-de-seguridad-social/IMSS164" target="_blank" rel="noopener noreferrer">Portal IMSS</a></li>
                   </ul>
+                  <p class="mt-2 mb-0">
+                    <i class="bi bi-info-circle"></i> Puedes cargar el escaneo de cualquier documento oficial que contenga tu NSS (credencial del IMSS, cartilla, hoja de registro, etc.) en formato PDF.
+                  </p>
                 </div>
               </div>
             </div>
@@ -553,45 +580,29 @@
               <!-- Municipio -->
               <div class="col-md-6 mb-4">
                 <label for="municipio" class="form-label fw-bold">Municipio/Alcaldía <span style="color: red;">*</span></label>
-                <input type="text" 
-                       id="municipio" 
-                       name="municipio" 
-                       class="form-control" 
-                       placeholder="Ingresa el municipio o alcaldía" 
-                       required>
+                <input type="text" id="municipio" name="municipio" class="form-control" 
+                       placeholder="Ingresa el municipio o alcaldía" oninput="this.value = this.value.toUpperCase();" required>
               </div>
 
               <!-- Población -->
               <div class="col-md-6 mb-4">
                 <label for="poblacion" class="form-label fw-bold">Población/Ciudad <span style="color: red;">*</span></label>
-                <input type="text" 
-                       id="poblacion" 
-                       name="poblacion" 
-                       class="form-control" 
-                       placeholder="Ingresa la población o ciudad" 
-                       required>
+                <input type="text" id="poblacion" name="poblacion" class="form-control" 
+                       placeholder="Ingresa la población o ciudad" oninput="this.value = this.value.toUpperCase();" required>
               </div>
 
               <!-- Colonia -->
               <div class="col-md-12 mb-4">
                 <label for="colonia" class="form-label fw-bold">Colonia <span style="color: red;">*</span></label>
-                <input type="text" 
-                       id="colonia" 
-                       name="colonia" 
-                       class="form-control" 
-                       placeholder="Ingresa la colonia" 
-                       required>
+                <input type="text" id="colonia" name="colonia" class="form-control" 
+                       placeholder="Ingresa la colonia" oninput="this.value = this.value.toUpperCase();" required>
               </div>
 
               <!-- Calle y Número -->
               <div class="col-md-12 mb-4">
                 <label for="calleNumero" class="form-label fw-bold">Calle y Número <span style="color: red;">*</span></label>
-                <input type="text" 
-                       id="calleNumero" 
-                       name="calleNumero" 
-                       class="form-control" 
-                       placeholder="Ejemplo: Av. Revolución 742" 
-                       required>
+                <input type="text" id="calleNumero" name="calleNumero" class="form-control" 
+                       placeholder="Ejemplo: Av. Revolución 742" oninput="this.value = this.value.toUpperCase();" required>
                 <div class="form-text">Incluye el nombre de la calle y el número exterior</div>
               </div>
             </div>
@@ -663,7 +674,8 @@
             <!-- Especialidad (Solo si el grado requiere) -->
             <div class="mb-3 d-none" id="especialidad-container">
                 <label for="especialidad" class="form-label fw-bold">Especialidad / Carrera</label>
-                <input type="text" id="especialidad" name="especialidad" class="form-control">
+                <input type="text" id="especialidad" name="especialidad" class="form-control" 
+                       oninput="this.value = this.value.toUpperCase();">
             </div>
 
             <!-- Estatus de Estudios -->
@@ -686,14 +698,44 @@
             <!-- Institución Educativa (Solo si el grado es Técnico o superior) -->
             <div class="mb-3 d-none" id="institucion-container">
                 <label for="institucionEducativa" class="form-label fw-bold">Institución Educativa</label>
-                <input type="text" id="institucionEducativa" name="institucionEducativa" class="form-control">
+                <input type="text" id="institucionEducativa" name="institucionEducativa" class="form-control" 
+                       oninput="this.value = this.value.toUpperCase();">
+            </div>
+
+            <!-- Campo para Número de Cédula (oculto por defecto) -->
+            <div id="numeroCedulaContainer" class="mb-3 d-none">
+              <label for="numeroCedula" class="form-label fw-bold">Número de Cédula Profesional <span style="color: red;">*</span></label>
+              <input type="text" 
+                     id="numeroCedula" 
+                     name="numeroCedula" 
+                     class="form-control" 
+                     placeholder="Ingresa tu número de cédula profesional"
+                     pattern="[0-9]*"
+                     title="Por favor ingresa solo números">
+              <small class="form-text text-muted">
+                  <i class="bi bi-info-circle"></i> Ingresa el número de cédula profesional sin espacios ni caracteres especiales
+              </small>
             </div>
 
             <!-- Documento -->
             <div class="mb-3">
                 <label for="documentoAcademico" class="form-label fw-bold">Documento que lo acredita <span style="color: red;">*</span></label>
                 <input type="file" id="documentoAcademico" name="documentoAcademico" class="form-control" accept=".pdf" required>
-                <small class="form-text text-muted">Solo se aceptan archivos en formato PDF (máx. 2MB).</small>
+                <small class="form-text text-muted">
+                    Solo se aceptan archivos en formato PDF (máx. 2MB).<br>
+                    <span id="cedulaLeyenda" class="d-none text-danger">
+                        <i class="bi bi-exclamation-triangle"></i> Para Licenciatura o grado superior, deberás cargar tu Cédula Profesional.
+                    </span>
+                </small>
+            </div>
+
+            <!-- CV -->
+            <div class="mb-3">
+                <label for="documentoCV" class="form-label fw-bold">Curriculum Vitae (CV) <span style="color: red;">*</span></label>
+                <input type="file" id="documentoCV" name="documentoCV" class="form-control" accept=".pdf" required>
+                <small class="form-text text-muted">
+                    <i class="bi bi-info-circle"></i> Por favor, sube tu CV actualizado en formato PDF (máx. 2MB)
+                </small>
             </div>
             <hr>
             
@@ -716,7 +758,7 @@
                          name="nombreContacto1" 
                          class="form-control" 
                          placeholder="Ejemplo: Juan Pérez López" 
-                         required>
+                         oninput="this.value = this.value.toUpperCase();" required>
                 </div>
                 
                 <!-- Teléfonos en columnas en pantallas medianas y grandes -->
@@ -759,7 +801,7 @@
                          name="nombreContacto2" 
                          class="form-control" 
                          placeholder="Ejemplo: Ana Gómez Díaz" 
-                         required>
+                         oninput="this.value = this.value.toUpperCase();" required>
                 </div>
                 
                 <!-- Teléfonos en columnas en pantallas medianas y grandes -->
@@ -812,7 +854,8 @@
             <!-- Nombre del Cónyuge -->
             <div class="mb-4">
               <label for="nombreConyuge" class="form-label fw-bold">Nombre del cónyuge o concubino</label>
-              <input type="text" id="nombreConyuge" name="nombreConyuge" class="form-control" placeholder="Ejemplo: María González Pérez">
+              <input type="text" id="nombreConyuge" name="nombreConyuge" class="form-control" 
+                     placeholder="Ejemplo: María González Pérez" oninput="this.value = this.value.toUpperCase();">
             </div>
 
             <!-- Número de Hijos -->
@@ -829,7 +872,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Nombre Completo</label>
-                    <input type="text" name="nombreHijo1" class="form-control" placeholder="Nombre completo">
+                    <input type="text" name="nombreHijo1" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Fecha de Nacimiento</label>
@@ -848,7 +891,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Nombre Completo</label>
-                    <input type="text" name="nombreHijo2" class="form-control" placeholder="Nombre completo">
+                    <input type="text" name="nombreHijo2" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Fecha de Nacimiento</label>
@@ -867,7 +910,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Nombre Completo</label>
-                    <input type="text" name="nombreHijo3" class="form-control" placeholder="Nombre completo">
+                    <input type="text" name="nombreHijo3" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Fecha de Nacimiento</label>
@@ -886,7 +929,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Nombre Completo</label>
-                    <input type="text" name="nombreHijo4" class="form-control" placeholder="Nombre completo">
+                    <input type="text" name="nombreHijo4" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Fecha de Nacimiento</label>
@@ -905,7 +948,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Nombre Completo</label>
-                    <input type="text" name="nombreHijo5" class="form-control" placeholder="Nombre completo">
+                    <input type="text" name="nombreHijo5" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Fecha de Nacimiento</label>
@@ -924,7 +967,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Nombre Completo</label>
-                    <input type="text" name="nombreHijo6" class="form-control" placeholder="Nombre completo">
+                    <input type="text" name="nombreHijo6" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Fecha de Nacimiento</label>
@@ -943,7 +986,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Nombre Completo</label>
-                    <input type="text" name="nombreHijo7" class="form-control" placeholder="Nombre completo">
+                    <input type="text" name="nombreHijo7" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Fecha de Nacimiento</label>
@@ -962,7 +1005,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Nombre Completo</label>
-                    <input type="text" name="nombreHijo8" class="form-control" placeholder="Nombre completo">
+                    <input type="text" name="nombreHijo8" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Fecha de Nacimiento</label>
@@ -981,7 +1024,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Nombre Completo</label>
-                    <input type="text" name="nombreHijo9" class="form-control" placeholder="Nombre completo">
+                    <input type="text" name="nombreHijo9" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Fecha de Nacimiento</label>
@@ -1000,7 +1043,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Nombre Completo</label>
-                    <input type="text" name="nombreHijo10" class="form-control" placeholder="Nombre completo">
+                    <input type="text" name="nombreHijo10" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Fecha de Nacimiento</label>
@@ -1115,6 +1158,7 @@
             estatusDeEstudios: getElementValue("estatusDeEstudios"),
             anioFinalizacion: getElementValue("anioFinalizacion"),
             institucionEducativa: getElementValue("institucionEducativa"),
+            numeroCedula: getElementValue("numeroCedula"),
             nombreContacto1: getElementValue("nombreContacto1"),
             telefonoFijoContacto1: getElementValue("telefonoFijoContacto1"),
             telefonoCelularContacto1: getElementValue("telefonoCelularContacto1"),
@@ -1171,6 +1215,7 @@
           alert("Hubo un error en el proceso. Verifica la consola para más detalles.");
         }
       });
+
     </script>
 
   </body>
