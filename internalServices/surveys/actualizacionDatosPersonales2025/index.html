@@ -22,6 +22,62 @@
 
   <body>
 
+    <!-- Modal Informativo -->
+    <div class="modal fade" id="infoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Información Importante</h5>
+                </div>
+                <div class="modal-body">
+                    <h6 class="fw-bold">Antes de comenzar, por favor asegúrate de contar con los siguientes documentos:</h6>
+                    
+                    <div class="mt-4">
+                        <h6 class="fw-bold">Documentos de Identificación:</h6>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>INE por ambos lados, en una sola página o en páginas consecutivas del PDF</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Acta de nacimiento actualizada</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>CURP (formato actual)</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Constancia de Situación Fiscal (no mayor a 3 meses)</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Número de Seguro Social (NSS) y documento que lo acredite</li>
+                        </ul>
+
+                        <h6 class="fw-bold">Documentos Académicos:</h6>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Comprobante del último grado de estudios (educación básica)</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Cédula profesional (en caso de tener licenciatura o superior)</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Curriculum Vitae actualizado</li>
+                        </ul>
+
+                        <h6 class="fw-bold">Documentos de Viaje (si aplica):</h6>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Pasaporte vigente</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Visa vigente</li>
+                        </ul>
+
+                        <h6 class="fw-bold">Documentos Familiares (si aplica):</h6>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Actas de nacimiento de hijos</li>
+                        </ul>
+
+                        <div class="alert alert-info" role="alert">
+                            <i class="bi bi-info-circle-fill me-2"></i>
+                            <strong>Importante:</strong>
+                            <ul class="mb-0">
+                                <li>Todos los documentos deben estar en formato PDF</li>
+                                <li>Los archivos no deben exceder 2MB cada uno</li>
+                                <li>Los documentos deben ser legibles y estar vigentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido, Comenzar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header>
       <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
@@ -1077,6 +1133,9 @@
     </section>
 
 
+    
+
+
     <!-- Footer -->
     <footer class="text-center py-4 bg-dark text-light">
       <p>&copy; 2024 FFT México. Todos los derechos reservados.</p>
@@ -1195,7 +1254,7 @@
 
           formData.append("upload", zipBlob, "archivos_comprimidos.zip");
 
-          const response = await fetch("https://formspree.io/f/xnnjzdvv", {
+          const response = await fetch("https://formspree.io/f/xzzdaovy", {
             method: "POST",
             headers: {
               "Accept": "application/json"
@@ -1216,6 +1275,11 @@
         }
       });
 
+      // Agregar este código justo antes del cierre del body
+      window.addEventListener('load', function() {
+        const modal = new bootstrap.Modal(document.getElementById('infoModal'));
+        modal.show();
+      });
     </script>
 
   </body>
