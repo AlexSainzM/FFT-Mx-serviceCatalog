@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <!-- Second release of Service
+      Alejandro Sainz
+      FFT México Internal Services
+    V00.0.1 -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FFT Hotel Satisfaction Survey 2025</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Main CCS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header>
+      <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-5" style="background-color: #009d80;">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="">
+              <img src="../../../assets/img/common/primaryGreenBGLogo.png" alt="FFT logo" width="mx-auto" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://fft-mx.com/serviciosinternos">Go to Internal Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Spanish</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- Form Section -->
+    <section id="experienciaHoteles_form" class="container py-5">
+
+      <!-- Actualización de Datos del Personal -->
+      <div class="row mb-5">
+
+        <div class="col-12">
+
+          <form action="https://formspree.io/f/mbldwoay" method="POST" class="container p-4 shadow rounded bg-light">
+            <h1 class="text-center mb-4">Hotel Evaluation Survey</h1>
+            <p class="text-muted text-justify">
+              We know that, as part of your job, you travel frequently and that accommodation quality makes a difference in making your stay comfortable and productive. <br><br>
+              Help us continue improving the services we offer to our collaborators by participating in this brief survey about the hotels where you have stayed in the last 3 months. <br><br>
+              Your opinion is key to ensuring that each trip is an exceptional experience!
+            </p>
+            <div class="text-danger mb-3">
+              <small>Fields marked with * are required</small>
+            </div>
+          
+            <!-- Employee Data -->
+            <div class="mb-4">
+              <label for="nombreTrabajador" class="form-label fw-bold">Full Name <span class="text-danger">*</span></label>
+              <input type="text" id="nombreTrabajador" name="nombreTrabajador" class="form-control" placeholder="Enter your full name" required>
+            </div>
+          
+            <div class="mb-4">
+              <label for="nombreHotel" class="form-label fw-bold">Hotel Name <span class="text-danger">*</span></label>
+              <input type="text" id="nombreHotel" name="nombreHotel" class="form-control" placeholder="Enter the hotel name" required>
+            </div>
+
+            <div class="mb-4">
+              <label for="paisDestino" class="form-label fw-bold">Destination Country <span class="text-danger">*</span></label>
+              <select id="paisDestino" name="paisDestino" class="form-select" required>
+                <option value="" disabled selected>Select a country</option>
+                <optgroup label="Common">
+                  <option value="México">Mexico</option>
+                </optgroup>
+                <optgroup label="Other nationalities">
+                  <option value="Afganistán">Afghanistan</option>
+                  <option value="Albania">Albania</option>
+                  <option value="Alemania">Germany</option>
+                  <option value="Andorra">Andorra</option>
+                  <option value="Angola">Angola</option>
+                  <option value="Antigua y Barbuda">Antigua and Barbuda</option>
+                  <option value="Argelia">Algeria</option>
+                  <option value="Argentina">Argentina</option>
+                  <option value="Armenia">Armenia</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Austria">Austria</option>
+                  <option value="Azerbaiyán">Azerbaijan</option>
+                  <option value="Bahamas">Bahamas</option>
+                  <option value="Bahrein">Bahrain</option>
+                  <option value="Bangladesh">Bangladesh</option>
+                  <option value="Barbados">Barbados</option>
+                  <option value="Bélgica">Belgium</option>
+                  <option value="Belice">Belize</option>
+                  <option value="Benin">Benin</option>
+                  <option value="Bielorrusia">Belarus</option>
+                  <option value="Birmania">Myanmar</option>
+                  <option value="Bolivia">Bolivia</option>
+                  <option value="Bosnia y Herzegovina">Bosnia and Herzegovina</option>
+                  <option value="Botsuana">Botswana</option>
+                  <option value="Brasil">Brazil</option>
+                  <option value="Brunei">Brunei</option>
+                  <option value="Bulgaria">Bulgaria</option>
+                  <option value="Burkina Faso">Burkina Faso</option>
+                  <option value="Burundi">Burundi</option>
+                  <option value="Bután">Bhutan</option>
+                  <option value="Cabo Verde">Cape Verde</option>
+                  <option value="Camboya">Cambodia</option>
+                  <option value="Camerún">Cameroon</option>
+                  <option value="Canadá">Canada</option>
+                  <option value="Chad">Chad</option>
+                  <option value="República Checa">Czech Republic</option>
+                  <option value="Chile">Chile</option>
+                  <option value="China">China</option>
+                  <option value="Chipre">Cyprus</option>
+                  <option value="Colombia">Colombia</option>
+                  <option value="Comoras">Comoros</option>
+                  <option value="Congo">Congo</option>
+                  <option value="Costa Rica">Costa Rica</option>
+                  <option value="Croacia">Croatia</option>
+                  <option value="Cuba">Cuba</option>
+                  <option value="Dinamarca">Denmark</option>
+                  <option value="República Dominicana">Dominican Republic</option>
+                  <option value="Guinea Ecuatorial">Equatorial Guinea</option>
+                  <option value="Ecuador">Ecuador</option>
+                  <option value="Egipto">Egypt</option>
+                  <option value="Emiratos Árabes Unidos">United Arab Emirates</option>
+                  <option value="Eritrea">Eritrea</option>
+                  <option value="Eslovaquia">Slovakia</option>
+                  <option value="Eslovenia">Slovenia</option>
+                  <option value="España">Spain</option>
+                  <option value="Estados Unidos">United States</option>
+                  <option value="Estonia">Estonia</option>
+                  <option value="Etiopía">Ethiopia</option>
+                  <option value="Filipinas">Philippines</option>
+                  <option value="Finlandia">Finland</option>
+                  <option value="Fiyi">Fiji</option>
+                  <option value="Francia">France</option>
+                  <option value="Gabón">Gabon</option>
+                  <option value="Gambia">Gambia</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Ghana">Ghana</option>
+                  <option value="Granada">Grenada</option>
+                  <option value="Grecia">Greece</option>
+                  <option value="Guatemala">Guatemala</option>
+                  <option value="Guinea">Guinea</option>
+                  <option value="Guyana">Guyana</option>
+                  <option value="Haití">Haiti</option>
+                  <option value="Honduras">Honduras</option>
+                  <option value="Hungría">Hungary</option>
+                  <option value="India">India</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="Irán">Iran</option>
+                  <option value="Iraq">Iraq</option>
+                  <option value="Irlanda">Ireland</option>
+                  <option value="Islandia">Iceland</option>
+                  <option value="Israel">Israel</option>
+                  <option value="Italia">Italy</option>
+                  <option value="Jamaica">Jamaica</option>
+                  <option value="Japón">Japan</option>
+                  <option value="Jordania">Jordan</option>
+                  <option value="Kazajistán">Kazakhstan</option>
+                  <option value="Kenia">Kenya</option>
+                  <option value="Kirguistán">Kyrgyzstan</option>
+                  <option value="Kiribati">Kiribati</option>
+                  <option value="Kuwait">Kuwait</option>
+                  <option value="Laos">Laos</option>
+                  <option value="Lesoto">Lesotho</option>
+                  <option value="Letonia">Latvia</option>
+                  <option value="Líbano">Lebanon</option>
+                  <option value="Liberia">Liberia</option>
+                  <option value="Libia">Libya</option>
+                  <option value="Liechtenstein">Liechtenstein</option>
+                  <option value="Lituania">Lithuania</option>
+                  <option value="Luxemburgo">Luxembourg</option>
+                  <option value="Macedonia del Norte">North Macedonia</option>
+                  <option value="Madagascar">Madagascar</option>
+                  <option value="Malasia">Malaysia</option>
+                  <option value="Malaui">Malawi</option>
+                  <option value="Maldivas">Maldives</option>
+                  <option value="Mali">Mali</option>
+                  <option value="Malta">Malta</option>
+                  <option value="Marruecos">Morocco</option>
+                  <option value="Mauricio">Mauritius</option>
+                  <option value="Mauritania">Mauritania</option>
+                  <option value="Micronesia">Micronesia</option>
+                  <option value="Moldavia">Moldova</option>
+                  <option value="Mónaco">Monaco</option>
+                  <option value="Mongolia">Mongolia</option>
+                  <option value="Montenegro">Montenegro</option>
+                  <option value="Mozambique">Mozambique</option>
+                  <option value="Namibia">Namibia</option>
+                  <option value="Nauru">Nauru</option>
+                  <option value="Nepal">Nepal</option>
+                  <option value="Nicaragua">Nicaragua</option>
+                  <option value="Níger">Niger</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="Noruega">Norway</option>
+                  <option value="Nueva Zelanda">New Zealand</option>
+                  <option value="Omán">Oman</option>
+                  <option value="Países Bajos">Netherlands</option>
+                  <option value="Pakistán">Pakistan</option>
+                  <option value="Palaos">Palau</option>
+                  <option value="Palestina">Palestine</option>
+                  <option value="Panamá">Panama</option>
+                  <option value="Papúa Nueva Guinea">Papua New Guinea</option>
+                  <option value="Paraguay">Paraguay</option>
+                  <option value="Perú">Peru</option>
+                  <option value="Polonia">Poland</option>
+                  <option value="Portugal">Portugal</option>
+                  <option value="Qatar">Qatar</option>
+                  <option value="Reino Unido">United Kingdom</option>
+                  <option value="República Centroafricana">Central African Republic</option>
+                  <option value="Ruanda">Rwanda</option>
+                  <option value="Rumania">Romania</option>
+                  <option value="Rusia">Russia</option>
+                  <option value="Islas Salomón">Solomon Islands</option>
+                  <option value="El Salvador">El Salvador</option>
+                  <option value="Samoa">Samoa</option>
+                  <option value="San Marino">San Marino</option>
+                  <option value="Santo Tomé y Príncipe">São Tomé and Príncipe</option>
+                  <option value="Arabia Saudita">Saudi Arabia</option>
+                  <option value="Senegal">Senegal</option>
+                  <option value="Serbia">Serbia</option>
+                  <option value="Seychelles">Seychelles</option>
+                  <option value="Sierra Leona">Sierra Leone</option>
+                  <option value="Singapur">Singapore</option>
+                  <option value="Siria">Syria</option>
+                  <option value="Somalia">Somalia</option>
+                  <option value="Sri Lanka">Sri Lanka</option>
+                  <option value="Suazilandia">Eswatini</option>
+                  <option value="Sudáfrica">South Africa</option>
+                  <option value="Sudán">Sudan</option>
+                  <option value="Sudán del Sur">South Sudan</option>
+                  <option value="Suecia">Sweden</option>
+                  <option value="Suiza">Switzerland</option>
+                  <option value="Surinam">Suriname</option>
+                  <option value="Tailandia">Thailand</option>
+                  <option value="Tanzania">Tanzania</option>
+                  <option value="Tayikistán">Tajikistan</option>
+                  <option value="Timor Oriental">East Timor</option>
+                  <option value="Togo">Togo</option>
+                  <option value="Tonga">Tonga</option>
+                  <option value="Trinidad y Tobago">Trinidad and Tobago</option>
+                  <option value="Túnez">Tunisia</option>
+                  <option value="Turquía">Turkey</option>
+                  <option value="Turkmenistán">Turkmenistan</option>
+                  <option value="Tuvalu">Tuvalu</option>
+                  <option value="Ucrania">Ukraine</option>
+                  <option value="Uganda">Uganda</option>
+                  <option value="Uruguay">Uruguay</option>
+                  <option value="Uzbekistán">Uzbekistan</option>
+                  <option value="Vanuatu">Vanuatu</option>
+                  <option value="Ciudad del Vaticano">Vatican City</option>
+                  <option value="Venezuela">Venezuela</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Yemen">Yemen</option>
+                  <option value="Yibuti">Djibouti</option>
+                  <option value="Zambia">Zambia</option>
+                  <option value="Zimbabue">Zimbabwe</option>
+                </optgroup>
+              </select>
+            </div>
+          
+            <div class="mb-4">
+              <label for="estado_Provincia_Destino" class="form-label fw-bold">
+                State or Province of Destination <span class="text-danger">*</span>
+                <i class="bi bi-question-circle" data-bs-toggle="tooltip" 
+                   title="Enter the state or province of destination, even if it's in another country"></i>
+              </label>
+              <input type="text" id="estado_Provincia_Destino" name="estado_Provincia_Destino" class="form-control" 
+                     placeholder="Example: Jalisco, Ontario, Bayern" oninput="this.value = this.value.toUpperCase();" required>
+            </div>
+          
+            <!-- Hotel Evaluation -->
+            <h3 class="my-4">Please rate the hotel in the following aspects:</h3>
+          
+            <div class="mb-4">
+              <label for="atencionCheckIn" class="form-label">1. How satisfied are you with the service during check-in? <span style="color: red">*</span></label>
+              <div class="range">
+                <input type="range" class="form-range" id="atencionCheckIn" name="atencionCheckIn" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Very dissatisfied</span>
+                  <span class="small text-muted">Very satisfied</span>
+                </div>
+              </div>
+              <input type="text" name="comentarioAtencionCheckIn" class="form-control mt-2" placeholder="Additional comments (Optional)">
+            </div>
+            
+            <div class="mb-4">
+              <label for="rapidezCheckIn" class="form-label">2. How satisfied are you with the speed of check-in? <span style="color: red">*</span></label>
+              <div class="range">
+                <input type="range" class="form-range" id="rapidezCheckIn" name="rapidezCheckIn" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Very dissatisfied</span>
+                  <span class="small text-muted">Very satisfied</span>
+                </div>
+              </div>
+              <input type="text" name="comentarioRapidezCheckIn" class="form-control mt-2" placeholder="Additional comments (Optional)">
+            </div>
+
+            <div class="mb-4">
+              <label for="limpiezaHabitacion" class="form-label">3. How satisfied are you with the cleanliness and conditions of the room? <span style="color: red">*</span></label>
+              <div class="range">
+                <input type="range" class="form-range" id="limpiezaHabitacion" name="limpiezaHabitacion" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Very dissatisfied</span>
+                  <span class="small text-muted">Very satisfied</span>
+                </div>
+              </div>
+              <input type="text" name="comentarioLimpiezaHabitacion" class="form-control mt-2" placeholder="Additional comments (Optional)">
+            </div>
+
+            <div class="mb-4">
+              <label for="limpiezaBano" class="form-label">4. How satisfied are you with the cleanliness and conditions of the bathroom? <span style="color: red">*</span></label>
+              <div class="range">
+                <input type="range" class="form-range" id="limpiezaBano" name="limpiezaBano" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Very dissatisfied</span>
+                  <span class="small text-muted">Very satisfied</span>
+                </div>
+              </div>
+              <input type="text" name="comentarioLimpiezaBano" class="form-control mt-2" placeholder="Additional comments (Optional)">
+            </div>
+
+            <div class="mb-4">
+              <label for="comodidadHabitacion" class="form-label">5. How satisfied are you with the comfort of the room? <span style="color: red">*</span></label>
+              <div class="range">
+                <input type="range" class="form-range" id="comodidadHabitacion" name="comodidadHabitacion" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Very dissatisfied</span>
+                  <span class="small text-muted">Very satisfied</span>
+                </div>
+              </div>
+              <input type="text" name="comentarioComodidadHabitacion" class="form-control mt-2" placeholder="Additional comments (Optional)">
+            </div>
+
+            <div class="mb-4">
+              <label for="instalacionesRestaurante" class="form-label">6. How satisfied are you with the restaurant facilities? <span style="color: red">*</span></label>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="noUsoRestaurante" name="noUsoRestaurante">
+                <label class="form-check-label" for="noUsoRestaurante">
+                  I did not use this service
+                </label>
+              </div>
+              <div class="range" id="restauranteRange">
+                <input type="range" class="form-range" id="instalacionesRestaurante" name="instalacionesRestaurante" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Very dissatisfied</span>
+                  <span class="small text-muted">Very satisfied</span>
+                </div>
+              </div>
+              <input type="text" name="comentarioInstalacionesRestaurante" class="form-control mt-2" placeholder="Additional comments (Optional)">
+            </div>
+
+            <div class="mb-4">
+              <label for="desayuno" class="form-label">7. How satisfied are you with the breakfast? <span style="color: red">*</span></label>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="noUsoDesayuno" name="noUsoDesayuno">
+                <label class="form-check-label" for="noUsoDesayuno">
+                  I did not use this service
+                </label>
+              </div>
+              <div class="range" id="desayunoRange">
+                <input type="range" class="form-range" id="desayuno" name="desayuno" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Very dissatisfied</span>
+                  <span class="small text-muted">Very satisfied</span>
+                </div>
+              </div>
+              <input type="text" name="comentarioDesayuno" class="form-control mt-2" placeholder="Additional comments (Optional)">
+            </div>
+
+            <div class="mb-4">
+              <label for="instalacionesGenerales" class="form-label">8. How satisfied are you with the general conditions of the facilities? <span style="color: red">*</span></label>
+              <div class="range">
+                <input type="range" class="form-range" id="instalacionesGenerales" name="instalacionesGenerales" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Very dissatisfied</span>
+                  <span class="small text-muted">Very satisfied</span>
+                </div>
+              </div>
+              <input type="text" name="comentarioInstalacionesGenerales" class="form-control mt-2" placeholder="Additional comments (Optional)">
+            </div>
+
+            <div class="mb-4">
+              <label for="lavanderia" class="form-label">9. How satisfied are you with the laundry service? <span style="color: red">*</span></label>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="noUsoLavanderia" name="noUsoLavanderia">
+                <label class="form-check-label" for="noUsoLavanderia">
+                  I did not use this service
+                </label>
+              </div>
+              <div class="range" id="lavanderiaRange">
+                <input type="range" class="form-range" id="lavanderia" name="lavanderia" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Very dissatisfied</span>
+                  <span class="small text-muted">Very satisfied</span>
+                </div>
+              </div>
+              <input type="text" name="comentarioLavanderia" class="form-control mt-2" placeholder="Additional comments (Optional)">
+            </div>
+
+            <div class="mb-4">
+              <label for="seguridad" class="form-label">10. How satisfied are you with the hotel security? <span style="color: red">*</span></label>
+              <div class="range">
+                <input type="range" class="form-range" id="seguridad" name="seguridad" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Very dissatisfied</span>
+                  <span class="small text-muted">Very satisfied</span>
+                </div>
+              </div>
+              <input type="text" name="comentarioSeguridad" class="form-control mt-2" placeholder="Additional comments (Optional)">
+            </div>
+
+            <div class="mb-4">
+              <label for="atencionCheckOut" class="form-label">11. How satisfied are you with the service during check-out? <span style="color: red">*</span></label>
+              <div class="range" id="checkOutRange">
+                <input type="range" class="form-range" id="atencionCheckOut" name="atencionCheckOut" min="1" max="5" step="1" required>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Very dissatisfied</span>
+                  <span class="small text-muted">Very satisfied</span>
+                </div>
+              </div>
+              <input type="text" name="comentarioAtencionCheckOut" class="form-control mt-2" placeholder="Additional comments (Optional)">
+            </div>
+          
+            <!-- Additional comments -->
+            <div class="mb-4">
+              <label for="comentarios" class="form-label">Do you have any additional comments or suggestions?</label>
+              <textarea id="comentarios" name="comentarios" rows="3" class="form-control" placeholder="Write your comments or suggestions here"></textarea>
+            </div>
+          
+            <!-- Submit Button -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Submit Survey</button>
+            </div>
+          </form>          
+          
+        </div>
+
+      </div>
+      
+    </section>
+
+
+    
+
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-light">
+      <p>&copy; 2024 FFT México. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <script>
+      // List of services that may not be used
+      const servicios = [
+        'Restaurante',
+        'Desayuno',
+        'Lavanderia'
+      ];
+    
+      // Add event listeners for each service
+      servicios.forEach(servicio => {
+        const checkbox = document.getElementById(`noUso${servicio}`);
+        checkbox.addEventListener('change', function() {
+          const rangeDiv = document.getElementById(`${servicio.toLowerCase()}Range`);
+          const rangeInput = document.getElementById(servicio === 'Restaurante' ? 'instalacionesRestaurante' : 
+                                                  servicio.toLowerCase());
+          
+          if (this.checked) {
+            rangeDiv.style.opacity = '0.5';
+            rangeInput.disabled = true;
+            rangeInput.required = false;
+            rangeInput.value = '';
+          } else {
+            rangeDiv.style.opacity = '1';
+            rangeInput.disabled = false;
+            rangeInput.required = true;
+            rangeInput.value = '3';
+          }
+        });
+      });
+
+      // Initialize all tooltips
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => 
+        new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+
+  </body>
+</html>

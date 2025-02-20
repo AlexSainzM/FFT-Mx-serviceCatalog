@@ -38,6 +38,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="https://fft-mx.com/serviciosinternos">Ir a Servicios Internos</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="en.html">English</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -46,34 +49,37 @@
     </header>
     
     <!-- Form Section -->
-    <section id="actualizacionDatosDelPersonal_form" class="container py-5">
+    <section id="experienciaHoteles_form" class="container py-5">
 
       <!-- Actualización de Datos del Personal -->
       <div class="row mb-5">
 
         <div class="col-12">
 
-          <form action="/ruta-del-servidor" method="POST" class="container p-4 shadow rounded bg-light">
+          <form action="https://formspree.io/f/xvgzlabz" method="POST" class="container p-4 shadow rounded bg-light">
             <h1 class="text-center mb-4">Encuesta de Evaluación de Hoteles</h1>
             <p class="text-muted text-justify">
               Sabemos que, como parte de tu trabajo, viajas con frecuencia y que la calidad del alojamiento marca la diferencia para que tu estancia sea cómoda y productiva. <br><br>
               Ayúdanos a seguir mejorando los servicios que ofrecemos a nuestros colaboradores participando en esta breve encuesta sobre los hoteles donde te has hospedado en los últimos 3 meses. <br><br>
               ¡Tu opinión es clave para asegurarnos de que cada viaje sea una experiencia excepcional!
             </p>
+            <div class="text-danger mb-3">
+              <small>Los campos marcados con * son obligatorios</small>
+            </div>
           
             <!-- Datos del trabajador -->
             <div class="mb-4">
-              <label for="nombreTrabajador" class="form-label">Nombre Completo:</label>
+              <label for="nombreTrabajador" class="form-label fw-bold">Nombre Completo <span class="text-danger">*</span></label>
               <input type="text" id="nombreTrabajador" name="nombreTrabajador" class="form-control" placeholder="Ingresa tu nombre completo" required>
             </div>
           
             <div class="mb-4">
-              <label for="nombreHotel" class="form-label">Nombre del Hotel:</label>
+              <label for="nombreHotel" class="form-label fw-bold">Nombre del Hotel <span class="text-danger">*</span></label>
               <input type="text" id="nombreHotel" name="nombreHotel" class="form-control" placeholder="Ingresa el nombre del hotel" required>
             </div>
 
             <div class="mb-4">
-              <label for="paisDestino" class="form-label">País de destino:</label>
+              <label for="paisDestino" class="form-label fw-bold">País de destino <span class="text-danger">*</span></label>
               <select id="paisDestino" name="paisDestino" class="form-select" required>
                 <option value="" disabled selected>Selecciona un país</option>
                 <optgroup label="Común">
@@ -272,7 +278,7 @@
               <label for="estado_Provincia_Destino" class="form-label fw-bold">
                 Estado o Provincia de Destino <span class="text-danger">*</span>
                 <i class="bi bi-question-circle" data-bs-toggle="tooltip" 
-                   title="Ingresa el estado o provincia donde naciste, incluso si es en otro país"></i>
+                   title="Ingresa el estado o provincia de destino, incluso si es en otro país"></i>
               </label>
               <input type="text" id="estado_Provincia_Destino" name="estado_Provincia_Destino" class="form-control" 
                      placeholder="Ejemplo: Jalisco, Ontario, Bayern" oninput="this.value = this.value.toUpperCase();" required>
@@ -494,6 +500,12 @@
           }
         });
       });
+
+      // Initialize all tooltips
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => 
+        new bootstrap.Tooltip(tooltipTriggerEl)
+      );
     </script>
 
   </body>
