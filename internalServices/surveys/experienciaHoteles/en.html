@@ -69,13 +69,44 @@
           
             <!-- Employee Data -->
             <div class="mb-4">
-              <label for="nombreTrabajador" class="form-label fw-bold">Full Name <span class="text-danger">*</span></label>
-              <input type="text" id="nombreTrabajador" name="nombreTrabajador" class="form-control" placeholder="Enter your full name" required>
+              <label for="centroCostos" class="form-label fw-bold">Cost Center <span class="text-danger">*</span></label>
+              <select id="centroCostos" name="centroCostos" class="form-select" required>
+                <option value="" disabled selected>Select your cost center</option>
+                <option value="54100">54100</option>
+                <option value="54110">54110</option>
+                <option value="54120">54120</option>
+                <option value="54130">54130</option>
+                <option value="54200">54200</option>
+                <option value="54210">54210</option>
+                <option value="54220">54220</option>
+                <option value="54230">54230</option>
+                <option value="54350">54350</option>
+                <option value="54300">54300</option>
+                <option value="54310">54310</option>
+                <option value="54320">54320</option>
+                <option value="54330">54330</option>
+                <option value="54395">54395</option>
+                <option value="54400">54400</option>
+                <option value="54410">54410</option>
+                <option value="54420">54420</option>
+                <option value="54430">54430</option>
+                <option value="54440">54440</option>
+                <option value="54450">54450</option>
+                <option value="54500">54500</option>
+                <option value="54510">54510</option>
+                <option value="54520">54520</option>
+                <option value="54530">54530</option>
+                <option value="54540">54540</option>
+                <option value="54550">54550</option>
+                <option value="54560">54560</option>
+                <option value="54700">54700</option>
+                <option value="54999">54999</option>
+              </select>
             </div>
           
             <div class="mb-4">
               <label for="nombreHotel" class="form-label fw-bold">Hotel Name <span class="text-danger">*</span></label>
-              <input type="text" id="nombreHotel" name="nombreHotel" class="form-control" placeholder="Enter the hotel name" required>
+              <input type="text" id="nombreHotel" name="nombreHotel" class="form-control" placeholder="Enter the hotel name"  oninput="this.value = this.value.toUpperCase();" required>
             </div>
 
             <div class="mb-4">
@@ -282,6 +313,38 @@
               </label>
               <input type="text" id="estado_Provincia_Destino" name="estado_Provincia_Destino" class="form-control" 
                      placeholder="Example: Jalisco, Ontario, Bayern" oninput="this.value = this.value.toUpperCase();" required>
+            </div>
+
+            <div class="mb-4">
+              <label for="fechaEstancia" class="form-label fw-bold">
+                Approximate Stay Date <span class="text-danger">*</span>
+              </label>
+              <div class="row">
+                <div class="col-md-6">
+                  <select id="mesEstancia" name="mesEstancia" class="form-select" required>
+                    <option value="" disabled selected>Select month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <select id="anoEstancia" name="anoEstancia" class="form-select" required>
+                    <option value="" disabled selected>Select year</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                  </select>
+                </div>
+              </div>
             </div>
           
             <!-- Hotel Evaluation -->
