@@ -101,7 +101,25 @@
                 <option value="54560">54560</option>
                 <option value="54700">54700</option>
                 <option value="54999">54999</option>
+                <option value="No aplica">I do not belong to any of these cost centers.</option>
               </select>
+            </div>
+
+            <div class="mb-4">
+              <label for="nombreTrabajador" class="form-label fw-bold">
+                Full name or SAP number of the traveler
+                <i class="bi bi-question-circle" data-bs-toggle="tooltip" 
+                   title="If you want to report a situation that requires follow-up, it is important that you provide your full name or SAP number to be able to contact you"></i>
+              </label>
+              <input type="text" 
+                     id="nombreTrabajador" 
+                     name="nombreTrabajador"
+                     class="form-control"
+                     placeholder="Example: Juan Pérez Rodríguez or 12345"
+                     oninput="this.value = this.value.toUpperCase();">
+              <div class="form-text">
+                <i class="bi bi-info-circle"></i> Optional field. Only necessary if you need to follow up on a specific situation.
+              </div>
             </div>
           
             <div class="mb-4">
