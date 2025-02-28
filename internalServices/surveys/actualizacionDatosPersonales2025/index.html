@@ -1171,7 +1171,7 @@
         try {
           const zipBlob = await zip.generateAsync({ type: "blob" });
 
-          if (zipBlob.size > 10 * 1024 * 1024) {
+          if (zipBlob.size > 20 * 1024 * 1024) {
             alert("El archivo ZIP es demasiado grande. Intenta reducir la cantidad o tamaño de los archivos.");
             return;
           }
