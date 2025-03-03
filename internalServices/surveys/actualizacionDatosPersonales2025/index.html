@@ -37,6 +37,7 @@
                         <ul class="list-group list-group-flush mb-3">
                             <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>INE por ambos lados, en una sola página o en páginas consecutivas del PDF</li>
                             <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Acta de nacimiento actualizada</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Comprobante de domicilio reciente (no mayor a 3 meses)</li>
                             <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>CURP (formato actual)</li>
                             <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Constancia de Situación Fiscal (no mayor a 3 meses)</li>
                             <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Número de Seguro Social (NSS) y documento que lo acredite</li>
@@ -421,6 +422,22 @@
                         required>
                 <div class="form-text mt-2">
                   <i class="bi bi-info-circle"></i> Por favor, sube un archivo PDF que contenga ambos lados de tu INE (frente y reverso en la misma página o en páginas consecutivas del PDF)
+                </div>
+              </div>
+            </div>
+
+            <!-- Comprobante de Domicilio -->
+            <div class="mb-4">
+              <label for="archivoComprobanteDomicilio" class="form-label fw-bold">Comprobante de Domicilio <span style="color: red;">*</span></label>
+              <div class="card p-3 bg-light">
+                <input type="file" 
+                       id="archivoComprobanteDomicilio" 
+                       name="archivoComprobanteDomicilio" 
+                       class="form-control" 
+                       accept=".pdf"
+                       required>
+                <div class="form-text mt-2">
+                  <i class="bi bi-info-circle"></i> Por favor, sube un comprobante de domicilio reciente (no mayor a 3 meses) en formato PDF. Puede ser recibo de luz, agua, teléfono.
                 </div>
               </div>
             </div>
@@ -1171,7 +1188,7 @@
         try {
           const zipBlob = await zip.generateAsync({ type: "blob" });
 
-          if (zipBlob.size > 10 * 1024 * 1024) {
+          if (zipBlob.size > 20 * 1024 * 1024) {
             alert("El archivo ZIP es demasiado grande. Intenta reducir la cantidad o tamaño de los archivos.");
             return;
           }

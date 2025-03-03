@@ -101,7 +101,25 @@
                 <option value="54560">54560</option>
                 <option value="54700">54700</option>
                 <option value="54999">54999</option>
+                <option value="No aplica">No pertenezco a ninguno de estos centros de costos.</option>
               </select>
+            </div>
+
+            <div class="mb-4">
+              <label for="nombreTrabajador" class="form-label fw-bold">
+                Nombre completo o número SAP del viajero
+                <i class="bi bi-question-circle" data-bs-toggle="tooltip" 
+                   title="Si deseas reportar una situación que requiera seguimiento, es importante que proporciones tu nombre completo o número SAP para poder contactarte"></i>
+              </label>
+              <input type="text" 
+                     id="nombreTrabajador" 
+                     name="nombreTrabajador"
+                     class="form-control"
+                     placeholder="Ejemplo: Juan Pérez Rodríguez o 12345"
+                     oninput="this.value = this.value.toUpperCase();">
+              <div class="form-text">
+                <i class="bi bi-info-circle"></i> Campo opcional. Solo necesario si requieres seguimiento sobre alguna situación específica.
+              </div>
             </div>
           
             <div class="mb-4">
