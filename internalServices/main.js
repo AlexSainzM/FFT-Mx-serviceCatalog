@@ -142,4 +142,25 @@
         console.error('Error:', error.message);
       });
 
+
+
+
+
+
+
+
+// Función para actualizar la hora actual
+    function updateCurrentTime() {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      document.getElementById('current-time').textContent = `${hours}:${minutes}`;
+    }
+    // Inicializar y actualizar hora 
+    document.addEventListener('DOMContentLoaded', function() {
+      // Actualizar la hora inmediatamente y luego cada minuto
+      updateCurrentTime();
+      setInterval(updateCurrentTime, 60000);
+    });
+
       
