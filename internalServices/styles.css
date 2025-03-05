@@ -23,11 +23,16 @@ body {
     background-color: var(--fft-secondaryGray2);
   }
 
+  #comedor_section {
+    background-image: url(./menuComedor/spaghetti.jpg);
+    opacity: 80%;
+  }
+
   /* Agregar al archivo styles.css o en la sección <style> del head */
   .campaign-card {
     transition: transform 0.2s, box-shadow 0.2s;
     border: none;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     opacity: 90%;
   }
 
