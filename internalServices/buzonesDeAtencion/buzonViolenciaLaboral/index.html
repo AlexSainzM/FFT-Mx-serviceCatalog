@@ -171,10 +171,6 @@
                                         <label class="form-check-label" for="miembroEnrico">Enrico Stölzner</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="miembroLuis" name="miembrosComiteEticaInvolucrados[]" value="Luis Gallegos">
-                                        <label class="form-check-label" for="miembroLuis">Luis Gallegos</label>
-                                    </div>
-                                    <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="miembroIvan" name="miembrosComiteEticaInvolucrados[]" value="Iván Ocapo">
                                         <label class="form-check-label" for="miembroIvan">Iván Ocapo</label>
                                     </div>
@@ -198,6 +194,10 @@
                                         <input type="checkbox" class="form-check-input" id="miembroJose" name="miembrosComiteEticaInvolucrados[]" value="José Carlos Sanchez">
                                         <label class="form-check-label" for="miembroJose">José Carlos Sanchez</label>
                                     </div>
+                                    <div class="form-check">
+                                      <input type="checkbox" class="form-check-input" id="miembroEricka" name="miembrosComiteEticaInvolucrados[]" value="Ericka Maricruz">
+                                      <label class="form-check-label" for="miembroEricka">Ericka Maricruz</label>
+                                  </div>
                                 </div>
         
                                 <p>Si es necesario, proporciona información adicional:</p>
@@ -224,6 +224,11 @@
               <div class="mb-3">
                 <label for="queSucedio" class="form-label">¿Qué fue lo que sucedió? <span class="text-danger">*</span></label>
                 <textarea class="form-control" id="queSucedio" name="queSucedio" rows="4" placeholder="Describe lo sucedido" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="evidencias" class="form-label">En caso de que tengas evidencias, puedes subirlas aquí</label>
+                <input type="file" class="form-control" id="evidencias" name="evidencias" multiple accept="image/*,.pdf,.doc,.docx,.txt">
+                <div class="form-text">Puedes adjuntar múltiples archivos (imágenes, PDF, documentos). Tamaño máximo total: 20MB</div>
               </div>
               <div class="row g-3">
                 <div class="col-md-6">
