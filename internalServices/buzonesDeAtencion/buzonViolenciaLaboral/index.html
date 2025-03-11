@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FFT Satisfacción Comedor 2025</title>
+    <title>Atención y prevención de violencia laboral, hostigamiento, acoso sexual y discriminación</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -44,53 +44,72 @@
         </nav>
       </div>
 
+      <div class="container pt-5">
+        <h1>Portal de atención y prevención de violencia laboral, hostigamiento, acoso sexual y discriminación</h1>
+        <p class="lead mb-4 text-justify">Todo incidente será atendido de manera confidencial y en terminos de las disposiciones legales. La información que proporciones deberá ser clara y objetiva.</p>
+        <br>
+        <p class="lead mb-4 text-justify">En FFT México, rechazamos categóricamente cualquier conducta de violencia, acoso laboral, sexualy discriminación en todas sus modalidades y formas. Nos compometemos a defender el derecho de todos los colaboradores para ser tratados con dignidad y equidad.</p>
+        <br>
+        <p class="lead mb-4 text-justify">Al completar el reporte estás aceptando los terminos y condiciones del servicio.</p>
+        <br>
+        <p class="lead mb-4 text-justify"> <span class="text-danger">* Campos requeridos</span></p>
+      </div>
       
     </header>
     
     <!-- Form Section -->
-    <section id="actualizacionDatosDelPersonal_form" class="container py-5">
+    <section id="_form" class="container py-5">
 
       <!-- Actualización de Datos del Personal -->
       <div class="row mb-5">
 
         <div class="col-12">
 
-          <form action="https://formspree.io/f/xwpkqjby" method="POST" class="container p-4 shadow rounded bg-light">
+          <form action="https://formspree.io/f/mjkyvoag" method="POST" class="container p-4 shadow rounded bg-light">
             <h2 class="text-center mb-4">Reporte de Situaciones Laborales</h2>
           
             <!-- Situación relacionada -->
             <div class="mb-4">
-              <h5>¿Con qué situación está relacionado su reporte?</h5>
+              <h5>¿Con qué situación está relacionada su reporte? <span class="text-danger">*</span></h5>
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="reporte-violencia" name="reporteRelacionadoCon" value="Violencia / Hostigamiento laboral">
-                <label class="form-check-label" for="reporte-violencia">Violencia / Hostigamiento laboral</label>
+                <input type="checkbox" id="situacionViolencia" name="reporteRelacionadoCon" value="Violencia / Hostigamiento laboral" class="form-check-input situacion-checkbox">
+                <label for="situacionViolencia" class="form-check-label">Violencia / Hostigamiento laboral</label>
               </div>
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="reporte-acoso" name="reporteRelacionadoCon" value="Acoso Sexual">
-                <label class="form-check-label" for="reporte-acoso">Acoso Sexual</label>
+                <input type="checkbox" id="situacionAcoso" name="reporteRelacionadoCon" value="Acoso Sexual" class="form-check-input situacion-checkbox">
+                <label for="situacionAcoso" class="form-check-label">Acoso Sexual</label>
               </div>
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="reporte-conductas" name="reporteRelacionadoCon" value="Conductas no éticas">
-                <label class="form-check-label" for="reporte-conductas">Conductas no éticas</label>
+                <input type="checkbox" id="situacionEtica" name="reporteRelacionadoCon" value="Conductas no éticas" class="form-check-input situacion-checkbox">
+                <label for="situacionEtica" class="form-check-label">Conductas no éticas</label>
               </div>
+              <div class="invalid-feedback" id="situacionFeedback">Por favor, seleccione al menos una situación.</div>
             </div>
           
             <!-- Datos del reportante -->
             <div class="mb-4">
-              <h5>¿Quién presenta la queja o reclamación?</h5>
+              
+              <h5>¿Deseas que tu reporte sea anonimo?<span class="text-danger">*</span></h5>
               <div class="form-check">
-                <input type="radio" id="rAnonimoSi" name="rAnonimo" value="Si" class="form-check-input" required>
+                <input type="radio" id="rAnonimoSi" name="reporteAnonimo" value="Si" class="form-check-input" required>
                 <label for="rAnonimoSi" class="form-check-label">Deseo que mi reporte sea anónimo</label>
               </div>
               <div class="form-check">
-                <input type="radio" id="rAnonimoNo" name="rAnonimo" value="No" class="form-check-input">
+                <input type="radio" id="rAnonimoNo" name="reporteAnonimo" value="No" class="form-check-input">
                 <label for="rAnonimoNo" class="form-check-label">Deseo proporcionar mis datos</label>
               </div>
-          
+
+              <div class="alert alert-warning mt-3" role="alert">
+                <h6 class="alert-heading"><i class="bi bi-exclamation-triangle-fill me-2"></i>Importante:</h6>
+                <p class="mb-0">Para poder dar un seguimiento adecuado a tu reporte y mantener una comunicación efectiva durante el proceso de investigación, te recomendamos proporcionar tus datos de contacto. Sin esta información, nuestra capacidad para atender y resolver la situación podría verse limitada.</p>
+              </div>
+
+              <!-- Datos del afectado o reportante -->
               <div class="row g-3 mt-3">
+                <h5>Datos del afectado o reportante</h5>
                 <div class="col-md-6">
-                  <label for="name" class="form-label">Nombre y apellidos:</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Escribe tu nombre completo">
+                  <label for="nombreAfectado" class="form-label">Nombre completo:</label>
+                  <input type="text" class="form-control" id="nombreAfectado" name="nombreAfectado" placeholder="Escribe tu nombre completo">
                 </div>
                 <div class="col-md-6">
                   <label for="departamentoAfectado" class="form-label">Área o departamento:</label>
@@ -110,31 +129,30 @@
                 </div>
               </div>
             </div>
+
+
+
           
             <!-- Datos de la persona involucrada -->
             <div class="mb-4">
-              <h5>¿Contra quién se presenta la queja o reclamación?</h5>
               <div class="row g-3">
+                <h5>¿Contra quién se presenta la queja o reclamación?</h5>
                 <div class="col-md-6">
-                  <label for="nombreAcusado" class="form-label">Nombre:</label>
-                  <input type="text" class="form-control" id="nombreAcusado" name="nombreAcusado" placeholder="Escribe el nombre">
+                  <label for="nombreAcusado" class="form-label">Nombre del acusado:<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="nombreAcusado" name="nombreAcusado" placeholder="Escribe el nombre" required>
                 </div>
                 <div class="col-md-6">
-                  <label for="apellidosAcusado" class="form-label">Apellidos:</label>
-                  <input type="text" class="form-control" id="apellidosAcusado" name="apellidosAcusado" placeholder="Escribe los apellidos">
+                  <label for="puestoAcusado" class="form-label">Puesto:<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="puestoAcusado" name="puestoAcusado" placeholder="Escribe el puesto" required>
                 </div>
                 <div class="col-md-6">
-                  <label for="puestoAcusado" class="form-label">Puesto:</label>
-                  <input type="text" class="form-control" id="puestoAcusado" name="puestoAcusado" placeholder="Escribe el puesto">
+                  <label for="departamentoAcusado" class="form-label">Área o departamento:<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="departamentoAcusado" name="departamentoAcusado" placeholder="Escribe el área o departamento" required>
                 </div>
-                <div class="col-md-6">
-                  <label for="departamentoAcusado" class="form-label">Área o departamento:</label>
-                  <input type="text" class="form-control" id="departamentoAcusado" name="departamentoAcusado" placeholder="Escribe el área o departamento">
-                </div>
-                <div class="col-md-6">
-                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">
-                        ¿Hay miembros del comité de ética FFT involucrados?
-                    </button>
+                <div class="col-12">
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">
+                      Por favor, inidicanos si hay miembros del comité de ética FFT involucrados.
+                  </button>
                 </div>
         
                 <!-- Modal -->
@@ -149,44 +167,43 @@
                                 <p>Por favor, selecciona a los miembros del comité de ética que estuvieron involucrados:</p>
                                 <div class="my-3">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="miembroEnrico" name="miembrosInvolucrados[]" value="Enrico Stölzner">
+                                        <input type="checkbox" class="form-check-input" id="miembroEnrico" name="miembrosComiteEticaInvolucrados[]" value="Enrico Stölzner">
                                         <label class="form-check-label" for="miembroEnrico">Enrico Stölzner</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="miembroLuis" name="miembrosInvolucrados[]" value="Luis Gallegos">
+                                        <input type="checkbox" class="form-check-input" id="miembroLuis" name="miembrosComiteEticaInvolucrados[]" value="Luis Gallegos">
                                         <label class="form-check-label" for="miembroLuis">Luis Gallegos</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="miembroIvan" name="miembrosInvolucrados[]" value="Iván Ocapo">
+                                        <input type="checkbox" class="form-check-input" id="miembroIvan" name="miembrosComiteEticaInvolucrados[]" value="Iván Ocapo">
                                         <label class="form-check-label" for="miembroIvan">Iván Ocapo</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="miembroRafael" name="miembrosInvolucrados[]" value="Rafael Ordoñez">
+                                        <input type="checkbox" class="form-check-input" id="miembroRafael" name="miembrosComiteEticaInvolucrados[]" value="Rafael Ordoñez">
                                         <label class="form-check-label" for="miembroRafael">Rafael Ordoñez</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="miembroAbraham" name="miembrosInvolucrados[]" value="Abraham Gutierrez">
+                                        <input type="checkbox" class="form-check-input" id="miembroAbraham" name="miembrosComiteEticaInvolucrados[]" value="Abraham Gutierrez">
                                         <label class="form-check-label" for="miembroAbraham">Abraham Gutierrez</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="miembroTim" name="miembrosInvolucrados[]" value="Tim Weber">
+                                        <input type="checkbox" class="form-check-input" id="miembroTim" name="miembrosComiteEticaInvolucrados[]" value="Tim Weber">
                                         <label class="form-check-label" for="miembroTim">Tim Weber</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="miembroGabriel" name="miembrosInvolucrados[]" value="Gabriel Almaraz">
+                                        <input type="checkbox" class="form-check-input" id="miembroGabriel" name="miembrosComiteEticaInvolucrados[]" value="Gabriel Almaraz">
                                         <label class="form-check-label" for="miembroGabriel">Gabriel Almaraz</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="miembroJose" name="miembrosInvolucrados[]" value="José Carlos Sanchez">
+                                        <input type="checkbox" class="form-check-input" id="miembroJose" name="miembrosComiteEticaInvolucrados[]" value="José Carlos Sanchez">
                                         <label class="form-check-label" for="miembroJose">José Carlos Sanchez</label>
                                     </div>
                                 </div>
         
                                 <p>Si es necesario, proporciona información adicional:</p>
                                 <div class="col-md-12">
-                                    <label for="infoAdicional" class="form-label">Información adicional</label>
-                                    <input type="text" class="form-control" id="infoAdicional" name="infoAdicional" placeholder="Escribe información adicional" required>
-                                    <div class="invalid-feedback">No has proporcionado información adicional.</div>
+                                  <label for="comiteEticaInvolucradoInfoAdicional" class="form-label">Información adicional</label>
+                                  <textarea class="form-control" id="comiteEticaInvolucradoInfoAdicional" name="comiteEticaInvolucradoInfoAdicional" rows="4" placeholder="Describe lo sucedido"></textarea>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -197,26 +214,29 @@
                 </div>
               </div>
             </div>
+
+
+            
           
             <!-- Guía de hechos -->
             <div class="mb-4">
               <h5>Guía de hechos</h5>
               <div class="mb-3">
-                <label for="queSucedio" class="form-label">¿Qué fue lo que sucedió?</label>
-                <textarea class="form-control" id="queSucedio" name="queSucedio" rows="4" placeholder="Describe lo sucedido"></textarea>
+                <label for="queSucedio" class="form-label">¿Qué fue lo que sucedió? <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="queSucedio" name="queSucedio" rows="4" placeholder="Describe lo sucedido" required></textarea>
               </div>
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label for="cuandoSucedio" class="form-label">¿Cuándo sucedió?</label>
-                  <input type="date" class="form-control" id="cuandoSucedio" name="cuandoSucedio">
+                  <label for="cuandoSucedio" class="form-label">¿Cuándo sucedió? <span class="text-danger">*</span></label>
+                  <input type="date" class="form-control" id="cuandoSucedio" name="cuandoSucedio" required>
                 </div>
                 <div class="col-md-6">
-                  <label for="horaSucedio" class="form-label">¿A qué hora sucedió?</label>
-                  <input type="time" class="form-control" id="horaSucedio" name="horaSucedio">
+                  <label for="horaSucedio" class="form-label">¿A qué hora sucedió? <span class="text-danger">*</span></label>
+                  <input type="time" class="form-control" id="horaSucedio" name="horaSucedio" required>
                 </div>
                 <div class="col-md-12">
-                  <label for="dondeSucedio" class="form-label">¿Dónde sucedió?</label>
-                  <input type="text" class="form-control" id="dondeSucedio" name="dondeSucedio" placeholder="Escribe el lugar donde sucedió">
+                  <label for="dondeSucedio" class="form-label">¿Dónde sucedió? <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="dondeSucedio" name="dondeSucedio" placeholder="Escribe el lugar donde sucedió" required>
                 </div>
               </div>
             </div>
@@ -250,136 +270,24 @@
     <script src="./main.js"></script>
 
     <script>
-      document.getElementById("uploadForm").addEventListener("submit", async function(event) {
-        event.preventDefault();
 
-        /* @ts-ignore */
-        const zip = new JSZip();
-        const inputs = [...document.querySelectorAll('input[type="file"]')];
-
-        let totalFiles = 0;
-
-        // Agregar archivos al ZIP
-        for (let input of inputs) {
-          if (input.files && input.files.length > 0) {
-            for (let file of input.files) {
-              zip.file(`Archivo_${totalFiles + 1}_${file.name}`, file);
-              totalFiles++;
-            }
+      // Validación para los checkboxes de situación
+      document.querySelector('form').addEventListener('submit', function(event) {
+        const checkboxes = document.querySelectorAll('.situacion-checkbox');
+        let checked = false;
+        
+        checkboxes.forEach(checkbox => {
+          if (checkbox.checked) {
+            checked = true;
           }
+        });
+        
+        if (!checked) {
+          event.preventDefault();
+          document.getElementById('situacionFeedback').style.display = 'block';
+        } else {
+          document.getElementById('situacionFeedback').style.display = 'none';
         }
-
-        try {
-          const zipBlob = await zip.generateAsync({ type: "blob" });
-
-          if (zipBlob.size > 10 * 1024 * 1024) {
-            alert("El archivo ZIP es demasiado grande. Intenta reducir la cantidad o tamaño de los archivos.");
-            return;
-          }
-
-          const formData = new FormData();
-
-          // Función auxiliar para obtener valor seguro
-          const getElementValue = (id) => {
-            const element = document.getElementById(id);
-            if (!element) {
-              // Intentar obtener el elemento por name si no se encuentra por ID
-              const elementByName = document.querySelector(`[name="${id}"]`);
-              return elementByName ? elementByName.value.trim() : '';
-            }
-            return element.value.trim();
-          };
-
-          // Obtener valores de forma segura
-          const formValues = {
-            noEmpleado: getElementValue("noEmpleado"),
-            noSAP: getElementValue("noSAP"),
-            nombre: getElementValue("nombre"),
-            apellidoPaterno: getElementValue("apellidoPaterno"),
-            apellidoMaterno: getElementValue("apellidoMaterno"),
-            sexo: getElementValue("sexo"),
-            fechaNacimiento: getElementValue("fechaNacimiento"),
-            nacionalidad: getElementValue("nacionalidad"),
-            estado_Provincia_Nacimiento: getElementValue("estado_Provincia_Nacimiento"),
-            curp: getElementValue("curp"),
-            rfc: getElementValue("RFC"),
-            nss: getElementValue("nss"),
-            codigoPostal: getElementValue("codigoPostal"),
-            entidad: getElementValue("entidad"),
-            municipio: getElementValue("municipio"),
-            poblacion: getElementValue("poblacion"),
-            colonia: getElementValue("colonia"),
-            calleNumero: getElementValue("calleNumero"),
-            telefonoFijo: getElementValue("telefonoFijo"),
-            telefonoCelular: getElementValue("telefonoCelular"),
-            email: getElementValue("email"),
-            gradoAcademico: getElementValue("gradoAcademico"),
-            especialidad: getElementValue("especialidad"),
-            estatusDeEstudios: getElementValue("estatusDeEstudios"),
-            anioFinalizacion: getElementValue("anioFinalizacion"),
-            institucionEducativa: getElementValue("institucionEducativa"),
-            numeroCedula: getElementValue("numeroCedula"),
-            nombreContacto1: getElementValue("nombreContacto1"),
-            telefonoFijoContacto1: getElementValue("telefonoFijoContacto1"),
-            telefonoCelularContacto1: getElementValue("telefonoCelularContacto1"),
-            nombreContacto2: getElementValue("nombreContacto2"),
-            telefonoFijoContacto2: getElementValue("telefonoFijoContacto2"),
-            telefonoCelularContacto2: getElementValue("telefonoCelularContacto2"),
-            estadoCivil: getElementValue("estadoCivil"),
-            nombreConyuge: getElementValue("nombreConyuge"),
-            numeroHijos: getElementValue("numeroHijos")
-          };
-
-          // Obtener valores de radio buttons de forma segura
-          const pasaporteRadio = document.querySelector('input[name="pasaporte"]:checked');
-          const visaRadio = document.querySelector('input[name="visa"]:checked');
-
-          formValues.pasaporte = pasaporteRadio ? pasaporteRadio.value : '';
-          formValues.visa = visaRadio ? visaRadio.value : '';
-
-          // Agregar todos los valores al FormData
-          Object.entries(formValues).forEach(([key, value]) => {
-            formData.append(key, value);
-          });
-
-          // Manejar información de hijos de forma segura
-          const numeroHijos = parseInt(formValues.numeroHijos) || 0;
-          for (let i = 1; i <= numeroHijos; i++) {
-            // Usar los nombres de los campos como están definidos en el HTML
-            const nombreHijo = document.querySelector(`[name="nombreHijo${i}"]`)?.value || '';
-            const fechaNacimientoHijo = document.querySelector(`[name="fechaNacimientoHijo${i}"]`)?.value || '';
-            
-            if (nombreHijo) formData.append(`nombreHijo${i}`, nombreHijo);
-            if (fechaNacimientoHijo) formData.append(`fechaNacimientoHijo${i}`, fechaNacimientoHijo);
-          }
-
-          formData.append("upload", zipBlob, "archivos_comprimidos.zip");
-
-          const response = await fetch("https://formspree.io/f/xzzdaovy", {
-            method: "POST",
-            headers: {
-              "Accept": "application/json"
-            },
-            body: formData
-          });
-
-          if (response.ok) {
-            alert("Formulario enviado correctamente.");
-            // Opcional: limpiar el formulario después del envío exitoso
-            document.getElementById("uploadForm").reset();
-          } else {
-            alert("Hubo un error al enviar los datos.");
-          }
-        } catch (error) {
-          console.error("Error al generar o enviar el ZIP:", error);
-          alert("Hubo un error en el proceso. Verifica la consola para más detalles.");
-        }
-      });
-
-      // Agregar este código justo antes del cierre del body
-      window.addEventListener('load', function() {
-        const modal = new bootstrap.Modal(document.getElementById('infoModal'));
-        modal.show();
       });
     </script>
 
