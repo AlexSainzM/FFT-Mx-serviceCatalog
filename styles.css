@@ -19,13 +19,18 @@ body {
     --black: #000000;
   }
 
-  #campaigns_section, #comunicados_section {
+
+  #products_section{
     background-color: var(--fft-secondaryGray2);
   }
 
-  #comedor_section {
-    background-image: url(./menuComedor/spaghetti.jpg);
-    opacity: 80%;
+  #especificaciones_section {
+    background-image: url(../../../../../assets/img/fft_wallpapers/Bild_2.jpg);
+    opacity: 95%;
+  }
+
+  #contacto_section {
+    background-color: var(--black);
   }
 
   /* Agregar al archivo styles.css o en la sección <style> del head */

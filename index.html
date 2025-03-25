@@ -99,41 +99,27 @@
   
   <body>
 
-    <div class="container py-3">
+    <div class="py-0">
+      
       <!-- Header -->
-      <header>
-        <div class="d-flex flex-column flex-md-row align-items-center pb-5 mb-3">
-          <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-5" style="background-color: #009d80;">
+      <header id="header-basic-welding-guns" style="position: relative;">
+        
+        <div class="d-flex flex-column flex-md-row align-items-center pb-0 mb-0" style="position: absolute; width: 100%; z-index: 1000;">
+          <nav class="navbar navbar-expand-lg navbar-dark px-4" style="background-color: rgba(0, 0, 0, .25); width: 100%;">
             <div class="container-fluid">
               <a class="navbar-brand" href="">
-                <img src="../assets/img/common/primaryGreenBGLogo.png" alt="FFT logo" width="mx-auto" height="30">
+                <img src="./assets/img/logosVariants/FFF_LogoNormal.png" alt="FFT logo" width="mx-auto" height="30">
               </a>
-              <div class="d-flex align-items-center me-auto ms-3 text-white">
-                
-                <div id="time-display">
-                  <span style="font-family: Raleway, sans-serif; font-weight: 600; opacity: 70%;" id="current-time">--:--</span>
-                </div>
-                
-              </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="" style="font-family: 'Raleway', sans-serif; font-weight: 600;">Comunicación general</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./buzonesDeAtencion/buzonViolenciaLaboral/index.html" style="font-family: 'Raleway', sans-serif;">Atención y prevención de violencia laboral</a>
-                  </li>
                   <!-- <li class="nav-item">
-                    <a class="nav-link" href="#atentionForms" style="font-family: 'Raleway', sans-serif;">Buzones de atención</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="" style="font-family: 'Raleway', sans-serif;">Comunicación</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="" style="font-family: 'Raleway', sans-serif;">Acerca de FFT</a>
+                    <a class="nav-link" href="./en.html" style="font-family: 'Raleway', sans-serif; font-weight: 600;">English version</a>
+                  </li> -->
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="../../../../../index.html" style="font-family: 'Raleway', sans-serif;">Volver al inicio</a>
                   </li> -->
                 </ul>
               </div>
@@ -141,156 +127,87 @@
           </nav>
         </div>
 
-        <div class="p-3 px-lg-0 pb-md-1 mx-auto">
-          <h1 class="display-4" style="opacity: 80%; font-family: 'Oswald', sans-serif; font-weight: 600; text-align: left;">SERVICIOS INTERNOS DE FFT MÉXICO</h1>
-          <p class="fs-5 text-muted">Un espacio con todas las herramientas y recursos para optimizar tu día a día en FFT.</p>
+        <div class="p-0 m-0">
+          <img src="./FFT Framer.jpg" class="img-fluid w-100 d-block" alt="Header background">
         </div>
+
       </header>
+
     </div>
 
     <main>
 
-    <!-- COMUNICACIÓN GENERAL -->
-
-      <!-- CAROUSEL DE COMUNICADOS -->
-      <div id="carousel_Comunicados" class="p-3 px-lg-0">
+      <!-- OVERVIEW -->
+      <!-- <div id="overview_section" class="p-4 px-lg-0">
         <div class="container">
-          <!-- CAROUSEL DE COMUNICADOS -->
-          <h2 class="display-5 mb-4" id="lastestNews" style="opacity: 80%; font-family: 'Oswald', sans-serif; font-weight: 400;">MANTENTE INFORMADO</h2>
-          <div id="lastestNewsCarrousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-wrap="true">
-            <div class="carousel-indicators"></div>
-            <div class="carousel-inner" id="carouselInner"></div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#lastestNewsCarrousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#lastestNewsCarrousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div> 
-
-      <!-- CAMPAÑAS ACTIVAS -->
-      <div id="campaigns_section" class="p-4 px-lg-0">
-        <div class="container">
-          <h2 class="display-5 mb-4 p-2" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: right; color: var(--fft-primaryGray);">CAMPAÑAS ACTIVAS</h2>
-        
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-            <!-- Actualización de datos -->
-            <div class="col">
-              <div class="card h-100 campaign-card">
-                <div class="card-body text-center">
-                  <i class="bi bi-person-lines-fill display-4 mb-3"></i>
-                  <h5 class="card-title" style="font-family: 'Oswald', sans-serif; font-weight: 600;">Actualiza tus datos personales <span class="badge text-bg-primary btn-pulse"></span></h5>
-                  <p class="card-text">Mantén tu información al día para una mejor comunicación.</p>
-                  <a href="./surveys/actualizacionDatosPersonales2025/index.html" class="btn btn-primary">Participar</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Encuesta transporte -->
-            <div class="col">
-              <div class="card h-100 campaign-card">
-                <div class="card-body text-center">
-                  <i class="bi bi-bus-front display-4 mb-3"></i>
-                  <h5 class="card-title" style="font-family: 'Oswald', sans-serif; font-weight: 600;">Satisfacción del Transporte</h5>
-                  <p class="card-text">Ayúdanos a mejorar el servicio de transporte del personal.</p>
-                  <a href="./surveys/satisfaccionTransporteDePersonal/index.html" class="btn btn-primary">Participar</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Encuesta comedor -->
-            <div class="col">
-              <div class="card h-100 campaign-card">
-                <div class="card-body text-center">
-                  <i class="bi bi-cup-hot display-4 mb-3"></i>
-                  <h5 class="card-title" style="font-family: 'Oswald', sans-serif; font-weight: 600;">Satisfacción del Comedor</h5>
-                  <p class="card-text">Comparte tu opinión sobre nuestro servicio de comedor.</p>
-                  <a href="./surveys/satisfaccioncomedor/index.html" class="btn btn-primary">Participar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- COMUNICADOS -->
-      <div id="comunicados_section" class="p-4 pb-5 px-lg-0">
-        <div class="container">
-          <h2 class="display-5 mb-4 p-2" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: left; color: var(--fft-primaryGray);">ÚLTIMOS COMUNICADOS</h2>
-        
-          <div class="row row-cols-1 g-4">
-            <!-- lISTA DE COMUNICADOS -->
-            <div class="col">
-              <div class="card h-100 campaign-card">
-                <div class="card-body text-center">
-                  <i class="bi bi-newspaper display-4 mb-3"></i>
-                  <h5 class="card-title" style="font-family: 'Oswald', sans-serif; font-weight: 600;">Ultimos comunicados: <span class="badge text-bg-primary btn-pulse"></span></h5>
-                  <div id="pdf-list-container">
-                    <!-- Los comunicados se cargan aquí dinamicamente -->
-                  </div>
-                  <a class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#todosLosComunicados">Ver la lista completa</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal "Todos los comunicados" -->
-      <div class="modal fade" id="todosLosComunicados" tabindex="-1" aria-labelledby="todosLosComunicadosTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="fs-3" id="todosLosComunicadosTitle" style="font-family: 'Oswald', sans-serif; font-weight: 600;">Comunicados recientes</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="listaCompletaComunicados">
+          <h2 class="display-5 mb-4" id="lastestNews" style="opacity: 80%; font-family: 'Oswald', sans-serif; font-weight: 400;">RESUMEN</h2>
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <p class="lead mb-4" style="text-align: justify; color: var(--fft-primaryGray);">
+                El <strong>FFTweldtec Basic</strong> es una serie de pistolas de soldadura robóticas diseñadas para aplicaciones en acero y aluminio, proporcionando soluciones eficientes y de alto rendimiento para la industria automotriz y otros sectores de manufactura. Disponible en configuraciones <strong>C-Gun</strong>, <strong>X-Gun</strong> y <strong>XL-Gun</strong>, esta tecnología ofrece precisión y durabilidad en procesos de soldadura de resistencia.
+              </p>
               
+              <div class="p-4" style="background-color: var(--fft-secondaryGray1); border-radius: 10px;">
+                <h3 style="color: var(--fft-primaryGreen); font-family: 'Oswald', sans-serif; font-weight: 500;">BENEFICIOS CLAVE</h3>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2">
+                    <span style="color: var(--fft-primaryGreen);">✅</span>
+                    <span style="color: var(--fft-primaryGray);">Estructura estable y de fácil mantenimiento.</span>
+                  </li>
+                  <li class="mb-2">
+                    <span style="color: var(--fft-primaryGreen);">✅</span>
+                    <span style="color: var(--fft-primaryGray);">Componentes principales disponibles en el mercado.</span>
+                  </li>
+                  <li class="mb-2">
+                    <span style="color: var(--fft-primaryGreen);">✅</span>
+                    <span style="color: var(--fft-primaryGray);">Tamaño compacto con contornos de interferencia reducidos.</span>
+                  </li>
+                  <li class="mb-2">
+                    <span style="color: var(--fft-primaryGreen);">✅</span>
+                    <span style="color: var(--fft-primaryGray);">Adaptaciones personalizadas según las necesidades del cliente.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <div class="col-lg-4 text-center">
+              <video autoplay muted playsinline loop style="width: 100%; height: auto;" class="img-fluid rounded shadow" alt="FFTweldtec Basic Welding Gun">
+                <source src="./video/04_WeldingGuns_720.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <!-- MENÚ DEL COMEDOR -->
-      <div id="comedor_section" class="p-4 px-lg-0">
+      <!-- CONOCE NUESTROS PRODUCTOS -->
+      <div id="products_section" class="p-4 px-lg-0">
         <div class="container">
-          <h2 class="display-5 mb-4 p-2" id="lastestNews" style="opacity: 80%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: right; color: var(--white);">CONOCE EL MENÚ DEL COMEDOR</h2>
+          <h2 class="display-5 mb-4 p-2" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: right; color: var(--fft-primaryGray);">CONOCE NUESTROS PRODUCTOS</h2>
         
-          <div class="row row-cols-1 g-4">
-            <!-- lISTA DE COMUNICADOS -->
-            <div class="col">
-              <div class="card h-100 campaign-card">
-                <div class="card-body text-center">
-                  <i class="bi bi-cup-hot-fill display-4 mb-3"></i>
-                  <h5 class="card-title" style="font-family: 'Oswald', sans-serif; font-weight: 600;">Conoce las opciones que tenemos para ti<span class="badge text-bg-primary btn-pulse"></span></h5>
-                  <a href="./menuComedor/index.html" class="btn btn-primary">Ver el menú</a>
-                </div>
-              </div>
-            </div>
+          <div class="row row-cols-1 row-cols-md-1 g-4">
+            
+            <a href="./ourFamily/families/1plantComponentsModules/FFTlinetec/RTU/index.html">
+              <img src="./ourFamily/families/1plantComponentsModules/FFTlinetec/RTU/img/header.png" class="img-fluid m-1" alt="">
+            </a>
+
+            <a href="./ourFamily/families/3joiningHemmingSeparating/FERE-Gluing/index.html">
+              <img src="./ourFamily/families/3joiningHemmingSeparating/FERE-Gluing/img/header.png" class="img-fluid m-1" alt="">
+            </a>
+
+            <a href="./ourFamily/families/3joiningHemmingSeparating/FFTweldtec/basic/index.html">
+              <img src="./ourFamily/families/3joiningHemmingSeparating/FFTweldtec/basic/img/header.png" class="img-fluid m-1" alt="">
+            </a>
+
+
           </div>
         </div>
       </div>
 
     </main>
-            
-
-
-
-
-        
-
-      </main>
 
     <!-- Footer -->
     <footer class="text-center py-3 bg-dark text-light">
-      <p>&copy; 2024 FFT México. Todos los derechos reservados.</p>
+      <p style="font-family: 'Arial', sans-serif;">&copy; 2025 FFT México. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Bootstrap JS -->
