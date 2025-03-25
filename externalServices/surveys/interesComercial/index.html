@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FFT Encuesta de satisfacción del transporte de personal</title>
+    <title>FFT México</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -56,262 +56,125 @@
 
         <div class="col-12">
 
-          <form action="https://formspree.io/f/mwpvgdbz" method="POST" class="container p-4 shadow rounded bg-light">
-            <h1 class="text-center mb-4">Encuesta de satisfacción Transpote de Personal: SETTEPI</h1>
+          <form action="https://formspree.io/f/xwplqlgk" method="POST" class="container p-4 shadow rounded bg-light">
+            <h1 class="text-center mb-4">Queremos conocerte</h1>
             <p class="text-muted text-justify">
-              Sabemos que el transporte de personal es un servicio esencial para llegar a tu trabajo de manera segura y puntual. La calidad de este servicio impacta directamente en tu experiencia diaria. <br><br>
-              Ayúdanos a seguir mejorando el servicio de transporte de personal participando en esta breve encuesta sobre el servicio que brinda SETTEPI. Tu retroalimentación nos ayudará a identificar áreas de oportunidad. <br><br>
-              ¡Tu opinión es clave para asegurarnos de que cada viaje sea seguro y cómodo!
+              Gracias por tu interés en los productos y servicios de FFT México. Por favor, completa este breve formulario para que podamos brindarte información más detallada sobre las soluciones que te interesan.
             </p>
             <div class="text-danger mb-3">
               <small>Los campos marcados con * son obligatorios</small>
             </div>
           
-            <!-- Datos del trabajador -->
-            <!-- Centro de costos -->
+            <!-- Nombre completo -->
             <div class="mb-4">
-              <label for="centroCostos" class="form-label fw-bold">Centro de Costos <span class="text-danger">*</span></label>
-              <select id="centroCostos" name="centroCostos" class="form-select" required>
-                <option value="" disabled selected>Selecciona tu centro de costos</option>
-                <option value="54100">54100</option>
-                <option value="54110">54110</option>
-                <option value="54120">54120</option>
-                <option value="54130">54130</option>
-                <option value="54200">54200</option>
-                <option value="54210">54210</option>
-                <option value="54220">54220</option>
-                <option value="54230">54230</option>
-                <option value="54350">54350</option>
-                <option value="54300">54300</option>
-                <option value="54310">54310</option>
-                <option value="54320">54320</option>
-                <option value="54330">54330</option>
-                <option value="54395">54395</option>
-                <option value="54400">54400</option>
-                <option value="54410">54410</option>
-                <option value="54420">54420</option>
-                <option value="54430">54430</option>
-                <option value="54440">54440</option>
-                <option value="54450">54450</option>
-                <option value="54500">54500</option>
-                <option value="54510">54510</option>
-                <option value="54520">54520</option>
-                <option value="54530">54530</option>
-                <option value="54540">54540</option>
-                <option value="54550">54550</option>
-                <option value="54560">54560</option>
-                <option value="54700">54700</option>
-                <option value="54999">54999</option>
-                <option value="No aplica">No pertenezco a ninguno de estos centros de costos.</option>
-              </select>
-            </div>
-
-            <!-- Nombre del trabajador o número SAP -->
-            <div class="mb-4">
-              <label for="nombreTrabajador" class="form-label fw-bold">
-                Nombre completo o número SAP del viajero
-                <i class="bi bi-question-circle" data-bs-toggle="tooltip" 
-                   title="Si deseas reportar una situación que requiera seguimiento, es importante que proporciones tu nombre completo o número SAP para poder contactarte"></i>
-              </label>
+              <label for="nombreCompleto" class="form-label fw-bold">Nombre completo <span class="text-danger">*</span></label>
               <input type="text" 
-                     id="nombreTrabajador" 
-                     name="nombreTrabajador"
+                     id="nombreCompleto" 
+                     name="nombreCompleto"
                      class="form-control"
-                     placeholder="Ejemplo: Juan Pérez Rodríguez o 12345"
+                     placeholder="Ingresa tu nombre completo"
+                     required
                      oninput="this.value = this.value.toUpperCase();">
+            </div>
+
+            <!-- Empresa -->
+            <div class="mb-4">
+              <label for="empresa" class="form-label fw-bold">Empresa o Institución</label>
+              <input type="text" 
+                     id="empresa" 
+                     name="empresa"
+                     class="form-control"
+                     placeholder="Nombre de tu empresa o institución"
+                     oninput="this.value = this.value.toUpperCase();">
+            </div>
+
+            <!-- Puesto -->
+            <div class="mb-4">
+              <label for="puesto" class="form-label fw-bold">Puesto o Cargo</label>
+              <input type="text" 
+                     id="puesto" 
+                     name="puesto"
+                     class="form-control"
+                     placeholder="Tu puesto o cargo actual"
+                     oninput="this.value = this.value.toUpperCase();">
+            </div>
+
+            <!-- Correo electrónico -->
+            <div class="mb-4">
+              <label for="email" class="form-label fw-bold">Correo electrónico <span class="text-danger">*</span></label>
+              <input type="email" 
+                     id="email" 
+                     name="email"
+                     class="form-control"
+                     placeholder="ejemplo@empresa.com"
+                     required>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="mb-4">
+              <label for="telefono" class="form-label fw-bold">Teléfono</label>
+              <input type="tel" 
+                     id="telefono" 
+                     name="telefono"
+                     class="form-control"
+                     placeholder="Número de contacto">
               <div class="form-text">
-                <i class="bi bi-info-circle"></i> Campo opcional. Solo necesario si requieres seguimiento sobre alguna situación específica.
+                <i class="bi bi-info-circle"></i> Campo opcional. Nos ayudará a brindarte una atención más personalizada.
               </div>
             </div>
 
-            <!-- Frecuencia de uso -->
+            <!-- Productos de interés -->
             <div class="mb-4">
-              <label class="form-label fw-bold">¿Cuántas veces a la semana utilizas el transporte de personal? <span class="text-danger">*</span></label>
+              <label class="form-label fw-bold">¿En qué productos o servicios estás interesado? <span class="text-danger">*</span></label>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="frecuenciaUso" id="frecuenciaDiario" value="Diario" required>
-                <label class="form-check-label" for="frecuenciaDiario">Diario</label>
+                <input class="form-check-input" type="checkbox" name="intereses" id="gluing" value="Gluing">
+                <label class="form-check-label" for="gluing">Gluing Equipment</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="frecuenciaUso" id="frecuencia3a4" value="3-4 veces">
-                <label class="form-check-label" for="frecuencia3a4">3 a 4 veces por semana</label>
+                <input class="form-check-input" type="checkbox" name="intereses" id="RTUs" value="RTUs">
+                <label class="form-check-label" for="RTUs">RTUs</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="frecuenciaUso" id="frecuencia1a2" value="1-2 veces">
-                <label class="form-check-label" for="frecuencia1a2">1 a 2 veces por semana</label>
+                <input class="form-check-input" type="checkbox" name="intereses" id="CarbonGripper" value="CarbonGripper">
+                <label class="form-check-label" for="CarbonGripper">CarbonGripper</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="frecuenciaUso" id="frecuenciaOcasional" value="Ocasional">
-                <label class="form-check-label" for="frecuenciaOcasional">Ocasionalmente (menos de una vez por semana)</label>
+                <input class="form-check-input" type="checkbox" name="intereses" id="Welding" value="Welding">
+                <label class="form-check-label" for="Welding">WeldingGuns</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="frecuenciaUso" id="frecuenciaNunca" value="Nunca" onchange="toggleForm(this)">
-                <label class="form-check-label" for="frecuenciaNunca">Nunca</label>
+                <input class="form-check-input" type="checkbox" name="intereses" id="TipChanger" value="TipChanger">
+                <label class="form-check-label" for="TipChanger">TipChanger</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="intereses" id="TurnTable" value="TurnTable">
+                <label class="form-check-label" for="TurnTable">TurnTable</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="intereses" id="TurnKeySolutions" value="TurnKeySolutions">
+                <label class="form-check-label" for="TurnKeySolutions">Turnkey Solutions</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="intereses" id="Otros" value="Otros">
+                <label class="form-check-label" for="Otros">Otros</label>
               </div>
             </div>
 
-            <!-- Evaluación general -->
+            <!-- Comentarios -->
             <div class="mb-4">
-              <label class="form-label fw-bold">En una escala del 1 al 10, donde 1 es "Pésimo" y 10 es "Excelente", ¿cómo calificarías el servicio de transporte de personal en general? <span class="text-danger">*</span></label>
-              <div class="d-flex justify-content-between">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="evaluacionGeneral" id="eval1" value="1" required>
-                  <label class="form-check-label" for="eval1">1</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="evaluacionGeneral" id="eval2" value="2">
-                  <label class="form-check-label" for="eval2">2</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="evaluacionGeneral" id="eval3" value="3">
-                  <label class="form-check-label" for="eval3">3</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="evaluacionGeneral" id="eval4" value="4">
-                  <label class="form-check-label" for="eval4">4</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="evaluacionGeneral" id="eval5" value="5">
-                  <label class="form-check-label" for="eval5">5</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="evaluacionGeneral" id="eval6" value="6">
-                  <label class="form-check-label" for="eval6">6</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="evaluacionGeneral" id="eval7" value="7">
-                  <label class="form-check-label" for="eval7">7</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="evaluacionGeneral" id="eval8" value="8">
-                  <label class="form-check-label" for="eval8">8</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="evaluacionGeneral" id="eval9" value="9">
-                  <label class="form-check-label" for="eval9">9</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="evaluacionGeneral" id="eval10" value="10">
-                  <label class="form-check-label" for="eval10">10</label>
-                </div>
-              </div>
-            </div>
-
-            <!-- Puntualidad -->
-            <div class="mb-4">
-              <label class="form-label fw-bold">¿Cómo calificarías la puntualidad del transporte? <span class="text-danger">*</span></label>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="puntualidad" id="puntualidadMuyBuena" value="Muy buena" required>
-                <label class="form-check-label" for="puntualidadMuyBuena">Muy buena (Siempre llega a tiempo)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="puntualidad" id="puntualidadBuena" value="Buena">
-                <label class="form-check-label" for="puntualidadBuena">Buena (Casi siempre puntual, con pequeñas demoras ocasionales)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="puntualidad" id="puntualidadRegular" value="Regular">
-                <label class="form-check-label" for="puntualidadRegular">Regular (Frecuentes retrasos, pero aún dentro de lo aceptable)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="puntualidad" id="puntualidadMala" value="Mala">
-                <label class="form-check-label" for="puntualidadMala">Mala (Retrasos constantes que afectan mi jornada)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="puntualidad" id="puntualidadMuyMala" value="Muy mala">
-                <label class="form-check-label" for="puntualidadMuyMala">Muy mala (Siempre llega tarde o no pasa a tiempo)</label>
-              </div>
-            </div>
-
-            <!-- Cumplimiento de paradas -->
-            <div class="mb-4">
-              <label class="form-label fw-bold">¿El transporte realiza siempre las paradas establecidas en la ruta? <span class="text-danger">*</span></label>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="cumplimientoParadas" id="paradasSiempre" value="Siempre" required>
-                <label class="form-check-label" for="paradasSiempre">Sí, siempre</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="cumplimientoParadas" id="paradasMayoria" value="Mayoría">
-                <label class="form-check-label" for="paradasMayoria">En su mayoría, pero algunas veces omite paradas</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="cumplimientoParadas" id="paradasOcasional" value="Ocasional">
-                <label class="form-check-label" for="paradasOcasional">Ocasionalmente no respeta las paradas</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="cumplimientoParadas" id="paradasNunca" value="Nunca">
-                <label class="form-check-label" for="paradasNunca">Nunca respeta las paradas establecidas</label>
-              </div>
-            </div>
-
-            <!-- Actitud y profesionalismo -->
-            <div class="mb-4">
-              <label class="form-label fw-bold">¿Cómo describirías la actitud y profesionalismo de los conductores del servicio? <span class="text-danger">*</span></label>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="actitudConductores" id="actitudExcelente" value="Excelente" required>
-                <label class="form-check-label" for="actitudExcelente">Excelente (Respetuosos, atentos y profesionales)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="actitudConductores" id="actitudBuena" value="Buena">
-                <label class="form-check-label" for="actitudBuena">Buena (Generalmente cordiales y profesionales)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="actitudConductores" id="actitudRegular" value="Regular">
-                <label class="form-check-label" for="actitudRegular">Regular (A veces hay falta de cortesía o actitud inadecuada)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="actitudConductores" id="actitudMala" value="Mala">
-                <label class="form-check-label" for="actitudMala">Mala (Frecuentemente groseros o poco profesionales)</label>
-              </div>
-            </div>
-
-            <!-- Seguridad -->
-            <div class="mb-4">
-              <label class="form-label fw-bold">¿Cómo percibes la seguridad al viajar en el transporte de personal? <span class="text-danger">*</span></label>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="seguridad" id="seguridadMuySegura" value="Muy segura" required>
-                <label class="form-check-label" for="seguridadMuySegura">Muy segura (Cumple con todas las normas de seguridad)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="seguridad" id="seguridadSegura" value="Segura">
-                <label class="form-check-label" for="seguridadSegura">Segura (Generalmente cumple con medidas de seguridad)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="seguridad" id="seguridadAceptable" value="Aceptable">
-                <label class="form-check-label" for="seguridadAceptable">Aceptable (Algunas deficiencias, pero en general es seguro)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="seguridad" id="seguridadInseguro" value="Inseguro">
-                <label class="form-check-label" for="seguridadInseguro">Inseguro (No se respetan normas de seguridad, se maneja de forma peligrosa)</label>
-              </div>
-            </div>
-
-            <!-- Estado y limpieza -->
-            <div class="mb-4">
-              <label class="form-label fw-bold">¿Cómo describirías el estado y limpieza de las unidades? <span class="text-danger">*</span></label>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="estadoLimpieza" id="limpiezaExcelente" value="Excelentes" required>
-                <label class="form-check-label" for="limpiezaExcelente">Excelentes (Limpias y en buen estado)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="estadoLimpieza" id="limpiezaRegular" value="Regulares">
-                <label class="form-check-label" for="limpiezaRegular">Regulares (Algunas veces limpias, pero con detalles de mantenimiento)</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="estadoLimpieza" id="limpiezaDeficiente" value="Deficientes">
-                <label class="form-check-label" for="limpiezaDeficiente">Deficientes (Sucias y en mal estado)</label>
-              </div>
-            </div>
-
-            <!-- Sugerencias y comentarios -->
-            <div class="mb-4">
-              <label for="sugerencias" class="form-label fw-bold">Si tienes alguna queja, sugerencia o comentario que pueda ayudar a mejorar el servicio, escríbelo aquí:</label>
-              <textarea class="form-control" id="sugerencias" name="sugerencias" rows="3" placeholder="Escribe tus sugerencias o comentarios aquí"></textarea>
+              <label for="comentarios" class="form-label fw-bold">Comentarios adicionales</label>
+              <textarea class="form-control" 
+                        id="comentarios" 
+                        name="comentarios" 
+                        rows="3" 
+                        placeholder="¿Hay algo más que quieras comentarnos?"></textarea>
             </div>
           
             <!-- Botón de Envío -->
             <div class="d-grid">
-              <button type="submit" class="btn btn-primary">Enviar Encuesta</button>
+              <button type="submit" class="btn btn-primary">Enviar Formulario</button>
             </div>
-          </form>          
+          </form>
           
         </div>
 
@@ -325,7 +188,7 @@
 
     <!-- Footer -->
     <footer class="text-center py-4 bg-dark text-light">
-      <p>&copy; 2024 FFT México. Todos los derechos reservados.</p>
+      <p>&copy; 2025 FFT México. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Bootstrap JS -->
