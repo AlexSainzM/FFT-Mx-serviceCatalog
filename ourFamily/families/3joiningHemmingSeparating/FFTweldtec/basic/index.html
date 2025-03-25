@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+  
+  <head> 
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FFTweldtec Basic Welding Guns</title>
+
+    <!-- Oswald and Raleway font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Main CCS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .campaign-card {
+        transition: transform 0.2s, box-shadow 0.2s;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+
+      .campaign-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      }
+
+      .campaign-card .btn {
+        opacity: 0.9;
+        transition: opacity 0.2s;
+      }
+
+      .campaign-card:hover .btn {
+        opacity: 1;
+      }
+    </style>
+
+  </head>
+  
+  <body>
+
+    <div class="py-0">
+      
+      <!-- Header -->
+      <header id="header-basic-welding-guns" style="position: relative;">
+        
+        <div class="d-flex flex-column flex-md-row align-items-center pb-0 mb-0" style="position: absolute; width: 100%; z-index: 1000;">
+          <nav class="navbar navbar-expand-lg navbar-dark px-5" style="background-color: rgba(0, 0, 0, .25); width: 100%;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="">
+                <img src="../../../../../assets/img/logosVariants/FFF_LogoNormal.png" alt="FFT logo" width="mx-auto" height="30">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./en.html" style="font-family: 'Raleway', sans-serif; font-weight: 600;">English version</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../../../../index.html" style="font-family: 'Raleway', sans-serif;">Volver al inicio</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="p-0 m-0">
+          <img src="./img/header.png" class="img-fluid w-100 d-block" alt="Header background">
+        </div>
+
+      </header>
+
+    </div>
+
+    <main>
+
+      <!-- Overview -->
+      <div id="overview_section" class="p-4 px-lg-0">
+        <div class="container">
+          <h2 class="display-5 mb-4" id="lastestNews" style="opacity: 80%; font-family: 'Oswald', sans-serif; font-weight: 400;">RESUMEN</h2>
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <p class="lead mb-4" style="text-align: justify; color: var(--fft-primaryGray);">
+                El <strong>FFTweldtec Basic</strong> es una serie de pistolas de soldadura robóticas diseñadas para aplicaciones en acero y aluminio, proporcionando soluciones eficientes y de alto rendimiento para la industria automotriz y otros sectores de manufactura. Disponible en configuraciones <strong>C-Gun</strong> y <strong>X-Gun</strong>, esta tecnología ofrece precisión y durabilidad en procesos de soldadura de resistencia.
+              </p>
+              
+              <div class="p-4" style="background-color: var(--fft-secondaryGray1); border-radius: 10px;">
+                <h3 style="color: var(--fft-primaryGreen); font-family: 'Oswald', sans-serif; font-weight: 500;">Beneficios clave</h3>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2">
+                    <span style="color: var(--fft-primaryGreen);">✅</span>
+                    <span style="color: var(--fft-primaryGray);">Estructura estable y de fácil mantenimiento.</span>
+                  </li>
+                  <li class="mb-2">
+                    <span style="color: var(--fft-primaryGreen);">✅</span>
+                    <span style="color: var(--fft-primaryGray);">Componentes principales disponibles en el mercado.</span>
+                  </li>
+                  <li class="mb-2">
+                    <span style="color: var(--fft-primaryGreen);">✅</span>
+                    <span style="color: var(--fft-primaryGray);">Tamaño compacto con contornos de interferencia reducidos.</span>
+                  </li>
+                  <li class="mb-2">
+                    <span style="color: var(--fft-primaryGreen);">✅</span>
+                    <span style="color: var(--fft-primaryGray);">Adaptaciones personalizadas según las necesidades del cliente.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 text-center">
+              <video autoplay muted playsinline loop style="width: 100%; height: auto;" class="img-fluid rounded shadow" alt="FFTweldtec Basic Welding Gun">
+                <source src="./video/04_WeldingGuns_720.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <img src="./img/header.png" class="img-fluid rounded shadow" alt="FFTweldtec Basic Welding Gun" style="max-width: 100%; height: auto;"> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      
+
+      
+
+      <!-- VERSIONES DEL PRODUCTO -->
+      <div id="versions_section" class="p-4 px-lg-0">
+        <div class="container">
+          <h2 class="display-5 mb-4 p-2" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: right; color: var(--fft-primaryGray);">VERSIONES DEL PRODUCTO</h2>
+        
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <!-- Basic C -->
+            <div class="col">
+              <div class="card h-100 campaign-card" data-bs-toggle="modal" data-bs-target="#basicCModal" style="cursor: pointer;">
+                <img src="./img/c/DSC01330.png" class="card-img-top p-3" alt="Pistola Basic C">
+                <div class="card-body">
+                  <h3 class="display-5 mb-1 p-2" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: left; color: var(--fft-primaryGray);">PISTOLA DE SOLDADURA BASIC C</h3>
+                  <table class="table table-sm m-2">
+                    <tbody>
+                      <tr>
+                        <td><small>Área de aplicación</small></td>
+                        <td><small>Acero y aluminio</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Fuerza máx. de soldadura</small></td>
+                        <td><small>6000 N</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Accionamiento</small></td>
+                        <td><small>Electromotriz</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Carrera de apertura</small></td>
+                        <td><small>125 mm</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Transformador</small></td>
+                        <td><small>MF 100 kVA</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Compensación</small></td>
+                        <td><small>Sin compensación</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Peso</small></td>
+                        <td><small>80 – 100 kg</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Cambio</small></td>
+                        <td><small>Rápido lado robot</small></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal for Basic C -->
+            <div class="modal fade" id="basicCModal" tabindex="-1" aria-labelledby="basicCModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="display-5 mb-0 p-2" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: right; color: var(--fft-primaryGray);">Welding Gun Basic C</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="./img/c/DSC01330.png" class="img-fluid" alt="Pistola Basic C">
+                      </div>
+                      <div class="col-md-6">
+                        <h4 class="display-5 mb-0 p-2" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: left; color: var(--fft-primaryGray);">Especificaciones Técnicas</h4>
+                        <ul class="list-unstyled p-2">
+                          <li><strong>Área de aplicación:</strong> Acero y aluminio</li>
+                          <li><strong>Fuerza máx. de soldadura:</strong> 6000 N</li>
+                          <li><strong>Accionamiento:</strong> Electromotriz</li>
+                          <li><strong>Carrera de apertura:</strong> 125 mm</li>
+                          <li><strong>Transformador:</strong> MF 100 kVA</li>
+                          <li><strong>Compensación:</strong> Sin compensación</li>
+                          <li><strong>Peso:</strong> 80 – 100 kg</li>
+                          <li><strong>Cambio:</strong> Rápido lado robot</li>
+                        </ul>
+                        <h6 class="mt-4 mb-3">Características Adicionales</h6>
+                        <p>La pistola Basic C está diseñada para ofrecer un rendimiento óptimo en aplicaciones de soldadura por resistencia. Su diseño compacto y robusto la hace ideal para líneas de producción automatizadas.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Basic X -->
+            <div class="col">
+              <div class="card h-100 campaign-card">
+                <img src="./img/x/DSC01284.png" class="card-img-top p-3" alt="Pistola Basic X">
+                <div class="card-body">
+                  <h3 class="display-5 mb-1 p-2" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: left; color: var(--fft-primaryGray);">PISTOLA DE SOLDADURA BASIC X</h3>
+                  <table class="table table-sm m-2">
+                    <tbody>
+                      <tr>
+                        <td><small>Área de aplicación:</small></td>
+                        <td><small>Acero y aluminio</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Fuerza máx. soldadura (800mm):</small></td>
+                        <td><small>6000 N</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Accionamiento:</small></td>
+                        <td><small>Electromotriz</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Ángulo de apertura:</small></td>
+                        <td><small>20°</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Transformador:</small></td>
+                        <td><small>MF 100 kVA</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Compensación:</small></td>
+                        <td><small>Sin compensación</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Peso:</small></td>
+                        <td><small>95 – 125 kg</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Cambio:</small></td>
+                        <td><small>Rápido lado robot</small></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Basic XL -->
+            <div class="col">
+              <div class="card h-100 campaign-card">
+                <img src="./img/XL/XL Gun02.png" class="card-img-top p-3" alt="Pistola Basic XL">
+                <div class="card-body">
+                  <h3 class="display-5 mb-1 p-2" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: left; color: var(--fft-primaryGray);">PISTOLA DE SOLDADURA BASIC XL</h3>
+                  <table class="table table-sm m-2">
+                    <tbody>
+                      <tr>
+                        <td><small>Área de aplicación:</small></td>
+                        <td><small>Acero y alumnio</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Fuerza máx. soldadura (800mm):</small></td>
+                        <td><small>8000 N</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Accionamiento:</small></td>
+                        <td><small>Electromotriz</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Ángulo de apertura:</small></td>
+                        <td><small>20°</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Transformador:</small></td>
+                        <td><small>MF 100 kVA</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Compensación:</small></td>
+                        <td><small>Sin compensación</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Peso:</small></td>
+                        <td><small>120 – 190 kg</small></td>
+                      </tr>
+                      <tr>
+                        <td><small>Cambio:</small></td>
+                        <td><small>Rápido lado robot</small></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMUNICADOS -->
+      <div id="comunicados_section" class="p-4 pb-5 px-lg-0">
+        <div class="container">
+          <h2 class="display-5 mb-4 p-2" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: left; color: var(--fft-primaryGray);">ÚLTIMOS COMUNICADOS</h2>
+        
+          <div class="row row-cols-1 g-4">
+            <!-- lISTA DE COMUNICADOS -->
+            <div class="col">
+              <div class="card h-100 campaign-card">
+                <div class="card-body text-center">
+                  <i class="bi bi-newspaper display-4 mb-3"></i>
+                  <h5 class="card-title" style="font-family: 'Oswald', sans-serif; font-weight: 600;">Ultimos comunicados: <span class="badge text-bg-primary btn-pulse"></span></h5>
+                  <div id="pdf-list-container">
+                    <!-- Los comunicados se cargan aquí dinamicamente -->
+                  </div>
+                  <a class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#todosLosComunicados">Ver la lista completa</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal "Todos los comunicados" -->
+      <div class="modal fade" id="todosLosComunicados" tabindex="-1" aria-labelledby="todosLosComunicadosTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="fs-3" id="todosLosComunicadosTitle" style="font-family: 'Oswald', sans-serif; font-weight: 600;">Comunicados recientes</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="listaCompletaComunicados">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MENÚ DEL COMEDOR -->
+      <div id="comedor_section" class="p-4 px-lg-0">
+        <div class="container">
+          <h2 class="display-5 mb-4 p-2" id="lastestNews" style="opacity: 80%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: right; color: var(--white);">CONOCE EL MENÚ DEL COMEDOR</h2>
+        
+          <div class="row row-cols-1 g-4">
+            <!-- lISTA DE COMUNICADOS -->
+            <div class="col">
+              <div class="card h-100 campaign-card">
+                <div class="card-body text-center">
+                  <i class="bi bi-cup-hot-fill display-4 mb-3"></i>
+                  <h5 class="card-title" style="font-family: 'Oswald', sans-serif; font-weight: 600;">Conoce las opciones que tenemos para ti<span class="badge text-bg-primary btn-pulse"></span></h5>
+                  <a href="./menuComedor/index.html" class="btn btn-primary">Ver el menú</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+            
+
+
+
+
+        
+
+      </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-light">
+      <p>&copy; 2024 FFT México. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- Main Js -->
+    <script src="./main.js"></script>
+    
+  </body>
+</html>
+
+
