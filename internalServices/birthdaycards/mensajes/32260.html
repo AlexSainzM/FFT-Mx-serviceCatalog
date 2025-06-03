@@ -108,7 +108,7 @@
           <nav class="navbar navbar-expand-lg navbar-dark px-4" style="background-color: rgba(0, 0, 0, .25); width: 100%;">
             <div class="container-fluid">
               <a class="navbar-brand" href="">
-                <img src="./assets/img/logosVariants/FFF_LogoNormal.png" alt="FFT logo" width="mx-auto" height="30">
+                <img src="../../../assets/img/logosVariants/FFF_LogoNormal.png" alt="FFT logo" width="mx-auto" height="30">
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -128,10 +128,10 @@
         </div>
 
         <div class="p-0 m-0">
-          <video autoplay muted loop playsinline poster="poster.jpg" id="bgVideo" class="img-fluid w-100 d-block">
+          <!-- <video autoplay muted loop playsinline poster="poster.jpg" id="bgVideo" class="img-fluid w-100 d-block">
             <source src="/assets/index/videoaereo_Banner.mp4" type="video/mp4" />
             Tu navegador no soporta video en HTML5.
-          </video>
+          </video> -->
           <!-- <img src="./fotoaerea.jpg" class="img-fluid w-100 d-block" alt="Header background"> -->
         </div>
 
@@ -141,74 +141,34 @@
 
     <main>
 
-      <!-- OVERVIEW -->
-      <!-- <div id="overview_section" class="p-4 px-lg-0">
+      <!-- Formulario: Envio de mensaje de cumpleaños -->
+      <div id="birthday_form" class="p-4 pt-5 px-lg-0">
         <div class="container">
-          <h2 class="display-5 mb-4" id="lastestNews" style="opacity: 80%; font-family: 'Oswald', sans-serif; font-weight: 400;">RESUMEN</h2>
-          <div class="row align-items-center">
-            <div class="col-lg-8">
-              <p class="lead mb-4" style="text-align: justify; color: var(--fft-primaryGray);">
-                El <strong>FFTweldtec Basic</strong> es una serie de pistolas de soldadura robóticas diseñadas para aplicaciones en acero y aluminio, proporcionando soluciones eficientes y de alto rendimiento para la industria automotriz y otros sectores de manufactura. Disponible en configuraciones <strong>C-Gun</strong>, <strong>X-Gun</strong> y <strong>XL-Gun</strong>, esta tecnología ofrece precisión y durabilidad en procesos de soldadura de resistencia.
-              </p>
-              
-              <div class="p-4" style="background-color: var(--fft-secondaryGray1); border-radius: 10px;">
-                <h3 style="color: var(--fft-primaryGreen); font-family: 'Oswald', sans-serif; font-weight: 500;">BENEFICIOS CLAVE</h3>
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2">
-                    <span style="color: var(--fft-primaryGreen);">✅</span>
-                    <span style="color: var(--fft-primaryGray);">Estructura estable y de fácil mantenimiento.</span>
-                  </li>
-                  <li class="mb-2">
-                    <span style="color: var(--fft-primaryGreen);">✅</span>
-                    <span style="color: var(--fft-primaryGray);">Componentes principales disponibles en el mercado.</span>
-                  </li>
-                  <li class="mb-2">
-                    <span style="color: var(--fft-primaryGreen);">✅</span>
-                    <span style="color: var(--fft-primaryGray);">Tamaño compacto con contornos de interferencia reducidos.</span>
-                  </li>
-                  <li class="mb-2">
-                    <span style="color: var(--fft-primaryGreen);">✅</span>
-                    <span style="color: var(--fft-primaryGray);">Adaptaciones personalizadas según las necesidades del cliente.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-4 text-center">
-              <video autoplay muted playsinline loop style="width: 100%; height: auto;" class="img-fluid rounded shadow" alt="FFTweldtec Basic Welding Gun">
-                <source src="./video/04_WeldingGuns_720.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- CONOCE NUESTROS PRODUCTOS -->
-      <div id="products_section" class="p-4 px-lg-0">
-        <div class="container">
-          <h2 class="display-5 mb-4 p-2" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: right; color: var(--fft-primaryGray);">CONOCE NUESTROS PRODUCTOS</h2>
+          <h2 class="display-5 mb-4 p-2 pt-2 mt-3" id="lastestNews" style="opacity: 90%; font-family: 'Oswald', sans-serif; font-weight: 400; text-align: right; color: var(--fft-primaryGray);">Envia un mensaje de cumpleaños para  </h2>
         
           <div class="row row-cols-1 row-cols-md-1 g-4">
             
-            <a href="./ourFamily/families/1plantComponentsModules/FFTlinetec/RTU/index.html">
-              <img src="./ourFamily/families/1plantComponentsModules/FFTlinetec/RTU/img/header.png" class="img-fluid m-1" alt="">
-            </a>
+            <form action="https://formspree.io/f/tu_codigo_formspree" method="POST" enctype="multipart/form-data" class="p-4 border rounded bg-light shadow-sm">
+              <h5 class="mb-3">Envía tu mensaje de cumpleaños 🎉</h5>
+            
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Tu nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+            
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje de felicitación</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+              </div>
+            
+              <div class="mb-3">
+                <label for="foto" class="form-label">Foto (opcional)</label>
+                <input type="file" class="form-control" id="foto" name="foto" accept="image/*">
+              </div>
+            
+              <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </form>
 
-            <a href="./ourFamily/families/3joiningHemmingSeparating/FERE-Gluing/index.html">
-              <img src="./ourFamily/families/3joiningHemmingSeparating/FERE-Gluing/img/header.png" class="img-fluid m-1" alt="">
-            </a>
-
-            <a href="./ourFamily/families/3joiningHemmingSeparating/FFTweldtec/basic/index.html">
-              <img src="./ourFamily/families/3joiningHemmingSeparating/FFTweldtec/basic/img/header.png" class="img-fluid m-1" alt="">
-            </a>
-
-            <a href="./ourFamily/families/5transportandPartsProvision/FFTprovi/turntable/index.html">
-              <img src="./ourFamily/families/5transportandPartsProvision/FFTprovi/turntable/img/header.png" class="img-fluid m-1" alt="">
-            </a>
-
-            <a href="./ourFamily/families/3joiningHemmingSeparating/FFTweldtec/tipChanger/index.html">
-              <img src="./ourFamily/families/3joiningHemmingSeparating/FFTweldtec/tipChanger/img/header.png" class="img-fluid m-1" alt="">
-            </a>
           </div>
         </div>
       </div>
@@ -224,7 +184,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     <!-- Main Js -->
-    <script src="./main.js"></script>
+    <script>
+      // Función para obtener el ID del nombre del archivo
+      function getFileId() {
+        const path = window.location.pathname;
+        const filename = path.split('/').pop();
+        return filename.split('.')[0];
+      }
+
+      // Función para cargar y mostrar el nombre
+      async function loadBirthdayPerson() {
+        try {
+          const response = await fetch('./junio.json');
+          const data = await response.json();
+          const fileId = getFileId();
+          
+          if (data[fileId]) {
+            const nombre = data[fileId].nombre;
+            document.getElementById('lastestNews').innerHTML = 
+              `Envía un mensaje de cumpleaños para ${nombre} 🎂`;
+          }
+        } catch (error) {
+          console.error('Error cargando los datos:', error);
+        }
+      }
+
+      // Ejecutar cuando el documento esté listo
+      document.addEventListener('DOMContentLoaded', loadBirthdayPerson);
+    </script>
     
   </body>
 </html>
