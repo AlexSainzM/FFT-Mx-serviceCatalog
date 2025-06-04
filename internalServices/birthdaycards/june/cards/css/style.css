@@ -3,13 +3,13 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #239ac2;
+  background-color: #009d80;
 }
 
 .birthdayCard {
   position: relative;
-  width: 250px;
-  height: 350px;
+  width: 500px;
+  height: 700px;
   cursor: pointer;
   transform-style: preserve-3d;
   transform: perspective(2500px);
@@ -33,8 +33,8 @@ body {
 .cardFront {
   position: relative;
   background-color: #fff;
-  width: 250px;
-  height: 350px;
+  width: 500px;
+  height: 700px;
   overflow: hidden;
   transform-origin: left;
   box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
@@ -46,7 +46,8 @@ body {
   font-family: Tahoma, sans-serif;
   text-align: center;
   margin: 30px;
-  background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%);
+  /* background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%); */
+  opacity: 50%;
   transition: 0.1s;
 }
 
@@ -59,15 +60,15 @@ body {
 .balloon-3,
 .balloon-4 {
   position: absolute;
-  width: 85px;
-  height: 95px;
+  width: 170px;
+  height: 190px;
   border-radius: 50%;
 }
 
 .balloon-1 {
   background-color: rgba(255, 40, 90, 0.7);
-  left: -10px;
-  top: 50px;
+  left: 10px;
+  top: 100px;
 }
 
 .balloon-2 {
@@ -94,11 +95,11 @@ body {
 .balloon-4::before {
   content: "";
   position: absolute;
-  width: 1px;
-  height: 155px;
+  width: 2px;
+  height: 310px;
   background-color: #ffc848;
-  top: 95px;
-  left: 43px;
+  top: 190px;
+  left: 80px;
 }
 
 .balloon-1::after,
@@ -109,8 +110,8 @@ body {
   position: absolute;
   border-right: 7px solid transparent;
   border-left: 7px solid transparent;
-  top: 94px;
-  left: 37px;
+  top: 188px;
+  left: 74px;
 }
 
 .balloon-1::after {
@@ -132,8 +133,8 @@ body {
 .cardInside {
   position: absolute;
   background-color: #fff;
-  width: 250px;
-  height: 350px;
+  width: 500px;
+  height: 700px;
   z-index: -1;
   left: 0;
   top: 0;
@@ -144,6 +145,7 @@ p {
   font-family: "Brush Script MT", cursive;
   margin: 40px;
   color: #333;
+  font-size: xx-large;
 }
 
 .name {
