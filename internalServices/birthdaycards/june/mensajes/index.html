@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo adicional opcional por si falta en el CSS */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 80px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--fft-primaryGreen);
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--fft-secondaryGray2);
+            font-size: 16px;
+        }
+
+        button.btn-primary {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #resultado {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .user-data p {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--fft-primaryGray);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container campaign-card">
+        <h2>Consulta de Usuario</h2>
+
+        <input type="text" id="userIdInput" placeholder="Ingresa ID del usuario">
+        <button onclick="buscarUsuario()" class="btn-primary">Buscar</button>
+
+        <div id="resultado" class="user-data"></div>
+    </div>
+
+    <footer>
+        &copy; 2025 - Sistema de Tarjetas FFT
+    </footer>
+
+    <script src="users.js"></script>
+</body>
+
+</html>
