@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarjeta de cumpleaños</title>
+  <style>
+    body {
+      background-color: #fdf6e3;
+      font-family: sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+    .birthdayCard {
+      max-width: 600px;
+      margin: 40px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .cardFront {
+      background: linear-gradient(135deg, #ffb347, #ffcc33);
+      padding: 2em;
+      text-align: center;
+    }
+    .cardFront .happy {
+      font-size: 1.8em;
+      margin: 0;
+      color: white;
+    }
+    .cardInside {
+      padding: 2em;
+    }
+    .cardInside p {
+      line-height: 1.5;
+      margin-bottom: 1em;
+    }
+    .cardInside .name {
+      font-weight: bold;
+      font-size: 1.1em;
+      text-align: right;
+      margin-top: 1em;
+    }
+    .mensaje {
+      background: #f9f9f9;
+      border-left: 4px solid #4caf50;
+      padding: 0.5em 1em;
+      margin-bottom: 1em;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="birthdayCard">
+    <div class="cardFront">
+      <h3 class="happy">🎉 ¡Feliz cumpleaños! 🎉</h3>
+    </div>
+    <div class="cardInside">
+      <p id="nombreCumpleanero"><strong>ID:</strong> ...</p>
+      <p>
+        En FFT México queremos desearte un día lleno de alegría, buenos momentos y mucho cariño.
+        Que este nuevo año en tu vida llegue con grandes aprendizajes, salud, éxitos y nuevas oportunidades para seguir creciendo personal y profesionalmente.
+      </p>
+      <p>
+        Gracias por ser parte de esta gran familia. ¡Disfruta tu día al máximo!
+      </p>
+      <p>
+        Con aprecio, <strong>FFT México</strong>
+      </p>
+      <p class="name">🎂</p>
+
+      <div id="mensajesAmigos">
+        <h4>🎈 Mensajes de tus compañeros:</h4>
+        <div id="mensajesLista"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function cargarMensajes() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      const nombreDiv = document.getElementById('nombreCumpleanero');
+      const mensajesDiv = document.getElementById('mensajesLista');
+
+      if (!id) {
+        nombreDiv.innerHTML = "<strong>Error:</strong> ID no especificado.";
+        return;
+      }
+
+      nombreDiv.innerHTML = `<strong>ID del cumpleañero:</strong> ${id}`;
+
+      try {
+        const response = await fetch('messages.json');
+        const data = await response.json();
+
+        const mensajes = data.submissions.filter(m => m.id_cumpleanero === id);
+
+        if (mensajes.length === 0) {
+          mensajesDiv.innerHTML = "<p>No se han recibido mensajes aún.</p>";
+          return;
+        }
+
+        mensajes.forEach(m => {
+          const mensajeHTML = `
+            <div class="mensaje">
+              <p><strong>${m.nombre}:</strong> ${m.mensaje}</p>
+            </div>
+          `;
+          mensajesDiv.innerHTML += mensajeHTML;
+        });
+
+      } catch (error) {
+        console.error("Error al cargar mensajes:", error);
+        mensajesDiv.innerHTML = "<p>Error al cargar los mensajes.</p>";
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', cargarMensajes);
+  </script>
+</body>
+</html>
