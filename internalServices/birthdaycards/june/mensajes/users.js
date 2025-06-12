@@ -8,7 +8,7 @@ async function buscarUsuario() {
   }
 
   try {
-    const response = await fetch('june.json');
+    const response = await fetch('birthdays.json');
     const data = await response.json();
 
     const usuario = data[input];
