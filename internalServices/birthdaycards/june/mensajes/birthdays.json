@@ -1,4 +1,16 @@
 {
+  "_comment": "Este archivo contiene los datos de los cumpleañeros de FFT, este y el archivo messages son los unicos que se deben modificar para enviar tarjetas de cumpleaños",
+  "00000": {
+    "nombre": "Cumpleañero de Prueba en FFT",
+    "fecha_nacimiento": "1997-06-02",
+    "centro_de_costo": 54400
+  },
+  "_enero": "Cumpleaños de enero",
+  "_febrero": "Cumpleaños de febrero",  
+  "_marzo": "Cumpleaños de marzo",
+  "_abril": "Cumpleaños de abril",
+  "_mayo": "Cumpleaños de mayo",
+  "_junio": "Cumpleaños de junio",
   "32315": {
     "nombre": "Rodriguez Castillo Daniel",
     "fecha_nacimiento": "1973-06-01",
@@ -128,5 +140,11 @@
     "nombre": "Marquez Mendez Paulina Irandy",
     "fecha_nacimiento": "1982-06-01",
     "centro_de_costo": 54110
-  }
+  },
+  "_agosto": "Cumpleaños de agosto",
+  "_septiembre": "Cumpleaños de septiembre",
+  "_octubre": "Cumpleaños de octubre",
+  "_noviembre": "Cumpleaños de noviembre",
+  "_diciembre": "Cumpleaños de diciembre"
 }
+
