@@ -1,1 +1,0 @@
-Hacemos ultimo commit de este repo que migramos a uno nuevo junto con su conexión en un dominio de AWS.

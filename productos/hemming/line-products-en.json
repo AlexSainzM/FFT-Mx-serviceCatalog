@@ -1,0 +1,101 @@
+{
+  "familia": "FFT hemtec",
+  "productos": [
+    {
+      "nombre": "Single",
+      "descripcion": "The modular FFThemtec Single is a flexible, robot-guided roller hemming tool for flat, drop, wedge and special folds made of steel and aluminum, which easily serves multiple derivatives in one production line.",
+      "lanzamiento": 1996,
+      "imagen_url": "single.webp",
+      "enlaces": {
+        "url_producto": "https://www.fft.de/en/products/single",
+        "url_informacion": "https://www.fft.de/products/Hemming-Falzen/hemtec-Single/Presentation/FFT-hemtec-Single-ENG.pdf",
+        "url_datasheet": "https://www.fft.de/products/Hemming-Falzen/hemtec-Single/Technical-Data/Technical-Data-Single-S-ENG.pdf",
+        "url_datasheet2": "https://www.fft.de/products/Hemming-Falzen/hemtec-VersoA/Technical-Data/Technical-Data-VersoA4-ENG.pdf",
+        "url_datasheet3": "https://www.fft.de/products/Hemming-Falzen/hemtec-VersoA/Technical-Data/Technical-Data-VersoA-ENG.pdf"
+      }
+    },
+    {
+      "nombre": "Twinstep",
+      "descripcion": "The FFThemtec Twinstep is a robot-guided tool for producing a wide variety of hemming geometries for steel and aluminum components. With two hemming rollers running one behind the other, it makes it possible to process several derivatives efficiently.",
+      "lanzamiento": 2006,
+      "imagen_url": "twinstep.webp",
+      "enlaces": {
+        "url_producto": "https://www.fft.de/en/products/twinstep",
+        "url_informacion": "https://www.fft.de/products/Hemming-Falzen/hemtec-Twinstep/Presentation/FFT-hemtec-Twinstep-ENG.pdf",
+        "url_datasheet": "https://www.fft.de/products/Hemming-Falzen/hemtec-Twinstep/Technical-Data/Technical-Data-Twinstep-ENG.pdf"
+      }
+    },
+    {
+      "nombre": "Verso",
+      "descripcion": "The FFThemtec Verso roller hemming head is a robot-guided tool with up to four pairs of hemming rollers.Ideal for wheel arch and door entry hemming, it ensures uniform hemming force thanks to the counter roller principle. Flexible for various derivatives.",
+      "lanzamiento": 2007,
+      "imagen_url": "verso.webp",
+      "enlaces": {
+        "url_producto": "https://www.fft.de/en/products/verso",
+        "url_informacion": "https://www.fft.de/products/Hemming-Falzen/hemtec-Verso/Presentation/FFT-hemtec-Verso-ENG.pdf"
+      }
+    },
+    {
+      "nombre": "VersoA",
+      "descripcion": "The roller hemming system is used in automated production systems for side walls and wheel arches. It consists of a roller hemming head and a special hemming frame. Aavailable as a one- or two-robot system.",
+      "lanzamiento": 2006,
+      "imagen_url": "versoa.webp",
+      "enlaces": {
+        "url_producto": "https://www.fft.de/en/products/versoa",
+        "url_informacion": "https://www.fft.de/products/Hemming-Falzen/hemtec-VersoA/Presentation/FFT-hemtec-VersoA2-ENG.pdf",
+        "url_datasheet": "https://www.fft.de/products/Hemming-Falzen/hemtec-VersoA/Technical-Data/Technical-Data-VersoA2-ENG.pdf"
+      }
+    },
+    {
+      "nombre": "VersoM / ML",
+      "descripcion": "The FFThemtec VersoM / VersoML Roll Hemming System is ideal for prototyping and small batches. It is manually operated and has a hand-cranked or pneumatic roller hemming head and a special hemming frame.",
+      "lanzamiento": 2006,
+      "imagen_url": "versom.webp",
+      "enlaces": {
+        "url_producto": "https://www.fft.de/en/products/versom",
+        "url_informacion": "https://www.fft.de/products/Hemming-Falzen/hemtec-VersoM/Presentation/FFT-hemtec-VersoM-ENG.pdf",
+        "url_datasheet": "https://www.fft.de/products/Hemming-Falzen/hemtec-VersoM/Technical-Data/Technical-Data-VersoM-ENG.pdf"
+      }
+    },
+    {
+      "nombre": "VersoMP",
+      "descripcion": "The FFThemtec VersoMP Roller Hemming System enables efficient prototype development and small batch production for sidewalls and wheel arches. The pneumatic head is also available with a hand crank and is operated manually.",
+      "lanzamiento": 2018,
+      "imagen_url": "versomp.webp",
+      "enlaces": {
+        "url_producto": "https://www.fft.de/en/products/versom",
+        "url_informacion": "https://www.fft.de/products/Hemming-Falzen/hemtec-VersoM/Presentation/FFT-hemtec-VersoMP-ENG.pdf",
+        "url_datasheet": "https://www.fft.de/products/Hemming-Falzen/hemtec-VersoM/Technical-Data/Technical-Data-VersoMP-ENG.pdf"
+      }
+    },
+    {
+      "nombre": "180°",
+      "descripcion": "The roller hemming head FFThemtec 180° is a versatile, robot-guided tool with 1-5 hemming rollers. It is used for sunroof hemming, pre-hemming processes and hemming without backing. This hemming head can be used robot-guided or stationary.",
+      "lanzamiento": 2009,
+      "imagen_url": "180.webp",
+      "enlaces": {
+        "url_producto": "https://www.fft.de/en/products/180"
+      }
+    },
+    {
+      "nombre": "Roller Cleaner",
+      "descripcion": "The Roller Cleaner automates the cleaning of hemming rolls without interrupting the process. A robot positions the hemming roller in front of the drive element. The roller is minimally wetted with oil, and a scraper removes the sticking glue.",
+      "lanzamiento": 2009,
+      "imagen_url": "roller-cleaner.webp",
+      "enlaces": {
+        "url_producto": "https://www.fft.de/en/products/joining-hemming-separating/fft-hemtec/cleaning-unit",
+        "url_informacion": "https://www.fft.de/products/Hemming-Falzen/hemtec-Roller-Cleaner/Presentation/FFT-hemtec-Roller-Cleaner-ENG.pdf",
+        "url_datasheet": "https://www.fft.de/products/Hemming-Falzen/hemtec-Roller-Cleaner/Technical-Data/Technical-Data-Roller-Cleaner-ENG.pdf"
+      }
+    },
+    {
+      "nombre": "HemQC",
+      "descripcion": "FFTmetrology HemQC inspects the quality of the folded edge during the roll folding process. This is a scanning procedure in which the width and height of the fold or the excess adhesive is measured.",
+      "lanzamiento": 2025,
+      "imagen_url": "hemqc.webp",
+      "enlaces": {
+        
+      }
+    }
+  ]
+}
