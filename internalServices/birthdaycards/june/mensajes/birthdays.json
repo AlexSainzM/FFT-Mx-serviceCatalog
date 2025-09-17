@@ -1,0 +1,150 @@
+{
+  "_comment": "Este archivo contiene los datos de los cumpleañeros de FFT, este y el archivo messages son los unicos que se deben modificar para enviar tarjetas de cumpleaños",
+  "00000": {
+    "nombre": "Cumpleañero de Prueba en FFT",
+    "fecha_nacimiento": "1997-06-02",
+    "centro_de_costo": 54400
+  },
+  "_enero": "Cumpleaños de enero",
+  "_febrero": "Cumpleaños de febrero",  
+  "_marzo": "Cumpleaños de marzo",
+  "_abril": "Cumpleaños de abril",
+  "_mayo": "Cumpleaños de mayo",
+  "_junio": "Cumpleaños de junio",
+  "32315": {
+    "nombre": "Rodriguez Castillo Daniel",
+    "fecha_nacimiento": "1973-06-01",
+    "centro_de_costo": 54210
+  },
+  "32344": {
+    "nombre": "Chavarriaz Sarmiento Gustavo",
+    "fecha_nacimiento": "1986-06-19",
+    "centro_de_costo": 54440
+  },
+  "32387": {
+    "nombre": "Rodriguez Garcia David Ricardo",
+    "fecha_nacimiento": "1985-06-02",
+    "centro_de_costo": 54220
+  },
+  "33284": {
+    "nombre": "Martinez Bautista Isaid",
+    "fecha_nacimiento": "1980-06-25",
+    "centro_de_costo": 54220
+  },
+  "32288": {
+    "nombre": "Görlich Florian Manuel",
+    "fecha_nacimiento": "1981-06-28",
+    "centro_de_costo": 54100
+  },
+  "32569": {
+    "nombre": "Reyes Ramirez Erick",
+    "fecha_nacimiento": "1990-06-23",
+    "centro_de_costo": 54330
+  },
+  "34495": {
+    "nombre": "Lopez Lopez Janett",
+    "fecha_nacimiento": "1981-06-16",
+    "centro_de_costo": 54410
+  },
+  "33881": {
+    "nombre": "Trejo De Los Santos Raul",
+    "fecha_nacimiento": "1994-06-08",
+    "centro_de_costo": 54220
+  },
+  "35606": {
+    "nombre": "Barranco Vargas Karen",
+    "fecha_nacimiento": "1996-06-22",
+    "centro_de_costo": 54210
+  },
+  "36947": {
+    "nombre": "Castro Buendia Jony Raul",
+    "fecha_nacimiento": "1973-06-03",
+    "centro_de_costo": 54200
+  },
+  "35421": {
+    "nombre": "Rodriguez Honorato Said Uriel",
+    "fecha_nacimiento": "1994-06-29",
+    "centro_de_costo": 54220
+  },
+  "35256": {
+    "nombre": "Castillo Sanchez Pablo",
+    "fecha_nacimiento": "1991-06-28",
+    "centro_de_costo": 54300
+  },
+  "32431": {
+    "nombre": "Moreno Sabinas Jesus Fabian",
+    "fecha_nacimiento": "1987-06-25",
+    "centro_de_costo": 54210
+  },
+  "37175": {
+    "nombre": "Sanchez Perez Ismael",
+    "fecha_nacimiento": "1980-06-16",
+    "centro_de_costo": 54310
+  },
+  "38533": {
+    "nombre": "Cruz Evaristo Ana Maria",
+    "fecha_nacimiento": "2000-06-03",
+    "centro_de_costo": 54320
+  },
+  "39183": {
+    "nombre": "Sainz Morales Alejandro",
+    "fecha_nacimiento": "1997-06-02",
+    "centro_de_costo": 54400
+  },
+  "38849": {
+    "nombre": "Gonzalez Herrera Dahir ",
+    "fecha_nacimiento": "2000-06-28",
+    "centro_de_costo": 54110
+  },
+  "38640": {
+    "nombre": "Mino Sierra Aldair Alberto ",
+    "fecha_nacimiento": "1995-06-10",
+    "centro_de_costo": 54310
+  },
+  "38741": {
+    "nombre": "Rodriguez Nicolas Mariano ",
+    "fecha_nacimiento": "1995-06-25",
+    "centro_de_costo": 54300
+  },
+  "38351": {
+    "nombre": "Rodriguez Martinez Arturo",
+    "fecha_nacimiento": "1976-06-25",
+    "centro_de_costo": 54210
+  },
+  "38805": {
+    "nombre": "Lopez Nieves Alejandro ",
+    "fecha_nacimiento": "1998-06-20",
+    "centro_de_costo": 54330
+  },
+  "38488": {
+    "nombre": "Jimenez Perez Alejandro",
+    "fecha_nacimiento": "1992-06-22",
+    "centro_de_costo": 54110
+  },
+  "38085": {
+    "nombre": "Hernandez Maimone Miguel Angel",
+    "fecha_nacimiento": "1986-06-04",
+    "centro_de_costo": 54300
+  },
+  "38286": {
+    "nombre": "Cervantes Tellez Martha Patricia",
+    "fecha_nacimiento": "1981-06-07",
+    "centro_de_costo": 54410
+  },
+  "39140": {
+    "nombre": "Rios Perez Rafael",
+    "fecha_nacimiento": "1995-06-30",
+    "centro_de_costo": 54440
+  },
+  "32260": {
+    "nombre": "Marquez Mendez Paulina Irandy",
+    "fecha_nacimiento": "1982-06-01",
+    "centro_de_costo": 54110
+  },
+  "_agosto": "Cumpleaños de agosto",
+  "_septiembre": "Cumpleaños de septiembre",
+  "_octubre": "Cumpleaños de octubre",
+  "_noviembre": "Cumpleaños de noviembre",
+  "_diciembre": "Cumpleaños de diciembre"
+}
+

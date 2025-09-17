@@ -1,0 +1,1303 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <!-- Second release of Service
+      Alejandro Sainz
+      FFT México Internal Services
+    V00.0.1 -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campaña de actualización de datos</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Main CCS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+  </head>
+
+  <body>
+
+    <!-- Modal Informativo -->
+    <div class="modal fade" id="infoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Información Importante</h5>
+                </div>
+                <div class="modal-body">
+                    <h6 class="fw-bold">Antes de comenzar, por favor asegúrate de contar con los siguientes documentos:</h6>
+                    
+                    <div class="mt-4">
+                        <h6 class="fw-bold">Documentos de Identificación:</h6>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>INE por ambos lados, en una sola página o en páginas consecutivas del PDF</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Acta de nacimiento actualizada</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Comprobante de domicilio reciente (no mayor a 3 meses)</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>CURP (formato actual)</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Constancia de Situación Fiscal (no mayor a 3 meses)</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Número de Seguro Social (NSS) y documento que lo acredite</li>
+                        </ul>
+
+                        <h6 class="fw-bold">Documentos Académicos:</h6>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Comprobante del último grado de estudios (educación básica)</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Cédula profesional (en caso de tener licenciatura o superior)</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Curriculum Vitae actualizado</li>
+                        </ul>
+
+                        <h6 class="fw-bold">Documentos de Viaje (si aplica):</h6>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Pasaporte vigente</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Visa vigente</li>
+                        </ul>
+
+                        <h6 class="fw-bold">Documentos Familiares (si aplica):</h6>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Actas de nacimiento de hijos</li>
+                        </ul>
+
+                        <div class="alert alert-info" role="alert">
+                            <i class="bi bi-info-circle-fill me-2"></i>
+                            <strong>Importante:</strong>
+                            <ul class="mb-0">
+                                <li>Todos los documentos deben estar en formato PDF</li>
+                                <li>Los archivos no deben exceder 2MB cada uno</li>
+                                <li>Los documentos deben ser legibles y estar vigentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido, Comenzar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-5" style="background-color: #009d80;">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="">
+              <img src="../../../assets/img/common/primaryGreenBGLogo.png" alt="FFT logo" width="mx-auto" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../../index.html">Volver al inicio</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal" style="opacity: 90%;">Servicios Internos FFT México</h1>
+        <p class="fs-5 text-muted">Un espacio con todas las herramientas y recursos para optimizar tu día a día en FFT.</p>
+      </div> -->
+
+    </header>
+    
+    <!-- Form Section -->
+    <section id="actualizacionDatosDelPersonal_form" class="container py-5">
+
+      <!-- Actualización de Datos del Personal -->
+      <div class="row mb-5">
+
+        <div class="col-12">
+
+          <form id="uploadForm" class="container p-4 shadow rounded bg-light">
+            
+            
+            <h1 class="text-center mb-4">¡Actualiza tus Datos y Sé Parte del Cambio Digital!</h1>
+            <p class="text-muted text-justify">
+              ¡Tu colaboración es fundamental para mejorar nuestros procesos! <br><br>
+              Estamos actualizando nuestra base de datos como parte de nuestra transformación digital. Tu información actualizada nos ayudará a optimizar la gestión de datos del equipo. <br><br>
+              <strong>¡Gracias por tu valioso tiempo!</strong>
+            </p>
+            <p class="text-muted mb-3"><span style="color: red;">*</span> Campos obligatorios</p>
+            <hr>
+
+
+            
+            <!-- Inicio de sección: Datos personales -->
+            <h2 class="text-center my-4">Datos Personales</h2>
+
+            <!-- Información de identificación -->
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <label for="noEmpleado" class="form-label fw-bold">
+                  No. de empleado <span class="text-danger">*</span>
+                  <i class="bi bi-question-circle" data-bs-toggle="tooltip" title="Puedes consultar este número en alguno de tus reportes de horas"></i>
+                </label>
+                <input type="number" id="noEmpleado" name="noEmpleado" class="form-control" 
+                       placeholder="Ejemplo: 12345" required>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <label for="noSAP" class="form-label fw-bold">
+                  No. SAP <span class="text-danger">*</span>
+                  <i class="bi bi-question-circle" data-bs-toggle="tooltip" title="Puedes consultar este numero en tu credencial de FFT"></i>
+                </label>
+                <input type="number" id="noSAP" name="noSAP" class="form-control" 
+                       placeholder="Ejemplo: 67890" required>
+              </div>
+            </div>
+
+            <!-- Nombre completo -->
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <label for="nombre" class="form-label fw-bold">Nombre(s) <span class="text-danger">*</span></label>
+                <input type="text" id="nombre" name="nombre" class="form-control" 
+                       placeholder="Ejemplo: Juan Carlos" oninput="this.value = this.value.toUpperCase();" required>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <label for="apellidoPaterno" class="form-label fw-bold">Apellido Paterno <span class="text-danger">*</span></label>
+                <input type="text" id="apellidoPaterno" name="apellidoPaterno" class="form-control" 
+                       placeholder="Ejemplo: González" oninput="this.value = this.value.toUpperCase();" required>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <label for="apellidoMaterno" class="form-label fw-bold">Apellido Materno <span class="text-danger">*</span></label>
+                <input type="text" id="apellidoMaterno" name="apellidoMaterno" class="form-control" 
+                       placeholder="Ejemplo: Pérez" oninput="this.value = this.value.toUpperCase();" required>
+              </div>
+            </div>
+
+            <!-- Información personal -->
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <label for="sexo" class="form-label fw-bold">Sexo <span class="text-danger">*</span></label>
+                <select id="sexo" name="sexo" class="form-select" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <label for="fechaNacimiento" class="form-label fw-bold">
+                  Fecha de Nacimiento <span class="text-danger">*</span>
+                </label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" 
+                       class="form-control" required>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <label for="nacionalidad" class="form-label fw-bold">
+                  Nacionalidad <span class="text-danger">*</span>
+                </label>
+                <select id="nacionalidad" name="nacionalidad" class="form-select" required>
+                  <option value="" disabled selected>Selecciona tu nacionalidad</option>
+                  <optgroup label="Común">
+                    <option value="Mexicana">Mexicana</option>
+                  </optgroup>
+                  <optgroup label="Otras nacionalidades">
+                    <option value="Afgana">Afgana</option>
+                    <option value="Albanesa">Albanesa</option>
+                    <option value="Alemana">Alemana</option>
+                    <option value="Andorrana">Andorrana</option>
+                    <option value="Angoleña">Angoleña</option>
+                    <option value="Antiguana">Antiguana</option>
+                    <option value="Argelina">Argelina</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Australiana">Australiana</option>
+                    <option value="Austriaca">Austriaca</option>
+                    <option value="Azerbaiyana">Azerbaiyana</option>
+                    <option value="Bahameña">Bahameña</option>
+                    <option value="Bahreiní">Bahreiní</option>
+                    <option value="Bangladesí">Bangladesí</option>
+                    <option value="Barbadense">Barbadense</option>
+                    <option value="Belga">Belga</option>
+                    <option value="Beliceña">Beliceña</option>
+                    <option value="Beninesa">Beninesa</option>
+                    <option value="Bielorrusa">Bielorrusa</option>
+                    <option value="Birmana">Birmana</option>
+                    <option value="Boliviana">Boliviana</option>
+                    <option value="Bosnia">Bosnia</option>
+                    <option value="Botsuanesa">Botsuanesa</option>
+                    <option value="Brasileña">Brasileña</option>
+                    <option value="Bruneana">Bruneana</option>
+                    <option value="Búlgara">Búlgara</option>
+                    <option value="Burkinesa">Burkinesa</option>
+                    <option value="Burundesa">Burundesa</option>
+                    <option value="Butanesa">Butanesa</option>
+                    <option value="Caboverdiana">Caboverdiana</option>
+                    <option value="Camboyana">Camboyana</option>
+                    <option value="Camerunesa">Camerunesa</option>
+                    <option value="Canadiense">Canadiense</option>
+                    <option value="Chadiana">Chadiana</option>
+                    <option value="Checa">Checa</option>
+                    <option value="Chilena">Chilena</option>
+                    <option value="China">China</option>
+                    <option value="Chipriota">Chipriota</option>
+                    <option value="Colombiana">Colombiana</option>
+                    <option value="Comorense">Comorense</option>
+                    <option value="Congoleña">Congoleña</option>
+                    <option value="Costarricense">Costarricense</option>
+                    <option value="Croata">Croata</option>
+                    <option value="Cubana">Cubana</option>
+                    <option value="Danesa">Danesa</option>
+                    <option value="Dominicana">Dominicana</option>
+                    <option value="Ecuatoguineana">Ecuatoguineana</option>
+                    <option value="Ecuatoriana">Ecuatoriana</option>
+                    <option value="Egipcia">Egipcia</option>
+                    <option value="Emiratí">Emiratí</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Eslovaca">Eslovaca</option>
+                    <option value="Eslovena">Eslovena</option>
+                    <option value="Española">Española</option>
+                    <option value="Estadounidense">Estadounidense</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Etíope">Etíope</option>
+                    <option value="Filipina">Filipina</option>
+                    <option value="Finlandesa">Finlandesa</option>
+                    <option value="Fiyiana">Fiyiana</option>
+                    <option value="Francesa">Francesa</option>
+                    <option value="Gabonesa">Gabonesa</option>
+                    <option value="Gambiana">Gambiana</option>
+                    <option value="Georgiana">Georgiana</option>
+                    <option value="Ghanesa">Ghanesa</option>
+                    <option value="Granadina">Granadina</option>
+                    <option value="Griega">Griega</option>
+                    <option value="Guatemalteca">Guatemalteca</option>
+                    <option value="Guineana">Guineana</option>
+                    <option value="Guyanesa">Guyanesa</option>
+                    <option value="Haitiana">Haitiana</option>
+                    <option value="Hondureña">Hondureña</option>
+                    <option value="Húngara">Húngara</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Iraní">Iraní</option>
+                    <option value="Iraquí">Iraquí</option>
+                    <option value="Irlandesa">Irlandesa</option>
+                    <option value="Islandesa">Islandesa</option>
+                    <option value="Israelí">Israelí</option>
+                    <option value="Italiana">Italiana</option>
+                    <option value="Jamaiquina">Jamaiquina</option>
+                    <option value="Japonesa">Japonesa</option>
+                    <option value="Jordana">Jordana</option>
+                    <option value="Kazaja">Kazaja</option>
+                    <option value="Keniata">Keniata</option>
+                    <option value="Kirguisa">Kirguisa</option>
+                    <option value="Kiribatiana">Kiribatiana</option>
+                    <option value="Kuwaití">Kuwaití</option>
+                    <option value="Laosiana">Laosiana</option>
+                    <option value="Lesotense">Lesotense</option>
+                    <option value="Letona">Letona</option>
+                    <option value="Libanesa">Libanesa</option>
+                    <option value="Liberiana">Liberiana</option>
+                    <option value="Libia">Libia</option>
+                    <option value="Liechtensteiniana">Liechtensteiniana</option>
+                    <option value="Lituana">Lituana</option>
+                    <option value="Luxemburguesa">Luxemburguesa</option>
+                    <option value="Macedonia">Macedonia</option>
+                    <option value="Madagascariense">Madagascariense</option>
+                    <option value="Malasia">Malasia</option>
+                    <option value="Malauí">Malauí</option>
+                    <option value="Maldiva">Maldiva</option>
+                    <option value="Maliense">Maliense</option>
+                    <option value="Maltesa">Maltesa</option>
+                    <option value="Marroquí">Marroquí</option>
+                    <option value="Mauriciana">Mauriciana</option>
+                    <option value="Mauritana">Mauritana</option>
+                    <option value="Micronesiana">Micronesiana</option>
+                    <option value="Moldava">Moldava</option>
+                    <option value="Monegasca">Monegasca</option>
+                    <option value="Mongola">Mongola</option>
+                    <option value="Montenegrina">Montenegrina</option>
+                    <option value="Mozambiqueña">Mozambiqueña</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Nauruana">Nauruana</option>
+                    <option value="Nepalí">Nepalí</option>
+                    <option value="Nicaragüense">Nicaragüense</option>
+                    <option value="Nigerina">Nigerina</option>
+                    <option value="Nigeriana">Nigeriana</option>
+                    <option value="Noruega">Noruega</option>
+                    <option value="Neozelandesa">Neozelandesa</option>
+                    <option value="Omaní">Omaní</option>
+                    <option value="Neerlandesa">Neerlandesa</option>
+                    <option value="Pakistaní">Pakistaní</option>
+                    <option value="Palauana">Palauana</option>
+                    <option value="Palestina">Palestina</option>
+                    <option value="Panameña">Panameña</option>
+                    <option value="Papú">Papú</option>
+                    <option value="Paraguaya">Paraguaya</option>
+                    <option value="Peruana">Peruana</option>
+                    <option value="Polaca">Polaca</option>
+                    <option value="Portuguesa">Portuguesa</option>
+                    <option value="Qatarí">Qatarí</option>
+                    <option value="Británica">Británica</option>
+                    <option value="Centroafricana">Centroafricana</option>
+                    <option value="Ruandesa">Ruandesa</option>
+                    <option value="Rumana">Rumana</option>
+                    <option value="Rusa">Rusa</option>
+                    <option value="Salomonense">Salomonense</option>
+                    <option value="Salvadoreña">Salvadoreña</option>
+                    <option value="Samoana">Samoana</option>
+                    <option value="Sanmarinense">Sanmarinense</option>
+                    <option value="Santotomense">Santotomense</option>
+                    <option value="Saudí">Saudí</option>
+                    <option value="Senegalesa">Senegalesa</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Seychellense">Seychellense</option>
+                    <option value="Sierraleonesa">Sierraleonesa</option>
+                    <option value="Singapurense">Singapurense</option>
+                    <option value="Siria">Siria</option>
+                    <option value="Somalí">Somalí</option>
+                    <option value="Srilanquesa">Srilanquesa</option>
+                    <option value="Suazi">Suazi</option>
+                    <option value="Sudafricana">Sudafricana</option>
+                    <option value="Sudanesa">Sudanesa</option>
+                    <option value="Sudanesa del Sur">Sudanesa del Sur</option>
+                    <option value="Sueca">Sueca</option>
+                    <option value="Suiza">Suiza</option>
+                    <option value="Surinamesa">Surinamesa</option>
+                    <option value="Tailandesa">Tailandesa</option>
+                    <option value="Tanzana">Tanzana</option>
+                    <option value="Tayika">Tayika</option>
+                    <option value="Timorense">Timorense</option>
+                    <option value="Togolesa">Togolesa</option>
+                    <option value="Tongana">Tongana</option>
+                    <option value="Trinitense">Trinitense</option>
+                    <option value="Tunecina">Tunecina</option>
+                    <option value="Turca">Turca</option>
+                    <option value="Turkmena">Turkmena</option>
+                    <option value="Tuvaluana">Tuvaluana</option>
+                    <option value="Ucraniana">Ucraniana</option>
+                    <option value="Ugandesa">Ugandesa</option>
+                    <option value="Uruguaya">Uruguaya</option>
+                    <option value="Uzbeka">Uzbeka</option>
+                    <option value="Vanuatuense">Vanuatuense</option>
+                    <option value="Vaticana">Vaticana</option>
+                    <option value="Venezolana">Venezolana</option>
+                    <option value="Vietnamita">Vietnamita</option>
+                    <option value="Yemení">Yemení</option>
+                    <option value="Yibutiana">Yibutiana</option>
+                    <option value="Zambiana">Zambiana</option>
+                    <option value="Zimbabuense">Zimbabuense</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mb-4">
+                <label for="estado_Provincia_Nacimiento" class="form-label fw-bold">
+                  Estado o Provincia de Nacimiento <span class="text-danger">*</span>
+                  <i class="bi bi-question-circle" data-bs-toggle="tooltip" 
+                     title="Ingresa el estado o provincia donde naciste, incluso si es en otro país"></i>
+                </label>
+                <input type="text" id="estado_Provincia_Nacimiento" name="estado_Provincia_Nacimiento" class="form-control" 
+                       placeholder="Ejemplo: Jalisco, Ontario, Bayern" oninput="this.value = this.value.toUpperCase();" required>
+              </div>
+            </div>
+            <hr>
+
+
+
+            <!-- Carga de documentos personales -->
+            <h3 class="text-center my-4">Carga de documentos personales</h3>
+            <!-- INE -->
+            <div class="mb-4">
+              <label for="archivoINE" class="form-label fw-bold">INE <span style="color: red;">*</span></label>
+              <div class="card p-3 bg-light">
+                <input type="file" 
+                        id="archivoINE" 
+                        name="archivoINE" 
+                        class="form-control" 
+                        accept=".pdf"
+                        required>
+                <div class="form-text mt-2">
+                  <i class="bi bi-info-circle"></i> Por favor, sube un archivo PDF que contenga ambos lados de tu INE (frente y reverso en la misma página o en páginas consecutivas del PDF)
+                </div>
+              </div>
+            </div>
+
+            <!-- Comprobante de Domicilio -->
+            <div class="mb-4">
+              <label for="archivoComprobanteDomicilio" class="form-label fw-bold">Comprobante de Domicilio <span style="color: red;">*</span></label>
+              <div class="card p-3 bg-light">
+                <input type="file" 
+                       id="archivoComprobanteDomicilio" 
+                       name="archivoComprobanteDomicilio" 
+                       class="form-control" 
+                       accept=".pdf"
+                       required>
+                <div class="form-text mt-2">
+                  <i class="bi bi-info-circle"></i> Por favor, sube un comprobante de domicilio reciente (no mayor a 3 meses) en formato PDF. Puede ser recibo de luz, agua, teléfono.
+                </div>
+              </div>
+            </div>
+
+            <!-- Acta de Nacimiento -->
+            <div class="mb-4">
+              <label for="archivoActaNacimiento" class="form-label fw-bold">Acta de Nacimiento Actualizada <span style="color: red;">*</span></label>
+              <div class="card p-3 bg-light">
+                <input type="file" 
+                       id="archivoActaNacimiento" 
+                       name="archivoActaNacimiento" 
+                       class="form-control" 
+                       accept=".pdf"
+                       required>
+                <div class="form-text mt-2">
+                  <i class="bi bi-info-circle"></i> Por favor, sube una copia legible y actualizada de tu acta de nacimiento en formato PDF.
+                  <ul class="mt-2 mb-0">
+                    <li>Puedes obtener tu acta de nacimiento actualizada en línea a través del portal: <a href="https://www.gob.mx/ActaNacimiento/" target="_blank" rel="noopener noreferrer">www.gob.mx/ActaNacimiento</a></li>
+                    <li>También puedes tramitarla en cualquier oficina del Registro Civil</li>
+                    <li>El trámite en línea es más rápido y puedes obtenerla el mismo día</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <!-- CURP -->
+            <div class="mb-4">
+              <label for="curp" class="form-label fw-bold">CURP <span style="color: red;">*</span></label>
+              <div class="card p-3 bg-light">
+                <input type="text" 
+                        id="curp" 
+                        name="curp" 
+                        class="form-control mb-3" 
+                        placeholder="Ingresa tu CURP"
+                        oninput="this.value = this.value.toUpperCase();"
+                        required>
+                <input type="file" 
+                        id="archivoCURP" 
+                        name="archivoCURP" 
+                        class="form-control" 
+                        accept=".pdf"
+                        required>
+                <div class="form-text mt-2">
+                  <i class="bi bi-info-circle"></i> Puedes obtener tu CURP y constancia en: 
+                  <a href="https://www.gob.mx/curp/" target="_blank" rel="noopener noreferrer">www.gob.mx/curp</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Constancia de Situación Fiscal -->
+            <div class="mb-4">
+              <label for="RFC" class="form-label fw-bold">Constancia de Situación Fiscal <span style="color: red;">*</span> <i class="bi bi-question-circle" data-bs-toggle="tooltip" title="Puedes consultar tu RFC en tu recibo de nómina"></i></label>
+              
+              <div class="card p-3 bg-light">
+                <input type="text" 
+                        id="RFC" 
+                        name="RFC" 
+                        class="form-control mb-3" 
+                        placeholder="Ingresa tu RFC" 
+                        oninput="this.value = this.value.toUpperCase();"
+                        required>
+                <input type="file" 
+                        id="archivoSituacionFiscal" 
+                        name="archivoSituacionFiscal" 
+                        class="form-control" 
+                        accept=".pdf"
+                        required>
+                <div class="form-text mt-2">
+                  <i class="bi bi-info-circle"></i> La constancia debe tener una antigüedad no mayor a 3 meses. Puedes obtenerla en:
+                  <ul class="mt-2 mb-0">
+                    <li><a href="https://www.sat.gob.mx/aplicacion/53027/genera-tu-constancia-de-situacion-fiscal" target="_blank" rel="noopener noreferrer">Portal del SAT</a></li>
+                    <li>Acudiendo a las oficinas del SAT (previa cita)</li>
+                    <li>A través de la app SAT Móvil</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <!-- NSS -->
+            <div class="mb-4">
+              <label for="nss" class="form-label fw-bold">Número de Seguro Social (NSS) <span style="color: red;">*</span></label>
+              <div class="card p-3 bg-light">
+                <input type="text" 
+                        id="nss" 
+                        name="nss" 
+                        class="form-control mb-3" 
+                        placeholder="Ejemplo: 12345678901" 
+                        pattern="[0-9]{11}"
+                        title="El NSS debe contener 11 dígitos numéricos"
+                        required>
+                <input type="file" 
+                        id="archivoNSS" 
+                        name="archivoNSS" 
+                        class="form-control" 
+                        accept=".pdf"
+                        required>
+                <div class="form-text mt-2">
+                  <i class="bi bi-info-circle"></i> El NSS es un número de 11 dígitos. Puedes encontrarlo en:
+                  <ul class="mt-2 mb-0">
+                    <li>Tu credencial del IMSS</li>
+                    <li>Cartilla del IMSS</li>
+                    <li>O consultarlo en: <a href="https://www.gob.mx/tramites/ficha/asignacion-o-localizacion-del-numero-de-seguridad-social/IMSS164" target="_blank" rel="noopener noreferrer">Portal IMSS</a></li>
+                  </ul>
+                  <p class="mt-2 mb-0">
+                    <i class="bi bi-info-circle"></i> Puedes cargar el escaneo de cualquier documento oficial que contenga tu NSS (credencial del IMSS, cartilla, hoja de registro, etc.) en formato PDF.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr>
+
+            <h2 class="mt-4">Documentos de Viaje</h2>
+
+            <!-- Pregunta sobre Pasaporte -->
+            <div class="mb-3">
+                <label class="form-label">¿Cuenta con Pasaporte?</label>
+                <div>
+                    <input type="radio" id="pasaporte_si" name="pasaporte" value="Sí" class="form-check-input">
+                    <label for="pasaporte_si" class="form-check-label">Sí</label>
+
+                    <input type="radio" id="pasaporte_no" name="pasaporte" value="No" class="form-check-input ms-3" checked>
+                    <label for="pasaporte_no" class="form-check-label">No</label>
+                </div>
+            </div>
+            <!-- Carga de Pasaporte (Oculto hasta que seleccione "Sí") -->
+            <div class="mb-3 d-none" id="pasaporte_upload">
+                <label for="archivo_pasaporte" class="form-label">Cargar escaneo del Pasaporte (PDF) <span class="text-danger">*</span></label>
+                <input type="file" id="archivo_pasaporte" name="archivo_pasaporte" class="form-control" accept=".pdf">
+                <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+            </div>
+
+            <!-- Pregunta sobre Visa -->
+            <div class="mb-3">
+                <label class="form-label">¿Cuenta con Visa?</label>
+                <div>
+                    <input type="radio" id="visa_si" name="visa" value="Sí" class="form-check-input">
+                    <label for="visa_si" class="form-check-label">Sí</label>
+
+                    <input type="radio" id="visa_no" name="visa" value="No" class="form-check-input ms-3" checked>
+                    <label for="visa_no" class="form-check-label">No</label>
+                </div>
+            </div>
+            <!-- Carga de Visa (Oculto hasta que seleccione "Sí") -->
+            <div class="mb-3 d-none" id="visa_upload">
+                <label for="archivo_visa" class="form-label">Cargar escaneo de la Visa (PDF) <span class="text-danger">*</span></label>
+                <input type="file" id="archivo_visa" name="archivo_visa" class="form-control" accept=".pdf">
+                <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+            </div>
+            <hr>
+            
+            
+              
+
+            <!-- Datos del domicilio -->
+            <h2 class="text-center my-4">Domicilio del trabajador</h2>
+
+            <div class="row">
+              <!-- Código Postal -->
+              <div class="col-md-4 mb-4">
+                <label for="codigoPostal" class="form-label fw-bold">Código Postal <span style="color: red;">*</span></label>
+                <input type="text" 
+                       id="codigoPostal" 
+                       name="codigoPostal" 
+                       class="form-control" 
+                       placeholder="Ejemplo: 12345" 
+                       pattern="[0-9]{5}"
+                       maxlength="5"
+                       title="Ingresa un código postal válido de 5 dígitos"
+                       required>
+                <div class="form-text">Ingresa los 5 dígitos de tu código postal</div>
+              </div>
+
+              <!-- Entidad -->
+              <div class="col-md-8 mb-4">
+                <label for="entidad" class="form-label fw-bold">Estado <span style="color: red;">*</span></label>
+                <select id="entidad" name="entidad" class="form-select" required>
+                  <option value="" disabled selected>Selecciona tu estado</option>
+                  <option value="Aguascalientes">Aguascalientes</option>
+                  <option value="Baja California">Baja California</option>
+                  <option value="Baja California Sur">Baja California Sur</option>
+                  <option value="Campeche">Campeche</option>
+                  <option value="Chiapas">Chiapas</option>
+                  <option value="Chihuahua">Chihuahua</option>
+                  <option value="Ciudad de México">Ciudad de México</option>
+                  <option value="Coahuila">Coahuila</option>
+                  <option value="Colima">Colima</option>
+                  <option value="Durango">Durango</option>
+                  <option value="Estado de México">Estado de México</option>
+                  <option value="Guanajuato">Guanajuato</option>
+                  <option value="Guerrero">Guerrero</option>
+                  <option value="Hidalgo">Hidalgo</option>
+                  <option value="Jalisco">Jalisco</option>
+                  <option value="Michoacán">Michoacán</option>
+                  <option value="Morelos">Morelos</option>
+                  <option value="Nayarit">Nayarit</option>
+                  <option value="Nuevo León">Nuevo León</option>
+                  <option value="Oaxaca">Oaxaca</option>
+                  <option value="Puebla">Puebla</option>
+                  <option value="Querétaro">Querétaro</option>
+                  <option value="Quintana Roo">Quintana Roo</option>
+                  <option value="San Luis Potosí">San Luis Potosí</option>
+                  <option value="Sinaloa">Sinaloa</option>
+                  <option value="Sonora">Sonora</option>
+                  <option value="Tabasco">Tabasco</option>
+                  <option value="Tamaulipas">Tamaulipas</option>
+                  <option value="Tlaxcala">Tlaxcala</option>
+                  <option value="Veracruz">Veracruz</option>
+                  <option value="Yucatán">Yucatán</option>
+                  <option value="Zacatecas">Zacatecas</option>
+                </select>
+              </div>
+
+              <!-- Municipio -->
+              <div class="col-md-6 mb-4">
+                <label for="municipio" class="form-label fw-bold">Municipio/Alcaldía <span style="color: red;">*</span></label>
+                <input type="text" id="municipio" name="municipio" class="form-control" 
+                       placeholder="Ingresa el municipio o alcaldía" oninput="this.value = this.value.toUpperCase();" required>
+              </div>
+
+              <!-- Población -->
+              <div class="col-md-6 mb-4">
+                <label for="poblacion" class="form-label fw-bold">Población/Ciudad <span style="color: red;">*</span></label>
+                <input type="text" id="poblacion" name="poblacion" class="form-control" 
+                       placeholder="Ingresa la población o ciudad" oninput="this.value = this.value.toUpperCase();" required>
+              </div>
+
+              <!-- Colonia -->
+              <div class="col-md-12 mb-4">
+                <label for="colonia" class="form-label fw-bold">Colonia <span style="color: red;">*</span></label>
+                <input type="text" id="colonia" name="colonia" class="form-control" 
+                       placeholder="Ingresa la colonia" oninput="this.value = this.value.toUpperCase();" required>
+              </div>
+
+              <!-- Calle y Número -->
+              <div class="col-md-12 mb-4">
+                <label for="calleNumero" class="form-label fw-bold">Calle y Número <span style="color: red;">*</span></label>
+                <input type="text" id="calleNumero" name="calleNumero" class="form-control" 
+                       placeholder="Ejemplo: Av. Revolución 742" oninput="this.value = this.value.toUpperCase();" required>
+                <div class="form-text">Incluye el nombre de la calle y el número exterior</div>
+              </div>
+            </div>
+            <hr>
+
+          
+
+
+            <!-- Información de Contacto -->
+            <h2 class="text-center my-4">Información de Contacto</h2>
+            
+            <div class="row">
+              <!-- Teléfono Fijo -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <label for="telefonoFijo" class="form-label fw-bold">Teléfono Fijo <span style="color: red;">*</span></label>
+                <input type="tel" 
+                       id="telefonoFijo" 
+                       name="telefonoFijo" 
+                       class="form-control" 
+                       placeholder="Ejemplo: 123-456-7890" 
+                       required>
+              </div>
+
+              <!-- Teléfono Celular -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <label for="telefonoCelular" class="form-label fw-bold">Teléfono Celular <span style="color: red;">*</span></label>
+                <input type="tel" 
+                       id="telefonoCelular" 
+                       name="telefonoCelular" 
+                       class="form-control" 
+                       placeholder="Ejemplo: 987-654-3210" 
+                       required>
+              </div>
+
+              <!-- Correo Electrónico Personal -->
+              <div class="col-md-12 col-lg-4 mb-4">
+                <label for="email" class="form-label fw-bold">Correo Electrónico Personal <span style="color: red;">*</span></label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       class="form-control" 
+                       placeholder="Ejemplo: usuario@dominio.com" 
+                       required>
+              </div>
+            </div>
+            <hr>
+
+
+
+            
+            <!-- Información Académica -->
+            <h2 class="text-center my-4">Información Académica</h2>
+            <h4 class="my-4">Ultimo grado de estudios</h4>
+            <!-- Grado Académico -->
+            <div class="mb-3">
+              <label for="gradoAcademico" class="form-label fw-bold">Grado Académico <span style="color: red;">*</span></label>
+              <select id="gradoAcademico" name="gradoAcademico" class="form-select" required>
+                <option value="" selected disabled>Seleccione una opción</option>
+                <option value="Primaria">Primaria</option>
+                <option value="Secundaria">Secundaria</option>
+                <option value="Bachillerato">Bachillerato</option>
+                <option value="Técnico">Técnico</option>
+                <option value="Licenciatura">Licenciatura</option>
+                <option value="Maestría">Maestría</option>
+                <option value="Doctorado">Doctorado</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <!-- Especialidad (Solo si el grado requiere) -->
+            <div class="mb-3 d-none" id="especialidad-container">
+                <label for="especialidad" class="form-label fw-bold">Especialidad / Carrera</label>
+                <input type="text" id="especialidad" name="especialidad" class="form-control" 
+                       oninput="this.value = this.value.toUpperCase();">
+            </div>
+
+            <!-- Estatus de Estudios -->
+            <div class="mb-3">
+                <label for="estatusDeEstudios" class="form-label fw-bold">Estatus de Estudios <span style="color: red;">*</span></label>
+                <select id="estatusDeEstudios" name="estatusDeEstudios" class="form-select" required>
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="Concluido">Concluido</option>
+                    <option value="En curso">En curso</option>
+                    <option value="No concluido">No concluido</option>
+                </select>
+            </div>
+
+            <!-- Año de Finalización (Depende del Estatus) -->
+            <div class="mb-3 d-none" id="anio-container">
+                <label for="anioFinalizacion" class="form-label fw-bold">Año de Finalización / Último Año Cursado</label>
+                <input type="number" id="anioFinalizacion" name="anioFinalizacion" class="form-control" min="1950" max="2030">
+            </div>
+
+            <!-- Institución Educativa (Solo si el grado es Técnico o superior) -->
+            <div class="mb-3 d-none" id="institucion-container">
+                <label for="institucionEducativa" class="form-label fw-bold">Institución Educativa</label>
+                <input type="text" id="institucionEducativa" name="institucionEducativa" class="form-control" 
+                       oninput="this.value = this.value.toUpperCase();">
+            </div>
+
+            <!-- Campo para Número de Cédula (oculto por defecto) -->
+            <div id="numeroCedulaContainer" class="mb-3 d-none">
+              <label for="numeroCedula" class="form-label fw-bold">Número de Cédula Profesional <span style="color: red;">*</span></label>
+              <input type="text" 
+                     id="numeroCedula" 
+                     name="numeroCedula" 
+                     class="form-control" 
+                     placeholder="Ingresa tu número de cédula profesional"
+                     pattern="[0-9]*"
+                     title="Por favor ingresa solo números">
+              <small class="form-text text-muted">
+                  <i class="bi bi-info-circle"></i> Ingresa el número de cédula profesional sin espacios ni caracteres especiales
+              </small>
+            </div>
+
+            <!-- Documento -->
+            <div class="mb-3">
+                <label for="documentoAcademico" class="form-label fw-bold">Documento que lo acredita <span style="color: red;">*</span></label>
+                <input type="file" id="documentoAcademico" name="documentoAcademico" class="form-control" accept=".pdf" required>
+                <small class="form-text text-muted">
+                    Solo se aceptan archivos en formato PDF (máx. 2MB).<br>
+                    <span id="cedulaLeyenda" class="d-none text-danger">
+                        <i class="bi bi-exclamation-triangle"></i> Para Licenciatura o grado superior, deberás cargar tu Cédula Profesional.
+                    </span>
+                </small>
+            </div>
+
+            <!-- CV -->
+            <div class="mb-3">
+                <label for="documentoCV" class="form-label fw-bold">Curriculum Vitae (CV) <span style="color: red;">*</span></label>
+                <input type="file" id="documentoCV" name="documentoCV" class="form-control" accept=".pdf" required>
+                <small class="form-text text-muted">
+                    <i class="bi bi-info-circle"></i> Por favor, sube tu CV actualizado en formato PDF (máx. 2MB)
+                </small>
+            </div>
+            <hr>
+            
+
+
+
+            <!-- Contactos de Emergencia -->  
+            <h2 class="text-center my-4">Contactos de Emergencia</h2>
+            <!-- Contacto 1 -->
+            <div class="card bg-light mb-4 p-3">
+              <h5 class="card-title">Contacto 1</h5>
+              <div class="row">
+                <!-- Nombre Completo -->
+                <div class="col-12 mb-3">
+                  <label for="nombreContacto1" class="form-label fw-bold">
+                    Nombre Completo <span style="color: red;">*</span>
+                  </label>
+                  <input type="text" 
+                         id="nombreContacto1" 
+                         name="nombreContacto1" 
+                         class="form-control" 
+                         placeholder="Ejemplo: Juan Pérez López" 
+                         oninput="this.value = this.value.toUpperCase();" required>
+                </div>
+                
+                <!-- Teléfonos en columnas en pantallas medianas y grandes -->
+                <div class="col-md-6 mb-3">
+                  <label for="telefonoFijoContacto1" class="form-label fw-bold">
+                    Teléfono Fijo <span style="color: red;">*</span>
+                  </label>
+                  <input type="tel" 
+                         id="telefonoFijoContacto1" 
+                         name="telefonoFijoContacto1" 
+                         class="form-control" 
+                         placeholder="Ejemplo: 123-456-7890" 
+                         required>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <label for="telefonoCelularContacto1" class="form-label fw-bold">
+                    Teléfono Celular <span style="color: red;">*</span>
+                  </label>
+                  <input type="tel" 
+                         id="telefonoCelularContacto1" 
+                         name="telefonoCelularContacto1" 
+                         class="form-control" 
+                         placeholder="Ejemplo: 987-654-3210" 
+                         required>
+                </div>
+              </div>
+            </div>
+            <!-- Contacto 2 -->
+            <div class="card bg-light mb-4 p-3">
+              <h5 class="card-title">Contacto 2</h5>
+              <div class="row">
+                <!-- Nombre Completo -->
+                <div class="col-12 mb-3">
+                  <label for="nombreContacto2" class="form-label fw-bold">
+                    Nombre Completo <span style="color: red;">*</span>
+                  </label>
+                  <input type="text" 
+                         id="nombreContacto2" 
+                         name="nombreContacto2" 
+                         class="form-control" 
+                         placeholder="Ejemplo: Ana Gómez Díaz" 
+                         oninput="this.value = this.value.toUpperCase();" required>
+                </div>
+                
+                <!-- Teléfonos en columnas en pantallas medianas y grandes -->
+                <div class="col-md-6 mb-3">
+                  <label for="telefonoFijoContacto2" class="form-label fw-bold">
+                    Teléfono Fijo <span style="color: red;">*</span>
+                  </label>
+                  <input type="tel" 
+                         id="telefonoFijoContacto2" 
+                         name="telefonoFijoContacto2" 
+                         class="form-control" 
+                         placeholder="Ejemplo: 123-456-7890" 
+                         required>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <label for="telefonoCelularContacto2" class="form-label fw-bold">
+                    Teléfono Celular <span style="color: red;">*</span>
+                  </label>
+                  <input type="tel" 
+                         id="telefonoCelularContacto2" 
+                         name="telefonoCelularContacto2" 
+                         class="form-control" 
+                         placeholder="Ejemplo: 987-654-3210" 
+                         required>
+                </div>
+              </div>
+            </div>
+            <hr>
+
+
+
+
+            <!-- Datos Familiares -->
+            <h2 class="text-center my-4">Datos Familiares</h2>
+
+            <!-- Estado Civil -->
+            <div class="mb-4">
+              <label for="estadoCivil" class="form-label fw-bold">Estado Civil <span style="color: red;">*</span></label>
+              <select id="estadoCivil" name="estadoCivil" class="form-select" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="Soltero/a">Soltero/a</option>
+                <option value="Casado/a">Casado/a</option>
+                <option value="Divorciado/a">Divorciado/a</option>
+                <option value="Viudo/a">Viudo/a</option>
+                <option value="Unión Libre">Unión Libre</option>
+              </select>
+            </div>
+
+            <!-- Nombre del Cónyuge -->
+            <div class="mb-4">
+              <label for="nombreConyuge" class="form-label fw-bold">Nombre del cónyuge o concubino</label>
+              <input type="text" id="nombreConyuge" name="nombreConyuge" class="form-control" 
+                     placeholder="Ejemplo: María González Pérez" oninput="this.value = this.value.toUpperCase();">
+            </div>
+
+            <!-- Número de Hijos -->
+            <div class="mb-4">
+              <label for="numeroHijos" class="form-label fw-bold">Número de Hijos <span style="color: red;">*</span></label>
+              <input type="number" id="numeroHijos" name="numeroHijos" class="form-control" placeholder="Ejemplo: 2" min="0" max="10" required onchange="mostrarCamposHijos(this.value)">
+            </div>
+
+            <!-- Contenedor para los campos de los hijos (pre-generados y ocultos) -->
+            <div id="contenedorHijos" class="mb-4">
+              <!-- Campos pre-generados para hasta 10 hijos -->
+              <div id="hijo1" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 1</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo1" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo1" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo1" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo2" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 2</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo2" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo2" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo2" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo3" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 3</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo3" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo3" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo3" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo4" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 4</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo4" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo4" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo4" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo5" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 5</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo5" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo5" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo5" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo6" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 6</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo6" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo6" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo6" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo7" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 7</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo7" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo7" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo7" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo8" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 8</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo8" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo8" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo8" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo9" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 9</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo9" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo9" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo9" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div id="hijo10" class="card bg-light mb-3 p-3 d-none">
+                <h5 class="card-title">Hijo 10</h5>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Nombre Completo</label>
+                    <input type="text" name="nombreHijo10" class="form-control" placeholder="Nombre completo" oninput="this.value = this.value.toUpperCase();">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimientoHijo10" class="form-control">
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label fw-bold">Acta de Nacimiento</label>
+                    <input type="file" name="actaNacimientoHijo10" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted">Solo se aceptan archivos en formato PDF.</small>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <hr>
+          
+            <!-- Botón de Envío -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Enviar Información</button>
+            </div>
+
+          </form>
+          
+          
+
+        </div>
+
+      </div>
+      
+    </section>
+
+
+    
+
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-light">
+      <p>&copy; 2024 FFT México. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <script src="./main.js"></script>
+
+    <script>
+      document.getElementById("uploadForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        /* @ts-ignore */
+        const zip = new JSZip();
+        const inputs = [...document.querySelectorAll('input[type="file"]')];
+
+        let totalFiles = 0;
+
+        // Agregar archivos al ZIP
+        for (let input of inputs) {
+          if (input.files && input.files.length > 0) {
+            for (let file of input.files) {
+              zip.file(`Archivo_${totalFiles + 1}_${file.name}`, file);
+              totalFiles++;
+            }
+          }
+        }
+
+        try {
+          const zipBlob = await zip.generateAsync({ type: "blob" });
+
+          if (zipBlob.size > 20 * 1024 * 1024) {
+            alert("El archivo ZIP es demasiado grande. Intenta reducir la cantidad o tamaño de los archivos.");
+            return;
+          }
+
+          const formData = new FormData();
+
+          // Función auxiliar para obtener valor seguro
+          const getElementValue = (id) => {
+            const element = document.getElementById(id);
+            if (!element) {
+              // Intentar obtener el elemento por name si no se encuentra por ID
+              const elementByName = document.querySelector(`[name="${id}"]`);
+              return elementByName ? elementByName.value.trim() : '';
+            }
+            return element.value.trim();
+          };
+
+          // Obtener valores de forma segura
+          const formValues = {
+            noEmpleado: getElementValue("noEmpleado"),
+            noSAP: getElementValue("noSAP"),
+            nombre: getElementValue("nombre"),
+            apellidoPaterno: getElementValue("apellidoPaterno"),
+            apellidoMaterno: getElementValue("apellidoMaterno"),
+            sexo: getElementValue("sexo"),
+            fechaNacimiento: getElementValue("fechaNacimiento"),
+            nacionalidad: getElementValue("nacionalidad"),
+            estado_Provincia_Nacimiento: getElementValue("estado_Provincia_Nacimiento"),
+            curp: getElementValue("curp"),
+            rfc: getElementValue("RFC"),
+            nss: getElementValue("nss"),
+            codigoPostal: getElementValue("codigoPostal"),
+            entidad: getElementValue("entidad"),
+            municipio: getElementValue("municipio"),
+            poblacion: getElementValue("poblacion"),
+            colonia: getElementValue("colonia"),
+            calleNumero: getElementValue("calleNumero"),
+            telefonoFijo: getElementValue("telefonoFijo"),
+            telefonoCelular: getElementValue("telefonoCelular"),
+            email: getElementValue("email"),
+            gradoAcademico: getElementValue("gradoAcademico"),
+            especialidad: getElementValue("especialidad"),
+            estatusDeEstudios: getElementValue("estatusDeEstudios"),
+            anioFinalizacion: getElementValue("anioFinalizacion"),
+            institucionEducativa: getElementValue("institucionEducativa"),
+            numeroCedula: getElementValue("numeroCedula"),
+            nombreContacto1: getElementValue("nombreContacto1"),
+            telefonoFijoContacto1: getElementValue("telefonoFijoContacto1"),
+            telefonoCelularContacto1: getElementValue("telefonoCelularContacto1"),
+            nombreContacto2: getElementValue("nombreContacto2"),
+            telefonoFijoContacto2: getElementValue("telefonoFijoContacto2"),
+            telefonoCelularContacto2: getElementValue("telefonoCelularContacto2"),
+            estadoCivil: getElementValue("estadoCivil"),
+            nombreConyuge: getElementValue("nombreConyuge"),
+            numeroHijos: getElementValue("numeroHijos")
+          };
+
+          // Obtener valores de radio buttons de forma segura
+          const pasaporteRadio = document.querySelector('input[name="pasaporte"]:checked');
+          const visaRadio = document.querySelector('input[name="visa"]:checked');
+
+          formValues.pasaporte = pasaporteRadio ? pasaporteRadio.value : '';
+          formValues.visa = visaRadio ? visaRadio.value : '';
+
+          // Agregar todos los valores al FormData
+          Object.entries(formValues).forEach(([key, value]) => {
+            formData.append(key, value);
+          });
+
+          // Manejar información de hijos de forma segura
+          const numeroHijos = parseInt(formValues.numeroHijos) || 0;
+          for (let i = 1; i <= numeroHijos; i++) {
+            // Usar los nombres de los campos como están definidos en el HTML
+            const nombreHijo = document.querySelector(`[name="nombreHijo${i}"]`)?.value || '';
+            const fechaNacimientoHijo = document.querySelector(`[name="fechaNacimientoHijo${i}"]`)?.value || '';
+            
+            if (nombreHijo) formData.append(`nombreHijo${i}`, nombreHijo);
+            if (fechaNacimientoHijo) formData.append(`fechaNacimientoHijo${i}`, fechaNacimientoHijo);
+          }
+
+          formData.append("upload", zipBlob, "archivos_comprimidos.zip");
+
+          const response = await fetch("https://formspree.io/f/xzzdaovy", {
+            method: "POST",
+            headers: {
+              "Accept": "application/json"
+            },
+            body: formData
+          });
+
+          if (response.ok) {
+            alert("Formulario enviado correctamente.");
+            // Opcional: limpiar el formulario después del envío exitoso
+            document.getElementById("uploadForm").reset();
+          } else {
+            alert("Hubo un error al enviar los datos.");
+          }
+        } catch (error) {
+          console.error("Error al generar o enviar el ZIP:", error);
+          alert("Hubo un error en el proceso. Verifica la consola para más detalles.");
+        }
+      });
+
+      // Agregar este código justo antes del cierre del body
+      window.addEventListener('load', function() {
+        const modal = new bootstrap.Modal(document.getElementById('infoModal'));
+        modal.show();
+      });
+    </script>
+
+  </body>
+</html>
