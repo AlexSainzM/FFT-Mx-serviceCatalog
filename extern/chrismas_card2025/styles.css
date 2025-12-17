@@ -6,13 +6,21 @@
 
 body {
   background-color: #928A97;
-  background-image: url('bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100vh;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: relative;
+}
+
+.body-background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .card {
@@ -25,7 +33,10 @@ body {
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition-delay: initial;
   transform: rotate(-10deg) translate(0, 0);
+  opacity: 0;
   animation: cardIn 1s alternate cubic-bezier(.87,-.41,.19,1.44);
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
 }
 
 @media (max-width: 767px) {
@@ -133,7 +144,7 @@ body {
 
 .cart-page-outside {
   border: 10px solid #fbfbfb;
-  background: #c72320 url('https://www.dropbox.com/s/xsgg2exs2oparkm/front-bg.png?raw=1') no-repeat center;
+  background: #009d80 url('bg.jpg') no-repeat center;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -148,12 +159,24 @@ body {
 .cart-page-inside,
 .cart-page-bottom {
   background-color: #d4d1d0;
-  background-image: url('https://www.dropbox.com/s/8hw7guch8d151kg/pattern.png?raw=1');
   border: 20px solid #d4d1d0;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.3;
 }
 
 @media (max-width: 767px) {
@@ -167,17 +190,22 @@ body {
   transform: rotateY(-180deg);
   border-right: none !important;
   background-position: 0px 80px;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 767px) {
   .cart-page-inside {
     background-position: 0px 30px;
+    padding: 15px;
   }
 }
 
 @media (max-width: 479px) {
   .cart-page-inside {
     background-position: 0px 30px;
+    padding: 10px;
   }
 }
 
@@ -201,6 +229,8 @@ body {
 
 .merry-christmas {
   transform: rotate(-20deg);
+  position: relative;
+  z-index: 1;
 }
 
 .merry-christmas svg {
@@ -208,15 +238,43 @@ body {
   height: auto;
 }
 
+.video-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.christmas-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
 @media (max-width: 767px) {
   .merry-christmas svg {
     width: 200px;
+  }
+
+  .video-container {
+    max-width: 180px;
+    margin: 15px auto 0;
   }
 }
 
 @media (max-width: 479px) {
   .merry-christmas svg {
     width: 150px;
+  }
+
+  .video-container {
+    max-width: 130px;
+    margin: 10px auto 0;
   }
 }
 
@@ -225,9 +283,9 @@ body {
   left: 50%;
   transform: translate(-50%, 0);
   bottom: 20px;
-  animation: iconAnimation 1s infinite alternate ease-in-out;
+  animation: iconFadeIn 0.5s ease-in-out 4s forwards, iconAnimation 1s infinite alternate ease-in-out 4.5s;
   transition: opacity .5s ease-in-out;
-  opacity: 1;
+  opacity: 0;
 }
 
 .click-icon svg {
@@ -253,6 +311,15 @@ body {
   opacity: 0;
 }
 
+@keyframes iconFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes iconAnimation {
   0% {
     transform: translate(-50%, 0);
@@ -262,21 +329,108 @@ body {
   }
 }
 
-p {
+.card-message {
+  padding: 30px 25px;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.message-title {
   font-family: 'Mirza', Verdana, Arial, serif;
-  font-size: 36px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c2c2c;
+  margin: 0 0 20px 0;
+  line-height: 1.3em;
+}
+
+.message-text {
+  font-family: 'Mirza', Verdana, Arial, serif;
+  font-size: 16px;
+  color: #3a3a3a;
+  line-height: 1.6em;
+  margin: 0 0 15px 0;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.message-closing {
+  font-family: 'Mirza', Verdana, Arial, serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c2c2c;
+  margin: 20px 0 25px 0;
+  line-height: 1.4em;
+  font-style: italic;
+}
+
+.message-signature {
+  font-family: 'Mirza', Verdana, Arial, serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #009d80;
+  margin: 15px 0 0 0;
   line-height: 1.2em;
-  padding-left: 10px;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 767px) {
-  p {
-    font-size: 24px;
+  .card-message {
+    padding: 20px 15px;
+  }
+
+  .message-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .message-text {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .message-closing {
+    font-size: 15px;
+    margin: 15px 0 20px 0;
+  }
+
+  .message-signature {
+    font-size: 18px;
+    margin-top: 12px;
   }
 }
 
 @media (max-width: 479px) {
-  p {
-    font-size: 20px;
+  .card-message {
+    padding: 15px 10px;
+  }
+
+  .message-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .message-text {
+    font-size: 11px;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+  }
+
+  .message-closing {
+    font-size: 13px;
+    margin: 12px 0 15px 0;
+  }
+
+  .message-signature {
+    font-size: 15px;
+    margin-top: 10px;
   }
 }
