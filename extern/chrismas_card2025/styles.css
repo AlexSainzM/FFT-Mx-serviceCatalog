@@ -32,9 +32,9 @@ body {
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition-delay: initial;
-  transform: rotate(-10deg) translate(0, 0);
+  transform: rotate(-10deg) translate(0, -100vh);
   opacity: 0;
-  animation: cardIn 1s alternate cubic-bezier(.87,-.41,.19,1.44);
+  animation: cardIn 1.5s ease-out;
   animation-delay: 3s;
   animation-fill-mode: forwards;
 }
@@ -68,7 +68,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 50px #000;
+  /* box-shadow: 0 0 50px #000; */
   transition: all 5.5s ease-in-out;
 }
 
@@ -101,14 +101,14 @@ body {
 @keyframes cardIn {
   0% {
     opacity: 0;
-    transform: rotate(-0deg) translate(0, -100%);
+    transform: rotate(-5deg) translate(0, -100vh) scale(0.5);
   }
-  25% {
-    opacity: 1;
+  50% {
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
-    transform: rotate(-0deg) translate(0, 0);
+    transform: rotate(-5deg) translate(0, 0) scale(1);
   }
 }
 
@@ -150,9 +150,9 @@ body {
 }
 
 .cart-page-front {
-  transform-origin: 0 50% 0;
+  transform-origin: 50% 50% 0;
   transform-style: preserve-3d;
-  transform: rotateY(-20deg);
+  transform: rotateY(-0);
   z-index: 2;
 }
 
@@ -210,7 +210,6 @@ body {
 
 .cart-page-inside {
   transform: rotateY(-180deg);
-  border-right: none !important;
   background-position: 0px 80px;
   flex-direction: column;
   padding: 20px;
