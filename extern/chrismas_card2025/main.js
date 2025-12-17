@@ -6,7 +6,7 @@ $(document).ready(function() {
   $card.on('click', function() {
 
 		$(this).toggleClass('is-opened');
-    // $clickMe.toggleClass('is-hidden');
+    //$clickMe.toggleClass('is-hidden');
 
 	});
 
