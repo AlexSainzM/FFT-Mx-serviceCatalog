@@ -101,14 +101,14 @@ body {
 @keyframes cardIn {
   0% {
     opacity: 0;
-    transform: rotate(-5deg) translate(0, -100vh) scale(0.5);
+    transform: rotate(-0deg) translate(0, -100vh) scale(0.5);
   }
   50% {
     opacity: 0.8;
   }
   100% {
     opacity: 1;
-    transform: rotate(-5deg) translate(0, 0) scale(1);
+    transform: rotate(-0deg) translate(0, 0) scale(1);
   }
 }
 
