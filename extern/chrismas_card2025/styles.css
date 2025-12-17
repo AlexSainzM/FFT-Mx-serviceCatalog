@@ -26,8 +26,8 @@ body {
 .card {
   perspective: 1500px;
   position: absolute;
-  left: calc(50% - 175px);
-  top: calc(50% - 250px);
+  left: calc(50% - 300px);
+  top: calc(50% - 400px);
   transition-property: transform;
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -39,17 +39,24 @@ body {
   animation-fill-mode: forwards;
 }
 
+@media (max-width: 1024px) {
+  .card {
+    left: calc(50% - 250px);
+    top: calc(50% - 350px);
+  }
+}
+
 @media (max-width: 767px) {
   .card {
-    left: calc(50% - 115px);
-    top: calc(50% - 164.5px);
+    left: calc(50% - 175px);
+    top: calc(50% - 250px);
   }
 }
 
 @media (max-width: 479px) {
   .card {
-    left: calc(50% - 75px);
-    top: calc(50% - 107px);
+    left: calc(50% - 140px);
+    top: calc(50% - 200px);
   }
 }
 
@@ -66,18 +73,24 @@ body {
 }
 
 .card.is-opened {
-  transform: rotate(0deg) translate(175px, 0);
+  transform: rotate(0deg) translate(300px, 0);
+}
+
+@media (max-width: 1024px) {
+  .card.is-opened {
+    transform: rotate(0deg) translate(250px, 0);
+  }
 }
 
 @media (max-width: 767px) {
   .card.is-opened {
-    transform: rotate(0deg) translate(115px, 0);
+    transform: rotate(0deg) translate(175px, 0);
   }
 }
 
 @media (max-width: 479px) {
   .card.is-opened {
-    transform: rotate(0deg) translate(75px, 0);
+    transform: rotate(0deg) translate(140px, 0);
   }
 }
 
@@ -88,36 +101,44 @@ body {
 @keyframes cardIn {
   0% {
     opacity: 0;
-    transform: rotate(-10deg) translate(0, -100%);
+    transform: rotate(-0deg) translate(0, -100%);
   }
   25% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    transform: rotate(-10deg) translate(0, 0);
+    transform: rotate(-0deg) translate(0, 0);
   }
 }
 
 .card,
 .card-page {
-  width: 350px;
-  height: 500px;
+  width: 600px;
+  height: 800px;
+}
+
+@media (max-width: 1024px) {
+  .card,
+  .card-page {
+    width: 500px;
+    height: 700px;
+  }
 }
 
 @media (max-width: 767px) {
   .card,
   .card-page {
-    width: 230px;
-    height: 329px;
+    width: 350px;
+    height: 500px;
   }
 }
 
 @media (max-width: 479px) {
   .card,
   .card-page {
-    width: 150px;
-    height: 214px;
+    width: 280px;
+    height: 400px;
   }
 }
 
@@ -235,13 +256,13 @@ body {
 }
 
 .merry-christmas svg {
-  width: 350px;
+  width: 500px;
   height: auto;
 }
 
 .video-container {
   width: 100%;
-  max-width: 300px;
+  max-width: 450px;
   margin: 20px auto 0;
   border-radius: 8px;
   overflow: hidden;
@@ -257,25 +278,36 @@ body {
   border-radius: 8px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .merry-christmas svg {
-    width: 200px;
+    width: 400px;
   }
 
   .video-container {
-    max-width: 180px;
+    max-width: 350px;
+    margin: 18px auto 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .merry-christmas svg {
+    width: 280px;
+  }
+
+  .video-container {
+    max-width: 250px;
     margin: 15px auto 0;
   }
 }
 
 @media (max-width: 479px) {
   .merry-christmas svg {
-    width: 150px;
+    width: 220px;
   }
 
   .video-container {
-    max-width: 130px;
-    margin: 10px auto 0;
+    max-width: 200px;
+    margin: 12px auto 0;
   }
 }
 
@@ -346,41 +378,67 @@ body {
 
 .message-title {
   font-family: 'Mirza', Verdana, Arial, serif;
-  font-size: 28px;
+  font-size: 42px;
   font-weight: bold;
   color: #2c2c2c;
-  margin: 0 0 20px 0;
+  margin: 0 0 25px 0;
   line-height: 1.3em;
 }
 
 .message-text {
   font-family: 'Mirza', Verdana, Arial, serif;
-  font-size: 16px;
+  font-size: 20px;
   color: #3a3a3a;
-  line-height: 1.6em;
-  margin: 0 0 15px 0;
+  line-height: 1.7em;
+  margin: 0 0 18px 0;
   text-align: justify;
   text-align-last: center;
 }
 
 .message-closing {
   font-family: 'Mirza', Verdana, Arial, serif;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   color: #2c2c2c;
-  margin: 20px 0 25px 0;
+  margin: 25px 0 30px 0;
   line-height: 1.4em;
   font-style: italic;
 }
 
 .message-signature {
   font-family: 'Mirza', Verdana, Arial, serif;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: bold;
   color: #009d80;
-  margin: 15px 0 0 0;
+  margin: 20px 0 0 0;
   line-height: 1.2em;
   letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+  .card-message {
+    padding: 25px 20px;
+  }
+
+  .message-title {
+    font-size: 36px;
+    margin-bottom: 22px;
+  }
+
+  .message-text {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .message-closing {
+    font-size: 22px;
+    margin: 22px 0 28px 0;
+  }
+
+  .message-signature {
+    font-size: 26px;
+    margin-top: 18px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -389,23 +447,23 @@ body {
   }
 
   .message-title {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 28px;
+    margin-bottom: 18px;
   }
 
   .message-text {
-    font-size: 13px;
-    margin-bottom: 12px;
+    font-size: 16px;
+    margin-bottom: 14px;
   }
 
   .message-closing {
-    font-size: 15px;
-    margin: 15px 0 20px 0;
+    font-size: 20px;
+    margin: 20px 0 25px 0;
   }
 
   .message-signature {
-    font-size: 18px;
-    margin-top: 12px;
+    font-size: 22px;
+    margin-top: 15px;
   }
 }
 
