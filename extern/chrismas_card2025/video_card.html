@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted playsinline loop>
+    <source src="./ChristmasCard_EnricoStoelzner_original.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
+  
+  <script>
+    // Intentar entrar en pantalla completa al cargar
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.querySelector('video');
+      
+      // Reproducir el video
+      video.play().catch(function(error) {
+        console.log('Error al reproducir:', error);
+      });
+      
+      // Intentar entrar en pantalla completa
+      if (video.requestFullscreen) {
+        video.requestFullscreen().catch(function(error) {
+          console.log('Error al entrar en pantalla completa:', error);
+        });
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      } else if (video.mozRequestFullScreen) {
+        video.mozRequestFullScreen();
+      } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen();
+      }
+    });
+  </script>
+</body>
+</html>
+
