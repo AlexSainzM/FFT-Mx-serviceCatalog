@@ -68,7 +68,7 @@
 
           <div class="alert alert-warning border-0 shadow-sm">
             <i class="bi bi-info-circle me-1"></i>
-            Las preguntas de evaluación son obligatorias. Los datos de identificación son opcionales.
+            Las preguntas de evaluación y el puesto postulado son obligatorios. El nombre es opcional.
           </div>
         </div>
       </div>
@@ -91,14 +91,29 @@
           </div>
         </div>
 
-        <!-- Formulario listo para conectar a Formspree u otro endpoint -->
-        <form id="encuestaReclutamiento" class="needs-validation" novalidate action="#" method="POST">
+        <!-- Formulario conectado a Formspree (reemplaza TU_FORM_ID por el ID real) -->
+        <form
+          id="encuestaReclutamiento"
+          class="needs-validation"
+          novalidate
+          action="https://formspree.io/f/mrpzebga"
+          method="POST">
 
-          <!-- Información del candidato (opcional) -->
+          <!-- Metadatos Formspree -->
+          <input type="hidden" name="_subject" value="Encuesta de Reclutamiento - Nueva respuesta">
+          <input type="hidden" name="_language" value="es">
+
+          <!-- Honeypot anti-spam (no eliminar) -->
+          <div class="formspree-honeypot" aria-hidden="true">
+            <label for="_gotcha">No completar este campo</label>
+            <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <!-- Información del candidato -->
           <div class="card survey-card border-0 shadow-sm mb-4">
             <div class="card-body p-4">
               <h2 class="h5 fw-bold mb-1 section-title">Información del candidato</h2>
-              <p class="text-muted small mb-4">Estos datos son opcionales.</p>
+              <p class="text-muted small mb-4">El puesto es obligatorio. El nombre es opcional.</p>
 
               <div class="mb-3">
                 <label for="nombre_candidato" class="form-label">
@@ -115,15 +130,17 @@
 
               <div class="mb-0">
                 <label for="puesto_postulado" class="form-label">
-                  Puesto al que se postuló <span class="optional-badge">(opcional)</span>
+                  Puesto al que se postuló <span class="text-danger">*</span>
                 </label>
                 <input
                   type="text"
                   class="form-control"
                   id="puesto_postulado"
                   name="puesto_postulado"
-                  placeholder="Puesto o vacante (opcional)"
-                  autocomplete="organization-title">
+                  placeholder="Puesto o vacante"
+                  autocomplete="organization-title"
+                  required>
+                <div class="invalid-feedback">Indica el puesto al que te postulaste.</div>
               </div>
             </div>
           </div>
@@ -367,9 +384,24 @@
             </div>
           </fieldset>
 
+          <div
+            id="formError"
+            class="alert alert-danger border-0 shadow-sm d-none mb-4"
+            role="alert"
+            aria-live="assertive">
+            <i class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></i>
+            <span id="formErrorText">No se pudo enviar la encuesta. Inténtalo de nuevo.</span>
+          </div>
+
           <div class="d-grid gap-2 col-12 col-md-6 mx-auto">
-            <button type="submit" class="btn btn-primary btn-lg">
-              <i class="bi bi-send me-2" aria-hidden="true"></i>Enviar encuesta
+            <button type="submit" id="submitBtn" class="btn btn-primary btn-lg">
+              <span class="btn-label">
+                <i class="bi bi-send me-2" aria-hidden="true"></i>Enviar encuesta
+              </span>
+              <span class="btn-loading d-none">
+                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                Enviando...
+              </span>
             </button>
           </div>
 

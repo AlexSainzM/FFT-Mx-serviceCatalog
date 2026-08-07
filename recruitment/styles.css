@@ -535,6 +535,27 @@ a.breadcrumb-item {
   display: block;
 }
 
+/* Honeypot Formspree: oculto para usuarios, visible solo para bots */
+.formspree-honeypot {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#submitBtn:disabled {
+  opacity: 0.85;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: var(--shadow-sm);
+}
+
+#formError {
+  border-left: 4px solid #dc3545;
+}
+
 @media (max-width: 768px) {
   .rating-options {
     grid-template-columns: repeat(2, 1fr);
