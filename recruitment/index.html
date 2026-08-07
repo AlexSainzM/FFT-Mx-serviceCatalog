@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Second release of Service
+  Alejandro Sainz
+  FFT México Internal Services
+  Enhanced by DeepAgent
+  V00.0.2 -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encuesta de satisfacción del proceso de Reclutamiento</title>
+  <meta name="description" content="Encuesta de satisfacción del proceso de Reclutamiento de FFT México. Comparte tu experiencia durante el primer contacto con nuestro equipo.">
+
+  <!-- Bootstrap 5.3.2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  
+  <!-- Main CSS stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-3 px-md-5" style="background-color: #009d80;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" aria-label="FFT México Logo">
+          <img src="../../assets/img/primaryGreenBGLogo.png" alt="FFT México" height="30" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://fft.de/es/">
+                <i class="bi bi-arrow-left-circle me-1"></i>Ir al Sitio Web
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container pt-5 mt-5">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1 class="display-5 fw-bold mb-4">Encuesta de satisfacción del proceso de Reclutamiento</h1>
+          
+          <div class="alert alert-info border-0 shadow-sm" role="alert">
+            <i class="bi bi-chat-heart fs-5 me-2"></i>
+            <strong>Tu opinión importa.</strong> Ayúdanos a mejorar el primer contacto con el equipo de Reclutamiento.
+          </div>
+
+          <p class="lead text-justify mb-3">
+            Tu opinión es muy importante para nosotros. Esta breve encuesta nos ayudará a conocer tu experiencia durante el primer contacto con nuestro equipo de Reclutamiento y a identificar oportunidades de mejora.
+          </p>
+
+          <p class="text-muted mb-4">
+            Responder la encuesta te tomará aproximadamente 1 minuto.
+          </p>
+
+          <div class="alert alert-warning border-0 shadow-sm">
+            <i class="bi bi-info-circle me-1"></i>
+            Las preguntas de evaluación son obligatorias. Los datos de identificación son opcionales.
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Form Section -->
+  <section id="_form" class="container py-5">
+    <div class="row mb-5">
+      <div class="col-lg-10 mx-auto">
+
+        <!-- Mensaje de agradecimiento (oculto inicialmente) -->
+        <div id="agradecimiento" class="thank-you-message d-none" role="status" aria-live="polite" tabindex="-1">
+          <div class="text-center p-4 p-md-5 rounded-4 shadow border-0 bg-white">
+            <i class="bi bi-check-circle-fill thank-you-icon mb-3" aria-hidden="true"></i>
+            <h2 class="h3 fw-bold mb-3">¡Gracias por compartir tu opinión!</h2>
+            <p class="mb-0 text-muted">
+              Tu respuesta ha sido registrada. Tus comentarios nos ayudan a mejorar continuamente nuestro proceso de Reclutamiento.
+            </p>
+          </div>
+        </div>
+
+        <!-- Formulario listo para conectar a Formspree u otro endpoint -->
+        <form id="encuestaReclutamiento" class="needs-validation" novalidate action="#" method="POST">
+
+          <!-- Información del candidato (opcional) -->
+          <div class="card survey-card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+              <h2 class="h5 fw-bold mb-1 section-title">Información del candidato</h2>
+              <p class="text-muted small mb-4">Estos datos son opcionales.</p>
+
+              <div class="mb-3">
+                <label for="nombre_candidato" class="form-label">
+                  Nombre <span class="optional-badge">(opcional)</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre_candidato"
+                  name="nombre_candidato"
+                  placeholder="Nombre completo (opcional)"
+                  autocomplete="name">
+              </div>
+
+              <div class="mb-0">
+                <label for="puesto_postulado" class="form-label">
+                  Puesto al que se postuló <span class="optional-badge">(opcional)</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="puesto_postulado"
+                  name="puesto_postulado"
+                  placeholder="Puesto o vacante (opcional)"
+                  autocomplete="organization-title">
+              </div>
+            </div>
+          </div>
+
+          <!-- Escala de evaluación -->
+          <div class="scale-legend mb-4 p-3 rounded-4 shadow-sm">
+            <h2 class="h6 fw-bold mb-3">
+              <i class="bi bi-bar-chart-steps me-1" aria-hidden="true"></i>
+              Escala de evaluación
+            </h2>
+            <div class="row g-2 scale-items">
+              <div class="col-6 col-md-3">
+                <div class="scale-item">
+                  <span class="scale-value">1</span>
+                  <span class="scale-label">Muy insatisfecho</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="scale-item">
+                  <span class="scale-value">2</span>
+                  <span class="scale-label">Insatisfecho</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="scale-item">
+                  <span class="scale-value">3</span>
+                  <span class="scale-label">Satisfecho</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="scale-item">
+                  <span class="scale-value">4</span>
+                  <span class="scale-label">Muy satisfecho</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pregunta 1 -->
+          <fieldset class="card survey-card question-card border-0 shadow-sm mb-3">
+            <div class="card-body p-4">
+              <legend class="question-legend h6 fw-semibold mb-3">
+                <span class="question-number" aria-hidden="true">1</span>
+                ¿Qué tan satisfecho(a) está con la atención y el trato recibido durante el primer contacto con nuestro equipo de Reclutamiento?
+              </legend>
+              <div class="rating-options" role="radiogroup" aria-required="true">
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p01_trato_candidato" id="p01_1" value="1" required>
+                  <label class="form-check-label" for="p01_1">
+                    <span class="rating-num">1</span>
+                    <span class="rating-text">Muy insatisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p01_trato_candidato" id="p01_2" value="2" required>
+                  <label class="form-check-label" for="p01_2">
+                    <span class="rating-num">2</span>
+                    <span class="rating-text">Insatisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p01_trato_candidato" id="p01_3" value="3" required>
+                  <label class="form-check-label" for="p01_3">
+                    <span class="rating-num">3</span>
+                    <span class="rating-text">Satisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p01_trato_candidato" id="p01_4" value="4" required>
+                  <label class="form-check-label" for="p01_4">
+                    <span class="rating-num">4</span>
+                    <span class="rating-text">Muy satisfecho</span>
+                  </label>
+                </div>
+              </div>
+              <div class="invalid-feedback">Selecciona una opción para continuar.</div>
+            </div>
+          </fieldset>
+
+          <!-- Pregunta 2 -->
+          <fieldset class="card survey-card question-card border-0 shadow-sm mb-3">
+            <div class="card-body p-4">
+              <legend class="question-legend h6 fw-semibold mb-3">
+                <span class="question-number" aria-hidden="true">2</span>
+                ¿La información proporcionada sobre la vacante y el proceso de selección fue clara y suficiente?
+              </legend>
+              <div class="rating-options" role="radiogroup" aria-required="true">
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p02_claridad_comunicacion" id="p02_1" value="1" required>
+                  <label class="form-check-label" for="p02_1">
+                    <span class="rating-num">1</span>
+                    <span class="rating-text">Muy insatisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p02_claridad_comunicacion" id="p02_2" value="2" required>
+                  <label class="form-check-label" for="p02_2">
+                    <span class="rating-num">2</span>
+                    <span class="rating-text">Insatisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p02_claridad_comunicacion" id="p02_3" value="3" required>
+                  <label class="form-check-label" for="p02_3">
+                    <span class="rating-num">3</span>
+                    <span class="rating-text">Satisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p02_claridad_comunicacion" id="p02_4" value="4" required>
+                  <label class="form-check-label" for="p02_4">
+                    <span class="rating-num">4</span>
+                    <span class="rating-text">Muy satisfecho</span>
+                  </label>
+                </div>
+              </div>
+              <div class="invalid-feedback">Selecciona una opción para continuar.</div>
+            </div>
+          </fieldset>
+
+          <!-- Pregunta 3 -->
+          <fieldset class="card survey-card question-card border-0 shadow-sm mb-3">
+            <div class="card-body p-4">
+              <legend class="question-legend h6 fw-semibold mb-3">
+                <span class="question-number" aria-hidden="true">3</span>
+                ¿El personal que lo atendió respondió sus dudas de manera oportuna y profesional?
+              </legend>
+              <div class="rating-options" role="radiogroup" aria-required="true">
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p03_profesionalismo_atencion" id="p03_1" value="1" required>
+                  <label class="form-check-label" for="p03_1">
+                    <span class="rating-num">1</span>
+                    <span class="rating-text">Muy insatisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p03_profesionalismo_atencion" id="p03_2" value="2" required>
+                  <label class="form-check-label" for="p03_2">
+                    <span class="rating-num">2</span>
+                    <span class="rating-text">Insatisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p03_profesionalismo_atencion" id="p03_3" value="3" required>
+                  <label class="form-check-label" for="p03_3">
+                    <span class="rating-num">3</span>
+                    <span class="rating-text">Satisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p03_profesionalismo_atencion" id="p03_4" value="4" required>
+                  <label class="form-check-label" for="p03_4">
+                    <span class="rating-num">4</span>
+                    <span class="rating-text">Muy satisfecho</span>
+                  </label>
+                </div>
+              </div>
+              <div class="invalid-feedback">Selecciona una opción para continuar.</div>
+            </div>
+          </fieldset>
+
+          <!-- Pregunta 4 -->
+          <fieldset class="card survey-card question-card border-0 shadow-sm mb-3">
+            <div class="card-body p-4">
+              <legend class="question-legend h6 fw-semibold mb-3">
+                <span class="question-number" aria-hidden="true">4</span>
+                ¿Qué tan satisfecho(a) está con la organización y puntualidad del primer contacto o entrevista inicial?
+              </legend>
+              <div class="rating-options" role="radiogroup" aria-required="true">
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p04_organizacion_proceso" id="p04_1" value="1" required>
+                  <label class="form-check-label" for="p04_1">
+                    <span class="rating-num">1</span>
+                    <span class="rating-text">Muy insatisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p04_organizacion_proceso" id="p04_2" value="2" required>
+                  <label class="form-check-label" for="p04_2">
+                    <span class="rating-num">2</span>
+                    <span class="rating-text">Insatisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p04_organizacion_proceso" id="p04_3" value="3" required>
+                  <label class="form-check-label" for="p04_3">
+                    <span class="rating-num">3</span>
+                    <span class="rating-text">Satisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p04_organizacion_proceso" id="p04_4" value="4" required>
+                  <label class="form-check-label" for="p04_4">
+                    <span class="rating-num">4</span>
+                    <span class="rating-text">Muy satisfecho</span>
+                  </label>
+                </div>
+              </div>
+              <div class="invalid-feedback">Selecciona una opción para continuar.</div>
+            </div>
+          </fieldset>
+
+          <!-- Pregunta 5 -->
+          <fieldset class="card survey-card question-card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+              <legend class="question-legend h6 fw-semibold mb-3">
+                <span class="question-number" aria-hidden="true">5</span>
+                ¿Considera que el primer contacto cumplió con sus expectativas respecto al proceso de selección?
+              </legend>
+              <div class="rating-options" role="radiogroup" aria-required="true">
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p05_cumplimiento_expectativas" id="p05_1" value="1" required>
+                  <label class="form-check-label" for="p05_1">
+                    <span class="rating-num">1</span>
+                    <span class="rating-text">Muy insatisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p05_cumplimiento_expectativas" id="p05_2" value="2" required>
+                  <label class="form-check-label" for="p05_2">
+                    <span class="rating-num">2</span>
+                    <span class="rating-text">Insatisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p05_cumplimiento_expectativas" id="p05_3" value="3" required>
+                  <label class="form-check-label" for="p05_3">
+                    <span class="rating-num">3</span>
+                    <span class="rating-text">Satisfecho</span>
+                  </label>
+                </div>
+                <div class="form-check rating-option">
+                  <input class="form-check-input" type="radio" name="p05_cumplimiento_expectativas" id="p05_4" value="4" required>
+                  <label class="form-check-label" for="p05_4">
+                    <span class="rating-num">4</span>
+                    <span class="rating-text">Muy satisfecho</span>
+                  </label>
+                </div>
+              </div>
+              <div class="invalid-feedback">Selecciona una opción para continuar.</div>
+            </div>
+          </fieldset>
+
+          <div class="d-grid gap-2 col-12 col-md-6 mx-auto">
+            <button type="submit" class="btn btn-primary btn-lg">
+              <i class="bi bi-send me-2" aria-hidden="true"></i>Enviar encuesta
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-dark text-light mt-5">
+    <div class="container">
+      <p class="mb-1">&copy; 2024 FFT México. Todos los derechos reservados.</p>
+      <p class="mb-0 small text-muted">Encuesta de satisfacción del proceso de Reclutamiento</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3.2 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+          crossorigin="anonymous"></script>
+
+  <!-- Validation JavaScript -->
+  <script src="main.js"></script>
+
+</body>
+</html>
